@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TdF-kommentatorbasen 2026</title>
+<style>
+  :root{
+    --bg:#0e1116; --panel:#161b22; --panel2:#1c2230; --line:#2a3242;
+    --txt:#e8edf4; --dim:#9aa6b6; --accent:#f5d000; --accent2:#ff5a00;
+    --yellow:#f5d000; --green:#1aa84a; --red:#d2002e; --white:#ffffff; --blue:#3da9fc;
+    --radius:12px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%}
+  body{
+    background:var(--bg); color:var(--txt);
+    font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    display:flex; flex-direction:column; height:100vh; overflow:hidden;
+  }
+  a{color:var(--blue);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  /* ---------- TOPPLINJE ---------- */
+  header.topbar{
+    display:flex;align-items:center;gap:16px;padding:10px 18px;
+    background:linear-gradient(90deg,#10141b,#161b22);border-bottom:1px solid var(--line);flex:0 0 auto;
+  }
+  .topbar h1{font-size:17px;margin:0;letter-spacing:.3px;white-space:nowrap}
+  .topbar h1 b{color:var(--accent)}
+  .topbar .meta{color:var(--dim);font-size:12.5px;white-space:nowrap}
+  .topbar .grow{flex:1}
+  .countdown{
+    background:var(--panel2);border:1px solid var(--line);border-radius:999px;
+    padding:6px 14px;font-weight:700;font-size:13px;color:var(--accent)
+  }
+
+  /* ---------- LAYOUT ---------- */
+  .layout{display:flex;flex:1;min-height:0}
+  aside.dash{
+    width:340px;flex:0 0 340px;border-right:1px solid var(--line);
+    background:var(--panel);overflow-y:auto;padding:14px
+  }
+  main.search-pane{flex:1;display:flex;flex-direction:column;min-width:0}
+
+  /* ---------- DASHBOARD ---------- */
+  .card{background:var(--panel2);border:1px solid var(--line);border-radius:var(--radius);padding:12px;margin-bottom:12px}
+  .card h2{margin:0 0 8px;font-size:12px;text-transform:uppercase;letter-spacing:.8px;color:var(--dim)}
+  .kv{display:flex;justify-content:space-between;gap:10px;padding:3px 0;font-size:13px;border-bottom:1px dashed #232b39}
+  .kv:last-child{border-bottom:0}
+  .kv span:first-child{color:var(--dim)}
+  .kv span:last-child{text-align:right;font-weight:600}
+  .pill{display:inline-block;background:#222a38;border:1px solid var(--line);border-radius:999px;padding:2px 9px;font-size:11.5px;margin:2px 3px 0 0;color:var(--dim)}
+
+  .live-note{font-size:12.5px;color:var(--dim);font-style:italic}
+  .troye-row{display:flex;align-items:center;gap:8px;padding:4px 0;font-size:13px}
+  .swatch{width:16px;height:16px;border-radius:4px;border:1px solid #00000055;flex:0 0 auto}
+  .swatch.dot{background-image:radial-gradient(#d2002e 30%,transparent 32%);background-size:7px 7px;background-color:#fff}
+
+  .fav{display:flex;align-items:center;gap:9px;padding:5px 0;border-bottom:1px dashed #232b39;cursor:pointer}
+  .fav:last-child{border-bottom:0}
+  .fav:hover{color:var(--accent)}
+  .fav .rank{width:18px;color:var(--accent);font-weight:800;text-align:center}
+  .fav .nm{font-weight:600;font-size:13px}
+  .fav .tm{color:var(--dim);font-size:12px;margin-left:auto}
+
+  /* ---------- SØK ---------- */
+  .search-head{padding:12px 16px;border-bottom:1px solid var(--line);background:var(--panel)}
+  .search-box{position:relative}
+  .search-box input{
+    width:100%;padding:12px 14px 12px 40px;font-size:16px;color:var(--txt);
+    background:var(--bg);border:1px solid var(--line);border-radius:10px;outline:none
+  }
+  .search-box input:focus{border-color:var(--accent)}
+  .search-box .ico{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--dim)}
+  .filters{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
+  .filters button{
+    background:#1b2230;border:1px solid var(--line);color:var(--dim);
+    padding:6px 12px;border-radius:999px;font-size:13px;cursor:pointer
+  }
+  .filters button.active{background:var(--accent);color:#10141b;border-color:var(--accent);font-weight:700}
+  .hint{color:var(--dim);font-size:12px;margin-top:8px}
+  kbd{background:#222a38;border:1px solid var(--line);border-bottom-width:2px;border-radius:5px;padding:1px 6px;font-size:11px}
+
+  .results{flex:1;overflow-y:auto;padding:14px 16px}
+  .sec-title{font-size:12px;text-transform:uppercase;letter-spacing:.8px;color:var(--dim);margin:8px 0 8px;display:flex;align-items:center;gap:8px}
+  .sec-title .count{background:#222a38;border-radius:999px;padding:1px 8px;font-size:11px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;margin-bottom:18px}
+  .grid-stages{display:grid;grid-template-columns:repeat(auto-fill,minmax(420px,1fr));gap:12px;margin-bottom:18px}
+
+  /* ---------- RYTTERKORT ---------- */
+  .rider{background:var(--panel2);border:1px solid var(--line);border-radius:var(--radius);padding:12px;display:flex;gap:12px}
+  .rider .avatar{width:62px;height:72px;border-radius:10px;flex:0 0 auto;overflow:hidden;background:#0c0f14;display:flex;flex-direction:column;align-items:center;justify-content:center}
+  .rider .photo{width:62px;height:72px;border-radius:10px;flex:0 0 auto;object-fit:cover;background:#0c0f14}
+  .rider .body{min-width:0;flex:1}
+  .rider .nm{font-weight:700;font-size:15px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+  .rider .role{color:var(--dim);font-size:12.5px}
+  .rider .det{font-size:12.5px;margin-top:6px}
+  .rider .det b{color:var(--dim);font-weight:600}
+  .flag-no{background:linear-gradient(90deg,#ba0c2f 33%,#fff 33% 66%,#00205b 66%);width:18px;height:12px;border-radius:2px;display:inline-block;border:1px solid #0006}
+  .nr-badge{background:var(--accent);color:#10141b;border-radius:6px;padding:0 6px;font-weight:800;font-size:12px}
+  .nr-badge.tbd{background:#2a3242;color:var(--dim)}
+  .norsk-tag{background:#ba0c2f;color:#fff;font-size:10px;padding:1px 6px;border-radius:999px;font-weight:700}
+  .usikker-warn{font-size:10px;background:rgba(77,56,0,.7);color:#d29922;border:1px solid #9e6a03;padding:1px 7px;border-radius:999px;font-weight:700;text-decoration:none;vertical-align:middle;white-space:nowrap}
+  .usikker-warn:hover{background:rgba(157,106,3,.35)}
+
+  /* ---------- LAGKORT ---------- */
+  .team{background:var(--panel2);border:1px solid var(--line);border-radius:var(--radius);padding:12px;display:flex;gap:12px;align-items:flex-start}
+  .team .jersey-wrap{flex:0 0 auto}
+  .team .nm{font-weight:700}
+  .team .sub{color:var(--dim);font-size:12.5px}
+  .team .lead{font-size:12.5px;margin-top:5px}
+
+  /* ---------- ETAPPEKORT ---------- */
+  .stage{background:var(--panel2);border:1px solid var(--line);border-radius:var(--radius);padding:11px 12px;display:flex;flex-direction:column;gap:0}
+  .stage.key{border-color:var(--accent);box-shadow:inset 3px 0 0 var(--accent)}
+  .stage-top{display:flex;gap:11px;align-items:flex-start}
+  .stage .num{font-weight:800;font-size:18px;width:34px;text-align:center;color:var(--accent)}
+  .stage .nm{font-weight:600}
+  .stage .sub{color:var(--dim);font-size:12.5px}
+  .stage .desc{font-size:12.5px;margin-top:4px}
+  .type-tag{font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;padding:2px 7px;border-radius:999px;font-weight:700}
+  .t-flat{background:#1b3a2a;color:#7ee0a6}
+  .t-kupert{background:#3a331b;color:#e8cf7e}
+  .t-fjell{background:#3a1b1b;color:#f0a0a0}
+  .t-tempo{background:#1b2a3a;color:#9cc8f0}
+  .t-tempo-lag{background:#241b3a;color:#c0a0f0}
+  .pts-info{font-size:12px;margin-top:3px;color:var(--dim);border-top:1px dashed #1e2a3a;padding-top:3px}
+  .pts-info .hi{color:var(--accent);font-weight:700}
+
+  /* ---------- RESULTATER 2026-CHIPS ---------- */
+  .res2026{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+  .res-chip{font-size:10px;padding:2px 8px;border-radius:999px;font-weight:700;letter-spacing:.3px;white-space:nowrap}
+  .res-seier{background:#f5d000;color:#0e1116}
+  .res-pall{background:#8a96a8;color:#0e1116}
+  .res-gc{background:#3da9fc;color:#0e1116}
+  .res-troye-gul{background:#f5d000;color:#0e1116}
+  .res-troye-gronn{background:#1aa84a;color:#fff}
+  .res-troye-prikket{background:#d2002e;color:#fff}
+  .res-troye-hvit{background:#e8edf4;color:#0e1116}
+  .res-rytter-row{display:flex;flex-wrap:wrap;align-items:center;gap:3px;margin-top:3px}
+  .res-rytter-name{font-size:10px;color:var(--dim);font-weight:600;white-space:nowrap;margin-right:2px}
+  .tour-etapper-count{color:var(--accent);font-weight:800;font-size:14px}
+
+  /* ---------- HØYDEPROFIL ---------- */
+  .elev-wrap{margin-top:8px;border-top:1px solid var(--line);padding-top:6px}
+  .elev-wrap svg{display:block;width:100%;overflow:visible}
+
+  /* ---------- STATISTIKK/HISTORIE ---------- */
+  .stat{background:var(--panel2);border:1px solid var(--line);border-radius:var(--radius);padding:12px}
+  .stat .t{font-weight:700;color:var(--accent);margin-bottom:4px}
+  .stat .x{font-size:13px}
+
+  .empty{color:var(--dim);text-align:center;padding:40px;font-style:italic}
+  mark{background:var(--accent);color:#10141b;border-radius:3px;padding:0 2px}
+
+  /* scrollbars */
+  ::-webkit-scrollbar{width:10px;height:10px}
+  ::-webkit-scrollbar-thumb{background:#2a3242;border-radius:6px}
+  ::-webkit-scrollbar-track{background:transparent}
+
+  @media(max-width:860px){
+    .layout{flex-direction:column}
+    aside.dash{width:100%;flex:0 0 auto;max-height:38vh;border-right:0;border-bottom:1px solid var(--line)}
+    .grid-stages{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <h1>🚴 <b>TdF</b>-kommentatorbasen <span style="color:var(--dim);font-weight:400">2026</span></h1>
+  <span class="meta" id="raceDates"></span>
+  <div class="grow"></div>
+  <span class="meta" id="updated"></span>
+  <span class="countdown" id="countdown">—</span>
+  <a href="faktasjekk.html" style="font-size:11px;color:var(--warn-text);border:1px solid var(--warn-border);background:rgba(77,56,0,.4);padding:3px 10px;border-radius:999px;white-space:nowrap;text-decoration:none;font-weight:700" title="Evalueringsmaskin — sjekk faktapresisjon">⚠ Faktasjekk</a>
+</header>
+
+<div class="layout">
+
+  <!-- ====================== DASHBOARD ====================== -->
+  <aside class="dash" id="dash"><!-- fylles av JS --></aside>
+
+  <!-- ====================== SØK ====================== -->
+  <main class="search-pane">
+    <div class="search-head">
+      <div class="search-box">
+        <span class="ico">🔍</span>
+        <input id="q" type="text" placeholder="Søk etter rytter, lag, etappe, sted, statistikk …" autocomplete="off">
+      </div>
+      <div class="filters" id="filters">
+        <button data-f="alle" class="active">Alle</button>
+        <button data-f="ryttere">Ryttere</button>
+        <button data-f="lag">Lag</button>
+        <button data-f="etapper">Etapper</button>
+        <button data-f="statistikk">Statistikk &amp; historier</button>
+        <button data-f="norsk">🇳🇴 Norsk</button>
+      </div>
+      <div class="hint">Trykk <kbd>/</kbd> for å hoppe til søk · <kbd>Esc</kbd> for å tømme</div>
+    </div>
+    <div class="results" id="results"><!-- fylles av JS --></div>
+  </main>
+</div>
+
+<script src="data.js"></script>
+<script src="faktarapport.js"></script>
+<script>
+const D = TDF_DATA;
+const $ = s => document.querySelector(s);
+
+/* ---- POENG PR. ETAPPE (grønn trøye, vinner av etappe) ---- */
+const SLUTT_POENG = {
+  1:20, 2:30, 3:20, 4:50, 5:70, 6:20, 7:70, 8:70, 9:30, 10:20,
+  11:70, 12:70, 13:20, 14:20, 15:20, 16:20, 17:50, 18:20, 19:20, 20:20, 21:50
+};
+/* KOM-poeng til vinnerover toppen (standard TdF 2026) */
+const KOM_PTS = {'HC':20,'1':10,'2':5,'3':2,'4':1};
+
+/* ---- DRAKT-BILDER FRA PROCYCLINGSTATS ---- */
+const JERSEY_URLS = {
+  "UAE": "https://www.procyclingstats.com/images/shirts/bx/eb/uae-team-emirates-xrg-2026.png",
+  "VLB": "https://www.procyclingstats.com/images/shirts/bx/eb/team-visma-lease-a-bike-2026-n3.png",
+  "RBH": "https://www.procyclingstats.com/images/shirts/bx/eb/red-bull-bora-hansgrohe-2026.png",
+  "LTK": "https://www.procyclingstats.com/images/shirts/bx/eb/lidl-trek-2026.png",
+  "DEC": "https://www.procyclingstats.com/images/shirts/bx/eb/decathlon-cma-cgm-team-2026-n2.png",
+  "APT": "https://www.procyclingstats.com/images/shirts/bx/eb/alpecin-premier-tech-2026.png",
+  "IGD": "https://www.procyclingstats.com/images/shirts/bx/eb/ineos-grenadiers-2026-n2.png",
+  "EFE": "https://www.procyclingstats.com/images/shirts/bx/eb/ef-education-easypost-2026-n2.png",
+  "GFC": "https://www.procyclingstats.com/images/shirts/bx/eb/groupama-fdj-united-2026.png",
+  "MOV": "https://www.procyclingstats.com/images/shirts/bx/eb/movistar-team-2026-n2.png",
+  "SOQ": "https://www.procyclingstats.com/images/shirts/bx/eb/soudal-quick-step-2026.png",
+  "TBV": "https://www.procyclingstats.com/images/shirts/bx/eb/bahrain-victorious-2026.png",
+  "PIC": "https://www.procyclingstats.com/images/shirts/bx/eb/team-picnic-postnl-2026.png",
+  "LIN": "https://www.procyclingstats.com/images/shirts/bx/eb/lotto-intermarche-2026-n2.png",
+  "NSN": "https://www.procyclingstats.com/images/shirts/bx/eb/nsn-cycling-team-2026.png",
+  "UNO": "https://www.procyclingstats.com/images/shirts/bx/eb/uno-x-mobility-2026-n2.png",
+  "AST": "https://www.procyclingstats.com/images/shirts/bx/eb/xds-astana-team-2026-n2.png",
+  "COF": "https://www.procyclingstats.com/images/shirts/bx/eb/cofidis-2026-n2.png",
+  "TUD": "https://www.procyclingstats.com/images/shirts/bx/eb/tudor-pro-cycling-team-2026.png",
+  "PQ3": "https://www.procyclingstats.com/images/shirts/bx/eb/pinarello-q365-pro-cycling-team-2026.png",
+  "JAY": "https://www.procyclingstats.com/images/shirts/bx/eb/team-jayco-alula-2026.png",
+  "TOT": "https://www.procyclingstats.com/images/shirts/bx/eb/team-totalenergies-2026.png",
+  "CRR": "https://www.procyclingstats.com/images/shirts/bx/eb/caja-rural-seguros-rga-2026-n3.png",
+};
+let activeFilter = "alle";
+let query = "";
+
+/* ---------- hjelpere ---------- */
+const norm = s => (s||"").toString().toLowerCase()
+  .normalize("NFD").replace(/[̀-ͯ]/g,"");
+function hl(text){
+  if(!query) return esc(text);
+  const t = esc(text);
+  return t.replace(new RegExp("("+query.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+")","ig"),"<mark>$1</mark>");
+}
+function esc(s){return (s||"").toString().replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function teamByKort(k){return D.lag.find(l=>l.kort===k)||{kort:k,navn:k,farger:["#888","#444","#fff"],drakt:{base:"#888",skulder:"#444",sleeve:"#666",krave:"#444",logo1:k,lf:"#fff",mønster:"none"}};}
+function initials(n){return n.split(/\s+/).map(w=>w[0]).slice(0,2).join("").toUpperCase();}
+
+/* ============================================================
+   DRAKT — bruker bilde fra PCS når tilgjengelig, ellers SVG
+   ============================================================ */
+function jerseySVG(team, size) {
+  const s = size || 52;
+  const url = JERSEY_URLS[team.kort];
+  if (url) {
+    const h = Math.round(s * 1.25);
+    return `<img src="${url}" alt="${esc(team.kort)}" width="${s}" height="${h}" loading="lazy" style="display:block;flex-shrink:0;object-fit:contain">`;
+  }
+  /* fallback SVG */
+  const d = team.drakt || {};
+  const base    = d.base    || team.farger?.[0] || '#888';
+  const skulder = d.skulder || team.farger?.[1] || base;
+  const sleeve  = d.sleeve  || skulder;
+  const krave   = d.krave   || skulder;
+  const band    = d.band    || null;
+  const mønster = d.mønster || 'none';
+  const sidefelt= d.sidefelt|| null;
+  const logo1   = d.logo1   || '';
+  const logo2   = d.logo2   || '';
+  const lf      = d.lf      || '#fff';
+
+  const id = team.kort || 'x';
+  const w = s, h = Math.round(s * 1.08);  /* NB: s er deklarert øverst i funksjonen */
+
+  /* mønster-overlay */
+  let pat = '';
+  if (mønster === 'band-top') {
+    pat = `<rect x="12" y="6" width="36" height="11" fill="${band||skulder}" opacity=".9" clip-path="url(#body-${id})"/>`;
+  } else if (mønster === 'band-mid') {
+    pat = `<rect x="12" y="24" width="36" height="10" fill="${band||skulder}" opacity=".9" clip-path="url(#body-${id})"/>`;
+  } else if (mønster === 'diagonal') {
+    pat = `<polygon points="12,42 48,12 48,26 12,56" fill="${skulder}" opacity=".55" clip-path="url(#body-${id})"/>`;
+  } else if (mønster === 'sidefelt') {
+    pat = `<rect x="12" y="6" width="7" height="56" fill="${sidefelt||skulder}" clip-path="url(#body-${id})"/>
+           <rect x="41" y="6" width="7" height="56" fill="${sidefelt||skulder}" clip-path="url(#body-${id})"/>`;
+  } else if (mønster === 'stripes-v') {
+    pat = `<rect x="21" y="6" width="5" height="56" fill="rgba(255,255,255,.18)" clip-path="url(#body-${id})"/>
+           <rect x="34" y="6" width="5" height="56" fill="rgba(255,255,255,.18)" clip-path="url(#body-${id})"/>`;
+  }
+
+  const l1sz = logo1.length > 9 ? 4.8 : logo1.length > 6 ? 5.5 : logo1.length > 4 ? 6.5 : 7.5;
+  const l2sz = logo2.length > 9 ? 4   : logo2.length > 6 ? 4.5 : logo2.length > 4 ? 5   : 5.8;
+  const l2y  = logo2 ? 44 : 0;
+
+  return `<svg width="${w}" height="${h}" viewBox="0 0 60 65" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;flex-shrink:0">
+  <defs>
+    <clipPath id="body-${id}"><path d="M12 6 L24 2 H36 L48 6 L54 26 L48 62 H12 L6 26 Z"/></clipPath>
+  </defs>
+  <!-- erme venstre -->
+  <path d="M1 12 L12 6 L18 22 L7 28 Z" fill="${sleeve}" stroke="#0004" stroke-width=".6"/>
+  <!-- erme høyre -->
+  <path d="M59 12 L48 6 L42 22 L53 28 Z" fill="${sleeve}" stroke="#0004" stroke-width=".6"/>
+  <!-- kropp -->
+  <path d="M12 6 L24 2 H36 L48 6 L54 26 L48 62 H12 L6 26 Z" fill="${base}" stroke="#0004" stroke-width=".6"/>
+  <!-- skulder-yoke -->
+  <path d="M12 6 L24 2 H36 L48 6 L52 20 L44 16 L30 12 L16 16 L8 20 Z" fill="${skulder}" opacity=".75"/>
+  <!-- mønster -->
+  ${pat}
+  <!-- krave -->
+  <path d="M24 2 Q30 9 36 2" fill="none" stroke="${krave}" stroke-width="4.5" stroke-linecap="round"/>
+  <!-- skygge venstre side -->
+  <path d="M12 6 L6 26 L12 62 L14 62 L14 26 L18 10 Z" fill="#00000018"/>
+  <!-- logo 1 -->
+  ${logo1 ? `<text x="30" y="${logo2?33:38}" text-anchor="middle" font-family="-apple-system,system-ui,Arial,sans-serif" font-size="${l1sz}" font-weight="800" fill="${lf}" letter-spacing=".4" paint-order="stroke">${esc(logo1)}</text>` : ''}
+  <!-- logo 2 -->
+  ${logo2 ? `<text x="30" y="43" text-anchor="middle" font-family="-apple-system,system-ui,Arial,sans-serif" font-size="${l2sz}" font-weight="600" fill="${lf}" opacity=".88" letter-spacing=".3">${esc(logo2)}</text>` : ''}
+</svg>`;
+}
+
+/* ============================================================
+   RYTTER-FIGUR SVG — syklist-silhuett i lagdrakt
+   ============================================================ */
+function riderSVG(team, size) {
+  const s = size || 62;
+  const d = team?.drakt || {};
+  const base    = d.base    || '#888';
+  const skulder = d.skulder || base;
+  const sleeve  = d.sleeve  || skulder;
+  const krave   = d.krave   || skulder;
+  const logo1   = d.logo1   || '';
+  const lf      = d.lf      || '#fff';
+  const shorts  = '#111827';
+  const helmetC = skulder;
+  const skinC   = '#e8c49a';
+  const h = Math.round(s * 1.18);
+
+  return `<svg width="${s}" height="${h}" viewBox="0 0 60 71" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block">
+  <!-- hjelm -->
+  <ellipse cx="30" cy="10" rx="13" ry="9" fill="${helmetC}"/>
+  <path d="M17 12 Q18 20 30 20 Q42 20 43 12" fill="${base}" opacity=".5"/>
+  <rect x="25" y="18" width="10" height="4" rx="2" fill="${helmetC}" opacity=".7"/>
+  <!-- hode -->
+  <ellipse cx="30" cy="20" rx="8" ry="8.5" fill="${skinC}"/>
+  <!-- briller -->
+  <path d="M22 20 Q30 17 38 20" fill="none" stroke="#33aaff" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- kropp (jersey) -->
+  <path d="M15 32 Q15 27 30 25 Q45 27 45 32 L47 58 Q38 62 30 62 Q22 62 13 58 Z" fill="${base}"/>
+  <!-- skulder-yoke -->
+  <path d="M15 32 Q15 27 30 25 Q45 27 45 32 L43 36 Q30 30 17 36 Z" fill="${skulder}" opacity=".8"/>
+  <!-- krave -->
+  <path d="M24 25 Q30 30 36 25" fill="none" stroke="${krave}" stroke-width="3" stroke-linecap="round"/>
+  <!-- arm venstre -->
+  <path d="M15 32 Q10 38 8 46" fill="none" stroke="${sleeve}" stroke-width="7" stroke-linecap="round"/>
+  <!-- arm høyre -->
+  <path d="M45 32 Q50 38 52 46" fill="none" stroke="${sleeve}" stroke-width="7" stroke-linecap="round"/>
+  <!-- hanske venstre -->
+  <circle cx="8" cy="48" r="4" fill="${skinC}"/>
+  <!-- hanske høyre -->
+  <circle cx="52" cy="48" r="4" fill="${skinC}"/>
+  <!-- bib-shorts -->
+  <path d="M13 56 Q20 62 30 62 Q40 62 47 56 L46 71 H14 Z" fill="${shorts}"/>
+  <!-- logo på jersey -->
+  ${logo1 ? `<text x="30" y="47" text-anchor="middle" font-family="-apple-system,system-ui,Arial,sans-serif" font-size="5" font-weight="800" fill="${lf}" letter-spacing=".3">${esc(logo1)}</text>` : ''}
+</svg>`;
+}
+
+/* ============================================================
+   HØYDEPROFIL SVG
+   ============================================================ */
+function elevationSVG(stage) {
+  if (!stage.elev || stage.elev.length < 2) return '';
+
+  const W = 500, H = 90;
+  const padL = 36, padR = 12, padT = 22, padB = 22;
+  const plotW = W - padL - padR;
+  const plotH = H - padT - padB;
+
+  const pts   = stage.elev;
+  const maxKm = stage.km;
+  const alts  = pts.map(p=>p[1]);
+  const minA  = Math.min(...alts);
+  const maxA  = Math.max(...alts);
+  const rangeA = maxA - minA || 1;
+
+  /* skalering */
+  const sx = km  => padL + (km / maxKm) * plotW;
+  const sy = alt => padT + plotH - ((alt - minA) / rangeA) * plotH;
+
+  /* profil-path */
+  const pathPts = pts.map(p=>`${sx(p[0]).toFixed(1)},${sy(p[1]).toFixed(1)}`).join(' ');
+  const firstX = sx(pts[0][0]).toFixed(1), lastX = sx(pts[pts.length-1][0]).toFixed(1);
+  const botY = (padT + plotH).toFixed(1);
+  const fillPath = `M${firstX},${botY} L${pathPts} L${lastX},${botY} Z`;
+  const linePath = `M${pathPts}`;
+
+  const lineColor  = stage.noklet ? '#f5d000' : '#3da9fc';
+  const fillColor  = stage.noklet ? 'rgba(245,208,0,0.18)' : 'rgba(61,169,252,0.15)';
+  const strokeW    = stage.noklet ? 2 : 1.5;
+
+  /* km-akse */
+  const kmStep = maxKm <= 30 ? 5 : maxKm <= 100 ? 20 : maxKm <= 160 ? 40 : 50;
+  let kmTicks = '';
+  for (let k = 0; k <= maxKm; k += kmStep) {
+    const x = sx(k).toFixed(1);
+    kmTicks += `<line x1="${x}" y1="${botY}" x2="${x}" y2="${(padT+plotH+4).toFixed(1)}" stroke="#2a3242" stroke-width="1"/>
+    <text x="${x}" y="${(padT+plotH+13).toFixed(1)}" text-anchor="middle" font-size="7.5" fill="#6b7a8d">${k}</text>`;
+  }
+
+  /* høyde-ticks */
+  const altSteps = [500, 1000, 1500, 2000, 2500];
+  let altTicks = '';
+  altSteps.forEach(a => {
+    if (a < minA || a > maxA + 100) return;
+    const y = sy(a).toFixed(1);
+    altTicks += `<line x1="${padL}" y1="${y}" x2="${(W-padR).toFixed(1)}" y2="${y}" stroke="#1e2a3a" stroke-width=".8" stroke-dasharray="3,3"/>
+    <text x="${(padL-3).toFixed(1)}" y="${y}" text-anchor="end" dominant-baseline="middle" font-size="7" fill="#4a5568">${a}</text>`;
+  });
+
+  /* topper */
+  let topperEl = '';
+  (stage.topper||[]).forEach(t => {
+    const x = sx(t.km).toFixed(1);
+    const y = sy(t.alt).toFixed(1);
+    const katColor = t.kat==='HC'?'#ff5a00':t.kat==='1'?'#d2002e':t.kat==='2'?'#e8802a':'#f5c842';
+    const label = t.navn.length > 16 ? t.navn.substring(0,14)+'…' : t.navn;
+    const altLabel = `${t.alt}m`;
+    const yLabel = parseFloat(y) - 4;
+    const yAlt   = yLabel - 9;
+    topperEl += `
+    <circle cx="${x}" cy="${y}" r="3.5" fill="${katColor}" stroke="#0e1116" stroke-width="1"/>
+    <line x1="${x}" y1="${y}" x2="${x}" y2="${(yLabel-2).toFixed(1)}" stroke="${katColor}" stroke-width="1" stroke-dasharray="2,1"/>
+    <text x="${x}" y="${yAlt.toFixed(1)}" text-anchor="middle" font-size="6.5" font-weight="700" fill="${katColor}">${esc(label)}</text>
+    <text x="${x}" y="${(yAlt+8).toFixed(1)}" text-anchor="middle" font-size="6" fill="#9aa6b6">${altLabel}</text>`;
+  });
+
+  /* spurter */
+  let spurterEl = '';
+  (stage.spurter||[]).forEach(s => {
+    const x = sx(s.km).toFixed(1);
+    const y = (padT + plotH).toFixed(1);
+    spurterEl += `
+    <polygon points="${x},${(padT+plotH-1).toFixed(1)} ${(parseFloat(x)-5).toFixed(1)},${(padT+plotH+8).toFixed(1)} ${(parseFloat(x)+5).toFixed(1)},${(padT+plotH+8).toFixed(1)}" fill="#1aa84a"/>
+    <text x="${x}" y="${(padT+plotH+16).toFixed(1)}" text-anchor="middle" font-size="6" fill="#1aa84a">${esc(s.navn)}</text>`;
+  });
+
+  /* start/mål-by */
+  const startLabel = stage.fra.length > 12 ? stage.fra.substring(0,11)+'…' : stage.fra;
+  const malLabel   = stage.til.length > 16 ? stage.til.substring(0,15)+'…' : stage.til;
+
+  return `<div class="elev-wrap">
+<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" style="height:${H}px">
+  <!-- bakgrunns-grid -->
+  ${altTicks}
+  <!-- km-akse -->
+  ${kmTicks}
+  <!-- fylt profil -->
+  <path d="${fillPath}" fill="${fillColor}"/>
+  <!-- profil-linje -->
+  <path d="${linePath}" fill="none" stroke="${lineColor}" stroke-width="${strokeW}" stroke-linejoin="round"/>
+  <!-- topper -->
+  ${topperEl}
+  <!-- spurter -->
+  ${spurterEl}
+  <!-- start-by -->
+  <text x="${padL}" y="${(H-3).toFixed(1)}" text-anchor="start" font-size="7.5" font-weight="700" fill="#6b7a8d">${esc(startLabel)}</text>
+  <!-- mål-by -->
+  <text x="${(W-padR).toFixed(1)}" y="${(H-3).toFixed(1)}" text-anchor="end" font-size="7.5" font-weight="700" fill="${lineColor}">${esc(malLabel)}</text>
+  <!-- km-label -->
+  <text x="${(padL + plotW/2).toFixed(1)}" y="${(H-3).toFixed(1)}" text-anchor="middle" font-size="7" fill="#3a4a5a">km</text>
+</svg></div>`;
+}
+
+/* ---------- nedtelling ---------- */
+function tick(){
+  const start = new Date(D.live.rittStartISO);
+  const now = new Date();
+  const diff = start - now;
+  const el = $("#countdown");
+  if(diff <= 0){ el.textContent = "Rittet er i gang!"; return; }
+  const d=Math.floor(diff/864e5), h=Math.floor(diff%864e5/36e5), m=Math.floor(diff%36e5/6e4);
+  el.textContent = `⏱ ${d}d ${h}t ${m}m til start`;
+}
+
+/* ---------- DASHBOARD ---------- */
+function renderDash(){
+  const f=D.fakta, L=D.live;
+  $("#raceDates").textContent = f.datoer + " · " + f.grandDepart.split(" —")[0];
+  $("#updated").textContent = "Oppdatert " + L.sisteOppdatering;
+
+  const next = D.etapper.find(e=>e.nr===L.nesteEtappe);
+  let html = "";
+
+  html += `<div class="card">
+    <h2>Status nå</h2>
+    ${L.gulTroye ? `<div class="kv"><span>🟡 Gul</span><span>${esc(L.gulTroye.navn)}</span></div>`:""}
+    ${L.dagensHistorie ? `<div style="margin:6px 0;font-size:13px">${esc(L.dagensHistorie)}</div>`:""}
+    ${next?`<div class="kv"><span>Neste etappe</span><span>#${next.nr} ${esc(next.fra)}→${esc(next.til)}</span></div>`:""}
+    <div class="live-note" style="margin-top:6px">${esc(L.notat)}</div>
+  </div>`;
+
+  if(L.sammenlagtTopp && L.sammenlagtTopp.length){
+    html += `<div class="card"><h2>Sammenlagt</h2>`;
+    L.sammenlagtTopp.forEach(r=>{
+      html+=`<div class="kv"><span>${r.plass}. ${esc(r.navn)}</span><span>${esc(r.diff||"")}</span></div>`;});
+    html+=`</div>`;
+  }
+
+  html += `<div class="card"><h2>Toppfavoritter sammenlagt</h2>`;
+  D.ryttere.filter(r=>r.rolle.startsWith("Sammenlagt")).slice(0,5).forEach((r,i)=>{
+    const tm = teamByKort(r.lag);
+    html += `<div class="fav" onclick="setQuery('${esc(r.navn)}')">
+      <span class="rank">${i+1}</span>
+      <span style="display:inline-block;line-height:0">${jerseySVG(tm,22)}</span>
+      <span class="nm">${esc(r.navn)}</span>
+      <span class="tm">${esc(tm.kort)}</span></div>`;
+  });
+  html += `</div>`;
+
+  html += `<div class="card"><h2>Rittet i tall</h2>
+    <div class="kv"><span>Distanse</span><span>${esc(f.distanse)}</span></div>
+    <div class="kv"><span>Høydemeter</span><span>${esc(f.hoydemeter.split(" (")[0])}</span></div>
+    <div class="kv"><span>Etapper</span><span>${esc(f.fordeling)}</span></div>
+    <div class="kv"><span>Hviledager</span><span>${esc(f.hviledager)}</span></div>
+    <div class="kv"><span>Høyeste punkt</span><span>${esc(f.hoyestePunkt)}</span></div>
+  </div>`;
+
+  html += `<div class="card"><h2>Nøkler til rittet</h2>`;
+  D.noklerTilRittet.forEach(k=>html+=`<div style="font-size:12.5px;padding:4px 0;border-bottom:1px dashed #232b39">• ${esc(k)}</div>`);
+  html += `</div>`;
+
+  html += `<div class="card"><h2>Trøyene</h2>`;
+  D.troyer.forEach(t=>{
+    const dot = t.navn.startsWith("Prikket")?"swatch dot":"swatch";
+    html += `<div class="troye-row"><span class="${dot}" style="background-color:${t.farge}"></span>
+      <span><b>${esc(t.navn)}</b> — <span style="color:var(--dim)">${esc(t.forklaring)}</span></span></div>`;
+  });
+  html += `</div>`;
+
+  html += `<div class="card"><h2>Kilder</h2>`;
+  D.kilder.forEach(k=>html+=`<div style="font-size:13px;padding:2px 0">→ <a href="${k.url}" target="_blank" rel="noopener">${esc(k.navn)}</a></div>`);
+  html += `</div>`;
+
+  $("#dash").innerHTML = html;
+}
+
+/* ---------- RESULTATCHIP ---------- */
+function resultChip(res) {
+  let cls, txt;
+  if (res.type === "seier") {
+    cls = "res-seier"; txt = "1. plass · " + res.ritt;
+  } else if (res.type === "pall") {
+    cls = "res-pall"; txt = res.plass + ". plass · " + res.ritt;
+  } else if (res.type === "GC") {
+    cls = "res-gc"; txt = res.plass + ". sammenl. · " + res.ritt;
+  } else {
+    const t = (res.troye||"").toLowerCase();
+    cls = t.includes("gul") ? "res-troye-gul"
+        : t.includes("grønn") ? "res-troye-gronn"
+        : (t.includes("klatr") || t.includes("prikk")) ? "res-troye-prikket"
+        : "res-troye-hvit";
+    txt = res.troye + " · " + res.ritt;
+  }
+  return `<span class="res-chip ${cls}">${esc(txt)}</span>`;
+}
+
+/* ---------- SØKE-MATCH ---------- */
+function riderText(r){return [r.navn,r.land,r.rolle,r.meritter,r.form,r.historie,teamByKort(r.lag).navn].join(" ");}
+function teamText(t){return [t.navn,t.land,t.leder,t.notat,t.kort].join(" ");}
+function stageText(e){return [e.nr,"etappe",e.fra,e.til,e.type,e.notat,(e.topper||[]).map(t=>t.navn).join(" "),(e.spurter||[]).map(s=>s.navn).join(" ")].join(" ");}
+function statText(s){return [s.tittel,s.tekst].join(" ");}
+function match(text){return norm(text).includes(norm(query));}
+
+/* ---------- RENDER RESULTATER ---------- */
+function render(){
+  const r=$("#results"); let html=""; const q=query.trim();
+  const show=f=>activeFilter==="alle"||activeFilter===f;
+  const norskOnly = activeFilter==="norsk";
+
+  let ryttere=D.ryttere.filter(x=>(!q||match(riderText(x))));
+  if(norskOnly) ryttere=ryttere.filter(x=>x.norsk);
+  if((show("ryttere")||norskOnly) && ryttere.length){
+    html+=secTitle("Ryttere",ryttere.length);
+    html+=`<div class="grid">`+ryttere.map(riderCard).join("")+`</div>`;
+  }
+
+  let lag=D.lag.filter(x=>(!q||match(teamText(x))));
+  if(norskOnly) lag=lag.filter(x=>x.norsk);
+  if((show("lag")||norskOnly) && lag.length){
+    html+=secTitle("Lag",lag.length);
+    html+=`<div class="grid">`+lag.map(teamCard).join("")+`</div>`;
+  }
+
+  let etp=D.etapper.filter(x=>(!q||match(stageText(x))));
+  if(!norskOnly && show("etapper") && etp.length){
+    html+=secTitle("Etapper",etp.length);
+    html+=`<div class="grid-stages">`+etp.map(stageCard).join("")+`</div>`;
+  }
+
+  let stat=D.statistikk.filter(x=>(!q||match(statText(x))));
+  if(!norskOnly && show("statistikk") && stat.length){
+    html+=secTitle("Statistikk & historier",stat.length);
+    html+=`<div class="grid">`+stat.map(statCard).join("")+`</div>`;
+  }
+
+  if(!html) html=`<div class="empty">Ingen treff på «${esc(q)}». Prøv et annet søk eller et annet filter.</div>`;
+  r.innerHTML=html;
+}
+function secTitle(t,n){return `<div class="sec-title">${t} <span class="count">${n}</span></div>`;}
+
+/* ---------- FAKTASJEKK-HJELPER ---------- */
+function usikkerBadge(referanse) {
+  if (typeof FAKTARAPPORT === 'undefined') return '';
+  const items = FAKTARAPPORT.usikker.filter(u =>
+    u.referanse === referanse || u.referanse.includes('(' + referanse + ')')
+  );
+  if (!items.length) return '';
+  const tittel = items.map(u => '⚠ ' + u.pastand + '\n→ ' + u.bekymring).join('\n\n');
+  return `<a class="usikker-warn" href="faktasjekk.html" target="_blank" title="${esc(tittel)}">⚠ usikker</a>`;
+}
+
+/* ---------- KORTRENDERE ---------- */
+function riderCard(r){
+  const tm = teamByKort(r.lag);
+  const jerseyUrl = JERSEY_URLS[r.lag];
+  const avatar = r.foto
+    ? `<img class="photo" src="${esc(r.foto)}" alt="${esc(r.navn)}" width="62" height="72" style="border-radius:10px;object-fit:cover">`
+    : jerseyUrl
+      ? `<div class="avatar" style="background:transparent"><img src="${jerseyUrl}" alt="${esc(tm.kort)}" width="52" height="65" loading="lazy" style="object-fit:contain;display:block"></div>`
+      : `<div class="avatar">${riderSVG(tm, 62)}</div>`;
+  const nr = r.nr ? `<span class="nr-badge">#${r.nr}</span>` : `<span class="nr-badge tbd">nr?</span>`;
+  return `<div class="rider">
+    ${avatar}
+    <div class="body">
+      <div class="nm">${nr} ${hl(r.navn)} ${r.norsk?'<span class="norsk-tag">NOR</span>':''}${usikkerBadge(r.navn)}</div>
+      <div class="role">${esc(r.land)} · ${r.alder?r.alder+" år · ":""}${esc(r.rolle)} · ${esc(tm.kort)}</div>
+      ${r.meritter?`<div class="det"><b>Meritter:</b> ${hl(r.meritter)}</div>`:""}
+      ${(r.form||r.resultater2026)?`<div class="det"><b>Form 2026:</b> ${r.form?hl(r.form):""}${r.resultater2026&&r.resultater2026.length?`<div class="res2026">${r.resultater2026.map(resultChip).join("")}</div>`:""}</div>`:""}
+      ${r.historie?`<div class="det"><b>Historie:</b> ${hl(r.historie)}</div>`:""}
+    </div></div>`;
+}
+
+function teamCard(t){
+  const lagRyttere = (TDF_DATA.ryttere||[]).filter(r => r.lag === t.kort && r.resultater2026 && r.resultater2026.length);
+  const res2026Html = lagRyttere.map(r => {
+    const etternavn = r.navn.split(" ").slice(-1)[0];
+    return `<div class="res-rytter-row"><span class="res-rytter-name">${esc(etternavn)}:</span>${r.resultater2026.map(resultChip).join("")}</div>`;
+  }).join("");
+  return `<div class="team">
+    <div class="jersey-wrap">${jerseySVG(t, 52)}</div>
+    <div class="body">
+      <div class="nm">${hl(t.navn)} ${t.norsk?'<span class="norsk-tag">NOR</span>':''}${usikkerBadge(t.kort)}</div>
+      <div class="sub">${esc(t.land)} · <span style="opacity:.7">${esc(t.kort)}</span></div>
+      ${t.leder&&t.leder!=="—"?`<div class="lead"><b style="color:var(--dim)">Leder:</b> ${hl(t.leder)}</div>`:""}
+      ${t.notat?`<div class="lead" style="color:var(--dim)">${hl(t.notat)}</div>`:""}
+      ${res2026Html?`<div class="det" style="margin-top:5px"><b>Sesong 2026 (Tour-troppen):</b><div>${res2026Html}</div></div>`:""}
+      ${t.tourEtapper?`<div class="det" style="margin-top:5px"><b>TdF-etappeseire (inkl. tidl. lagnavn):</b> <span class="tour-etapper-count">${esc(String(t.tourEtapper.antall))}</span> <span style="color:var(--dim);font-size:12px">· ${hl(t.tourEtapper.noter)}</span></div>`:""}
+    </div></div>`;
+}
+
+function stagePointsHtml(e) {
+  const topper  = (e.topper||[]).filter(t=>t.kat);
+  const isITT   = e.type === 'tempo';
+  const isTTT   = e.type === 'tempo-lag';
+  const sluttPts = SLUTT_POENG[e.nr] || 0;
+
+  const komDeler = topper.map(t => {
+    const pts = KOM_PTS[t.kat] || 1;
+    const katLabel = t.kat === 'HC' ? 'HC' : t.kat + '. kat';
+    return `<span class="hi">${esc(t.navn)}</span> ${katLabel} · ${pts}p`;
+  });
+
+  let lines = [];
+  if (komDeler.length) lines.push('⛰ ' + komDeler.join('&ensp;·&ensp;'));
+
+  if (isTTT) {
+    lines.push('Lagtempo — individuell tid teller · Mål: ' + sluttPts + 'p');
+  } else if (isITT) {
+    lines.push('⏱ Ingen mellomspurt · Mål: <span class="hi">' + sluttPts + 'p</span> · Bonussek.: ingen');
+  } else {
+    lines.push('🏁 2× mellomspurt (25p vinneren) · Mål: <span class="hi">' + sluttPts + 'p</span> · Bonussek.: <span class="hi">10-6-4</span>');
+  }
+
+  return lines.map(l => `<div class="pts-info">${l}</div>`).join('');
+}
+
+function stageCard(e){
+  const tcls={"flat":"t-flat","kupert":"t-kupert","fjell":"t-fjell","tempo":"t-tempo","tempo-lag":"t-tempo-lag"}[e.type]||"";
+  const tlabel={"flat":"Flat","kupert":"Kupert","fjell":"Fjell","tempo":"Tempo","tempo-lag":"Lagtempo"}[e.type]||e.type;
+  const profil = e.profilbilde
+    ? `<div class="elev-wrap"><img src="${esc(e.profilbilde)}" alt="Etappeprofil ${e.nr}" loading="lazy" style="width:100%;border-radius:6px;display:block;margin-top:4px"></div>`
+    : elevationSVG(e);
+  return `<div class="stage ${e.noklet?'key':''}">
+    <div class="stage-top">
+      <div class="num">${e.nr}</div>
+      <div class="body" style="flex:1">
+        <div class="nm">${hl(e.fra)} → ${hl(e.til)} ${e.toppmaal?'⛰️':''}</div>
+        <div class="sub">${esc(e.dato)} · ${e.km} km · <span class="type-tag ${tcls}">${tlabel}</span> ${e.noklet?'<span class="type-tag" style="background:var(--accent);color:#10141b">NØKKEL</span>':''}</div>
+        ${e.notat?`<div class="desc">${hl(e.notat)}</div>`:""}
+        ${stagePointsHtml(e)}
+      </div>
+    </div>
+    ${profil}
+  </div>`;
+}
+
+function statCard(s){
+  return `<div class="stat"><div class="t">${hl(s.tittel)}</div><div class="x">${hl(s.tekst)}</div></div>`;
+}
+
+/* ---------- INTERAKSJON ---------- */
+function setQuery(v){ $("#q").value=v; query=v; render(); $("#q").focus(); }
+$("#q").addEventListener("input",e=>{query=e.target.value;render();});
+$("#filters").addEventListener("click",e=>{
+  if(e.target.tagName!=="BUTTON")return;
+  document.querySelectorAll("#filters button").forEach(b=>b.classList.remove("active"));
+  e.target.classList.add("active"); activeFilter=e.target.dataset.f; render();
+});
+document.addEventListener("keydown",e=>{
+  if(e.key==="/"&&document.activeElement!==$("#q")){e.preventDefault();$("#q").focus();}
+  if(e.key==="Escape"){$("#q").value="";query="";render();$("#q").blur();}
+});
+
+/* ---------- INIT ---------- */
+renderDash(); render(); tick(); setInterval(tick,30000);
+</script>
+</body>
+</html>
