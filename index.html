@@ -137,12 +137,32 @@
   }
   .kart-popup{
     display:none;position:absolute;bottom:calc(100% + 8px);left:0;
-    width:320px;height:210px;
+    width:420px;height:260px;
     background:var(--panel2);border:1px solid var(--line);border-radius:8px;
     overflow:hidden;z-index:500;box-shadow:0 8px 24px rgba(0,0,0,.6);
   }
   .kart-popup iframe{width:100%;height:100%;border:0;display:block}
+  .kart-popup img{width:100%;height:100%;object-fit:contain;display:block;background:#000}
   .kart-trigger:hover .kart-popup{display:block}
+
+  /* ---------- ETAPPEPROFIL HOVER-ZOOM ---------- */
+  .profil-zoom-wrap{position:relative;cursor:zoom-in;margin-top:4px}
+  .profil-zoom-wrap img{width:100%;border-radius:6px;display:block}
+  .profil-big{
+    display:none;position:fixed;
+    width:860px;height:300px;
+    background:var(--panel);border:2px solid var(--line);border-radius:10px;
+    overflow:hidden;z-index:800;box-shadow:0 16px 48px rgba(0,0,0,.9);
+    pointer-events:none;
+  }
+  .profil-big img{width:100%;height:100%;object-fit:contain;display:block}
+  .profil-big svg{width:100%;height:100%}
+  .profil-big-label{
+    position:absolute;top:8px;left:12px;
+    font-size:11px;font-weight:700;color:var(--dim);
+    text-transform:uppercase;letter-spacing:.5px;
+    pointer-events:none;
+  }
 
   /* ---------- RESULTATER 2026-CHIPS ---------- */
   .res2026{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
@@ -711,7 +731,11 @@ function stagePointsHtml(e) {
   return lines.map(l => `<div class="pts-info">${l}</div>`).join('');
 }
 
-function kartPopup(nr) {
+function kartPopup(nr, maalGrafikkUrl) {
+  // Når ASO-bilde er lagt inn (maalGrafikkUrl), vises det i stedet for kart
+  if (maalGrafikkUrl) {
+    return `<span class="kart-trigger">📸 mål-grafikk<div class="kart-popup"><img src="${esc(maalGrafikkUrl)}" alt="Mål etappe ${nr}"></div></span>`;
+  }
   const k = FINISH_COORDS && FINISH_COORDS[nr];
   if (!k) return '';
   const {lat, lon} = k;
@@ -723,9 +747,14 @@ function kartPopup(nr) {
 function stageCard(e){
   const tcls={"flat":"t-flat","kupert":"t-kupert","fjell":"t-fjell","tempo":"t-tempo","tempo-lag":"t-tempo-lag"}[e.type]||"";
   const tlabel={"flat":"Flat","kupert":"Kupert","fjell":"Fjell","tempo":"Tempo","tempo-lag":"Lagtempo"}[e.type]||e.type;
-  const profil = e.profilbilde
-    ? `<div class="elev-wrap"><img src="${esc(e.profilbilde)}" alt="Etappeprofil ${e.nr}" loading="lazy" style="width:100%;border-radius:6px;display:block;margin-top:4px"></div>`
+  const label = `Etappe ${e.nr}: ${e.fra} → ${e.til}`;
+  const profilContent = e.profilbilde
+    ? `<img src="${esc(e.profilbilde)}" alt="Etappeprofil ${e.nr}" loading="lazy">`
     : elevationSVG(e);
+  const profilBigContent = e.profilbilde
+    ? `<img src="${esc(e.profilbilde)}" alt="Etappeprofil ${e.nr}">`
+    : elevationSVG(e);
+  const profil = `<div class="profil-zoom-wrap" data-label="${esc(label)}">${profilContent}<div class="profil-big"><div class="profil-big-label">${esc(label)}</div>${profilBigContent}</div></div>`;
   return `<div class="stage ${e.noklet?'key':''}">
     <div class="stage-top">
       <div class="num">${e.nr}</div>
@@ -734,7 +763,7 @@ function stageCard(e){
         <div class="sub">${esc(e.dato)} · ${e.km} km · <span class="type-tag ${tcls}">${tlabel}</span> ${e.noklet?'<span class="type-tag" style="background:var(--accent);color:#10141b">NØKKEL</span>':''}</div>
         ${e.notat?`<div class="desc">${hl(e.notat)}</div>`:""}
         ${stagePointsHtml(e)}
-        ${kartPopup(e.nr)}
+        ${kartPopup(e.nr, e.maalGrafikkUrl)}
       </div>
     </div>
     ${profil}
@@ -763,7 +792,38 @@ document.addEventListener('mouseover', function(e) {
   const t = e.target.closest('.kart-trigger');
   if (!t) return;
   const iframe = t.querySelector('iframe');
-  if (!iframe.src) iframe.src = t.dataset.src;
+  if (iframe && !iframe.src) iframe.src = t.dataset.src;
+});
+
+/* ---------- ETAPPEPROFIL: zoom ved hover ---------- */
+let activeBig = null;
+document.addEventListener('mouseover', function(e) {
+  const wrap = e.target.closest('.profil-zoom-wrap');
+  if (!wrap) return;
+  const big = wrap.querySelector('.profil-big');
+  if (!big) return;
+  const rect = wrap.getBoundingClientRect();
+  const popW = 860, popH = 300, margin = 12;
+  // Plasser popup: over kortet hvis plass, ellers under
+  let top = rect.top - popH - margin;
+  if (top < margin) top = rect.bottom + margin;
+  // Horisontal: venstrejuster men klem mot høyre kant
+  let left = rect.left;
+  if (left + popW > window.innerWidth - margin) left = window.innerWidth - popW - margin;
+  if (left < margin) left = margin;
+  big.style.top  = top  + 'px';
+  big.style.left = left + 'px';
+  big.style.display = 'block';
+  activeBig = big;
+});
+document.addEventListener('mouseout', function(e) {
+  const wrap = e.target.closest('.profil-zoom-wrap');
+  if (!wrap) return;
+  if (!wrap.contains(e.relatedTarget)) {
+    const big = wrap.querySelector('.profil-big');
+    if (big) big.style.display = 'none';
+    activeBig = null;
+  }
 });
 
 /* ---------- INIT ---------- */
