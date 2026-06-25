@@ -102,6 +102,18 @@ a:hover{text-decoration:underline}
 .workflow-status{margin:0 20px 12px;background:var(--bg2);border:1px solid var(--border);border-radius:6px;padding:10px 14px;font-size:12px}
 .workflow-status .ws-title{font-weight:700;margin-bottom:4px;color:var(--accent)}
 .workflow-status .ws-body{color:var(--dim)}
+
+/* HISTORISK FASIT */
+.fasit-section{margin:12px 20px;border:2px solid #b34700;border-radius:8px;overflow:hidden}
+.fasit-header{background:#3d1a00;padding:10px 14px;display:flex;align-items:center;gap:10px}
+.fasit-header-title{font-size:13px;font-weight:800;color:#ff8c42;text-transform:uppercase;letter-spacing:.6px}
+.fasit-header-sub{font-size:11px;color:#cc6622}
+.fasit-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:0;border-top:1px solid #3d2000}
+.fasit-item{padding:10px 14px;border-right:1px solid #3d2000;border-bottom:1px solid #3d2000;background:#1e0e00}
+.fasit-item:hover{background:#261200}
+.fasit-tittel{font-size:11px;font-weight:700;color:#ff8c42;text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px}
+.fasit-tekst{font-size:12px;color:#e8d5c4;line-height:1.5;margin-bottom:6px}
+.fasit-advarsel{font-size:11px;color:#ffb347;font-style:italic;border-left:2px solid #b34700;padding-left:7px}
 </style>
 </head>
 <body>
@@ -117,6 +129,16 @@ a:hover{text-decoration:underline}
 <div id="workflow-notice" class="workflow-status" style="display:none">
   <div class="ws-title">Automatisk faktasjekk pågår</div>
   <div class="ws-body">Agenter sjekker nøkkelpåstander mot nettet. Oppdater siden etter noen minutter for funn.</div>
+</div>
+
+<div class="fasit-section">
+  <div class="fasit-header">
+    <div>
+      <div class="fasit-header-title">⚠ Historisk fasit — ankerpunkter som aldri kan være feil</div>
+      <div class="fasit-header-sub">Disse fakta er hardkodet. Hvis data.js strider mot disse, er feilen i data.js. Sjekk alltid disse før sending.</div>
+    </div>
+  </div>
+  <div class="fasit-grid" id="fasit-grid"></div>
 </div>
 
 <div class="summary" id="summary-cards">
@@ -164,6 +186,19 @@ a:hover{text-decoration:underline}
 <script>
 // --- DATO ---
 document.getElementById('dato-display').textContent = 'Oppdatert: ' + FAKTARAPPORT.sistOppdatert;
+
+// --- HISTORISK FASIT ---
+function renderFasit() {
+  const grid = document.getElementById('fasit-grid');
+  const items = FAKTARAPPORT.historiskFasit || [];
+  grid.innerHTML = items.map(f => `
+    <div class="fasit-item">
+      <div class="fasit-tittel">${esc(f.tittel)}</div>
+      <div class="fasit-tekst">${esc(f.fasit)}</div>
+      ${f.advarsel ? `<div class="fasit-advarsel">${esc(f.advarsel)}</div>` : ''}
+    </div>`).join('');
+}
+renderFasit();
 
 // --- SUMMARY ---
 function renderSummary() {

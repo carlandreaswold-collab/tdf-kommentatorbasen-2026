@@ -1,10 +1,87 @@
 // Faktarapport — verifisert / usikker / rettet-status for TdF-kommentatorbasen
-// Sist oppdatert: 2026-06-24 (automatisk faktasjekk med 10 agenter)
+// Sist oppdatert: 2026-06-25
 const FAKTARAPPORT = {
-  sistOppdatert: "2026-06-24",
+  sistOppdatert: "2026-06-25 (rev.2)",
+
+  // HISTORISK FASIT — hardkodede sannheter som ALDRI skal motsi disse i data.js
+  // Disse er ankerpunkter. Hvis tekst i basen strider mot disse: feilen er i basen, ikke her.
+  historiskFasit: [
+    {
+      id: "tour-5-ganger",
+      tittel: "Fem Tour-seire — de fire",
+      fasit: "Fire ryttere har vunnet Tour de France 5 ganger: Merckx (1969, 1970, 1971, 1972, 1974), Hinault (1978, 1979, 1981, 1982, 1985), Anquetil (1957, 1961, 1962, 1963, 1964), Indurain (1991, 1992, 1993, 1994, 1995 — eneste med 5 på rad). Armstrong vant 7 (1999–2005), men er fradømt alle titler.",
+      advarsel: "Si ALDRI at bare Merckx og Hinault har 5 — Anquetil og Indurain er like store legender med 5 seire."
+    },
+    {
+      id: "lemond-seire",
+      tittel: "LeMond — 3 Tour-seire",
+      fasit: "Greg LeMond vant Tour 3 ganger: 1986, 1989 og 1990. Aldri mer enn 3.",
+      advarsel: "LeMond er en Tour-legende, men vant 3 — ikke 5."
+    },
+    {
+      id: "ullrich-seire",
+      tittel: "Ullrich — 1 Tour-seier",
+      fasit: "Jan Ullrich vant Tour kun 1 gang: 1997. Ble nummer to fire ganger (1996, 1998, 2000, 2003).",
+      advarsel: "Ullrich er mest kjent for sine mange andreplasser, ikke seire."
+    },
+    {
+      id: "indurain-5-rad",
+      tittel: "Indurain — eneste med 5 på rad",
+      fasit: "Miguel Indurain er den eneste ryttere som har vunnet Tour 5 år på rad (1991–1995).",
+      advarsel: "Dette er unikt i historien — verken Merckx, Hinault eller Anquetil klarte 5 på rad."
+    },
+    {
+      id: "giro-tour-dobbel-ryttere",
+      tittel: "Giro-Tour-dobbelen — alle 8 ryttere",
+      fasit: "8 unike ryttere har vunnet Giro+Tour samme år: Coppi (1949, 1952), Anquetil (1964), Merckx (1970, 1972, 1974), Hinault (1982, 1985), Roche (1987), Induráin (1992, 1993), Pantani (1998), Pogačar (2024). Vingegaard kan bli nr. 9.",
+      advarsel: "Si ALDRI 'kun 5 ryttere' — Hinault, Roche og Induráin mangler da. Roche er dessuten den eneste som også tok VM-gullet samme år (1987)."
+    },
+    {
+      id: "tour-etapper-merckx",
+      tittel: "Merckx — 34 Tour-etappeseire",
+      fasit: "Eddy Merckx vant 34 Tour-etapper. Rekorden sto uutfordret til Cavendish tangerte med etappe 35 i 2024.",
+      advarsel: "Cavendish tangerte rekorden i 2024 (med Astana) — Merckx ble ikke slått, rekorden ble delt."
+    },
+    {
+      id: "pogacar-4-seire-for-2026",
+      tittel: "Pogačar — 4 Tour-seire før 2026",
+      fasit: "Pogačar har vunnet Tour 4 ganger: 2020, 2021, 2024, 2025. Han vant ikke i 2022 (Vingegaard) eller 2023 (Vingegaard).",
+      advarsel: "Husk at Vingegaard slo ham i 2022 og 2023 — ikke si 'unbroken streak' for Pogačar."
+    }
+  ],
 
   // Rettede feil — funnet og fikset i data.js
   rettet: [
+    {
+      id: "giro-tour-dobbel-8-ryttere",
+      kategori: "statistikk",
+      referanse: "Giro-Tour-dobbelen (statistikk)",
+      felt: "tekst",
+      feil: "'Kun 5 ryttere i historien ... Vingegaard kan bli nr. 6' — Hinault (1982/85), Roche (1987) og Induráin (1992/93) mangler. Det er 8 ryttere, og Vingegaard ville bli nr. 9.",
+      korrekt: "8 ryttere: Coppi (1949/52), Anquetil (1964), Merckx (1970/72/74), Hinault (1982/85), Roche (1987), Induráin (1992/93), Pantani (1998), Pogačar (2024). Vingegaard → nr. 9.",
+      kilde: "cyclingweekly.com / Wikipedia",
+      dato: "2026-06-25"
+    },
+    {
+      id: "23-lag-jayco-worldtour",
+      kategori: "statistikk",
+      referanse: "23 lag i Tour (statistikk)",
+      felt: "tekst",
+      feil: "Jayco AlUla listet som wildcard-lag — det er et WorldTour-lag og inviteres automatisk. Cofidis (5. ProTeam-lag) manglet.",
+      korrekt: "De 5 ProTeam-lagene er: Tudor, Pinarello-Q36.5, TotalEnergies, Caja Rural og Cofidis. Jayco AlUla er WorldTour.",
+      kilde: "cyclingweekly.com / Wikipedia – 2026 TdF teams",
+      dato: "2026-06-25"
+    },
+    {
+      id: "pogacar-jakt-femgangsvinnere",
+      kategori: "statistikk",
+      referanse: "Pogačars jakt (statistikk)",
+      felt: "tekst",
+      feil: "'Merckx og Hinault sto på 5. Anquetil, Ullrich og LeMond aldri over 3.' — Anquetil vant faktisk 5 Tour, og Indurain (5 seire) manglet helt fra teksten.",
+      korrekt: "Fire ryttere har nådd 5: Merckx (1969–74), Hinault (1978–85), Anquetil (1957–64) og Indurain (1991–95). LeMond vant 3, Ullrich kun 1.",
+      kilde: "letour.fr historiearkiv / Wikipedia",
+      dato: "2026-06-25"
+    },
     {
       id: "per-strand-hagenes-navn",
       kategori: "rytter",

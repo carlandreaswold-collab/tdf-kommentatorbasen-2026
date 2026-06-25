@@ -129,17 +129,17 @@ const TDF_DATA = {
       topper:[{km:150,navn:"Col du Donon",alt:727,kat:"4"},{km:205,navn:"Ballon d'Alsace",alt:1178,kat:"1"}],
       spurter:[{km:115,navn:"Baume-les-Dames"}]
     },
-    { nr:14, dato:"18. jul", fra:"Mulhouse", til:"Le Markstein", km:155, type:"fjell", toppmaal:false, noklet:true,
+    { nr:14, dato:"18. jul", fra:"Mulhouse", til:"Col du Haag", km:155, type:"fjell", toppmaal:true, noklet:true,
       profilbilde:"https://cdn.cyclingstage.com/images/tour-de-france/2026/stage-14-profile.jpg",
-      notat:"Vosges-klatring, Le Markstein. Tøff dag.",
-      topper:[{km:80,navn:"Col du Platzerwasel",alt:1100,kat:"2"},{km:135,navn:"Grand Ballon",alt:1424,kat:"1"},{km:155,navn:"Le Markstein",alt:1183,kat:"2"}],
+      notat:"Ny Vosges-klatring: Col du Haag — nylig asfaltert sykkelvei, første gang i Tour. Kalt 'alsasisk Col de Loze' (bratt, smal, snodd). Grand Ballon underveis. 3 800 hm totalt.",
+      topper:[{km:80,navn:"Col du Platzerwasel",alt:1100,kat:"2"},{km:135,navn:"Grand Ballon",alt:1424,kat:"1"},{km:155,navn:"Col du Haag",alt:900,kat:"1"}],
       spurter:[{km:50,navn:"Cernay"}]
     },
     { nr:15, dato:"19. jul", fra:"Champagnole", til:"Plateau de Solaison", km:184, type:"fjell", toppmaal:true, noklet:true,
       profilbilde:"https://cdn.cyclingstage.com/images/tour-de-france/2026/stage-15-profile.jpg",
-      notat:"Toppmål Plateau de Solaison rett før hviledag. GC-dag.",
-      topper:[{km:110,navn:"Col de la Ramaz",alt:1619,kat:"1"},{km:184,navn:"Plateau de Solaison",alt:1450,kat:"HC"}],
-      spurter:[{km:85,navn:"Cluses"}]
+      notat:"Mont Salève (9 km, ~9 %, oppover 15 %) før sisteetappen. Solaison-finale: 11 km, 9 %. GC-dag rett før hviledag.",
+      topper:[{km:100,navn:"Mont Salève",alt:1380,kat:"1"},{km:184,navn:"Plateau de Solaison",alt:1450,kat:"HC"}],
+      spurter:[{km:85,navn:"Annemasse"}]
     },
     { nr:16, dato:"21. jul", fra:"Évian-les-Bains", til:"Thonon-les-Bains", km:26, type:"tempo", noklet:true,
       profilbilde:"https://cdn.cyclingstage.com/images/tour-de-france/2026/stage-16-profile.jpg",
@@ -148,8 +148,8 @@ const TDF_DATA = {
     },
     { nr:17, dato:"22. jul", fra:"Chambéry", til:"Voiron", km:175, type:"flat",
       profilbilde:"https://cdn.cyclingstage.com/images/tour-de-france/2026/stage-17-profile.jpg",
-      notat:"Overgangsetappe / brudd før Alpene. Col des Prés + Col de Couz, men flat avslutning.",
-      topper:[{km:45,navn:"Col des Prés",alt:1100,kat:"3"},{km:90,navn:"Col de Couz",alt:730,kat:"4"}],
+      notat:"Overgangsetappe / brudd før Alpene. Col du Frêne + Col de Couz, flat avslutning mot Voiron. Markedsføres som spurt, men bruddet vinner.",
+      topper:[{km:45,navn:"Col du Frêne",alt:1389,kat:"2"},{km:90,navn:"Col de Couz",alt:730,kat:"4"}],
       spurter:[{km:100,navn:"Pontcharra"}]
     },
     { nr:18, dato:"23. jul", fra:"Voiron", til:"Orcières-Merlette", km:185, type:"fjell", toppmaal:true, noklet:true,
@@ -158,10 +158,10 @@ const TDF_DATA = {
       topper:[{km:155,navn:"Col du Noyer",alt:1664,kat:"1"},{km:185,navn:"Orcières-Merlette",alt:1820,kat:"HC"}],
       spurter:[{km:70,navn:"Grenoble"}]
     },
-    { nr:19, dato:"24. jul", fra:"Gap", til:"Alpe d'Huez", km:128, type:"fjell", toppmaal:true, noklet:true,
+    { nr:19, dato:"24. jul", fra:"Gap", til:"Alpe d'Huez", km:130, type:"fjell", toppmaal:true, noklet:true,
       profilbilde:"https://cdn.cyclingstage.com/images/tour-de-france/2026/stage-19-profile.jpg",
-      notat:"Kort og eksplosiv. Alpe d'Huez fra tradisjonell side (21 hårnålssvinger). Abrahamsen i brudd?",
-      topper:[{km:50,navn:"Col d'Ornon",alt:1367,kat:"2"},{km:128,navn:"Alpe d'Huez",alt:1860,kat:"HC"}],
+      notat:"Tre klatringer: Col de Bayard → Col du Noyer → Col d'Ornon → 21 hårnålssvinger opp Alpe d'Huez (13 km, 8 %+). Abrahamsen i brudd?",
+      topper:[{km:30,navn:"Col de Bayard",alt:1246,kat:"2"},{km:60,navn:"Col du Noyer",alt:1664,kat:"1"},{km:95,navn:"Col d'Ornon",alt:1367,kat:"2"},{km:130,navn:"Alpe d'Huez",alt:1860,kat:"HC"}],
       spurter:[{km:40,navn:"Corps"}]
     },
     { nr:20, dato:"25. jul", fra:"Le Bourg-d'Oisans", til:"Alpe d'Huez", km:171, type:"fjell", toppmaal:true, noklet:true,
@@ -1046,12 +1046,12 @@ const TDF_DATA = {
     { tittel:"Dobbel Alpe d'Huez", tekst:"Første gang i historien at Alpe d'Huez er mål to dager på rad (etappe 19 og 20). Pidcock vant der i 2022 — begge dagene passer ham." },
     { tittel:"Galibier på topp", tekst:"Col du Galibier (2 642 m) er rittets høyeste punkt, på dronningetappe 20." },
     { tittel:"Norsk WorldTour-lag", tekst:"Uno-X Mobility rykket opp til WorldTour for 2026. 8 ryttere i Tour — flertallet er norske. Abrahamsen vant Brussels Classic i 2024. Wærenskjold vant Baloise Belgium Tour i 2024 (2026 gikk til Philipsen). Beste norske forberedelse noensinne." },
-    { tittel:"Pogačars jakt", tekst:"Tadej Pogačar jakter en rekordtangerende 5. Tour-seier. Merckx og Hinault sto på 5. Anquetil, Ullrich og LeMond aldri over 3." },
-    { tittel:"Giro-Tour-dobbelen", tekst:"Vingegaard vant Giroen 2026 og forsøker den sjeldne Giro-Tour-dobbelen. Kun 5 ryttere i historien: Coppi (1952), Anquetil (1964), Merckx (1972), Pantani (1998) — og Pogačar i 2024. Vingegaard kan bli nr. 6." },
+    { tittel:"Pogačars jakt", tekst:"Tadej Pogačar jakter en rekordtangerende 5. Tour-seier. Fire ryttere har nådd 5: Merckx (1969–74), Hinault (1978–85), Anquetil (1957–64) og Indurain (1991–95, som eneste konsekutiv). Armstrong vant 7 men er fradømt alt. LeMond vant 3 (1986, 1989, 1990), Ullrich kun 1 (1997)." },
+    { tittel:"Giro-Tour-dobbelen", tekst:"Vingegaard vant Giroen 2026 og forsøker den sjeldne Giro-Tour-dobbelen. 8 ryttere i historien har klart det: Coppi (1949/52), Anquetil (1964), Merckx (1970/72/74), Hinault (1982/85), Roche (1987), Induráin (1992/93), Pantani (1998) og Pogačar (2024). Vingegaard kan bli nr. 9." },
     { tittel:"Lite tempo", tekst:"Kun ~46 tempokilometer totalt (lagtempo + ett enkelttempo). Favoriserer rene klatrere. Evenepoel trenger MAKS uttelling på etappe 16." },
     { tittel:"Wout van Aert IKKE med", tekst:"Van Aert er ikke på Vismas Tour-lag i 2026 — stort fravær. Jorgenson, Kuss og Armirail som backup for Vingegaard." },
     { tittel:"Ayuso byttet lag", tekst:"Juan Ayuso forlot UAE og signerte med Lidl-Trek til 2026 — stor overgang. Nå møter han eks-lagkamerat Pogačar som rival." },
-    { tittel:"23 lag i Tour", tekst:"5 wildcard-lag i tillegg til 18 WorldTour-lag: Tudor (Alaphilippe), Pinarello-Q36.5 (Pidcock), Jayco AlUla, TotalEnergies, Caja Rural. Pidcock er mørkt hest." },
+    { tittel:"23 lag i Tour", tekst:"5 ProTeam-lag i tillegg til 18 WorldTour-lag: Tudor (Alaphilippe), Pinarello-Q36.5 (Pidcock), TotalEnergies, Caja Rural og Cofidis. Jayco AlUla er WorldTour og trenger ikke wildcard. Pidcock er mørkt hest." },
     { tittel:"Seixas — 19 år", tekst:"Paul Seixas er født 2006 og debuterer i Tour som 19-åring. Vant Itzulia Basque Country i april 2026. Hvit-troye-favoritt. Enorm press fra Frankrike." }
   ],
 
@@ -1070,4 +1070,29 @@ const TDF_DATA = {
     { navn:"The Inner Ring", url:"https://inrng.com/" },
     { navn:"TV2 Sykkel", url:"https://www.tv2.no/sport/sykkel/" }
   ]
+};
+
+/* ---- MÅLKOORDINATER (for hover-kart) ---- */
+const FINISH_COORDS = {
+  1:  {lat:41.3641, lon:2.1527},   // Barcelona/Montjuïc
+  2:  {lat:41.3641, lon:2.1527},   // Barcelona/Montjuïc
+  3:  {lat:42.5431, lon:2.0198},   // Les Angles
+  4:  {lat:42.9676, lon:1.6052},   // Foix
+  5:  {lat:43.2951, lon:-0.3707},  // Pau
+  6:  {lat:42.7290, lon:-0.0093},  // Gavarnie-Gèdre
+  7:  {lat:44.8378, lon:-0.5792},  // Bordeaux
+  8:  {lat:44.8500, lon:0.4833},   // Bergerac
+  9:  {lat:45.5472, lon:2.3075},   // Ussel
+  10: {lat:45.1064, lon:2.7432},   // Le Lioran
+  11: {lat:46.9917, lon:3.1575},   // Nevers
+  12: {lat:46.7806, lon:4.8528},   // Chalon-sur-Saône
+  13: {lat:47.8197, lon:6.8536},   // Ballon d'Alsace
+  14: {lat:47.970,  lon:7.060},    // Col du Haag
+  15: {lat:46.180,  lon:6.562},    // Plateau de Solaison
+  16: {lat:46.3708, lon:6.4786},   // Thonon-les-Bains
+  17: {lat:45.3631, lon:5.5889},   // Voiron
+  18: {lat:44.6914, lon:6.3297},   // Orcières-Merlette
+  19: {lat:45.0909, lon:6.0730},   // Alpe d'Huez
+  20: {lat:45.0909, lon:6.0730},   // Alpe d'Huez (via Sarenne)
+  21: {lat:48.8698, lon:2.3093}    // Paris/Champs-Élysées
 };
