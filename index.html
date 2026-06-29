@@ -143,7 +143,12 @@
   }
   .kart-popup iframe{width:100%;height:100%;border:0;display:block}
   .kart-popup img{width:100%;height:100%;object-fit:contain;display:block;background:#000}
-  .kart-trigger:hover .kart-popup{display:block}
+
+  /* ---------- TROPP-KNAPP ---------- */
+  .tropp-trigger{position:relative;display:inline-block;margin-top:6px}
+  .tropp-btn{background:#1e2d45;color:#7aa8cc;border:1px solid #2a3a55;border-radius:5px;font-size:10.5px;padding:2px 9px;cursor:pointer;font-family:inherit;font-weight:700;letter-spacing:.4px}
+  .tropp-btn:hover{background:#243050;color:#9cc4e8}
+  .tropp-popup{display:none;position:absolute;z-index:600;background:#141d2e;border:1px solid #2a3a55;border-radius:8px;padding:8px 14px;font-size:12px;line-height:1.85;white-space:nowrap;top:30px;left:0;box-shadow:0 6px 20px rgba(0,0,0,.7)}
 
   /* ---------- ETAPPEPROFIL HOVER-ZOOM ---------- */
   .profil-zoom-wrap{position:relative;cursor:zoom-in;margin-top:4px}
@@ -689,6 +694,8 @@ function riderCard(r){
 
 function teamCard(t){
   const lagRyttere = (TDF_DATA.ryttere||[]).filter(r => r.lag === t.kort && r.resultater2026 && r.resultater2026.length);
+  const alleRyttere = (TDF_DATA.ryttere||[]).filter(r => r.lag === t.kort);
+  const tropNavn = alleRyttere.length ? alleRyttere.map(r => esc(r.navn)).join('<br>') : esc(t.ryttere||'');
   const res2026Html = lagRyttere.map(r => {
     const etternavn = r.navn.split(" ").slice(-1)[0];
     return `<div class="res-rytter-row"><span class="res-rytter-name">${esc(etternavn)}:</span>${r.resultater2026.map(resultChip).join("")}</div>`;
@@ -700,6 +707,7 @@ function teamCard(t){
       <div class="sub">${esc(t.land)} · <span style="opacity:.7">${esc(t.kort)}</span></div>
       ${t.leder&&t.leder!=="—"?`<div class="lead"><b style="color:var(--dim)">Leder:</b> ${hl(t.leder)}</div>`:""}
       ${t.notat?`<div class="lead" style="color:var(--dim)">${hl(t.notat)}</div>`:""}
+      <span class="tropp-trigger"><button class="tropp-btn" type="button">TROPP</button><div class="tropp-popup">${tropNavn}</div></span>
       ${res2026Html?`<div class="det" style="margin-top:5px"><b>Sesong 2026 (Tour-troppen):</b><div>${res2026Html}</div></div>`:""}
       ${t.tourEtapper?`<div class="det" style="margin-top:5px"><b>TdF-etappeseire (inkl. tidl. lagnavn):</b> <span class="tour-etapper-count">${esc(String(t.tourEtapper.antall))}</span> <span style="color:var(--dim);font-size:12px">· ${hl(t.tourEtapper.noter)}</span></div>`:""}
     </div></div>`;
@@ -787,12 +795,58 @@ document.addEventListener("keydown",e=>{
   if(e.key==="Escape"){$("#q").value="";query="";render();$("#q").blur();}
 });
 
-/* ---------- MÅL-KART: last iframe ved hover ---------- */
+/* ---------- MÅL-KART: 1 sekunds forsinkelse ---------- */
+let kartTimer = null, kartActive = null;
 document.addEventListener('mouseover', function(e) {
   const t = e.target.closest('.kart-trigger');
+  if (t === kartActive) return;
+  if (kartActive) {
+    clearTimeout(kartTimer);
+    const p = kartActive.querySelector('.kart-popup');
+    if (p) p.style.display = 'none';
+  }
+  kartActive = t;
   if (!t) return;
-  const iframe = t.querySelector('iframe');
-  if (iframe && !iframe.src) iframe.src = t.dataset.src;
+  kartTimer = setTimeout(function() {
+    const iframe = t.querySelector('iframe');
+    if (iframe && !iframe.src) iframe.src = t.dataset.src;
+    const popup = t.querySelector('.kart-popup');
+    if (popup) popup.style.display = 'block';
+  }, 1000);
+});
+document.addEventListener('mouseout', function(e) {
+  const t = e.target.closest('.kart-trigger');
+  if (!t || t.contains(e.relatedTarget)) return;
+  clearTimeout(kartTimer);
+  const popup = t.querySelector('.kart-popup');
+  if (popup) popup.style.display = 'none';
+  kartActive = null;
+});
+
+/* ---------- TROPP-POPUP: 1 sekunds forsinkelse ---------- */
+let troppTimer = null, troppActive = null;
+document.addEventListener('mouseover', function(e) {
+  const t = e.target.closest('.tropp-trigger');
+  if (t === troppActive) return;
+  if (troppActive) {
+    clearTimeout(troppTimer);
+    const p = troppActive.querySelector('.tropp-popup');
+    if (p) p.style.display = 'none';
+  }
+  troppActive = t;
+  if (!t) return;
+  troppTimer = setTimeout(function() {
+    const popup = t.querySelector('.tropp-popup');
+    if (popup) popup.style.display = 'block';
+  }, 1000);
+});
+document.addEventListener('mouseout', function(e) {
+  const t = e.target.closest('.tropp-trigger');
+  if (!t || t.contains(e.relatedTarget)) return;
+  clearTimeout(troppTimer);
+  const popup = t.querySelector('.tropp-popup');
+  if (popup) popup.style.display = 'none';
+  troppActive = null;
 });
 
 /* ---------- ETAPPEPROFIL: zoom ved hover ---------- */
