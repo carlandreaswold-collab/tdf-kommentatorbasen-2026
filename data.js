@@ -774,10 +774,11 @@ const TDF_DATA = {
 
     /* ---- GROUPAMA–FDJ UNITED ---- */
     { navn:"Romain Grégoire", lag:"GFC", land:"Frankrike", alder:22, rolle:"Allrounder / klatrer", nr:null, foto:"",
-      meritter:"Etappeseier Tour de Suisse 2026, etappeseier Tour de France 2025",
-      form:"Vant etappe 2 i Tour de Suisse 2026 — holdt unna for Pogačar. Toppet poengklassementet i TdS. FDJ-unge stjerne. Kan overraske på kuperte avslutninger og er i god form.",
+      meritter:"Etappeseier Tour de Suisse 2026, vant grønn trøye Tour de Suisse 2026, etappeseier Tour de France 2025",
+      form:"Vant etappe 2 i Tour de Suisse 2026 — holdt unna for Pogačar. Vant GRØNN TRØYE (poengklassementet) i Tour de Suisse. FDJ-unge stjerne. Kan overraske på kuperte avslutninger og er i god form.",
       resultater2026:[
-        {type:"seier", ritt:"Tour de Suisse etappe 2"}
+        {type:"seier", ritt:"Tour de Suisse etappe 2"},
+        {type:"troye", ritt:"Tour de Suisse", troye:"Grønn trøye (poeng)"}
       ],
       historie:"22 år — Frankrikes neste store. Bred profil og mye driv. Vant etappe i Tour de France 2025 — venter på å eksplodere i 2026." },
     { navn:"Valentin Madouas", lag:"GFC", land:"Frankrike", alder:31, rolle:"Klassiker / allrounder", nr:null, foto:"",
@@ -829,9 +830,12 @@ const TDF_DATA = {
       form:"Erfaren SQS-klassikerrytter. Jakter etapper.",
       historie:"Vant Milano-Sanremo 2021. Passer kuperte avslutninger." },
     { navn:"Louis Vervaeke", lag:"SOQ", land:"Belgia", alder:31, rolle:"Hjelper / klatrer", nr:null, foto:"",
-      meritter:"Solid hjelper",
-      form:"Viktig klatrehjelper for Landa.",
-      historie:"Erfaren belgisk hjelper for SQS." },
+      meritter:"Vant klatretrøya Tour de Suisse 2026",
+      form:"Vant KLATRETRØYA (prikket trøye) i Tour de Suisse 2026 — bevist at han er en ekte klatrer. Viktig klatrehjelper for Van Wilder og laget i Tour.",
+      resultater2026:[
+        {type:"troye", ritt:"Tour de Suisse", troye:"Klatretrøye"}
+      ],
+      historie:"Erfaren belgisk klatrer og hjelper for SQS. Tour de Suisse-klatretrøyen viser at han kan konkurrere med de beste på toppen." },
     { navn:"Ilan Van Wilder", lag:"SOQ", land:"Belgia", alder:24, rolle:"Klatrer / allrounder", nr:null, foto:"",
       meritter:"Lovende klatrer, etappeseirer",
       form:"Ung SQS-klatrer. Kan overraske på rette dager.",
