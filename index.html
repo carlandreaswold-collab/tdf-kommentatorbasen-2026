@@ -156,13 +156,13 @@
   .profil-zoom-wrap img{width:100%;border-radius:6px;display:block}
   .profil-big{
     display:none;position:fixed;
-    width:860px;height:300px;
+    width:1200px;height:500px;
     background:var(--panel);border:2px solid var(--line);border-radius:10px;
     overflow:hidden;z-index:800;box-shadow:0 16px 48px rgba(0,0,0,.9);
     pointer-events:none;
   }
   .profil-big img{width:100%;height:100%;object-fit:contain;display:block}
-  .profil-big svg{width:100%;height:100%}
+  .profil-big svg{width:100%!important;height:100%!important}
   .profil-big-label{
     position:absolute;top:8px;left:12px;
     font-size:11px;font-weight:700;color:var(--dim);
@@ -578,6 +578,12 @@ function renderDash(){
     <div class="kv"><span>Høyeste punkt</span><span>${esc(f.hoyestePunkt)}</span></div>
   </div>`;
 
+  if(L.preTourNytt && L.preTourNytt.length){
+    html += `<div class="card"><h2>Pre-Tour nøkkelresultater</h2>`;
+    L.preTourNytt.forEach(n=>html+=`<div style="font-size:12px;padding:4px 0;border-bottom:1px dashed #232b39;line-height:1.4">${esc(n)}</div>`);
+    html += `</div>`;
+  }
+
   html += `<div class="card"><h2>Nøkler til rittet</h2>`;
   D.noklerTilRittet.forEach(k=>html+=`<div style="font-size:12.5px;padding:4px 0;border-bottom:1px dashed #232b39">• ${esc(k)}</div>`);
   html += `</div>`;
@@ -867,7 +873,7 @@ document.addEventListener('mouseover', function(e) {
     const big = wrap.querySelector('.profil-big');
     if (!big) return;
     const rect = wrap.getBoundingClientRect();
-    const popW = 860, popH = 300, margin = 12;
+    const popW = 1200, popH = 500, margin = 12;
     let top = rect.top - popH - margin;
     if (top < margin) top = rect.bottom + margin;
     let left = rect.left;

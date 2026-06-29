@@ -23,7 +23,11 @@ const TDF_DATA = {
     prikketTroye: null,
     hvitTroye: null,
     sammenlagtTopp: [],
-    dagensHistorie: ""
+    dagensHistorie: "",
+    preTourNytt: [
+      "Tour de Suisse (17–22 jun): 🏆 Pogačar (UAE) — +6:32 til nr.2 · Grønn: Grégoire (FDJ) · 🔴 Klatretrøye: Vervaeke (SQS) · Hvit: Vacek (LTK) · 5. Van Wilder (SQS)",
+      "Tour Auvergne-Rhône-Alpes (7–14 jun): 🏆 Del Toro (UAE) · 2. Tuckwell (RBH) · 3. Ayuso (LTK) · Etappeseire: Baudin(EF) · Charmig(UNO) · Simmons(LTK) · Van Gils(RBH)"
+    ]
   },
 
   /* ---- FAKTA OM RITTET ---- */
@@ -863,8 +867,11 @@ const TDF_DATA = {
       historie:"Erfaren belgisk klatrer og hjelper for SQS. Tour de Suisse-klatretrøyen viser at han kan konkurrere med de beste på toppen." },
     { navn:"Ilan Van Wilder", lag:"SOQ", land:"Belgia", alder:24, rolle:"Klatrer / allrounder", nr:null, foto:"",
       meritter:"Lovende klatrer, etappeseirer",
-      form:"Ung SQS-klatrer. Kan overraske på rette dager.",
-      historie:"Ung belgisk klatrer med stor potensial." },
+      form:"5. plass sammenlagt Tour de Suisse 2026 — SQS sin nye GC-leder etter Landas frafall. Ung og undervurdert. Kan overraske i fjellene.",
+      resultater2026:[
+        {type:"GC", ritt:"Tour de Suisse", plass:5}
+      ],
+      historie:"Ung belgisk klatrer med stor potensial. Overrasket med 5. plass i Tour de Suisse — er i god klatreform inn mot Tour." },
 
     /* ---- BAHRAIN VICTORIOUS ---- */
     { navn:"Lenny Martínez", lag:"TBV", land:"Frankrike", alder:23, rolle:"Klatrer / GC-talent", nr:null, foto:"",
