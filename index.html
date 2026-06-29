@@ -692,7 +692,7 @@ function riderCard(r){
     ${avatar}
     <div class="body">
       <div class="nm">${nr} ${hl(r.navn)} ${r.norsk?'<span class="norsk-tag">NOR</span>':''}${usikkerBadge(r.navn)}</div>
-      <div class="role">${esc(r.land)} · ${r.alder?r.alder+" år · ":""}${esc(r.rolle)} · ${esc(tm.kort)}</div>
+      <div class="role">${esc(r.land)} · ${r.alder?r.alder+" år · ":""}${esc(r.rolle)} · ${esc(tm.navn)}</div>
       ${r.skade?`<div class="skade-note">🩹 ${esc(r.skade)}</div>`:""}
       ${r.meritter?`<div class="det"><b>Meritter:</b> ${hl(r.meritter)}</div>`:""}
       ${(r.form||r.resultater2026)?`<div class="det"><b>Form 2026:</b> ${r.form?hl(r.form):""}${r.resultater2026&&r.resultater2026.length?`<div class="res2026">${r.resultater2026.map(resultChip).join("")}</div>`:""}</div>`:""}
