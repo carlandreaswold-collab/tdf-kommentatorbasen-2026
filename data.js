@@ -416,6 +416,7 @@ const TDF_DATA = {
         {type:"seier", ritt:"Volta a Catalunya"},
         {type:"GC", ritt:"Giro d'Italia", plass:1}
       ],
+      skade:"Krasj i trening Malaga (jan) + sykdom (feb) + krasj Paris-Nice etappe 5 (mars, kutt i leppen + håndledd). Ingen vedvarende problem — vant Paris-Nice og Giroen 2026.",
       historie:"Klatrer i verdensklasse. Eneste toppfavoritt fra Giroen i år. #11." },
 
     { navn:"Remco Evenepoel", lag:"RBH", land:"Belgia", alder:26, rolle:"Sammenlagt / tempo", nr:21, foto:"",
@@ -425,6 +426,7 @@ const TDF_DATA = {
         {type:"seier", ritt:"Amstel Gold Race"},
         {type:"pall", ritt:"Liège-Bastogne-Liège", plass:3}
       ],
+      skade:"Albueskade vår 2026 — minimalt racing siden april. Savnet belgiske NM (regulatorisk spørsmål pågår). Frisk til Tour.",
       historie:"Må ta tid på tempoen og overleve Alpene. Elbow-skade i vår forstyrret forberedelsene. #21." },
 
     { navn:"Paul Seixas", lag:"DEC", land:"Frankrike", alder:19, rolle:"Sammenlagt (talent)", nr:null, foto:"",
@@ -435,6 +437,7 @@ const TDF_DATA = {
         {type:"seier", ritt:"La Flèche Wallonne"},
         {type:"pall", ritt:"Liège-Bastogne-Liège", plass:2}
       ],
+      skade:"Stygt krasj 70 km/t Tour Auvergne etappe 7 — begge hender skadet + ryggsmerter, abandonerte. MR og innendørstrening. Bekreftet start.",
       historie:"Tidenes mest hypede franske Tour-debut (19 år). Enorm press hjemme. Dersom han overlever uka 1, er han en faktor i fjellet." },
 
     { navn:"Juan Ayuso", lag:"LTK", land:"Spania", alder:23, rolle:"Sammenlagt", nr:null, foto:"",
@@ -443,11 +446,13 @@ const TDF_DATA = {
       resultater2026:[
         {type:"GC", ritt:"Tour Auvergne-Rhône-Alpes", plass:3}
       ],
+      skade:"Krasj Paris-Nice etappe 4 (mars, ambulanse, ingen brudd) + viral infeksjon april → nesten 2 mnd ute. Mistet Ardennene. Tilbake: 3. plass Tour Auvergne.",
       historie:"Tidligere UAE-rytter. Sterk GC-kandidat på spansk jord i Grand Départ. Han angrep på Grand Colombier i Auvergne — men Del Toro var sterkere." },
 
     { navn:"Cian Uijtdebroeks", lag:"MOV", land:"Belgia", alder:23, rolle:"Sammenlagt", nr:null, foto:"",
       meritter:"Tour de Suisse-podium, stor Tour-talent",
       form:"Movistar-kaptein for GC. Ung belgier med imponerende klatreegenskaper. Underfavoritt.",
+      skade:"Hårsprekk i albue-radiusen (krasj Volta a Valencia etappe 3, feb 2026). Fullt restituert — «ingen problemer nå».",
       historie:"En av syklingens største talenter. Movistar satser alt på ham i Tour." },
 
     { navn:"Tom Pidcock", lag:"PQ3", land:"Storbr.", alder:26, rolle:"Sammenlagt / brudd", nr:null, foto:"",
@@ -456,6 +461,7 @@ const TDF_DATA = {
       resultater2026:[
         {type:"pall", ritt:"Milano-Sanremo", plass:2}
       ],
+      skade:"Ravine-krasj 60 km/t Volta a Catalunya etappe 5 (mars) — beinmølje + leddbåndsskader i kne + håndledd. Viral infeksjon (TdS, juni). Vant i Andorra 18 dager før Tour.",
       historie:"Vant etappen på Alpe d'Huez i 2022 — kommer tilbake dit på etappe 19 og 20." },
 
     { navn:"Richard Carapaz", lag:"EFE", land:"Ecuador", alder:33, rolle:"Sammenlagt", nr:null, foto:"",
@@ -464,16 +470,19 @@ const TDF_DATA = {
       resultater2026:[
         {type:"GC", ritt:"Tour de Suisse", plass:2}
       ],
+      skade:"Operert for cyste tidlig 2026 — 24 dager uten sykkel, mistet Giro d'Italia. Frisk: 2. plass Tour de Suisse bak Pogačar (6:32).",
       historie:"Ecuadors største sykkelhelt. OL-mester 2021. Giro-vinner 2019. Offensiv stil passer kuperte etapper i Tour." },
 
     { navn:"Florian Lipowitz", lag:"RBH", land:"Tyskland", alder:25, rolle:"Sammenlagt", nr:22, foto:"",
       meritter:"Topp-10 Grand Tours",
       form:"Red Bulls andre GC-kort ved siden av Evenepoel. Kan ta over hvis Evenepoel taper tid.",
+      skade:"Post-TdF 2025: gjentatte sykdommer + neseskille-operasjon → 8 uker uten sykling. Fullt restituert i 2026 (vant Tour of Slovenia).",
       historie:"Jevn og sterk klatrer. Slår neppe «romvesenene», men kan ende på pallen." },
 
     { navn:"Lennert Van Eetvelt", lag:"LIN", land:"Belgia", alder:23, rolle:"Sammenlagt", nr:null, foto:"",
       meritter:"Vuelta-podium, topp GC-talent",
       form:"Lotto-Intermarché-kaptein for GC. En av Belgias neste store.",
+      skade:"Brukket midtfinger venstre hånd + albu/underarm (krasj Giro etappe 11, mai 2026). Bakgrunn: brukket metatars + ryggvirvelbrudd TdF 2025.",
       historie:"Ung og aggressiv klatrer. Outsider for pallen." },
 
     /* ---- KLASSIKER/SPURT ---- */
@@ -484,6 +493,7 @@ const TDF_DATA = {
         {type:"seier", ritt:"Omloop Het Nieuwsblad"},
         {type:"seier", ritt:"E3 Saxo Classic"}
       ],
+      skade:"Brukket håndrotsbein (scaphoid) + leddbånd — MTB-krasj Nové Město (mai 2026). Rask bedring, klar til Tour.",
       historie:"Barnebarn av Raymond Poulidor. Eksplosiv på kuperte dager." },
 
     { navn:"Jasper Philipsen", lag:"APT", land:"Belgia", alder:27, rolle:"Spurt", nr:null, foto:"",
@@ -494,11 +504,13 @@ const TDF_DATA = {
         {type:"GC", ritt:"Baloise Belgium Tour", plass:1},
         {type:"seier", ritt:"Copenhagen Sprint"}
       ],
+      skade:"Brukket kragebein + AC-ledd + 2 ribbein (krasj TdF 2025 etappe 3) — operasjon. Fullt restituert til 2026.",
       historie:"Alpecins rakettskyting. Trener med van der Poel — genialt duo." },
 
     { navn:"Mads Pedersen", lag:"LTK", land:"Danmark", alder:29, rolle:"Spurt / klassiker", nr:null, foto:"",
       meritter:"Verdensmester 2019, Ronde van Vlaanderen-vinner 2022",
       form:"Lidl-Treks spurter. Sterk på kuperte avslutninger.",
+      skade:"Brukket venstre håndledd + høyre kragebein (Volta a Valencia, 4. feb 2026) — operasjon. Tilbake etter kun 6,5 uker i Milano-Sanremo.",
       historie:"Dansk allrounder. Jakter etapper på flate og halvkuperte dager." },
 
     { navn:"Biniam Girmay", lag:"NSN", land:"Eritrea", alder:24, rolle:"Spurt / klassiker", nr:null, foto:"",
@@ -509,11 +521,13 @@ const TDF_DATA = {
     { navn:"Julian Alaphilippe", lag:"TUD", land:"Frankrike", alder:33, rolle:"Klassiker / brudd", nr:null, foto:"",
       meritter:"2x verdensmester (2020, 2021), vant Tour-etapper, Monument-podier",
       form:"Tudor wildcard. Tilbake i Tour etter å ha forlatt Quick-Step. Sulten på etapper.",
+      skade:"Viral sykdom vår 2026 — abandonerte/DNS Amstel, Flèche Wallonne og Liège. Tilbake i Tour de Suisse (DNS siste etappe).",
       historie:"Fransk publikumsfavoritt — ingen skaper mer spenning i brudd og i teten." },
 
     { navn:"Ben Healy", lag:"EFE", land:"Irland", alder:24, rolle:"Etappejeger / klatrer", nr:null, foto:"",
       meritter:"Giro-etappeseier, Strade Bianche 2024",
       form:"EFs etappetruer. Sterk i brudd og på kuperte etapper.",
+      skade:"Krasjet mot tilskuer 50 km/t (TT-rekognosering Itzulia, april) → uoppdaget korsbensbrudd. Kjørte alle 6 Itzulia-etapper! Bekreftet start.",
       historie:"Irsk klatrepunch — passer det kuperte terrenget i Tour." },
 
     /* ---- NORSK INTERESSE ---- */
@@ -523,12 +537,14 @@ const TDF_DATA = {
       resultater2026:[
         {type:"pall", ritt:"Tour Auvergne-Rhône-Alpes etappe 6", plass:2}
       ],
+      skade:"Alvorlig sykdom TdF 2025 (oksygen + sykehus etter etappe 16 Mont Ventoux). Brukket kragebein (Gran Piemonte, høst 2025). Fullt restituert til 2026.",
       historie:"Tvilling — bror Anders Johannessen er med på Uno-X Tour-laget 2026! Norsk klatrehåp. Kan komme sterk i uka 3. Uka 3 er der GC gjøres opp i Alpene." },
 
     { navn:"Jonas Abrahamsen", lag:"UNO", land:"Norge", alder:30, rolle:"Brudd / klatring", nr:null, foto:"", norsk:true,
       meritter:"Tour de France etappeseier, vant Brussels Cycling Classic 2024",
       form:"Bruddspesialist som liker å gå langt fra mål. I god form inn mot Tour. Vant Brussels Classic i 2024.",
       resultater2026:[],
+      skade:"BRUKKET KRAGEBEIN — Baloise Belgium Tour etappe 1 (18. juni!). Bekreftet start 9 dager etter bruddet. «Kanskje er jeg en superhelt.»",
       historie:"Kjent for vekttap-reisen og offensiv kjøring. Norsk etappejeger #1." },
 
     { navn:"Søren Wærenskjold", lag:"UNO", land:"Norge", alder:25, rolle:"Spurt / tempo / klassiker", nr:null, foto:"", norsk:true,
@@ -550,6 +566,7 @@ const TDF_DATA = {
     { navn:"Magnus Cort", lag:"UNO", land:"Danmark", alder:32, rolle:"Etappejeger / spurt", nr:null, foto:"",
       meritter:"2 Tour de France etappeseire (2018 og 2022), 6 Vuelta-etappeseire",
       form:"Uno-X-kaptein på flate og kuperte etapper. Erfaren etappejeger — 2 Tour-seire (2018, 2022) og 6 Vuelta-seire. Ikke forveks Vuelta- og Tour-tallene på lufta.",
+      skade:"Mystisk utmattelse/sykdom mid-2025 — avsluttet sesongen tidlig. Fullt frisk i 2026. SISTE TOUR — annonserte karriereslutt ved sesongslutt 2026.",
       historie:"Meget populær rytter. Verdensrekordholder i antall Vuelta-etappeseire blant levende ryttere. 2 Tour-etappeseiere (2018 og 2022)." },
 
     { navn:"Matteo Jorgenson", lag:"VLB", land:"USA", alder:26, rolle:"Sammenlagt / hjelper", nr:null, foto:"",
@@ -565,6 +582,7 @@ const TDF_DATA = {
         {type:"seier", ritt:"Antwerp Port Epic"},
         {type:"pall", ritt:"E3 Saxo Classic", plass:2}
       ],
+      skade:"Syk under Tour Auvergne — abandonerte foran etappe 7. Fullt restituert. NB: Erstattet Laporte (lårskade) på Visma-laget.",
       historie:"Norsk allrounder, ikke ren klatrer. Første Visma-akademiryktter til å nå Tour-laget. Sa selv: «Det er en enorm ære — belønning for fem års arbeid»." },
 
     /* ---- UAE TEAM EMIRATES ---- */
@@ -577,6 +595,7 @@ const TDF_DATA = {
         {type:"seier", ritt:"Tour Auvergne-Rhône-Alpes etappe 8 (Plateau de Solaison)"},
         {type:"troye", ritt:"Tour Auvergne-Rhône-Alpes", troye:"Beste unge rytter"}
       ],
+      skade:"Lårmuskelrift høyre ben (krasj Itzulia etappe 3, april 2026) — nesten 2 mnd ute. Returnerte Tour Auvergne som test. Klar til Tour.",
       historie:"Mexicansk superstjerne in spe. 22 år. Pogačars viktigste støttespiller og arvtaker. NB: Plateau de Solaison er SAMME toppmål som Tour-etappe 15 — del Toro kjenner bakken godt!" },
     { navn:"Brandon McNulty", lag:"UAE", land:"USA", alder:27, rolle:"Allrounder / tempo / hjelper", nr:null, foto:"",
       meritter:"Sterk Grand Tour-hjelper, temposterk",
@@ -642,6 +661,7 @@ const TDF_DATA = {
       resultater2026:[
         {type:"GC", ritt:"Giro d'Italia", plass:3}
       ],
+      skade:"2024: Gjentatte sykdommer → neseskille-operasjon. Tidlig 2026 syk igjen. Kjempet gjennom sykdom i Giroen, ble likevel 3.",
       historie:"Vant Giroen 2022. Kjent klatrer som hjelper Red Bull-laget i fjellene." },
     { navn:"Mattia Cattaneo", lag:"RBH", land:"Italia", alder:32, rolle:"Allrounder / hjelper", nr:null, foto:"",
       meritter:"Etappeseirer, solid hjelper",
@@ -664,6 +684,7 @@ const TDF_DATA = {
     { navn:"Mattias Skjelmose", lag:"LTK", land:"Danmark", alder:24, rolle:"Sammenlagt / klatrer", nr:null, foto:"",
       meritter:"Tour de Suisse-vinner 2023, topp klatrer",
       form:"Lidl-Treks 2. GC-kort. Ung og eksplosiv.",
+      skade:"Krasj Paris-Nice etappe 7 (snøvær, mars) + magejinfeksjon → DNS Tour Auvergne OG Tour de Suisse (mai-juni). Vant i Andorra sent juni — «formen er der til Tour».",
       historie:"Ung dansk klatrer. Vant Tour de Suisse 2023. Skal hjelpe Ayuso men kan ta egne sjanser." },
     { navn:"Søren Kragh Andersen", lag:"LTK", land:"Danmark", alder:31, rolle:"Etappejeger / allrounder", nr:null, foto:"",
       meritter:"2 Tour de France etappeseire (2020), sterk allrounder",
@@ -730,6 +751,7 @@ const TDF_DATA = {
       meritter:"Tour de France-vinner 2019, Giro d'Italia-vinner 2021",
       form:"TILBAKE I TOUR! Vant Tour 2019 og Giro 2021, men har slitt med rygg- og helseskader etter stygg sykkelulykke i Colombia i januar 2022 (krevde komplisert ryggoperasjon). Nå bekreftet på INEOS-laget til Tour de France 2026 — en av de mest emosjonelle historiene i dette Tour.",
       resultater2026:[],
+      skade:"BUS-ULYKKE jan 2022: brukket T5-T6-virvler, lårbeinet, 11 ribbein, punktert lunge — nær dødelig. Kne-tendinopati tidlig 2026 (mars-april). I støtterolle.",
       historie:"Colombiansk legende. Yngste Tour-vinner siden 1983. Ulykken i 2022 (kolliderte med en buss i trening) var dramatisk — legen sa det var nær livstruende. Hans comeback er en av syklingens store historier. NB: Nå 28 år — kan han vinne igjen?" },
     { navn:"Thymen Arensman", lag:"IGD", land:"Nederland", alder:25, rolle:"Klatrer / GC", nr:null, foto:"",
       meritter:"Vuelta-etappeseirer, 4. plass Giro d'Italia 2026",
@@ -737,14 +759,17 @@ const TDF_DATA = {
       resultater2026:[
         {type:"GC", ritt:"Giro d'Italia", plass:4}
       ],
+      skade:"Krasj i grusparti Tirreno-Adriatico etappe 2 (mars 2026). Omfang av skader ikke kjent, men bekreftet til Tour.",
       historie:"Nederlandsk klatrer. Vant etapper i Vueltaen. Ambisiøs GC-kandidat." },
     { navn:"Filippo Ganna", lag:"IGD", land:"Italia", alder:29, rolle:"Tempo-spesialist", nr:null, foto:"",
       meritter:"4x verdensmester enkeltstart, olympisk mester",
       form:"Farligste mann i tempoet (etappe 16). Kan ta gul trøye tidlig på lagtempo.",
+      skade:"Hjernerystelse med hukommelsestap (krasj TdF 2025 etappe 1) — forlot rittet. Ingen skader i 2026 — klar til Tour.",
       historie:"Verdens beste temposyklist. Holder ikke i fjellet, men etappe 16 er hans store sjanse." },
     { navn:"Carlos Rodríguez", lag:"IGD", land:"Spania", alder:24, rolle:"Klatrer / GC", nr:null, foto:"",
       meritter:"Topp-5 Tour de France, etappeseirer",
       form:"INEOS' GC-kaptein. Ung spansk klatrer med stor fremtid.",
+      skade:"Krasj nedover ~100 km/t Tour de Romandie etappe 4 (2026) — slapp unna med skrubbsår. Er nå INEOSs primære GC-kort etter Onley-frafall.",
       historie:"24 år og allerede topp-5 i Tour. Spansk klatrehåp for INEOS." },
     { navn:"Kévin Vauquelin", lag:"IGD", land:"Frankrike", alder:25, rolle:"Klatrer / etappejeger", nr:null, foto:"",
       meritter:"Kritérium du Dauphiné-etappe, sterk klatrer",
@@ -897,6 +922,7 @@ const TDF_DATA = {
     { navn:"Arnaud De Lie", lag:"LIN", land:"Belgia", alder:23, rolle:"Spurt / puncheur", nr:null, foto:"",
       meritter:"Mange énsdagsseire, sterk spurter",
       form:"Lotto sin spurtkaptein. 23 år og allerede en av de beste på kuperte avslutninger.",
+      skade:"Brukket ankel (trapp-fall jul 2025) + sykdom (cobbles-klassikerne) + Campylobacter-infeksjon mai 2026. Likevel på startlisten til Tour.",
       historie:"Belgisk kraftspurter. Elsker kuperte avslutninger. Kan slå VdP og Philipsen på riktig dag." },
     { navn:"Georg Zimmermann", lag:"LIN", land:"Tyskland", alder:28, rolle:"Klatrer / etappejeger", nr:null, foto:"",
       meritter:"Tour-etappeseier, klatrespesialist",
@@ -1094,6 +1120,7 @@ const TDF_DATA = {
     { navn:"Michael Matthews", lag:"JAY", land:"Australia", alder:35, rolle:"Klassiker / spurt", nr:null, foto:"",
       meritter:"7 Tour-etappeseire, Milano-Sanremo-finalist, grønn trøye 2017",
       form:"Erfaren spurter og klassiker-truer. 35 år men fortsatt i toppform.",
+      skade:"Lungeemboli 2025 (oppdaget på høydeleir) — nær-dødelig, 4 mnd ute. Krasj 5. mars 2026: åpent brudd høyre arm + brukket håndledd/tommel. Utrolig comeback.",
       historie:"Australsk legende. Vant 7 Tour-etapper. Grønn trøye 2017. Sterk på kuperte avslutninger." },
     { navn:"Ben O'Connor", lag:"JAY", land:"Australia", alder:30, rolle:"Klatrer / GC", nr:null, foto:"",
       meritter:"4. plass Tour 2021, etappeseirer",
@@ -1102,6 +1129,7 @@ const TDF_DATA = {
     { navn:"Luke Plapp", lag:"JAY", land:"Australia", alder:24, rolle:"Allrounder / tempo / GC-talent", nr:null, foto:"",
       meritter:"Sterk allrounder, temposterk",
       form:"Ung australsk GC-håp. Sterk på tempo og klatring.",
+      skade:"Sykdom under Tour Auvergne — DNS etappe 8. Frisk til Tour.",
       historie:"24 år og allerede bredt anerkjent talent. Kan bli stor GC-rytter." },
     { navn:"Pascal Ackermann", lag:"JAY", land:"Tyskland", alder:31, rolle:"Spurt", nr:null, foto:"",
       meritter:"Etappeseirer i Grand Tours",
@@ -1193,7 +1221,9 @@ const TDF_DATA = {
     { tittel:"Wout van Aert IKKE med", tekst:"Van Aert er ikke på Vismas Tour-lag i 2026 — stort fravær. Jorgenson, Kuss og Armirail som backup for Vingegaard." },
     { tittel:"Ayuso byttet lag", tekst:"Juan Ayuso forlot UAE og signerte med Lidl-Trek til 2026 — stor overgang. Nå møter han eks-lagkamerat Pogačar som rival." },
     { tittel:"23 lag i Tour", tekst:"5 ProTeam-lag i tillegg til 18 WorldTour-lag: Tudor (Alaphilippe), Pinarello-Q36.5 (Pidcock), TotalEnergies, Caja Rural og Cofidis. Jayco AlUla er WorldTour og trenger ikke wildcard. Pidcock er mørkt hest." },
-    { tittel:"Seixas — 19 år", tekst:"Paul Seixas er født 2006 og debuterer i Tour som 19-åring. Vant Itzulia Basque Country i april 2026. Hvit-troye-favoritt. Enorm press fra Frankrike." }
+    { tittel:"Seixas — 19 år", tekst:"Paul Seixas er født 2006 og debuterer i Tour som 19-åring. Vant Itzulia Basque Country i april 2026. Hvit-troye-favoritt. Enorm press fra Frankrike." },
+    { tittel:"TARA-viruset herjet feltet", tekst:"Tour Auvergne-Rhône-Alpes (7–14 juni 2026) var epidemisk: av 154 startere fullførte kun 91 — 63 abandonerte. En viral sykdom spredte seg gjennom pelotongen og kasserte store navn. Utøvere som hoppet over TARA (Evenepoel, Vingegaard, van der Poel) unngikk smitte. Konsekvenser: Landa ute av Tour, Onley (INEOS) skadet, Seixas og Abrahamsen klarte seg — knapt." },
+    { tittel:"Vismas pre-Tour-mareritt", tekst:"Visma | Lease a Bike mister tre nøkkelryttere før Tour: Van Aert ut (albueskade+infeksjon), Laporte ut (lårskade), Affini usikker (skritt-kutt, italienske NM 26. juni). Erstatninger: Piganzoli (erstattet van Aert), Hagenes (erstattet Laporte), Lemmen som mulig Affini-erstatning. Vingegaard stiller altså uten sin beste støttestjerne (van Aert) inn i det viktigste rittet." }
   ],
 
   /* ---- TRØYENE ---- */

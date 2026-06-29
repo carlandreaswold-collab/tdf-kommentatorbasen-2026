@@ -97,6 +97,7 @@
   .rider .role{color:var(--dim);font-size:12.5px}
   .rider .det{font-size:12.5px;margin-top:6px}
   .rider .det b{color:var(--dim);font-weight:600}
+  .skade-note{font-size:11px;color:#e07e2a;margin-top:3px;padding:2px 7px;background:rgba(224,126,42,.1);border-left:2px solid #e07e2a;border-radius:0 4px 4px 0}
   .flag-no{background:linear-gradient(90deg,#ba0c2f 33%,#fff 33% 66%,#00205b 66%);width:18px;height:12px;border-radius:2px;display:inline-block;border:1px solid #0006}
   .nr-badge{background:var(--accent);color:#10141b;border-radius:6px;padding:0 6px;font-weight:800;font-size:12px}
   .nr-badge.tbd{background:#2a3242;color:var(--dim)}
@@ -686,6 +687,7 @@ function riderCard(r){
     <div class="body">
       <div class="nm">${nr} ${hl(r.navn)} ${r.norsk?'<span class="norsk-tag">NOR</span>':''}${usikkerBadge(r.navn)}</div>
       <div class="role">${esc(r.land)} · ${r.alder?r.alder+" år · ":""}${esc(r.rolle)} · ${esc(tm.kort)}</div>
+      ${r.skade?`<div class="skade-note">🩹 ${esc(r.skade)}</div>`:""}
       ${r.meritter?`<div class="det"><b>Meritter:</b> ${hl(r.meritter)}</div>`:""}
       ${(r.form||r.resultater2026)?`<div class="det"><b>Form 2026:</b> ${r.form?hl(r.form):""}${r.resultater2026&&r.resultater2026.length?`<div class="res2026">${r.resultater2026.map(resultChip).join("")}</div>`:""}</div>`:""}
       ${r.historie?`<div class="det"><b>Historie:</b> ${hl(r.historie)}</div>`:""}
