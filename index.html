@@ -137,13 +137,13 @@
     position:relative;user-select:none;margin-top:4px;
   }
   .kart-popup{
-    display:none;position:absolute;bottom:calc(100% + 8px);left:0;
-    width:420px;height:260px;
+    display:none;position:fixed;
+    width:480px;height:428px;
     background:var(--panel2);border:1px solid var(--line);border-radius:8px;
     overflow:hidden;z-index:500;box-shadow:0 8px 24px rgba(0,0,0,.6);
   }
   .kart-popup iframe{width:100%;height:100%;border:0;display:block}
-  .kart-popup img{width:100%;height:100%;object-fit:contain;display:block;background:#000}
+  .kart-popup img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;background:#000}
 
   /* ---------- TROPP-KNAPP ---------- */
   .tropp-trigger{position:relative;display:inline-block;margin-top:6px}
@@ -819,7 +819,21 @@ document.addEventListener('mouseover', function(e) {
     const iframe = t.querySelector('iframe');
     if (iframe && !iframe.src) iframe.src = t.dataset.src;
     const popup = t.querySelector('.kart-popup');
-    if (popup) popup.style.display = 'block';
+    if (!popup) return;
+    const pw = 480, ph = 428, gap = 10;
+    const card = t.closest('.stage') || t;
+    const cr = card.getBoundingClientRect();
+    const vw = window.innerWidth, vh = window.innerHeight;
+    // Plasser til høgre for kortet, eller til venstre om ikkje plass
+    let left = cr.right + gap;
+    if (left + pw > vw - 8) left = cr.left - pw - gap;
+    left = Math.max(8, left);
+    // Vertikalt: juster slik at popupen ikkje går utanfor
+    let top = cr.top;
+    top = Math.max(8, Math.min(top, vh - ph - 8));
+    popup.style.left = left + 'px';
+    popup.style.top  = top  + 'px';
+    popup.style.display = 'block';
   }, 1000);
 });
 document.addEventListener('mouseout', function(e) {
