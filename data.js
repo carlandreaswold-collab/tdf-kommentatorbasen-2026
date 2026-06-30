@@ -5,7 +5,7 @@
    hver etappe (~2 timer før start). Selve appen (index.html) rører
    jeg ikke. Alt under er vanlig JSON-aktig JavaScript.
 
-   Sist oppdatert: 2026-06-30  (startliste fullstendig oppdatert fra PCS — 39 nye rytterkort, 13 fjerninger. 2 lag ikke fullt bekreftet: INEOS (mangler ~3) og APT (mangler ~2))
+   Sist oppdatert: 2026-06-30  (startliste + etappedata fra offisiell kommentatorboka. Etappe 13 slutter i Belfort (ikkje toppmål!), etappe 14 i Le Markstein. Alle km-markørar for klatringar korrigert.)
    Kilder: ProCyclingStats, CyclingUpToDate, unoxteam.com, CyclingStage,
            CyclingNews, Wikipedia.
    ============================================================= */
@@ -62,122 +62,143 @@ const TDF_DATA = {
   /* ---- ETAPPER ---- */
   etapper: [
     { nr:1, dato:"4. jul", fra:"Barcelona", til:"Barcelona/Montjuïc", km:19.7, type:"tempo-lag", noklet:true,
-      profilbilde:"https://cdn.cyclingstage.com/images/tour-de-france/2026/stage-1-profile.jpg",
+      profilbilde:"img/profil/e01_profil.jpg",
+      maalGrafikkUrl:"img/mal/e01_mal.jpg",
       notat:"Lagtempo. Flat start, kupert finale opp mot Montjuïc. Individuell tid teller. Setter tidlige GC-marginer.",
       topper:[{km:19.7,navn:"Montjuïc",alt:175,kat:"4"}],spurter:[]
     },
     { nr:2, dato:"5. jul", fra:"Tarragona", til:"Barcelona/Montjuïc", km:168.5, type:"kupert", noklet:true,
-      profilbilde:"https://cdn.cyclingstage.com/images/tour-de-france/2026/stage-2-profile.jpg",
+      profilbilde:"img/profil/e02_profil.jpg",
+      maalGrafikkUrl:"img/mal/e02_mal.jpg",
       notat:"~2 500 hm. Avgjøres på Montjuïc-rundene. Punchere/klassikerryttere — van der Poel, Pidcock, Alaphilippe.",
       topper:[{km:168.5,navn:"Montjuïc",alt:175,kat:"4"}],
       spurter:[{km:95,navn:"Sant Sadurní d'Anoia"}]
     },
     { nr:3, dato:"6. jul", fra:"Granollers", til:"Les Angles", km:195.9, type:"fjell", toppmaal:true, noklet:true,
-      profilbilde:"https://cdn.cyclingstage.com/images/tour-de-france/2026/stage-3-profile.jpg",
-      notat:"Krysser Pyreneene inn i Frankrike. 3 850 hm, oppoverbakkemål. Tidlig GC-test.",
-      topper:[{km:140,navn:"Col de la Quillane",alt:1714,kat:"1"},{km:195.9,navn:"Les Angles",alt:1602,kat:"1"}],
-      spurter:[{km:75,navn:"Ripoll"}]
+      profilbilde:"img/profil/e03_profil.jpg",
+      maalGrafikkUrl:"img/mal/e03_mal.jpg",
+      notat:"Granollers → Pyreneene → Les Angles. Col de Toses (km 128, 1778 m, 9,3 km/6,5 %), Col du Calvaire (km 172, 1836 m), Col de la Quillane (km 184, 1716 m) → toppmål Les Angles. Tidlig GC-test.",
+      topper:[{km:128,navn:"Col de Toses",alt:1778,kat:"1"},{km:172,navn:"Col du Calvaire",alt:1836,kat:"HC"},{km:184,navn:"Col de la Quillane",alt:1716,kat:"1"},{km:195.9,navn:"Les Angles",alt:1602,kat:"1"}],
+      spurter:[{km:91,navn:"Ripoll"}]
     },
     { nr:4, dato:"7. jul", fra:"Carcassonne", til:"Foix", km:182, type:"kupert",
-      profilbilde:"https://cdn.cyclingstage.com/images/tour-de-france/2026/stage-4-profile.jpg",
+      profilbilde:"img/profil/e04_profil.jpg",
+      maalGrafikkUrl:"img/mal/e04_mal.jpg",
       notat:"Pyreneenes utløpere. Siste ~35 km mest nedover — bruddetappe.",
       topper:[{km:115,navn:"Col de Marmare",alt:600,kat:"3"}],
       spurter:[{km:100,navn:"Pamiers"}]
     },
     { nr:5, dato:"8. jul", fra:"Lannemezan", til:"Pau", km:158, type:"flat",
-      profilbilde:"https://cdn.cyclingstage.com/images/tour-de-france/2026/stage-5-profile.jpg",
+      profilbilde:"img/profil/e05_profil.jpg",
+      maalGrafikkUrl:"img/mal/e05_mal.jpg",
       notat:"Spurtsjanse. Pau er klassisk Tour-by. Philipsen, Merlier, De Lie, Kooij, Pedersen.",
       topper:[],spurter:[{km:90,navn:"Tarbes"}]
     },
-    { nr:6, dato:"9. jul", fra:"Pau", til:"Gavarnie-Gèdre", km:186, type:"fjell", toppmaal:true, noklet:true,
-      profilbilde:"https://cdn.cyclingstage.com/images/tour-de-france/2026/stage-6-profile.jpg",
-      notat:"Col d'Aspin + Col du Tourmalet før mål i Cirque de Gavarnie. Stor fjelldag.",
-      topper:[{km:79,navn:"Col d'Aspin",alt:1489,kat:"2"},{km:155,navn:"Col du Tourmalet",alt:2115,kat:"HC"},{km:186,navn:"Gavarnie-Gèdre",alt:1350,kat:"HC"}],
-      spurter:[{km:40,navn:"Lourdes"}]
+    { nr:6, dato:"9. jul", fra:"Pau", til:"Gavarnie-Gèdre", km:186.2, type:"fjell", toppmaal:true, noklet:true,
+      profilbilde:"img/profil/e06_profil.jpg",
+      maalGrafikkUrl:"img/mal/e06_mal.jpg",
+      notat:"Pau → Lourdes (km 37,5) → Col d'Aspin (km 118, 1489 m, HC) → Col du Tourmalet (km 148, 2115 m, HC — Souvenir Jacques Goddet) → toppmål Gavarnie-Gèdre (1350 m). Klassisk pyrenesk storetappe.",
+      topper:[{km:77,navn:"Col de Mauvezin",alt:518,kat:"3"},{km:118,navn:"Col d'Aspin",alt:1489,kat:"1"},{km:148,navn:"Col du Tourmalet",alt:2115,kat:"HC"},{km:186,navn:"Gavarnie-Gèdre",alt:1380,kat:"HC"}],
+      spurter:[{km:37,navn:"Lourdes"}]
     },
     { nr:7, dato:"10. jul", fra:"Hagetmau", til:"Bordeaux", km:175, type:"flat",
-      profilbilde:"https://cdn.cyclingstage.com/images/tour-de-france/2026/stage-7-profile.jpg",
+      profilbilde:"img/profil/e07_profil.jpg",
+      maalGrafikkUrl:"img/mal/e07_mal.jpg",
       notat:"Klassisk massespurt i Bordeaux.",
       topper:[],spurter:[{km:100,navn:"Mont-de-Marsan"}]
     },
-    { nr:8, dato:"11. jul", fra:"Périgueux", til:"Bergerac", km:182, type:"flat",
-      profilbilde:"https://cdn.cyclingstage.com/images/tour-de-france/2026/stage-8-profile.jpg",
+    { nr:8, dato:"11. jul", fra:"Périgueux", til:"Bergerac", km:180.4, type:"flat",
+      profilbilde:"img/profil/e08_profil.jpg",
+      maalGrafikkUrl:"img/mal/e08_mal.jpg",
       notat:"Flat — spurterne.",
       topper:[],spurter:[{km:105,navn:"Sainte-Alvère"}]
     },
-    { nr:9, dato:"12. jul", fra:"Malemort", til:"Ussel", km:185, type:"kupert",
-      profilbilde:"https://cdn.cyclingstage.com/images/tour-de-france/2026/stage-9-profile.jpg",
-      notat:"Kupert inn mot Massif Central. Bruddfare.",
-      topper:[{km:120,navn:"Côte de la Croix des Frères",alt:700,kat:"4"}],
-      spurter:[{km:100,navn:"Bort-les-Orgues"}]
+    { nr:9, dato:"12. jul", fra:"Malemort", til:"Ussel", km:185.5, type:"kupert",
+      profilbilde:"img/profil/e09_profil.jpg",
+      maalGrafikkUrl:"img/mal/e09_mal.jpg",
+      notat:"Kupert inn mot Massif Central via Turenne, Collonges-la-Rouge. Suc au May (km 105) og Mont Bessou (km 161) — bruddfare.",
+      topper:[{km:105,navn:"Suc au May",alt:903,kat:"3"},{km:129,navn:"Côte de la Croix du Pey",alt:817,kat:"4"},{km:161,navn:"Mont Bessou",alt:977,kat:"3"}],
+      spurter:[{km:65,navn:"Tulle"}]
     },
     { nr:10, dato:"14. jul", fra:"Aurillac", til:"Le Lioran", km:167, type:"kupert", noklet:true,
-      profilbilde:"https://cdn.cyclingstage.com/images/tour-de-france/2026/stage-10-profile.jpg",
-      notat:"Nasjonaldagen 14. juli. Le Lioran — eksplosiv kupert dag, ofte franske offensiver. Seixas vs GC-favorittene.",
-      topper:[{km:167,navn:"Le Lioran",alt:1160,kat:"2"}],
-      spurter:[{km:80,navn:"Murat"}]
+      profilbilde:"img/profil/e10_profil.jpg",
+      maalGrafikkUrl:"img/mal/e10_mal.jpg",
+      notat:"Nasjonaldagen 14. juli. Cantal-fjellene: Puy Mary/Pas de Peyrol (km 136, 1589 m) → Col de Pertus (km 152) → toppmål Le Lioran. Franske offensiver på hjemmedag.",
+      topper:[{km:97,navn:"Col de la Griffoul",alt:1336,kat:"2"},{km:104,navn:"Col de Prat de Bouc",alt:1392,kat:"2"},{km:136,navn:"Puy Mary / Pas de Peyrol",alt:1589,kat:"1"},{km:152,navn:"Col de Pertus",alt:1309,kat:"2"},{km:167,navn:"Le Lioran",alt:1160,kat:"2"}],
+      spurter:[{km:113,navn:"Murat"}]
     },
     { nr:11, dato:"15. jul", fra:"Vichy", til:"Nevers", km:161, type:"flat",
-      profilbilde:"https://cdn.cyclingstage.com/images/tour-de-france/2026/stage-11-profile.jpg",
+      profilbilde:"img/profil/e11_profil.jpg",
+      maalGrafikkUrl:"img/mal/e11_mal.jpg",
       notat:"Spurtsjanse.",
       topper:[],spurter:[{km:90,navn:"Moulins"}]
     },
-    { nr:12, dato:"16. jul", fra:"Magny-Cours", til:"Chalon-sur-Saône", km:181, type:"flat",
-      profilbilde:"https://cdn.cyclingstage.com/images/tour-de-france/2026/stage-12-profile.jpg",
+    { nr:12, dato:"16. jul", fra:"Magny-Cours", til:"Chalon-sur-Saône", km:179.1, type:"flat",
+      profilbilde:"img/profil/e12_profil.jpg",
+      maalGrafikkUrl:"img/mal/e12_mal.jpg",
       notat:"Flat — spurterne.",
       topper:[],spurter:[{km:100,navn:"Cluny"}]
     },
-    { nr:13, dato:"17. jul", fra:"Dole", til:"Ballon d'Alsace", km:205, type:"fjell", toppmaal:true, noklet:true,
-      profilbilde:"https://cdn.cyclingstage.com/images/tour-de-france/2026/stage-13-profile.jpg",
-      notat:"Lengste etappe (205 km). Ballon d'Alsace som toppmål — legendarisk Vosges-klatring (1 178 m, 9 km, 6,9 %). Klassisk TdF-stigning fra 1905.",
-      topper:[{km:150,navn:"Col du Donon",alt:727,kat:"4"},{km:205,navn:"Ballon d'Alsace",alt:1178,kat:"1"}],
-      spurter:[{km:115,navn:"Baume-les-Dames"}]
+    { nr:13, dato:"17. jul", fra:"Dole", til:"Belfort", km:205.8, type:"kupert", noklet:true,
+      profilbilde:"img/profil/e13_profil.jpg",
+      maalGrafikkUrl:"img/mal/e13_mal.jpg",
+      notat:"Lengste etappe (206 km). Ballon d'Alsace (km 176, 1173 m, HC) er storeklatringen — men etappen slutter FLATT ned til Belfort. Klassisk TdF-stigning fra 1905, men ingen toppmål.",
+      topper:[{km:157,navn:"Col des Croix",alt:678,kat:"4"},{km:176,navn:"Ballon d'Alsace",alt:1173,kat:"1"}],
+      spurter:[{km:126,navn:"Lure"}]
     },
-    { nr:14, dato:"18. jul", fra:"Mulhouse", til:"Col du Haag", km:155, type:"fjell", toppmaal:true, noklet:true,
-      profilbilde:"https://cdn.cyclingstage.com/images/tour-de-france/2026/stage-14-profile.jpg",
-      notat:"Ny Vosges-klatring: Col du Haag — nylig asfaltert sykkelvei, første gang i Tour. Kalt 'alsasisk Col de Loze' (bratt, smal, snodd). Grand Ballon underveis. 3 800 hm totalt.",
-      topper:[{km:80,navn:"Col du Platzerwasel",alt:1100,kat:"2"},{km:135,navn:"Grand Ballon",alt:1424,kat:"1"},{km:155,navn:"Col du Haag",alt:900,kat:"1"}],
-      spurter:[{km:50,navn:"Cernay"}]
+    { nr:14, dato:"18. jul", fra:"Mulhouse", til:"Le Markstein", km:155, type:"fjell", toppmaal:true, noklet:true,
+      profilbilde:"img/profil/e14_profil.jpg",
+      maalGrafikkUrl:"img/mal/e14_mal.jpg",
+      notat:"Toppmål Le Markstein Fellering (1040–1265 m) — 2. gang i Tour-historien. Runden: Grand Ballon (km 37, 1336 m) → Le Markstein 1. pasering (km 44) → Ballon d'Alsace (km 94) → Col du Haag (km 149, bratt ny asfalt, 'alsasisk Col de Loze') → Le Markstein mål. Serge Lang, grunnleggeren av alpint-VM, herfra.",
+      topper:[{km:26,navn:"Vieil-Armand / Hartmannswillerkopf",alt:889,kat:"4"},{km:37,navn:"Grand Ballon",alt:1336,kat:"1"},{km:44,navn:"Le Markstein (1. pasering)",alt:1192,kat:"2"},{km:94,navn:"Ballon d'Alsace",alt:1173,kat:"1"},{km:149,navn:"Col du Haag",alt:1233,kat:"1"},{km:155,navn:"Le Markstein (MÅL)",alt:1192,kat:"1"}],
+      spurter:[{km:12,navn:"Bollwiller"}]
     },
-    { nr:15, dato:"19. jul", fra:"Champagnole", til:"Plateau de Solaison", km:184, type:"fjell", toppmaal:true, noklet:true,
-      profilbilde:"https://cdn.cyclingstage.com/images/tour-de-france/2026/stage-15-profile.jpg",
-      notat:"Mont Salève (9 km, ~9 %, oppover 15 %) før sisteetappen. Solaison-finale: 11 km, 9 %. GC-dag rett før hviledag.",
-      topper:[{km:100,navn:"Mont Salève",alt:1380,kat:"1"},{km:184,navn:"Plateau de Solaison",alt:1450,kat:"HC"}],
-      spurter:[{km:85,navn:"Annemasse"}]
+    { nr:15, dato:"19. jul", fra:"Champagnole", til:"Plateau de Solaison", km:183.9, type:"fjell", toppmaal:true, noklet:true,
+      profilbilde:"img/profil/e15_profil.jpg",
+      maalGrafikkUrl:"img/mal/e15_mal.jpg",
+      notat:"Jura → Ain → Haute-Savoie. Côte des Rousses (km 37, 1097 m) → Col de la Croisette/Le Salève (km 136, 1175 m) → toppmål Plateau de Solaison Brison (km 184, 1508 m, 6,7 km). GC-dag rett før hviledag.",
+      topper:[{km:37,navn:"Côte des Rousses",alt:1097,kat:"3"},{km:136,navn:"Col de la Croisette / Le Salève",alt:1175,kat:"2"},{km:183.9,navn:"Plateau de Solaison",alt:1508,kat:"HC"}],
+      spurter:[{km:91,navn:"Bellegarde-sur-Valserine"}]
     },
-    { nr:16, dato:"21. jul", fra:"Évian-les-Bains", til:"Thonon-les-Bains", km:26, type:"tempo", noklet:true,
-      profilbilde:"https://cdn.cyclingstage.com/images/tour-de-france/2026/stage-16-profile.jpg",
+    { nr:16, dato:"21. jul", fra:"Évian-les-Bains", til:"Thonon-les-Bains", km:26.1, type:"tempo", noklet:true,
+      profilbilde:"img/profil/e16_profil.jpg",
+      maalGrafikkUrl:"img/mal/e16_mal.jpg",
       notat:"Eneste enkelttempo. 9 km stigning ut av Évian, så flatt langs Genfersjøen. Evenepoels nøkkeldag. Ganna farlig.",
       topper:[{km:9,navn:"Topp Évian-stigning",alt:850,kat:"4"}],spurter:[]
     },
-    { nr:17, dato:"22. jul", fra:"Chambéry", til:"Voiron", km:175, type:"flat",
-      profilbilde:"https://cdn.cyclingstage.com/images/tour-de-france/2026/stage-17-profile.jpg",
-      notat:"Overgangsetappe / brudd før Alpene. Col du Frêne + Col de Couz, flat avslutning mot Voiron. Markedsføres som spurt, men bruddet vinner.",
-      topper:[{km:45,navn:"Col du Frêne",alt:1389,kat:"2"},{km:90,navn:"Col de Couz",alt:730,kat:"4"}],
-      spurter:[{km:100,navn:"Pontcharra"}]
+    { nr:17, dato:"22. jul", fra:"Chambéry", til:"Voiron", km:160, type:"kupert",
+      profilbilde:"img/profil/e17_profil.jpg",
+      maalGrafikkUrl:"img/mal/e17_mal.jpg",
+      notat:"Chambéry → Aix-les-Bains → Aillon-le-Jeune → Col des Prés (km 50, 1142 m) → loop tilbake til Chambéry → Col de Couz (km 84, 623 m) → Les Échelles → Voiron. Brudddag.",
+      topper:[{km:50,navn:"Col des Prés",alt:1142,kat:"2"},{km:84,navn:"Col de Couz",alt:623,kat:"4"}],
+      spurter:[{km:110,navn:"Le Pont-de-Beauvoisin"}]
     },
-    { nr:18, dato:"23. jul", fra:"Voiron", til:"Orcières-Merlette", km:185, type:"fjell", toppmaal:true, noklet:true,
-      profilbilde:"https://cdn.cyclingstage.com/images/tour-de-france/2026/stage-18-profile.jpg",
-      notat:"Toppmål Orcières-Merlette. Starten på den avgjørende alpe-helgen.",
-      topper:[{km:155,navn:"Col du Noyer",alt:1664,kat:"1"},{km:185,navn:"Orcières-Merlette",alt:1820,kat:"HC"}],
-      spurter:[{km:70,navn:"Grenoble"}]
+    { nr:18, dato:"23. jul", fra:"Voiron", til:"Orcières-Merlette", km:172, type:"fjell", toppmaal:true, noklet:true,
+      profilbilde:"img/profil/e18_profil.jpg",
+      maalGrafikkUrl:"img/mal/e18_mal.jpg",
+      notat:"Voiron → Vercors (Saint-Nizier, km 52) → Grenoble → Corps → La Fare-en-Champsaur (km 153) → toppmål Orcières-Merlette (1820 m). Start på avgjørende alpe-helg.",
+      topper:[{km:52,navn:"Saint-Nizier-du-Moucherotte",alt:1172,kat:"3"},{km:92,navn:"Côte de Monteynard",alt:844,kat:"4"},{km:172,navn:"Orcières-Merlette",alt:1820,kat:"HC"}],
+      spurter:[{km:63,navn:"Seyssins/Grenoble"}]
     },
-    { nr:19, dato:"24. jul", fra:"Gap", til:"Alpe d'Huez", km:130, type:"fjell", toppmaal:true, noklet:true,
-      profilbilde:"https://cdn.cyclingstage.com/images/tour-de-france/2026/stage-19-profile.jpg",
-      notat:"Tre klatringer: Col de Bayard → Col du Noyer → Col d'Ornon → 21 hårnålssvinger opp Alpe d'Huez (13 km, 8 %+). Abrahamsen i brudd?",
-      topper:[{km:30,navn:"Col de Bayard",alt:1246,kat:"2"},{km:60,navn:"Col du Noyer",alt:1664,kat:"1"},{km:95,navn:"Col d'Ornon",alt:1367,kat:"2"},{km:130,navn:"Alpe d'Huez",alt:1860,kat:"HC"}],
-      spurter:[{km:40,navn:"Corps"}]
+    { nr:19, dato:"24. jul", fra:"Gap", til:"Alpe d'Huez", km:127.9, type:"fjell", toppmaal:true, noklet:true,
+      profilbilde:"img/profil/e19_profil.jpg",
+      maalGrafikkUrl:"img/mal/e19_mal.jpg",
+      notat:"Gap → Col de Bayard (km 5, 1246 m) → Col du Noyer (km 25, 1664 m) → La Fare → Corps → Col d'Ornon (km 99, 1371 m) → Le Bourg d'Oisans → 21 hårnålssvinger Alpe d'Huez (km 128, 1850 m, 13 km/8 %).",
+      topper:[{km:5,navn:"Col de Bayard",alt:1246,kat:"2"},{km:25,navn:"Col du Noyer",alt:1664,kat:"1"},{km:99,navn:"Col d'Ornon",alt:1371,kat:"2"},{km:127.9,navn:"Alpe d'Huez",alt:1850,kat:"HC"}],
+      spurter:[{km:55,navn:"Corps"}]
     },
     { nr:20, dato:"25. jul", fra:"Le Bourg-d'Oisans", til:"Alpe d'Huez", km:171, type:"fjell", toppmaal:true, noklet:true,
-      profilbilde:"https://cdn.cyclingstage.com/images/tour-de-france/2026/stage-20-profile.jpg",
-      notat:"DRONNINGETAPPEN. Galibier (2 642 m) + Col de Sarenne + 2. gang opp Alpe d'Huez. 5 600 hm. Touren avgjøres her.",
-      topper:[{km:52,navn:"Col de la Croix de Fer",alt:2067,kat:"HC"},{km:95,navn:"Col du Galibier",alt:2642,kat:"HC"},{km:108,navn:"Col de Sarenne",alt:1999,kat:"1"},{km:171,navn:"Alpe d'Huez",alt:1860,kat:"HC"}],
-      spurter:[{km:30,navn:"Bourg-d'Oisans int."}]
+      profilbilde:"img/profil/e20_profil.jpg",
+      maalGrafikkUrl:"img/mal/e20_mal.jpg",
+      notat:"DRONNINGETAPPEN. 5 600 hm. Bourg d'Oisans → Col de la Croix de Fer (km 34, HC) → Maurienne-dalen → Col du Télégraphe (km 76, kat 1) → Valloire → Col du Galibier (km 110, 2642 m, HC — Souvenir Henri Desgrange) → Col du Lautaret → La Grave → Col de Sarenne (km 150, kat 1) → 2. gang opp Alpe d'Huez. Touren avgjøres her.",
+      topper:[{km:34,navn:"Col de la Croix de Fer",alt:2067,kat:"HC"},{km:76,navn:"Col du Télégraphe",alt:1566,kat:"1"},{km:110,navn:"Col du Galibier",alt:2642,kat:"HC"},{km:119,navn:"Col du Lautaret",alt:2058,kat:"3"},{km:150,navn:"Col de Sarenne",alt:1999,kat:"1"},{km:170.9,navn:"Alpe d'Huez",alt:1850,kat:"HC"}],
+      spurter:[{km:30,navn:"Allemond/Bourg-d'Oisans int."}]
     },
-    { nr:21, dato:"26. jul", fra:"Thoiry", til:"Paris/Champs-Élysées", km:130, type:"flat", noklet:true,
-      profilbilde:"https://cdn.cyclingstage.com/images/tour-de-france/2026/stage-21-profile.jpg",
-      notat:"Montmartre-brosteinen (Rue Lepic) før spurt på Champs-Élysées. Kan bli mer enn parade.",
-      topper:[],spurter:[{km:103,navn:"Montmartre/Rue Lepic"}]
+    { nr:21, dato:"26. jul", fra:"Thoiry", til:"Paris/Champs-Élysées", km:110, type:"flat", noklet:true,
+      profilbilde:"img/profil/e21_profil.jpg",
+      maalGrafikkUrl:"img/mal/e21_mal.jpg",
+      notat:"Thoiry (Yvelines) → Versailles → Paris. Côte de la Butte Montmartre (km 91, 128 m, 6,5 %, brostein!) x2 → sluttspurt på Champs-Élysées. Kan bli mer enn parade.",
+      topper:[{km:91,navn:"Côte de la Butte Montmartre",alt:128,kat:"4"}],spurter:[{km:101,navn:"Champs-Élysées (siste runde)"}]
     }
   ],
 
