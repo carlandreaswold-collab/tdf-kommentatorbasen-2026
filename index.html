@@ -214,7 +214,7 @@
     <div class="search-head">
       <div class="search-box">
         <span class="ico">🔍</span>
-        <input id="q" type="text" placeholder="Søk etter rytter, lag, etappe, sted, statistikk …" autocomplete="off">
+        <input id="q" type="text" placeholder="Søk rytter, lag, etappe … eller skriv startnr (f.eks. 1 eller #51)" autocomplete="off">
       </div>
       <div class="filters" id="filters">
         <button data-f="alle" class="active">Alle</button>
@@ -620,6 +620,21 @@ function render(){
   const r=$("#results"); let html=""; const q=query.trim();
   const show=f=>activeFilter==="alle"||activeFilter===f;
   const norskOnly = activeFilter==="norsk";
+
+  // Bib-nummer direktesøk: ren tallsøk eller #tall gir umiddelbart treff
+  const bibMatch = q.match(/^#?(\d+)$/);
+  if(bibMatch){
+    const nr=parseInt(bibMatch[1]);
+    const treff=D.ryttere.find(x=>x.nr===nr);
+    if(treff){
+      html+=`<div class="sec-title">Startnummer <span class="nr-badge">#${nr}</span></div>`;
+      html+=`<div class="grid">`+riderCard(treff)+`</div>`;
+      r.innerHTML=html; return;
+    } else {
+      html+=`<div class="empty">Ingen rytter med startnummer #${nr}. Numrene slippes offisielt 2.–3. juli.</div>`;
+      r.innerHTML=html; return;
+    }
+  }
 
   let ryttere=D.ryttere.filter(x=>(!q||match(riderText(x))));
   if(norskOnly) ryttere=ryttere.filter(x=>x.norsk);
