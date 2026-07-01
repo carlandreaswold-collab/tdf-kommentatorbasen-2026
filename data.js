@@ -824,7 +824,7 @@ const TDF_DATA = {
       form:"Farligste mann i tempoet (etappe 16). Kan ta gul trøye tidlig på lagtempo.",
       skade:"Hjernerystelse med hukommelsestap (krasj TdF 2025 etappe 1) — forlot rittet. Ingen skader i 2026 — klar til Tour.",
       historie:"Verdens beste temposyklist. Holder ikke i fjellet, men etappe 16 er hans store sjanse." },
-    { navn:"Tobias Foss", lag:"IGD", land:"Norge", alder:27, rolle:"Tempo / allrounder", nr:null, foto:"",
+    { navn:"Tobias Foss", lag:"IGD", land:"Norge", alder:27, rolle:"Tempo / allrounder", nr:null, foto:"", norsk:true,
       meritter:"Verdensmester enkeltstart U23 2019, Vuelta-etappe, Giro-GC topp-10",
       form:"NORSK RYTTER PÅ INEOS! Bekreftet på INEOS-laget til Tour 2026 — en overraskelse. Sterk tempomann og allrounder. Erstatter Carlos Rodríguez som ikke er tatt ut.",
       resultater2026:[],
