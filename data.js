@@ -498,7 +498,7 @@ const TDF_DATA = {
     { navn:"Cian Uijtdebroeks", lag:"MOV", land:"Belgia", alder:23, rolle:"Sammenlagt", nr:null, foto:"",
       meritter:"Tour de Suisse-podium, stor Tour-talent",
       form:"Movistar-kaptein for GC. Ung belgier med imponerende klatreegenskaper. Underfavoritt.",
-      skade:"Hårsprekk i albue-radiusen (krasj Volta a Valencia etappe 3, feb 2026). Fullt restituert — «ingen problemer nå».",
+      skade:"Hairline fracture i radius (krasj Volta a Valencia etappe 3, feb 2026). Fullt restituert — «ingen problemer nå».",
       historie:"En av syklingens største talenter. Movistar satser alt på ham i Tour." },
 
     { navn:"Tom Pidcock", lag:"PQ3", land:"Storbr.", alder:26, rolle:"Sammenlagt / brudd", nr:null, foto:"",
@@ -507,7 +507,7 @@ const TDF_DATA = {
       resultater2026:[
         {type:"pall", ritt:"Milano-Sanremo", plass:2}
       ],
-      skade:"Ravine-krasj 60 km/t Volta a Catalunya etappe 5 (mars) — beinmølje + leddbåndsskader i kne + håndledd. Viral infeksjon (TdS, juni). Vant i Andorra 18 dager før Tour.",
+      skade:"Stygt krasj 60 km/t ned i ravine, Volta a Catalunya etappe 5 (mars) — multiple beinbrudd + leddbåndsskader i kne + håndledd. Viral infeksjon (TdS, juni). Vant i Andorra 18 dager før Tour.",
       historie:"Vant etappen på Alpe d'Huez i 2022 — kommer tilbake dit på etappe 19 og 20." },
 
     { navn:"Richard Carapaz", lag:"EFE", land:"Ecuador", alder:33, rolle:"Sammenlagt", nr:null, foto:"",
@@ -528,7 +528,7 @@ const TDF_DATA = {
     { navn:"Lennert Van Eetvelt", lag:"LIN", land:"Belgia", alder:23, rolle:"Sammenlagt", nr:null, foto:"",
       meritter:"Vuelta-podium, topp GC-talent",
       form:"Lotto-Intermarché-kaptein for GC. En av Belgias neste store.",
-      skade:"Brukket midtfinger venstre hånd + albu/underarm (krasj Giro etappe 11, mai 2026). Bakgrunn: brukket metatars + ryggvirvelbrudd TdF 2025.",
+      skade:"Brukket midtfinger venstre hånd + albue og underarm (krasj Giro etappe 11, mai 2026). Bakgrunn: brukket metatars + ryggvirvelbrudd TdF 2025.",
       historie:"Ung og aggressiv klatrer. Outsider for pallen." },
 
     /* ---- KLASSIKER/SPURT ---- */
@@ -730,7 +730,7 @@ const TDF_DATA = {
     { navn:"Mattias Skjelmose", lag:"LTK", land:"Danmark", alder:24, rolle:"Sammenlagt / klatrer", nr:null, foto:"",
       meritter:"Tour de Suisse-vinner 2023, topp klatrer",
       form:"Lidl-Treks 2. GC-kort. Ung og eksplosiv.",
-      skade:"Krasj Paris-Nice etappe 7 (snøvær, mars) + magejinfeksjon → DNS Tour Auvergne OG Tour de Suisse (mai-juni). Vant i Andorra sent juni — «formen er der til Tour».",
+      skade:"Krasj Paris-Nice etappe 7 (snøvær, mars) + mageinfeksjon → DNS Tour Auvergne OG Tour de Suisse (mai-juni). Vant i Andorra sent juni — «formen er der til Tour».",
       historie:"Ung dansk klatrer. Vant Tour de Suisse 2023. Skal hjelpe Ayuso men kan ta egne sjanser." },
     { navn:"Quinn Simmons", lag:"LTK", land:"USA", alder:24, rolle:"Puncheur / allrounder", nr:null, foto:"",
       meritter:"Etappeseirer, vant Tour Auvergne-Rhône-Alpes etappe 4 (2026)",
