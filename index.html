@@ -152,16 +152,16 @@
   .tropp-popup{display:none;position:absolute;z-index:600;background:#141d2e;border:1px solid #2a3a55;border-radius:8px;padding:8px 14px;font-size:12px;line-height:1.85;white-space:nowrap;top:30px;left:0;box-shadow:0 6px 20px rgba(0,0,0,.7)}
 
   /* ---------- ETAPPEPROFIL HOVER-ZOOM ---------- */
-  .profil-zoom-wrap{position:relative;cursor:zoom-in;margin-top:4px}
-  .profil-zoom-wrap img{width:100%;border-radius:6px;display:block}
+  .profil-zoom-wrap{position:relative;cursor:zoom-in;margin-top:4px;overflow:hidden;border-radius:6px}
+  .profil-zoom-wrap > img{width:100%;border-radius:6px;display:block;max-height:260px;object-fit:contain;background:#000}
   .profil-big{
     display:none;position:fixed;
-    width:1200px;height:500px;
+    width:1100px;height:400px;
     background:var(--panel);border:2px solid var(--line);border-radius:10px;
     overflow:hidden;z-index:800;box-shadow:0 16px 48px rgba(0,0,0,.9);
     pointer-events:none;
   }
-  .profil-big img{width:100%;height:100%;object-fit:contain;display:block}
+  .profil-big img{width:100%;height:100%;object-fit:contain;background:#000;display:block}
   .profil-big svg{width:100%!important;height:100%!important}
   .profil-big-label{
     position:absolute;top:8px;left:12px;
@@ -887,11 +887,15 @@ document.addEventListener('mouseover', function(e) {
     const big = wrap.querySelector('.profil-big');
     if (!big) return;
     const rect = wrap.getBoundingClientRect();
-    const popW = 1200, popH = 500, margin = 12;
+    const popW = 1100, popH = 400, margin = 12;
+    const vw = window.innerWidth, vh = window.innerHeight;
+    // Prøv over kortet, deretter under
     let top = rect.top - popH - margin;
     if (top < margin) top = rect.bottom + margin;
+    // Klem alltid innanfor synleg skjerm
+    top = Math.max(margin, Math.min(top, vh - popH - margin));
     let left = rect.left;
-    if (left + popW > window.innerWidth - margin) left = window.innerWidth - popW - margin;
+    if (left + popW > vw - margin) left = vw - popW - margin;
     if (left < margin) left = margin;
     big.style.top  = top  + 'px';
     big.style.left = left + 'px';
