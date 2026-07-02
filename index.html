@@ -89,7 +89,21 @@
   .grid-stages{display:grid;grid-template-columns:repeat(auto-fill,minmax(420px,1fr));gap:12px;margin-bottom:18px}
 
   /* ---------- RYTTERKORT ---------- */
-  .rider{background:var(--panel2);border:1px solid var(--line);border-radius:var(--radius);padding:12px;display:flex;gap:12px;min-width:0;overflow:hidden}
+  .rider{background:var(--panel2);border:1px solid var(--line);border-radius:var(--radius);padding:12px;display:flex;gap:12px;min-width:0;overflow:hidden;position:relative}
+  .rider[draggable="true"]{cursor:grab}
+  .rider[draggable="true"]:active{cursor:grabbing}
+  .rider-brudd-btn{position:absolute;top:6px;right:6px;background:rgba(14,17,22,.8);border:1px solid var(--line);border-radius:6px;color:var(--dim);font-size:10.5px;padding:2px 7px;cursor:pointer;font-family:inherit;font-weight:700;z-index:2;white-space:nowrap;line-height:1.5;transition:background .12s,color .12s,border-color .12s}
+  .rider-brudd-btn:hover{background:#1e3a1b;color:#7ee0a6;border-color:#2a5a2a}
+  .rider-brudd-btn.i-brudd{background:#1a3a1a;border-color:#2a5a2a;color:#7ee0a6}
+  .rider-brudd-btn.fjern-btn{color:#d2002e;border-color:#5a2020;background:rgba(80,20,20,.5)}
+  .rider-brudd-btn.fjern-btn:hover{background:#5a1010;color:#ff7070;border-color:#d2002e}
+  .filters button.drop-aktiv{background:#3a1010!important;border-color:#d2002e!important;color:#ff8080!important;box-shadow:0 0 0 2px rgba(210,0,46,.3)}
+  .brudd-count-badge{background:#d2002e;color:#fff;border-radius:999px;padding:0 6px;font-size:11px;font-weight:800;margin-left:3px;vertical-align:middle;display:inline-block}
+  .brudd-tom{color:var(--dim);text-align:center;padding:52px 24px;border:2px dashed var(--line);border-radius:var(--radius);line-height:1.9}
+  .brudd-tom b{color:var(--txt);font-size:15px}
+  .brudd-topplinje{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+  .brudd-clear-btn{background:#2a1010;border:1px solid #5a2020;color:#d2002e;font-size:12px;padding:4px 12px;border-radius:6px;cursor:pointer;font-family:inherit;font-weight:700}
+  .brudd-clear-btn:hover{background:#5a1010;color:#ff8080}
   .rider .avatar{width:62px;height:72px;border-radius:10px;flex:0 0 auto;overflow:hidden;background:#0c0f14;display:flex;flex-direction:column;align-items:center;justify-content:center}
   .rider .photo{width:62px;height:72px;border-radius:10px;flex:0 0 auto;object-fit:cover;background:#0c0f14}
   .rider .body{min-width:0;flex:1}
@@ -237,6 +251,7 @@
         <button data-f="statistikk">Statistikk &amp; historier</button>
         <button data-f="norsk">🇳🇴 Norsk</button>
         <button data-f="sprintere">🟢 Sprintere</button>
+        <button data-f="brudd">Brudd <span id="bruddCount" class="brudd-count-badge" style="display:none"></span></button>
       </div>
       <div class="hint">Trykk <kbd>/</kbd> for å hoppe til søk · <kbd>Esc</kbd> for å tømme</div>
     </div>
@@ -286,6 +301,11 @@ const JERSEY_URLS = {
 };
 let activeFilter = "alle";
 let query = "";
+const bruddSet = new Set();
+function oppdaterBruddBadge(){
+  const b=document.getElementById("bruddCount");
+  b.textContent=bruddSet.size||""; b.style.display=bruddSet.size?"inline-block":"none";
+}
 
 /* ---------- hjelpere ---------- */
 const norm = s => (s||"").toString().toLowerCase()
@@ -651,6 +671,18 @@ function render(){
     r.innerHTML=html; return;
   }
 
+  // Brudd-fane: vis pinboard når ingen søketekst
+  if(activeFilter==="brudd"&&!q){
+    if(!bruddSet.size){
+      html=`<div class="brudd-tom"><b>Bruddet er tomt</b><br><span style="font-size:13px">Dra et rytterkort hit til «Brudd»-knappen<br>— eller klikk «+ Brudd» på et kortets øvre høyre hjørne</span></div>`;
+    } else {
+      const br=[...bruddSet].map(n=>D.ryttere.find(r=>r.navn===n)).filter(Boolean);
+      html+=`<div class="brudd-topplinje"><div class="sec-title" style="margin:0">Bruddet <span class="count">${br.length}</span></div><button class="brudd-clear-btn" id="bruddClearBtn">Tøm bruddet</button></div>`;
+      html+=`<div class="grid">`+br.map(riderCard).join("")+`</div>`;
+    }
+    r.innerHTML=html; return;
+  }
+
   // Bib-nummer direktesøk: ren tallsøk eller #tall gir umiddelbart treff
   const bibMatch = q.match(/^#?(\d+)$/);
   if(bibMatch){
@@ -670,7 +702,7 @@ function render(){
   let ryttere=D.ryttere.filter(x=>(!q||match(riderText(x))));
   if(norskOnly) ryttere=ryttere.filter(x=>x.norsk);
   if(sprintOnly) ryttere=ryttere.filter(x=>x.rolle.toLowerCase().includes("spurt"));
-  if((show("ryttere")||norskOnly||sprintOnly) && ryttere.length){
+  if((show("ryttere")||norskOnly||sprintOnly||activeFilter==="brudd") && ryttere.length){
     html+=secTitle("Ryttere",ryttere.length);
     html+=`<div class="grid">`+ryttere.map(riderCard).join("")+`</div>`;
   }
@@ -720,7 +752,11 @@ function riderCard(r){
       ? `<div class="avatar" style="background:transparent"><img src="${jerseyUrl}" alt="${esc(tm.kort)}" width="52" height="65" loading="lazy" style="object-fit:contain;display:block"></div>`
       : `<div class="avatar">${riderSVG(tm, 62)}</div>`;
   const nr = r.nr ? `<span class="nr-badge">#${r.nr}</span>` : `<span class="nr-badge tbd">nr?</span>`;
-  return `<div class="rider">
+  const iB = bruddSet.has(r.navn);
+  const bruddBtn = activeFilter==="brudd"
+    ? `<button class="rider-brudd-btn fjern-btn" data-brudd-fjern="${esc(r.navn)}">✕ Fjern</button>`
+    : `<button class="rider-brudd-btn${iB?" i-brudd":""}" data-brudd-legg="${esc(r.navn)}">${iB?"✓ I brudd":"+ Brudd"}</button>`;
+  return `<div class="rider" draggable="true" data-navn="${esc(r.navn)}">${bruddBtn}
     ${avatar}
     <div class="body">
       <div class="nm">${nr} ${hl(r.navn)} ${r.norsk?'<span class="norsk-tag">NOR</span>':''}${usikkerBadge(r.navn)}</div>
@@ -901,6 +937,39 @@ document.addEventListener('mouseout', function(e) {
   troppActive = null;
 });
 
+
+/* ---------- BRUDD — KLIKK OG DRAG ---------- */
+$("#results").addEventListener("click", e => {
+  const legg = e.target.closest("[data-brudd-legg]");
+  if(legg){
+    const n=legg.dataset.bruddLegg;
+    if(bruddSet.has(n)) bruddSet.delete(n); else bruddSet.add(n);
+    oppdaterBruddBadge(); render(); return;
+  }
+  const fjern = e.target.closest("[data-brudd-fjern]");
+  if(fjern){ bruddSet.delete(fjern.dataset.bruddFjern); oppdaterBruddBadge(); render(); return; }
+  if(e.target.id==="bruddClearBtn"){ bruddSet.clear(); oppdaterBruddBadge(); render(); }
+});
+
+// Drag fra rytterkort
+$("#results").addEventListener("dragstart", e => {
+  const card = e.target.closest(".rider[data-navn]");
+  if(!card){ e.preventDefault(); return; }
+  e.dataTransfer.setData("text/plain", card.dataset.navn);
+  e.dataTransfer.effectAllowed = "copy";
+});
+
+// Drop-sone: Brudd-filter-knappen
+(function(){
+  const btn = document.querySelector("[data-f='brudd']");
+  btn.addEventListener("dragover", e => { e.preventDefault(); btn.classList.add("drop-aktiv"); });
+  btn.addEventListener("dragleave", () => btn.classList.remove("drop-aktiv"));
+  btn.addEventListener("drop", e => {
+    e.preventDefault(); btn.classList.remove("drop-aktiv");
+    const n = e.dataTransfer.getData("text/plain");
+    if(n){ bruddSet.add(n); oppdaterBruddBadge(); render(); }
+  });
+})();
 
 /* ---------- INIT ---------- */
 renderDash(); render(); tick(); setInterval(tick,30000);
