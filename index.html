@@ -157,6 +157,17 @@
   .profil-zoom-wrap{margin-top:6px}
   .profil-zoom-wrap > img{width:100%;border-radius:6px;display:block;object-fit:contain;background:#000}
 
+  /* ---------- SPURT-TOPPLISTE ---------- */
+  .spurt-topp-label{font-size:10.5px;text-transform:uppercase;letter-spacing:.6px;color:var(--green);font-weight:700;margin-top:6px;border-top:1px dashed #1e3a28;padding-top:4px}
+  .spurt-res-list{display:flex;flex-direction:column;gap:1px;margin-top:3px}
+  .spurt-res-item{display:flex;align-items:center;gap:6px;font-size:12.5px;line-height:1.4}
+  .spurt-plass{font-weight:800;min-width:18px;text-align:right;font-size:13px;flex:0 0 auto}
+  .spurt-plass.p1{color:var(--yellow)}
+  .spurt-plass.p2{color:#c0c8d8}
+  .spurt-plass.p3{color:#e07e2a}
+  .spurt-plass.p4,.spurt-plass.p5{color:var(--dim)}
+  .spurt-ritt{color:var(--txt)}
+
   /* ---------- RESULTATER 2026-CHIPS ---------- */
   .res2026{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
   .res-chip{font-size:10px;padding:2px 8px;border-radius:999px;font-weight:700;letter-spacing:.3px;white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis}
@@ -225,6 +236,7 @@
         <button data-f="etapper">Etapper</button>
         <button data-f="statistikk">Statistikk &amp; historier</button>
         <button data-f="norsk">🇳🇴 Norsk</button>
+        <button data-f="sprintere">🟢 Sprintere</button>
       </div>
       <div class="hint">Trykk <kbd>/</kbd> for å hoppe til søk · <kbd>Esc</kbd> for å tømme</div>
     </div>
@@ -623,6 +635,22 @@ function render(){
   const show=f=>activeFilter==="alle"||activeFilter===f;
   const norskOnly = activeFilter==="norsk";
 
+  // Sprintere-fane: vis alle spurtryttere sortert
+  if(activeFilter==="sprintere"&&!q){
+    const spr=D.ryttere.filter(r=>r.rolle.toLowerCase().includes("spurt"))
+      .sort((a,b)=>{
+        const aRen=a.rolle==="Spurt",bRen=b.rolle==="Spurt";
+        const aT5=(a.spurtTopp5||[]).length,bT5=(b.spurtTopp5||[]).length;
+        if(aT5!==bT5) return bT5-aT5;
+        if(aRen&&!bRen) return -1;
+        if(!aRen&&bRen) return 1;
+        return 0;
+      });
+    html+=secTitle("Sprintere",spr.length);
+    html+=`<div class="grid">`+spr.map(riderCard).join("")+`</div>`;
+    r.innerHTML=html; return;
+  }
+
   // Bib-nummer direktesøk: ren tallsøk eller #tall gir umiddelbart treff
   const bibMatch = q.match(/^#?(\d+)$/);
   if(bibMatch){
@@ -638,9 +666,11 @@ function render(){
     }
   }
 
+  const sprintOnly = activeFilter==="sprintere";
   let ryttere=D.ryttere.filter(x=>(!q||match(riderText(x))));
   if(norskOnly) ryttere=ryttere.filter(x=>x.norsk);
-  if((show("ryttere")||norskOnly) && ryttere.length){
+  if(sprintOnly) ryttere=ryttere.filter(x=>x.rolle.toLowerCase().includes("spurt"));
+  if((show("ryttere")||norskOnly||sprintOnly) && ryttere.length){
     html+=secTitle("Ryttere",ryttere.length);
     html+=`<div class="grid">`+ryttere.map(riderCard).join("")+`</div>`;
   }
@@ -699,6 +729,7 @@ function riderCard(r){
       ${(r.form||r.resultater2026)?`<div class="det"><b>Form 2026:</b> ${r.form?hl(r.form):""}${r.resultater2026&&r.resultater2026.length?`<div class="res2026">${r.resultater2026.map(resultChip).join("")}</div>`:""}</div>`:""}
       ${r.historie?`<div class="det"><b>Historie:</b> ${hl(r.historie)}</div>`:""}
       ${r.skade?`<div class="skade-note">🩹 ${esc(r.skade)}</div>`:""}
+      ${r.spurtTopp5&&r.spurtTopp5.length?`<div class="spurt-topp-label">Topp ${r.spurtTopp5.length} spurter 2026</div><div class="spurt-res-list">${r.spurtTopp5.map(s=>`<div class="spurt-res-item"><span class="spurt-plass p${Math.min(s.plass,5)}">${s.plass}.</span><span class="spurt-ritt">${esc(s.ritt)}</span></div>`).join("")}</div>`:""}
     </div></div>`;
 }
 

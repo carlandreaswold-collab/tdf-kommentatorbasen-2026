@@ -550,18 +550,41 @@ const TDF_DATA = {
         {type:"GC", ritt:"Baloise Belgium Tour", plass:1},
         {type:"seier", ritt:"Copenhagen Sprint"}
       ],
+      spurtTopp5:[
+        {plass:1, ritt:"Gent-Wevelgem"},
+        {plass:1, ritt:"Baloise Belgium Tour et.5"},
+        {plass:1, ritt:"Baloise Belgium Tour sammenl."},
+        {plass:1, ritt:"Copenhagen Sprint"},
+        {plass:3, ritt:"Tirreno-Adriatico et.3"}
+      ],
       skade:"Brukket kragebein + AC-ledd + 2 ribbein (krasj TdF 2025 etappe 3) — operasjon. Fullt restituert til 2026.",
       historie:"Alpecins rakettskyting. Trener med van der Poel — genialt duo." },
 
     { navn:"Mads Pedersen", lag:"LTK", land:"Danmark", alder:29, rolle:"Spurt / klassiker", nr:null, foto:"",
       meritter:"Verdensmester 2019, Ronde van Vlaanderen-vinner 2022",
-      form:"Lidl-Treks spurter. Sterk på kuperte avslutninger.",
+      form:"0 seiere i 2026 etter skade — men 2. plass Boucles de la Mayenne, 4. Milano-Sanremo bare 6 uker etter operasjon. TdF er klart hovedmål.",
+      spurtTopp5:[
+        {plass:2, ritt:"Boucles de la Mayenne (siste etappe)"},
+        {plass:4, ritt:"Milano-Sanremo (6 uker etter operasjon!)"},
+        {plass:5, ritt:"Tour of Flanders"}
+      ],
       skade:"Brukket venstre håndledd + høyre kragebein (Volta a Valencia, 4. feb 2026) — operasjon. Tilbake etter kun 6,5 uker i Milano-Sanremo.",
       historie:"Dansk allrounder. Jakter etapper på flate og halvkuperte dager." },
 
     { navn:"Biniam Girmay", lag:"NSN", land:"Eritrea", alder:24, rolle:"Spurt / klassiker", nr:null, foto:"",
       meritter:"Gent-Wevelgem 2022, Tour-etappeseier 2024, Vuelta-etapper",
-      form:"NSN-kapteinen. En av verdens beste spurter. Vant over mange av de beste i 2025/2026.",
+      form:"Vant Valencia-etappe, Clásica de Almería og Baloise-etappe i 2026 — Merlier og Philipsens farligste utfordrer.",
+      resultater2026:[
+        {type:"seier", ritt:"Volta Valenciana et.1"},
+        {type:"seier", ritt:"Clásica de Almería"},
+        {type:"seier", ritt:"Baloise Belgium Tour et.1"}
+      ],
+      spurtTopp5:[
+        {plass:1, ritt:"Clásica de Almería"},
+        {plass:1, ritt:"Volta Valenciana et.1"},
+        {plass:1, ritt:"Baloise Belgium Tour et.1"},
+        {plass:3, ritt:"Brussels Cycling Classic"}
+      ],
       historie:"Africas nye sykkelhelt. Tidenes beste eritreanske syklist. Utrolig explosivitet." },
 
     { navn:"Julian Alaphilippe", lag:"TUD", land:"Frankrike", alder:33, rolle:"Klassiker / brudd", nr:null, foto:"",
@@ -595,8 +618,14 @@ const TDF_DATA = {
 
     { navn:"Søren Wærenskjold", lag:"UNO", land:"Norge", alder:25, rolle:"Spurt / tempo / klassiker", nr:null, foto:"", norsk:true,
       meritter:"Vant Baloise Belgium Tour 2024 (sammenlagt), Omloop Het Nieuwsblad",
-      form:"Kraftig motor, temposterk og god spurter. Baloise Belgium Tour 2026 gikk til Philipsen (Wærenskjold vant i 2024). I god form inn mot Tour.",
+      form:"0 seiere i 2026, men 3.-plass Dwars door Vlaanderen og jevnlig i topp-5 i spurter. Stor motor — trygt inn mot Tour.",
       resultater2026:[],
+      spurtTopp5:[
+        {plass:3, ritt:"Dwars door Vlaanderen"},
+        {plass:4, ritt:"Volta Valenciana et.1"},
+        {plass:4, ritt:"Volta Valenciana et.4"},
+        {plass:4, ritt:"Baloise Belgium Tour et.5"}
+      ],
       historie:"Stor motor — norsk spurtkort og temposterk. Kan true på flate etapper." },
 
     { navn:"Torstein Træen", lag:"UNO", land:"Norge", alder:30, rolle:"Klatrer / hjelper", nr:null, foto:"", norsk:true,
@@ -779,7 +808,17 @@ const TDF_DATA = {
       historie:"23 år og allerede i Tour. Stor fremtid." },
     { navn:"Olav Kooij", lag:"DEC", land:"Nederland", alder:25, rolle:"Spurt", nr:null, foto:"",
       meritter:"En av verdens beste spurter, etappeseirer i Grand Tours og énsdagsritt",
-      form:"OVERRASKENDE PÅ DECATHLON! Kooij er en av de aller raskeste i verden — tok flere etapper på Vuelta og andre ritt. Farlig konkurrent mot Philipsen og Girmay på spurtdagene.",
+      form:"Mistet halv vår til virus, men kom tilbake og vant 3 av 3 spurter i Boucles de la Mayenne + Baloise-etappe. I knallform.",
+      resultater2026:[
+        {type:"seier", ritt:"Boucles de la Mayenne et.1"},
+        {type:"seier", ritt:"Boucles de la Mayenne et.3"},
+        {type:"seier", ritt:"Baloise Belgium Tour et.4"}
+      ],
+      spurtTopp5:[
+        {plass:1, ritt:"Boucles de la Mayenne et.1"},
+        {plass:1, ritt:"Boucles de la Mayenne et.3"},
+        {plass:1, ritt:"Baloise Belgium Tour et.4"}
+      ],
       historie:"Nederlandsk rakett. Var på Visma/Jumbo i mange år. Nå overraskende på Decathlon og i Tour — stor outsider for grønn trøye." },
     { navn:"Cees Bol", lag:"DEC", land:"Nederland", alder:30, rolle:"Allrounder / spurt", nr:null, foto:"",
       meritter:"Etappeseirer, sterk allrounder",
@@ -952,7 +991,22 @@ const TDF_DATA = {
       historie:"Vant Paris-Roubaix 2022. Bred profil." },
     { navn:"Tim Merlier", lag:"SOQ", land:"Belgia", alder:33, rolle:"Spurt", nr:null, foto:"",
       meritter:"Giro-etappeseirer, sterk spurter",
-      form:"SQS sin spurtkaptein. Jakter etapper mot Philipsen, Girmay og De Lie.",
+      form:"Sesongens varmeste spurter — 6 seiere inkl. Scheldeprijs (3. år på rad!), Ronde van Limburg og 3 Tour de Hongrie-etapper. Farligst på rene flate spurt.",
+      resultater2026:[
+        {type:"seier", ritt:"Scheldeprijs"},
+        {type:"seier", ritt:"Ronde van Limburg"},
+        {type:"seier", ritt:"Tour de Hongrie et.1"},
+        {type:"seier", ritt:"Tour de Hongrie et.3"},
+        {type:"seier", ritt:"Tour de Hongrie et.5"},
+        {type:"seier", ritt:"Baloise Belgium Tour et.2"}
+      ],
+      spurtTopp5:[
+        {plass:1, ritt:"Scheldeprijs (3. år på rad!)"},
+        {plass:1, ritt:"Ronde van Limburg"},
+        {plass:1, ritt:"Tour de Hongrie et.1 + et.3 + et.5"},
+        {plass:1, ritt:"Baloise Belgium Tour et.2"},
+        {plass:2, ritt:"Baloise Belgium Tour et.1 (tap for Girmay)"}
+      ],
       historie:"Belgisk rakett-spurter. Rask på flat avslutning." },
     { navn:"Valentin Paret-Peintre", lag:"SOQ", land:"Frankrike", alder:28, rolle:"Klatrer / etappejeger", nr:null, foto:"",
       meritter:"Etappeseirer, klatrer",
@@ -1001,6 +1055,7 @@ const TDF_DATA = {
     { navn:"Phil Bauhaus", lag:"TBV", land:"Tyskland", alder:28, rolle:"Spurt", nr:null, foto:"",
       meritter:"Giro- og Vuelta-etappeseirer, sterk spurter",
       form:"Bahrains spurtkort på flate etapper. Vant etapper i Giro og Vuelta. Kan overraske på de rene spurtdagene.",
+      spurtTopp5:[],
       historie:"Tysk kraftspurter. Vant etapper i alle tre Grand Tours. Ny BRN-spurter." },
     { navn:"Damiano Caruso", lag:"TBV", land:"Italia", alder:37, rolle:"Klatrer / GC-hjelper", nr:null, foto:"",
       meritter:"2. plass Giro d'Italia 2021, etappeseier Grand Tours",
@@ -1056,7 +1111,16 @@ const TDF_DATA = {
     /* ---- LOTTO–INTERMARCHÉ ---- */
     { navn:"Arnaud De Lie", lag:"LIN", land:"Belgia", alder:23, rolle:"Spurt / puncheur", nr:null, foto:"",
       meritter:"Mange énsdagsseire, sterk spurter",
-      form:"Lotto sin spurtkaptein. 23 år og allerede en av de beste på kuperte avslutninger.",
+      form:"Vant Famenne Ardenne Classic og Tour de Wallonie-etappe tross skader. Sterkest på kuperte avslutninger.",
+      resultater2026:[
+        {type:"seier", ritt:"Famenne Ardenne Classic"},
+        {type:"seier", ritt:"Tour de Wallonie et.4"}
+      ],
+      spurtTopp5:[
+        {plass:1, ritt:"Famenne Ardenne Classic"},
+        {plass:1, ritt:"Tour de Wallonie et.4"},
+        {plass:4, ritt:"Gent-Wevelgem"}
+      ],
       skade:"Brukket ankel (trapp-fall jul 2025) + sykdom (cobbles-klassikerne) + Campylobacter-infeksjon mai 2026. Likevel på startlisten til Tour.",
       historie:"Belgisk kraftspurter. Elsker kuperte avslutninger. Kan slå VdP og Philipsen på riktig dag." },
     { navn:"Georg Zimmermann", lag:"LIN", land:"Tyskland", alder:28, rolle:"Klatrer / etappejeger", nr:null, foto:"",
@@ -1215,6 +1279,7 @@ const TDF_DATA = {
     { navn:"Arvid de Kleijn", lag:"TUD", land:"Nederland", alder:27, rolle:"Spurt", nr:null, foto:"",
       meritter:"Etappeseirer, sterk spurter",
       form:"Nederlandsk spurter for Tudor. Kan ta etapper på flate dager og hjelpe på kuperte avslutninger.",
+      spurtTopp5:[],
       historie:"Sterk spurter. Tudor sin hurtigste mann på de rene spurtdagene. Bred spurtkompetanse." },
     { navn:"Marco Haller", lag:"TUD", land:"Østerrike", alder:34, rolle:"Hjelper / road captain", nr:null, foto:"",
       meritter:"Veteran allrounder, erfaren road captain",
@@ -1267,7 +1332,13 @@ const TDF_DATA = {
       historie:"Australsk allrounder med bred profil. Viktig hjelper for Plapp og O'Connor." },
     { navn:"Michael Matthews", lag:"JAY", land:"Australia", alder:35, rolle:"Klassiker / spurt", nr:null, foto:"",
       meritter:"7 Tour-etappeseire, Milano-Sanremo-finalist, grønn trøye 2017",
-      form:"Erfaren spurter og klassiker-truer. 35 år men fortsatt i toppform.",
+      form:"Utrolig comeback-historikk: lungeemboli 2025 → krasjet mars 2026 → tilbake i juni. Vant Gran Premio Castellón i januar.",
+      resultater2026:[
+        {type:"seier", ritt:"Gran Premio Castellón"}
+      ],
+      spurtTopp5:[
+        {plass:1, ritt:"Gran Premio Castellón (jan) — deretter skadet ut"}
+      ],
       skade:"Lungeemboli 2025 (oppdaget på høydeleir) — nær-dødelig, 4 mnd ute. Krasj 5. mars 2026: åpent brudd høyre arm + brukket håndledd/tommel. Utrolig comeback.",
       historie:"Australsk legende. Vant 7 Tour-etapper. Grønn trøye 2017. Sterk på kuperte avslutninger." },
     { navn:"Ben O'Connor", lag:"JAY", land:"Australia", alder:30, rolle:"Klatrer / GC", nr:null, foto:"",
@@ -1282,6 +1353,7 @@ const TDF_DATA = {
     { navn:"Pascal Ackermann", lag:"JAY", land:"Tyskland", alder:31, rolle:"Spurt", nr:null, foto:"",
       meritter:"Etappeseirer i Grand Tours",
       form:"Jaycos spurtkort. Kan ta etapper på de flate dagene.",
+      spurtTopp5:[],
       historie:"Tysk spurter. Sterk på flat avslutning." },
     { navn:"Mauro Schmid", lag:"JAY", land:"Sveits", alder:26, rolle:"Allrounder / brudd", nr:null, foto:"",
       meritter:"Giro-etappeseier, allrounder",
@@ -1333,7 +1405,13 @@ const TDF_DATA = {
       historie:"Nederlandsk puncheur fra Rotterdam, født 1999. Lang vei via Monkey Town og Burgos-BH til Caja Rural — og nå plutselig Tour de France. Sa selv han ikke hadde trodd det mulig for to år siden." },
     { navn:"Fernando Gaviria", lag:"CRR", land:"Colombia", alder:31, rolle:"Spurt", nr:null, foto:"",
       meritter:"2 Tour-etappeseire (2018: etappe 1 og 4), Giro-etapper",
-      form:"Caja Rurals spurtkaptein. Klar for etapper på flatere dager.",
+      form:"0 seiere men aktiv sesong — 2. plass Oman-etappe, Ronde van Limburg og to Tour de Hongrie-etapper. Tape spurtene ofte på avgjørende meters.",
+      spurtTopp5:[
+        {plass:2, ritt:"Tour of Oman et.1"},
+        {plass:2, ritt:"Ronde van Limburg"},
+        {plass:2, ritt:"Tour de Hongrie et.3"},
+        {plass:3, ritt:"Tour de Hongrie et.5"}
+      ],
       historie:"Vant 2 Tour-etapper i 2018 (debut-Tour, ikke 4 i 2017). Kolombisk spurter med lang Grand Tour-erfaring." },
     { navn:"Ben Balderstone", lag:"CRR", land:"Australia", alder:25, rolle:"Allrounder", nr:null, foto:"",
       meritter:"Allrounder",
