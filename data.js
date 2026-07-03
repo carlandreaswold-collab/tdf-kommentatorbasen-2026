@@ -23,6 +23,9 @@ const TDF_DATA = {
     prikketTroye: null,
     hvitTroye: null,
     sammenlagtTopp: [],
+    gronnTopp: [],
+    prikketTopp: [],
+    hvitTopp: [],
     dagensHistorie: "",
     preTourNytt: [
       "Tour de Suisse (17–22 jun): 🏆 Pogačar (UAE) — +6:32 til nr.2 · Grønn: Grégoire (FDJ) · 🔴 Klatretrøye: Vervaeke (SQS) · Hvit: Vacek (LTK) · 5. Van Wilder (SQS)",
@@ -1509,6 +1512,10 @@ const TDF_DATA = {
   ],
 
   /* ---- STATISTIKK & HISTORIER ---- */
+  /* ---- ETAPPERESULTATER (oppdateres etter hver etappe) ---- */
+  /* Struktur: { etappe, dato, startby, mål, km, type, resultater:[{plass,navn,lag,tid,delta}] } */
+  etappeResultater: [],
+
   statistikk: [
     { tittel:"Pogačar dominerte Sveits", tekst:"Tour de Suisse 2026 (17–21 juni): Pogačar vant med 6 minutters og 32 sekunders margin etter kun 5 etapper — 3 etappeseire inkl. 72 km solo på etappe 1 og TT-seier. Carapaz nr. 2 (EF), Vacek nr. 3 (LTK). Van Wilder ble 5. (SQS). Vervaeke vant klatretrøya." },
     { tittel:"Del Toro tok Dauphiné (nytt navn)", tekst:"Critérium du Dauphiné heter nå Tour Auvergne-Rhône-Alpes (7–14 juni 2026). Isaac del Toro (UAE) vant — to strake etappeseire i finalehelgen (Grand Colombier + Plateau de Solaison). Tuckwell (RBH) 2., Ayuso (LTK) 3. Etappeseiere: Baudin (EF), Charmig (UNO), Visma TTT, Simmons (LTK), Van Aert (VLB), Van Gils (RBH)." },

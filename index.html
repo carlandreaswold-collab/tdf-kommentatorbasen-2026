@@ -216,6 +216,45 @@
   .empty{color:var(--dim);text-align:center;padding:40px;font-style:italic}
   mark{background:var(--accent);color:#10141b;border-radius:3px;padding:0 2px}
 
+  /* ---------- TRØYER-FANE ---------- */
+  .troye-card{background:var(--panel2);border:1px solid var(--line);border-radius:var(--radius);padding:14px;display:flex;flex-direction:column;gap:10px}
+  .troye-card-header{font-weight:700;font-size:14px;letter-spacing:.2px}
+  .troye-empty{color:var(--dim);font-style:italic;font-size:13px;padding:12px 0}
+  .troye-table{display:flex;flex-direction:column;gap:3px}
+  .troye-row-item{display:grid;grid-template-columns:28px 1fr 52px 80px;align-items:center;gap:6px;font-size:12.5px;padding:3px 4px;border-radius:5px}
+  .troye-row-item:hover{background:#1e2a3a}
+  .troye-plass{font-weight:800;color:var(--accent);text-align:right}
+  .troye-rytter{font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .troye-lag{color:var(--dim);font-size:11.5px}
+  .troye-val{color:var(--dim);text-align:right;font-size:12px;font-variant-numeric:tabular-nums}
+  .troye-separator{border:0;border-top:1px dashed var(--line);margin:6px 0}
+
+  /* ---------- RESULTATER-FANE ---------- */
+  .etappe-res-card{display:flex;flex-direction:column;gap:0;padding:0;overflow:hidden}
+  .etR-header{display:flex;align-items:center;gap:8px;padding:10px 12px 6px;flex-wrap:wrap}
+  .etR-num{font-weight:800;font-size:15px;color:var(--accent);white-space:nowrap}
+  .etR-rute{font-weight:600;font-size:13px;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .etR-meta{font-size:11.5px;color:var(--dim);padding:0 12px 8px;border-bottom:1px solid var(--line)}
+  .etR-liste{padding:6px 12px}
+  .etR-rad{display:grid;grid-template-columns:26px 1fr 46px 70px;align-items:center;gap:5px;font-size:12.5px;padding:3px 3px;border-radius:5px}
+  .etR-rad:hover{background:#1e2a3a}
+  .etR-norsk{background:rgba(186,12,47,.08);border-radius:5px}
+  .etR-norsk-seksjon{border-top:1px dashed var(--line);margin-top:4px;padding-top:4px}
+  .etR-norsk-header{font-size:10.5px;color:#ba0c2f;font-weight:700;letter-spacing:.4px;text-transform:uppercase;margin-bottom:3px}
+  .etR-plass{font-weight:800;text-align:right;color:var(--dim);font-size:12px}
+  .etR-rad:nth-child(1) .etR-plass{color:var(--yellow)}
+  .etR-rad:nth-child(2) .etR-plass{color:#b0b8c8}
+  .etR-rad:nth-child(3) .etR-plass{color:#e07e2a}
+  .etR-navn{font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .etR-lag{color:var(--dim);font-size:11.5px;white-space:nowrap}
+  .etR-tid{color:var(--dim);text-align:right;font-size:12px;font-variant-numeric:tabular-nums;white-space:nowrap}
+
+  /* ---------- FULL LISTE HOVER ---------- */
+  .full-liste-trigger{position:relative;display:inline-block;padding:6px 12px}
+  .full-liste-btn{background:#1e2d45;color:#7aa8cc;border:1px solid #2a3a55;border-radius:5px;font-size:10.5px;padding:3px 10px;cursor:default;font-family:inherit;font-weight:700;letter-spacing:.4px;user-select:none}
+  .full-liste-btn:hover{background:#243050;color:#9cc4e8}
+  .full-liste-popup{display:none;position:fixed;z-index:650;background:#141d2e;border:1px solid #2a3a55;border-radius:8px;padding:10px 14px;font-size:12px;min-width:320px;max-height:480px;overflow-y:auto;box-shadow:0 8px 28px rgba(0,0,0,.8)}
+
   /* scrollbars */
   ::-webkit-scrollbar{width:10px;height:10px}
   ::-webkit-scrollbar-thumb{background:#2a3242;border-radius:6px}
@@ -257,6 +296,8 @@
         <button data-f="lag">Lag</button>
         <button data-f="etapper">Etapper</button>
         <button data-f="statistikk">Statistikk &amp; historier</button>
+        <button data-f="troyer">🎽 Trøyer</button>
+        <button data-f="resultater">📋 Resultater</button>
         <button data-f="norsk">🇳🇴 Norsk</button>
         <button data-f="sprintere">🟢 Sprintere</button>
         <button data-f="brudd">Brudd <span id="bruddCount" class="brudd-count-badge" style="display:none"></span></button>
@@ -691,6 +732,98 @@ function render(){
     r.innerHTML=html; return;
   }
 
+  // Trøyer-fane
+  if(activeFilter==="troyer"&&!q){
+    const troyerDef=[
+      {key:"sammenlagtTopp",label:"Gul trøye — Sammenlagt",ikon:"🟡",leder:D.live.gulTroye,enhet:"tid"},
+      {key:"gronnTopp",label:"Grønn trøye — Poengkonkurranse",ikon:"🟢",leder:D.live.grontTroye,enhet:"poeng"},
+      {key:"prikketTopp",label:"Prikktrøye — Klatrekonkurranse",ikon:"🔴",leder:D.live.prikketTroye,enhet:"poeng"},
+      {key:"hvitTopp",label:"Hvit trøye — Beste unge rytter",ikon:"⬜",leder:D.live.hvitTroye,enhet:"tid"},
+    ];
+    html+=`<div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(380px,1fr))">`;
+    for(const td of troyerDef){
+      const liste=D.live[td.key]||[];
+      const top15=liste.slice(0,15);
+      const harData=liste.length>0;
+      const lederTekst=td.leder?`<span style="color:var(--accent);font-weight:800">${esc(td.leder)}</span>`:"";
+      const tableRows=top15.map((row,i)=>{
+        const val=td.enhet==="poeng"?(row.poeng??""): (row.tid??"");
+        const erNorsk=(D.ryttere||[]).find(x=>x.navn===row.navn&&x.norsk);
+        return `<div class="troye-row-item">
+          <span class="troye-plass">${row.plass??i+1}</span>
+          <span class="troye-rytter">${erNorsk?"🇳🇴 ":""}${esc(row.navn)}</span>
+          <span class="troye-lag">${esc(row.lag||"")}</span>
+          <span class="troye-val">${esc(String(val))}</span>
+        </div>`;
+      }).join("");
+      const fullPopupRows=liste.map((row,i)=>{
+        const val=td.enhet==="poeng"?(row.poeng??""):(row.tid??"");
+        const erNorsk=(D.ryttere||[]).find(x=>x.navn===row.navn&&x.norsk);
+        return `<div class="troye-row-item">
+          <span class="troye-plass">${row.plass??i+1}</span>
+          <span class="troye-rytter">${erNorsk?"🇳🇴 ":""}${esc(row.navn)}</span>
+          <span class="troye-lag">${esc(row.lag||"")}</span>
+          <span class="troye-val">${esc(String(val))}</span>
+        </div>`;
+      }).join("");
+      const fullListeBtn=liste.length>15?`<div class="full-liste-trigger"><button class="full-liste-btn">FULL LISTE ▾</button><div class="full-liste-popup"><div class="troye-table">${fullPopupRows}</div></div></div>`:"";
+      html+=`<div class="troye-card">
+        <div class="troye-card-header">${td.ikon} ${td.label}${lederTekst?" — "+lederTekst:""}</div>
+        ${!harData
+          ?`<div class="troye-empty">Oppdateres etter etappe 1 (4. juli)</div>`
+          :`<div class="troye-table">${tableRows}</div>${fullListeBtn}`}
+      </div>`;
+    }
+    html+=`</div>`;
+    r.innerHTML=html; return;
+  }
+
+  // Resultater-fane
+  if(activeFilter==="resultater"&&!q){
+    const etR=D.etappeResultater||[];
+    const norskSett=new Set((D.ryttere||[]).filter(x=>x.norsk).map(x=>x.navn));
+    if(!etR.length){
+      html=`<div class="empty" style="padding:60px 40px;line-height:2.2">
+        <div style="font-size:36px;margin-bottom:10px">📋</div>
+        <b style="color:var(--txt);font-size:16px">Etapperesultater</b><br>
+        <span>Etappe 1 kjøres 4. juli — oppdateres etter hvert som etappene er ferdig</span>
+      </div>`;
+    } else {
+      const typeMap={spurt:"t-flat",klatring:"t-fjell",tempo:"t-tempo",kupering:"t-kupert","tempo-lag":"t-tempo-lag"};
+      html+=`<div class="grid-stages">`;
+      [...etR].reverse().forEach(et=>{
+        const top10=(et.resultater||[]).slice(0,10);
+        const resten=(et.resultater||[]).slice(10);
+        const norskUtenfor=resten.filter(x=>norskSett.has(x.navn));
+        const typeCls=typeMap[et.type||""]||"t-flat";
+        const typeLabel=(et.type||"").charAt(0).toUpperCase()+(et.type||"").slice(1);
+        const radHtml=(liste,visNorskIkon)=>liste.map(rd=>{
+          const erNorsk=norskSett.has(rd.navn);
+          return `<div class="etR-rad${erNorsk?" etR-norsk":""}">
+            <span class="etR-plass">${rd.plass}.</span>
+            <span class="etR-navn">${visNorskIkon&&erNorsk?"🇳🇴 ":""}${esc(rd.navn)}</span>
+            <span class="etR-lag">${esc(rd.lag||"")}</span>
+            <span class="etR-tid">${esc(rd.delta||rd.tid||"")}</span>
+          </div>`;
+        }).join("");
+        const norskSeksjon=norskUtenfor.length?`<div class="etR-norsk-seksjon"><div class="etR-norsk-header">🇳🇴 Norske utenfor topp 10</div>${radHtml(norskUtenfor,false)}</div>`:"";
+        const fullPopup=(et.resultater||[]).length>10?`<div class="full-liste-trigger"><button class="full-liste-btn">FULL LISTE ▾</button><div class="full-liste-popup">${radHtml(et.resultater||[],true)}</div></div>`:"";
+        html+=`<div class="stage etappe-res-card">
+          <div class="etR-header">
+            <span class="etR-num">Etappe ${et.etappe}</span>
+            <span class="etR-rute">${esc(et.startby||"")} → ${esc(et.mål||"")}</span>
+            ${typeLabel?`<span class="type-tag ${typeCls}">${typeLabel}</span>`:""}
+          </div>
+          <div class="etR-meta">${esc(et.dato||"")}${et.km?" · "+et.km+" km":""}</div>
+          <div class="etR-liste">${radHtml(top10,true)}${norskSeksjon}</div>
+          ${fullPopup}
+        </div>`;
+      });
+      html+=`</div>`;
+    }
+    r.innerHTML=html; return;
+  }
+
   // Bib-nummer direktesøk: ren tallsøk eller #tall gir umiddelbart treff
   const bibMatch = q.match(/^#?(\d+)$/);
   if(bibMatch){
@@ -768,7 +901,7 @@ function riderCard(r){
     ${avatar}
     <div class="body">
       <div class="nm">${nr} ${hl(r.navn)} ${r.norsk?'<span class="norsk-tag">NOR</span>':''}${usikkerBadge(r.navn)}</div>
-      <div class="role">${esc(r.land)} · ${r.alder?r.alder+" år · ":""}${esc(r.rolle)} · ${esc(tm.navn)}</div>
+      <div class="role">${esc(r.land)}${r.fødeby?` · 📍 ${esc(r.fødeby)}`:""} · ${r.alder?r.alder+" år · ":""}${esc(r.rolle)} · ${esc(tm.navn)}</div>
       ${r.meritter?`<div class="det"><b>Meritter:</b> ${hl(r.meritter)}</div>`:""}
       ${(r.form||r.resultater2026)?`<div class="det"><b>Form 2026:</b> ${r.form?hl(r.form):""}${r.resultater2026&&r.resultater2026.length?`<div class="res2026">${r.resultater2026.map(resultChip).join("")}</div>`:""}</div>`:""}
       ${r.historie?`<div class="det"><b>Historie:</b> ${hl(r.historie)}</div>`:""}
@@ -945,6 +1078,39 @@ document.addEventListener('mouseout', function(e) {
   troppActive = null;
 });
 
+
+/* ---------- FULL LISTE HOVER: 1 sekunds forsinkelse ---------- */
+let fullListeTimer=null,fullListeActive=null;
+document.addEventListener('mouseover',function(e){
+  const t=e.target.closest('.full-liste-trigger');
+  if(t===fullListeActive) return;
+  if(fullListeActive){
+    clearTimeout(fullListeTimer);
+    const p=fullListeActive.querySelector('.full-liste-popup');
+    if(p){p.style.display='none';}
+  }
+  fullListeActive=t;
+  if(!t) return;
+  fullListeTimer=setTimeout(function(){
+    const popup=t.querySelector('.full-liste-popup');
+    if(!popup) return;
+    popup.style.display='block';
+    const btn=t.querySelector('.full-liste-btn');
+    if(btn){
+      const rect=btn.getBoundingClientRect();
+      popup.style.top=(rect.bottom+6)+'px';
+      popup.style.left=Math.min(rect.left,window.innerWidth-340)+'px';
+    }
+  },1000);
+});
+document.addEventListener('mouseout',function(e){
+  const t=e.target.closest('.full-liste-trigger');
+  if(!t||t.contains(e.relatedTarget)) return;
+  clearTimeout(fullListeTimer);
+  const popup=t.querySelector('.full-liste-popup');
+  if(popup) popup.style.display='none';
+  fullListeActive=null;
+});
 
 /* ---------- BRUDD — KLIKK OG DRAG ---------- */
 $("#results").addEventListener("click", e => {
