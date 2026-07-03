@@ -636,7 +636,7 @@ const TDF_DATA = {
     /* ---- NORSK INTERESSE ---- */
     { navn:"Tobias Halland Johannessen", lag:"UNO", land:"Norge", alder:26, rolle:"Sammenlagt", nr:121, foto:"", fødeby:"Drøbak", norsk:true,
       meritter:"6. plass Tour de France 2025 — Norges beste Grand Tour-resultat noensinne",
-      form:"Beste sesong hittil: 4. Tirreno-Adriatico, 3. Itzulia Basque Country, 2. Milano-Torino, 5. sammenlag Tour Auvergne. 2. plass etappe 6 Tour Auvergne (Crest-Voland) bak Van Gils. Tvillingbror Anders er med på SAMME Tour-lag. Mål 2026: topp 5 (sportsdirektør Gabriel Rasch offentlig).",
+      form:"Beste sesong hittil: 4. Tirreno-Adriatico, 3. Itzulia Basque Country, 2. Milano-Torino, 5. sammenlag Tour Auvergne. 2. plass etappe 6 Tour Auvergne (Crest-Voland) bak Van Gils. Tvillingbror Anders er med på SAMME Tour-lag. Mål 2026: topp 5 (sportsdirektør Gabriel Rasch offentlig). ETAPPE 2 (Barcelona): TV2 peker på dette som hans store sjanse allerede på dag 2 — kan skrive seg inn i Tour de France-historien der.",
       resultater2026:[
         {type:"GC", ritt:"Tirreno-Adriatico", plass:4},
         {type:"GC", ritt:"Itzulia Basque Country", plass:3},
@@ -649,7 +649,7 @@ const TDF_DATA = {
 
     { navn:"Jonas Abrahamsen", lag:"UNO", land:"Norge", alder:30, rolle:"Brudd / klatring", nr:122, foto:"", fødeby:"Skien", norsk:true,
       meritter:"2 Tour de France etappeseire (2023 + etappe 11 Toulouse 2025 — 155 km solo), kåret mest kampvillige rytter TdF 2025, prikktrøye 10 dager + grønn 3 dager TdF 2024, vant Brussels Cycling Classic 2024",
-      form:"Skadefri oppkjøring 2026. 3. plass NM fellesstart 2026 (Stavanger, 39 sek bak NM-vinner Skaarseth). Klar for bruddkjøring.",
+      form:"Skadefri oppkjøring 2026. 3. plass NM fellesstart 2026 (Stavanger, 39 sek bak NM-vinner Skaarseth). Klar for bruddkjøring. TV2: har trolig blinket seg ut ETAPPE 4 og ETAPPE 9 som mål.",
       resultater2026:[
         {type:"pall", ritt:"NM fellesstart 2026", plass:3}
       ],
@@ -871,11 +871,11 @@ const TDF_DATA = {
       historie:"Sterk nederlandsk motor. Bred profil — kan ta seg av arbeid på flat og kupert terreng. Hjelper Seixas og kan ta egne sjanser." },
 
     /* ---- ALPECIN–PREMIER TECH ---- */
-    { navn:"Axel Verstrynge", lag:"APT", land:"Belgia", alder:24, rolle:"Klatrer / brudd", nr:108, foto:"",
+    { navn:"Emiel Verstrynge", lag:"APT", land:"Belgia", alder:23, rolle:"Klatrer / brudd", nr:108, foto:"", fødeby:"Pittem",
       meritter:"Lovende klatrer",
       form:"Alpecins klatrerkort. Kan gå i brudd på fjellsetapper.",
       historie:"Ung belgisk klatrer. Bruddspesialist." },
-    { navn:"Jimmy Rickaert", lag:"APT", land:"Belgia", alder:29, rolle:"Hjelper / spurt", nr:107, foto:"",
+    { navn:"Jonas Rickaert", lag:"APT", land:"Belgia", alder:29, rolle:"Hjelper / spurt", nr:107, foto:"", fødeby:"Roeselare",
       meritter:"Spurthjelper",
       form:"Viktig hjelper for Philipsen og van der Poel.",
       historie:"Pålitelig belgisk hjelper for Alpecin." },
@@ -1020,14 +1020,14 @@ const TDF_DATA = {
       meritter:"Solid klatrer",
       form:"Klatrehjelper for Uijtdebroeks.",
       historie:"Spansk klatrer for Movistar." },
-    { navn:"Georg Hessmann", lag:"MOV", land:"Tyskland", alder:25, rolle:"Allrounder / hjelper", nr:145, foto:"", fødeby:"Münster",
+    { navn:"Michel Hessmann", lag:"MOV", land:"Tyskland", alder:24, rolle:"Allrounder / hjelper", nr:145, foto:"", fødeby:"Münster",
       meritter:"Solid allrounder",
       form:"Tysker i Movistar-troppen. Bidragsyter.",
       historie:"Tysk allrounder for Movistar." },
-    { navn:"Carlos Rubio", lag:"MOV", land:"Spania", alder:24, rolle:"Klatrer / hjelper", nr:148, foto:"",
-      meritter:"Klatrer",
-      form:"Hjelper for Uijtdebroeks i fjellene.",
-      historie:"Spansk klatrer for Movistar." },
+    { navn:"Einer Rubio", lag:"MOV", land:"Colombia", alder:27, rolle:"Klatrer / hjelper", nr:148, foto:"", fødeby:"Pitalito",
+      meritter:"Klatrer, Grand Tour-erfaring",
+      form:"Kolombisk klatrer og hjelper for Uijtdebroeks i fjellene.",
+      historie:"Kolombisk klatrer for Movistar. Solid Grand Tour-hjelper." },
     { navn:"Nelson Oliveira", lag:"MOV", land:"Portugal", alder:34, rolle:"Hjelper / allrounder", nr:146, foto:"", fødeby:"Anadia",
       meritter:"Erfaren proff, VM-medalje, etappeseirer",
       form:"Portugisisk veteran for Movistar. Bred profil — hjelper i fjell og flat. Lang Grand Tour-erfaring.",
@@ -1242,10 +1242,10 @@ const TDF_DATA = {
     /* ---- UNO-X MOBILITY (tillegg) ---- */
     { navn:"Anders Johannessen", lag:"UNO", land:"Norge", alder:26, rolle:"Klatrer / hjelper", nr:125, foto:"", fødeby:"Drøbak", norsk:true,
       meritter:"Proff på Uno-X Mobility",
-      form:"TVILLINGBROR til Tobias Halland Johannessen — begge er med på Uno-X Tour-lag 2026! Første gang begge tvillingene sykler Tour de France. Anders er en solid klatrer og allrounder.",
+      form:"TVILLINGBROR til Tobias Halland Johannessen — begge er med på Uno-X Tour-lag 2026! Første gang begge tvillingene sykler Tour de France. Anders fikk plass etter at Andreas Kron måtte trekke seg grunnet sykdom.",
       resultater2026:[],
-      historie:"Tvilling — bror Tobias Halland Johannessen er GC-kapteinen for Uno-X. De to brødrene fra Stavanger er begge proffyklist og nå i SAMME Tour de France-lag. Unik norsk Tour-historie!" },
-    { navn:"Niklas Charmig", lag:"UNO", land:"Danmark", alder:28, rolle:"Klatrer / etappejeger", nr:123, foto:"",
+      historie:"Tvilling — bror Tobias Halland Johannessen er GC-kapteinen for Uno-X. De to brødrene fra Drøbak er begge proffyklist og nå i SAMME Tour de France-lag. Unik norsk Tour-historie!" },
+    { navn:"Anthon Charmig", lag:"UNO", land:"Danmark", alder:24, rolle:"Klatrer / etappejeger", nr:123, foto:"", fødeby:"Randers",
       meritter:"Etappeseirer, vant Tour Auvergne-Rhône-Alpes etappe 2 (2026)",
       form:"Vant etappe 2 av Tour Auvergne-Rhône-Alpes 2026 (Saint-Martin-le-Vinoux → Le Puy-en-Velay) — Uno-X sin store etappejeger. I knallform. Offensiv profil liker å angripe tidlig.",
       resultater2026:[
@@ -1308,7 +1308,7 @@ const TDF_DATA = {
       meritter:"Ung fransk allrounder",
       form:"Ung fransk allrounder for Cofidis. Kan hjelpe i fjellene og på kuperte etapper.",
       historie:"Franskt talent. Debuterer i Tour de France 2026." },
-    { navn:"Bert Allegaert", lag:"COF", land:"Belgia", alder:29, rolle:"Klassiker / hjelper", nr:162, foto:"", fødeby:"Moorslede",
+    { navn:"Piet Allegaert", lag:"COF", land:"Belgia", alder:29, rolle:"Klassiker / hjelper", nr:162, foto:"", fødeby:"Moorslede",
       meritter:"Klassikerspesialist",
       form:"Belgisk klassikerhjelper for Cofidis. Viktig støtte på flate og kuperte etapper.",
       historie:"Sterk belgisk motor. Bred profil fra sprint til klatring." },
@@ -1434,7 +1434,7 @@ const TDF_DATA = {
       meritter:"Tour-etappeseier 2024, sterk puncheur",
       form:"TotalEnergies sin etappehåp. Vant Tour-etappe i 2024.",
       historie:"Vant etappe i Tour 2024. Sterk puncheur fra Frankrike." },
-    { navn:"Alexys Breuillard", lag:"TOT", land:"Frankrike", alder:27, rolle:"Hjelper", nr:202, foto:"", fødeby:"Pertuis",
+    { navn:"Nicolas Breuillard", lag:"TOT", land:"Frankrike", alder:26, rolle:"Hjelper", nr:202, foto:"", fødeby:"Pertuis",
       meritter:"Solid hjelper",
       form:"Bidragsyter for TotalEnergies.",
       historie:"Fransk hjelper for TotalEnergies." },
@@ -1534,7 +1534,13 @@ const TDF_DATA = {
     { tittel:"23 lag i Tour", tekst:"5 ProTeam-lag i tillegg til 18 WorldTour-lag: Tudor (Alaphilippe), Pinarello-Q36.5 (Pidcock), TotalEnergies, Caja Rural og Cofidis. Jayco AlUla er WorldTour og trenger ikke wildcard. Pidcock er mørkt hest." },
     { tittel:"Seixas — 19 år", tekst:"Paul Seixas er født 2006 og debuterer i Tour som 19-åring. Vant Itzulia Basque Country i april 2026. Hvit-troye-favoritt. Enorm press fra Frankrike." },
     { tittel:"TARA-viruset herjet feltet", tekst:"Tour Auvergne-Rhône-Alpes (7–14 juni 2026) var epidemisk: av 154 startere fullførte kun 91 — 63 abandonerte. En viral sykdom spredte seg gjennom pelotongen og kasserte store navn. Utøvere som hoppet over TARA (Evenepoel, Vingegaard, van der Poel) unngikk smitte. Konsekvenser: Landa ute av Tour, Onley (INEOS) skadet, Seixas og Abrahamsen klarte seg — knapt." },
-    { tittel:"Vismas pre-Tour-mareritt", tekst:"Visma | Lease a Bike mister tre nøkkelryttere før Tour: Van Aert ut (albueskade+infeksjon), Laporte ut (lårskade), Affini usikker (skritt-kutt, italienske NM 26. juni). Erstatninger: Piganzoli (erstattet van Aert), Hagenes (erstattet Laporte), Lemmen som mulig Affini-erstatning. Vingegaard stiller altså uten sin beste støttestjerne (van Aert) inn i det viktigste rittet." }
+    { tittel:"Vismas pre-Tour-mareritt", tekst:"Visma | Lease a Bike mister tre nøkkelryttere før Tour: Van Aert ut (albueskade+infeksjon), Laporte ut (lårskade), Affini usikker (skritt-kutt, italienske NM 26. juni). Erstatninger: Piganzoli (erstattet van Aert), Hagenes (erstattet Laporte), Lemmen som mulig Affini-erstatning. Vingegaard stiller altså uten sin beste støttestjerne (van Aert) inn i det viktigste rittet." },
+    { tittel:"Grønn trøye — 7 av 7", tekst:"De siste 7 årene (2019–2025) har grønn trøye hatt 7 ULIKE vinnere. Kontrast: Peter Sagan vant 7 av 8 år fra 2012 til 2019. Norsk tilknytning: Thor Hushovd vant grønn trøye TO ganger i sin karriere." },
+    { tittel:"Grønn trøye — vinnere 2021–2025", tekst:"2025: Jonathan Milan (Lidl-Trek) · 2024: Biniam Girmay (NSN) · 2023: Jasper Philipsen (APT) · 2022: Wout van Aert (VLB) · 2021: Mark Cavendish · 2019: Peter Sagan · 2012–2019: Sagan vant 7 ganger på 8 år." },
+    { tittel:"Prikktrøye — klatretrøye-historikk 2021–2025", tekst:"2025: Tadej Pogačar · 2024: Richard Carapaz · 2023: Giulio Ciccone · 2022: Jonas Vingegaard · 2021: Tadej Pogačar. Fire av siste seks år har prikktrøyen endt hos sammenlagtvinneren." },
+    { tittel:"Hvit trøye — beste unge rytter 2021–2025", tekst:"2025: Florian Lipowitz · 2024: Remco Evenepoel · 2023: Tadej Pogačar · 2022: Tadej Pogačar · 2021: Tadej Pogačar. Pogačar vant hvit trøye tre år på rad." },
+    { tittel:"Wout van Aert slår Pogačar", tekst:"Eneste gang Pogačar har tapt et ritt i 2026: Wout Van Aert spurtslo sloveneren i velodrom-finalen på Paris-Roubaix. Ellers ubeseiret." },
+    { tittel:"Vingegaard slår Pogačar på TT 2023", tekst:"Klassisk moment: Etter 15 etapper i 2023 skilte det KUN 10 sekunder mellom Pogačar og Vingegaard. Da kom tempo til Saint-Gervais Mont-Blanc — Vingegaard slo Pogačar og åpnet et gap på nesten 2 minutter. TT kan avgjøre Tour." }
   ],
 
   /* ---- TRØYENE ---- */
