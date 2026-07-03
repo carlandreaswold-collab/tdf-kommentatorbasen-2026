@@ -466,7 +466,7 @@ const TDF_DATA = {
     /* ---- GC-FAVORITTER ---- */
     { navn:"Tadej Pogačar", lag:"UAE", land:"Slovenia", alder:27, rolle:"Sammenlagt", nr:1, foto:"", fødeby:"Komenda",
       meritter:"4 Tour-seire (2020,2021,2024,2025), regjerende verdensmester",
-      form:"Monstrøst form. Vant Tour de Suisse med 6 minutters og 32 sekunders margin etter kun 5 etapper — 3 etappeseire inkl. solo-raid 72 km ut og TT-seier. Har vunnet 3 Monumenter i vår (MSR, RVV, LBL). Tapte Paris-Roubaix til van Aert i to-mann sprint. Jakter historisk 5. Tour-seir.",
+      form:"Monstrøst form. Vant Tour de Suisse med 6 minutters og 32 sekunders margin etter kun 5 etapper — 3 etappeseire inkl. solo-raid 72 km ut og TT-seier. Har vunnet 3 Monumenter i vår (MSR, RVV, LBL). Tapte Paris-Roubaix til van Aert i to-mann sprint. Jakter historisk 5. Tour-seir. NB (INRNG): Avslørte etter TdF 2025 at han hadde en KNESKADE under rittet — med det in mente var han muligens sårbar. Svakhet: dristige angrep som ikke alltid lønner seg (eks. Amstel Gold Race 2025).",
       resultater2026:[
         {type:"seier", ritt:"Strade Bianche"},
         {type:"seier", ritt:"Milano-Sanremo"},
@@ -481,8 +481,8 @@ const TDF_DATA = {
       historie:"Mest komplette rytter for denne ruta. Angriper hvor som helst. #1 som forsvarende mester. Tour de Suisse 2026: vant på sin første deltakelse med nesten 7 minutter — nesten utropt i sveitsisk fjellterreng." },
 
     { navn:"Jonas Vingegaard", lag:"VLB", land:"Danmark", alder:29, rolle:"Sammenlagt", nr:11, foto:"", fødeby:"Glyngøre",
-      meritter:"2 Tour-seire (2022, 2023), vant Giro d'Italia 2026 (fullfører karriere-Grand Slam — alle tre Grand Tours vunnet, første siden Froome 2018)",
-      form:"Dominerte Giroen 2026 (5 etappeseire, utropt i Roma). Vant Paris-Nice og Volta a Catalunya i vår. Stort spørsmål: klarer han Giro-Tour-dobbelen? Siste som slo Pogačar i Tour.",
+      meritter:"2 Tour-seire (2022, 2023), vant Vuelta a España 2025, vant Giro d'Italia 2026 (fullfører karriere-Grand Slam — alle tre Grand Tours vunnet, første siden Froome 2018)",
+      form:"Dominerte Giroen 2026 (5 etappeseire, utropt i Roma). Vant Paris-Nice og Volta a Catalunya i vår. Vant Vuelta 2025. Stort spørsmål: klarer han Giro-Tour-dobbelen? Siste som slo Pogačar i Tour. INRNG: 'He even says he's better than ever' — men sa det samme i 2025 og tapte.",
       resultater2026:[
         {type:"seier", ritt:"Paris-Nice"},
         {type:"seier", ritt:"Volta a Catalunya"},
@@ -493,7 +493,7 @@ const TDF_DATA = {
 
     { navn:"Remco Evenepoel", lag:"RBH", land:"Belgia", alder:26, rolle:"Sammenlagt / tempo", nr:21, foto:"", fødeby:"Schepdaal",
       meritter:"Dobbel OL-mester (Paris 2024), 3. i Tour-debut 2023, abandonerte Tour de France 2025",
-      form:"Vant Amstel Gold Race i april. Lite ritt siden pga elbow-skade. Våpenet er tempoetappe 16; problemet er dobbel Alpe d'Huez etterpå.",
+      form:"Vant Amstel Gold Race i april. Hoppet over all racing siden april for å fokusere 100% på Tour. Ser ekstremt slank ut — klar. Våpenet er tempoetappe 16; problemet er dobbel Alpe d'Huez etterpå. Tourmalet er hans nemesis (tapte der i Vuelta 2023 og TdF 2025). INRNG: kan overraske med overraskelsesangrep der han tar et gap og holder inn — passer noen dalstrekninger bedre enn toppmålene.",
       resultater2026:[
         {type:"seier", ritt:"Amstel Gold Race"},
         {type:"pall", ritt:"Liège-Bastogne-Liège", plass:3}
@@ -503,7 +503,7 @@ const TDF_DATA = {
 
     { navn:"Paul Seixas", lag:"DEC", land:"Frankrike", alder:19, rolle:"Sammenlagt (talent)", nr:51, foto:"", fødeby:"Lyon",
       meritter:"Vant Itzulia Basque Country og La Flèche Wallonne april 2026, 2. plass Strade Bianche 2026, 2. plass Liège-Bastogne-Liège 2026. YNGSTE TdF-STARTER SIDEN 1937.",
-      form:"Årets store sensasjon. 19 år — fulgte Pogačar i Strade Bianche og LBL (2. begge gangene). Vant Itzulia suverent og sjokkerte med Flèche Wallonne-seier på Mur de Huy. 7 seiere på 23 racedays. Krasjet i Tour Auvergne men bekreftet på start. Hvit-trøye-klar favoritt.",
+      form:"Årets store sensasjon. 19 år — fulgte Pogačar i Strade Bianche og LBL (2. begge gangene). Vant Itzulia suverent og sjokkerte med Flèche Wallonne-seier på Mur de Huy. 7 seiere på 23 racedays. Krasjet i Tour Auvergne — mistet kampen om seieren, slet med skrubbsår på håndflatene og tapte treningstid. MÅL (INRNG): 1) fullføre rittet, 2) best mulig GC-plassering. Evne: kan gå ekstremt dypt — men koster ham gjerne dagen etter.",
       resultater2026:[
         {type:"pall", ritt:"Strade Bianche", plass:2},
         {type:"seier", ritt:"Itzulia Basque Country"},
@@ -530,8 +530,8 @@ const TDF_DATA = {
       historie:"En av syklingens største talenter. Movistar satser alt på ham i Tour." },
 
     { navn:"Tom Pidcock", lag:"PQ3", land:"Storbr.", alder:26, rolle:"Sammenlagt / brudd", nr:171, foto:"", fødeby:"Leeds",
-      meritter:"Vant Tour-etappe 2022 på Alpe d'Huez, OL-mester MTB, vinner Tour de Suisse",
-      form:"2. plass Milano-Sanremo 2026 (slo alt unntatt Pogačar i to-mann sprint). Hadde fall i Volta a Catalunya, men bekreftet på start. Pinarello-Q36.5 wildcard. Etappe 19+20 på Alpe d'Huez passer ham perfekt.",
+      meritter:"Vant Tour-etappe 2022 på Alpe d'Huez, OL-mester MTB, vinner Tour de Suisse, pall Vuelta a España 2025",
+      form:"2. plass Milano-Sanremo 2026 (slo alt unntatt Pogačar i to-mann sprint). Hadde fall i Volta a Catalunya, men bekreftet på start. Pinarello-Q36.5 wildcard. Etappe 19+20 på Alpe d'Huez passer ham perfekt. INRNG: «Human scratchcard — you never know what you get each time.» Mål: GC, men pivoterer til etapper om han faller ut av topp-5.",
       resultater2026:[
         {type:"pall", ritt:"Milano-Sanremo", plass:2}
       ],
@@ -549,7 +549,7 @@ const TDF_DATA = {
 
     { navn:"Florian Lipowitz", lag:"RBH", land:"Tyskland", alder:25, rolle:"Sammenlagt", nr:25, foto:"", fødeby:"Laichingen",
       meritter:"Topp-3 + hvit trøye (beste unge rytter) Tour de France 2025",
-      form:"Knakende god form: vant Tour of Slovenia (2 etapper + sammenlag), runner-up Itzulia og Tour de Romandie, 3. plass Volta a Catalunya. Sitat: «Det finnes ingen mer komplett rytter» (om Pogačar). «Men bare nesten umulig — ikke umulig.»",
+      form:"Knakende god form: vant Tour of Slovenia (2 etapper + sammenlag), runner-up Itzulia og Tour de Romandie, 3. plass Volta a Catalunya. Sitat: «Det finnes ingen mer komplett rytter» (om Pogačar). «Men bare nesten umulig — ikke umulig.» INRNG: Søker fortsatt sitt FØRSTE WorldTour-seier. Racecraft under utvikling — slapp feltet i oppoverbakke i Slovenia, men var nølende i nedkjøringen.",
       resultater2026:[
         {type:"GC", ritt:"Tour of Slovenia", plass:1},
         {type:"GC", ritt:"Itzulia Basque Country", plass:2},
@@ -707,7 +707,7 @@ const TDF_DATA = {
     /* ---- UAE TEAM EMIRATES ---- */
     { navn:"Isaac Del Toro", lag:"UAE", land:"Mexico", alder:22, rolle:"Sammenlagt / klatrer", nr:2, foto:"", fødeby:"Ensenada",
       meritter:"Vuelta 2025-revelasjon, vant Tour Auvergne-Rhône-Alpes 2026",
-      form:"Vant Tour Auvergne-Rhône-Alpes 2026 (det nyomdøpte Critérium du Dauphiné) — to strake etappeseire i finalehelgen (Grand Colombier etappe 7 og Plateau de Solaison etappe 8). Tok gul trøye fra Luke Tuckwell (RBH) på siste dag. Kom tilbake etter lårmuskelsone fra Itzulia-krasj i april. UAEs 2. kaptein og hvit-troye-kandidat.",
+      form:"Vant Tour Auvergne-Rhône-Alpes 2026 (det nyomdøpte Critérium du Dauphiné) — to strake etappeseire i finalehelgen (Grand Colombier etappe 7 og Plateau de Solaison etappe 8). Tok gul trøye fra Luke Tuckwell (RBH) på siste dag. Kom tilbake etter lårmuskelsone fra Itzulia-krasj i april. UAEs 2. kaptein og hvit-troye-kandidat. INRNG: Rekognoserte nøkkel-Tour-etapper med Pogačar — kjenner bakken. Vis i Giroen 2025 at han klarer 3 uker. Relativ svakhet: tempoetapper.",
       resultater2026:[
         {type:"GC", ritt:"Tour Auvergne-Rhône-Alpes", plass:1},
         {type:"seier", ritt:"Tour Auvergne-Rhône-Alpes etappe 7 (Grand Colombier)"},
@@ -1411,9 +1411,9 @@ const TDF_DATA = {
       skade:"Lungeemboli 2025 (oppdaget på høydeleir) — nær-dødelig, 4 mnd ute. KJØRT NED AV BRANNBIL under trening 5. mars 2026: åpent brudd høyre arm, brukket håndledd og tommel, to operasjoner. Returnerte juni 2026. Sitat: «Hadde du sagt til meg for tre måneder siden at jeg ville stå på Tour de France-start, tror jeg ikke jeg hadde trodd deg.»",
       historie:"Australsk legende. Vant 7 Tour-etapper. Grønn trøye 2017. Sterk på kuperte avslutninger." },
     { navn:"Ben O'Connor", lag:"JAY", land:"Australia", alder:30, rolle:"Klatrer / GC", nr:111, foto:"", fødeby:"Subiaco",
-      meritter:"4. plass Tour 2021, etappeseirer",
-      form:"Jaycos GC-kaptein. Sterk klatrer med ambisjoner om pallen.",
-      historie:"Ble 4. i Tour 2021. Australsk klatrer med stor kapasitet i fjellene." },
+      meritter:"4. plass Tour 2021, vant dronningetappe Tour de France 2025, 11. plass Tour 2025",
+      form:"Forsøkte GC i 2025 men falt ut — endte med å vinne dronningetappen og ble 11. sammenlagt. INRNG: laget ville signert for det samme igjen. Australsk klatrer med stor kapasitet i fjellene.",
+      historie:"Ble 4. i Tour 2021. Vant queen stage TdF 2025. Etappejeger mer enn GC-mann." },
     { navn:"Luke Plapp", lag:"JAY", land:"Australia", alder:24, rolle:"Allrounder / tempo / GC-talent", nr:117, foto:"", fødeby:"Melbourne",
       meritter:"Sterk allrounder, temposterk",
       form:"Ung australsk GC-håp. Sterk på tempo og klatring.",
@@ -1539,7 +1539,8 @@ const TDF_DATA = {
     { tittel:"Grønn trøye — vinnere 2021–2025", tekst:"2025: Jonathan Milan (Lidl-Trek) · 2024: Biniam Girmay (NSN) · 2023: Jasper Philipsen (APT) · 2022: Wout van Aert (VLB) · 2021: Mark Cavendish · 2019: Peter Sagan · 2012–2019: Sagan vant 7 ganger på 8 år." },
     { tittel:"Prikktrøye — klatretrøye-historikk 2021–2025", tekst:"2025: Tadej Pogačar · 2024: Richard Carapaz · 2023: Giulio Ciccone · 2022: Jonas Vingegaard · 2021: Tadej Pogačar. Fire av siste seks år har prikktrøyen endt hos sammenlagtvinneren." },
     { tittel:"Hvit trøye — beste unge rytter 2021–2025", tekst:"2025: Florian Lipowitz · 2024: Remco Evenepoel · 2023: Tadej Pogačar · 2022: Tadej Pogačar · 2021: Tadej Pogačar. Pogačar vant hvit trøye tre år på rad." },
-    { tittel:"Wout van Aert slår Pogačar", tekst:"Eneste gang Pogačar har tapt et ritt i 2026: Wout Van Aert spurtslo sloveneren i velodrom-finalen på Paris-Roubaix. Ellers ubeseiret." },
+    { tittel:"Wout van Aert slår Pogačar", tekst:"Eneste gang Pogačar har tapt et ritt i 2026: Wout Van Aert spurtslo sloveneren i velodrom-finalen på Paris-Roubaix. Ellers ubeseiret siden... 2023 Tour de France." },
+    { tittel:"Tidsbonuser på etappemål", tekst:"10-6-4 sekunders tidsbonus til henholdsvis 1., 2. og 3. plass på samtlige etappenål. Kan spille inn i tett sammenlagtkamp." },
     { tittel:"Vingegaard slår Pogačar på TT 2023", tekst:"Klassisk moment: Etter 15 etapper i 2023 skilte det KUN 10 sekunder mellom Pogačar og Vingegaard. Da kom tempo til Saint-Gervais Mont-Blanc — Vingegaard slo Pogačar og åpnet et gap på nesten 2 minutter. TT kan avgjøre Tour." }
   ],
 
