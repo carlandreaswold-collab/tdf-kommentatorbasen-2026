@@ -253,7 +253,7 @@ const TDF_DATA = {
       ds:["Zak Dempster", "Klaas Lodewyck"],
       ryttere:"Evenepoel, Lipowitz, Cattaneo, Van Gils, Hindley, Denz, Tratnik, van Dijke",
       notat:"To GC-kort: Evenepoel (tempo) + Lipowitz (jevn). Evenepoel #21. NB: D. Martínez, Meeus og Van Poppel er IKKE med — laget er mer defensivt sammensatt. Luke Tuckwell (som ble 2. i Tour Auvergne) er heller ikke med. Tratnik solid hjelper, Denz allrounder.",
-      tourEtapper:{ antall:8, noter:"Som BORA-hansgrohe/Red Bull-BORA: Sagan (utvist uten seier 2017, vant etapper 2018–19 inkl. grønn trøye) · Meeus 1 (Champs-Élysées 2023) · Evenepoel 0 i Tour ennå" },
+      tourEtapper:{ antall:4, noter:"Som BORA-hansgrohe/Red Bull-BORA: Sagan 3 (etappe 2+13 i 2018, etappe 5 i 2019 — utvist uten seier i 2017) · Meeus 1 (Champs-Élysées 2023) · Evenepoel 0 i Tour ennå" },
       drakt:{ base:"#0c1640", skulder:"#ffffff", sleeve:"#0c1640", krave:"#cc0000",
               band:null, mønster:"none",
               logo1:"Red Bull", logo2:"BORA", lf:"#ffffff" }
@@ -303,7 +303,7 @@ const TDF_DATA = {
       ds:["Tom Southam", "Charles Wegelius"],
       ryttere:"Carapaz, Healy, Asgreen, Baudin, Quinn, Steinhauser, Walker, Valgren",
       notat:"Rosa drakt, offensiv stil. Carapaz som GC-kort — OL-mester 2021, Grand Tour-vinner. NB: Honoré er IKKE på TdF-laget. Fullstendig tropp nå klar: Quinn, Steinhauser, Walker og Valgren kompletterer.",
-      tourEtapper:{ antall:8, noter:"Urán 2 (Cannondale-Drapac 2017) · Healy 1 (2023) · div. Cannondale/EF-epoken" },
+      tourEtapper:{ antall:7, noter:"Urán 1 (etappe 9, 2017) · Healy 1 (2023) · div. Cannondale/EF-epoken" },
       drakt:{ base:"#d04797", skulder:"#d04797", sleeve:"#d04797", krave:"#d04797",
               band:null, mønster:"none",
               logo1:"EF", logo2:"EasyPost", lf:"#ffffff" }
@@ -323,7 +323,7 @@ const TDF_DATA = {
       ds:["José Vicente García Acosta", "Pablo Lastras"],
       ryttere:"Uijtdebroeks, Rubio, Castrillo, Hessmann, Oliveira, Cepeda, Romo, García Pierna",
       notat:"Uijtdebroeks (23) som GC-kort — ung belgier med store ambisjoner. Homerace-motivasjon. NB: Ivan Romeo og Roger Adrià er IKKE med. Fullstendig lag: Oliveira (POR), Cepeda (ECU), Romo og García Pierna (ESP) inn.",
-      tourEtapper:{ antall:15, noter:"Som Caisse d'Épargne/Movistar: Valverde 5 (2005–2015) · Quintana 3 (2013–2016) · div." },
+      tourEtapper:{ antall:15, noter:"Som Caisse d'Épargne/Movistar: Valverde 5 (2005–2015) · Quintana 3 (2013–2016) · Izagirre 1 (etappe 20, 2016) · div." },
       drakt:{ base:"#1c569b", skulder:"#4875a5", sleeve:"#1c569b", krave:"#1c569b",
               band:null, mønster:"none",
               logo1:"Movistar", logo2:"", lf:"#ffffff" }
@@ -343,7 +343,7 @@ const TDF_DATA = {
       ds:["Roman Kreuziger", "Gorazd Štangelj"],
       ryttere:"Martínez, Tiberi, Mohorič, Bauhaus, Caruso, Gradek, Van Mechelen, Stannard",
       notat:"Martínez og Tiberi deler GC-ledelse. Mohorič farlig i brudd. Bauhaus som spurtkort på flate etapper. NB: Bilbao er IKKE med på laget.",
-      tourEtapper:{ antall:10, noter:"Mohoric 2 (2021, inkl. solo 100 km ut) · Teuns 1 (Mûr-de-Bretagne 2021) · Bilbao 1 (2023) · Haller 1 (2021) · div. siden 2018" },
+      tourEtapper:{ antall:9, noter:"Mohoric 2 (2021, inkl. solo 100 km ut) · Teuns 1 (Mûr-de-Bretagne 2021) · Bilbao 1 (2023) · div. siden 2018" },
       drakt:{ base:"#1a1c48", skulder:"#1a1c48", sleeve:"#1a1c48", krave:"#1a9eaa",
               band:null, mønster:"none",
               logo1:"Bahrain", logo2:"Victorious", lf:"#ffffff" }
@@ -403,7 +403,7 @@ const TDF_DATA = {
       ds:["Roberto Damiani", "Bingen Fernández", "Sébastien Hinault"],
       ryttere:"Aranburu, Fretin, Izagirre, Kirsch, Page, Allegaert, Biermans, Thomas (B.)",
       notat:"Wildcard-lag. Izagirre og Aranburu som etappejegere. NB: Buchmann er IKKE med. Benjamin Thomas er allrounder og hjelper. Biermans og Allegaert klassikerkort.",
-      tourEtapper:{ antall:8, noter:"Som Cofidis (siden 1997, stabilt lagnavn): Izagirre 1 (2016) · div. tidlig 2000-tall" },
+      tourEtapper:{ antall:8, noter:"Som Cofidis (siden 1997, stabilt lagnavn): Izagirre 1 (etappe 12, 2023) · div. tidlig 2000-tall" },
       drakt:{ base:"#761941", skulder:"#f5c000", sleeve:"#761941", krave:"#761941",
               band:null, mønster:"none",
               logo1:"Cofidis", logo2:"", lf:"#ffffff" }
@@ -434,7 +434,7 @@ const TDF_DATA = {
       ds:["Steve Cummings", "Mathew Hayman"],
       ryttere:"Plapp, Matthews, O'Connor, Ackermann, Schmid, Durbridge, Engelhardt, O'Brien",
       notat:"Wildcard. Matthews som spurter og klassiker-truer. Plapp GC-håp. Durbridge erfaren tempoallrounder, Engelhardt ung tysk klatrer, O'Brien australsk allrounder.",
-      tourEtapper:{ antall:15, noter:"Som GreenEdge/Orica/Mitchelton/BikeExchange/Jayco: Matthews 2 (2016) · Ewan 2 (2017–18) · Gerrans 1 (2012) · A. Yates 1 (2022) · div." },
+      tourEtapper:{ antall:13, noter:"Som GreenEdge/Orica/Mitchelton/BikeExchange/Jayco: Matthews 2 (2016) · Gerrans 1 (2012) · A. Yates 1 (2022) · div." },
       drakt:{ base:"#6e3fa3", skulder:"#6e3fa3", sleeve:"#6e3fa3", krave:"#6e3fa3",
               band:"#00e676", mønster:"band-mid",
               logo1:"Jayco", logo2:"AlUla", lf:"#ffffff" }

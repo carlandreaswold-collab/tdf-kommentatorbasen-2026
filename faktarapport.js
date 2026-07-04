@@ -63,6 +63,56 @@ const FAKTARAPPORT = {
       dato: "2026-07-04"
     },
     {
+      id: "bahrain-haller-ingen-seier",
+      kategori: "lag",
+      referanse: "Bahrain Victorious",
+      felt: "tourEtapper.noter",
+      feil: "'Haller 1 (2021)' — Marco Haller har aldri vunnet en Grand Tour-etappe",
+      korrekt: "Bahrains tre 2021-etapper gikk til Mohorič (2) og Teuns (1). Haller er ren hjelper.",
+      kilde: "ProCyclingStats / Wikipedia (agent-søk 2026-07-04)",
+      dato: "2026-07-04"
+    },
+    {
+      id: "ef-uran-1-ikke-2",
+      kategori: "lag",
+      referanse: "EF Education-EasyPost",
+      felt: "tourEtapper.noter",
+      feil: "'Urán 2 (2017)' — Urán vant kun 1 etappe i 2017",
+      korrekt: "Urán vant etappe 9 (Nantua–Chambéry) i 2017. Eneste TdF-etappeseier for ham.",
+      kilde: "Cycling Weekly / Wikipedia (agent-søk 2026-07-04)",
+      dato: "2026-07-04"
+    },
+    {
+      id: "cofidis-izagirre-feil-aar",
+      kategori: "lag",
+      referanse: "Cofidis / Movistar",
+      felt: "tourEtapper.noter",
+      feil: "'Izagirre 1 (2016)' under Cofidis — Izagirre var med Movistar i 2016",
+      korrekt: "Izagirre vant etappe 20 i 2016 med Movistar. Gikk til Cofidis i 2022 og vant etappe 12 i 2023.",
+      kilde: "Movistar Team pressemeld. / Wikipedia (agent-søk 2026-07-04)",
+      dato: "2026-07-04"
+    },
+    {
+      id: "jayco-ewan-aldri-tour",
+      kategori: "lag",
+      referanse: "Team Jayco AlUla",
+      felt: "tourEtapper.noter",
+      feil: "'Ewan 2 (2017–18)' — Ewan syklet aldri Tour de France for Orica/Mitchelton",
+      korrekt: "Ewan ble droppet fra 2018-TdF-troppen og debuterte i Tour i 2019 med Lotto-Soudal.",
+      kilde: "Wikipedia / Cycling Weekly (agent-søk 2026-07-04)",
+      dato: "2026-07-04"
+    },
+    {
+      id: "bora-sagan-eksakt-antall",
+      kategori: "lag",
+      referanse: "Red Bull-BORA-hansgrohe",
+      felt: "tourEtapper.noter + antall",
+      feil: "'Sagan 6 (2017×4, 2018×1, 2019×1)' — antall og fordeling begge feil",
+      korrekt: "Sagan vant 0 i 2017 (utvist), 2 i 2018 (etappe 2+13), 1 i 2019 (etappe 5) = 3 totalt med BORA.",
+      kilde: "Wikipedia / Cycling Weekly (agent-søk 2026-07-04)",
+      dato: "2026-07-04"
+    },
+    {
       id: "uae-aru-feil-lag",
       kategori: "lag",
       referanse: "UAE Team Emirates",
