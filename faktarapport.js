@@ -63,6 +63,106 @@ const FAKTARAPPORT = {
       dato: "2026-07-04"
     },
     {
+      id: "uae-aru-feil-lag",
+      kategori: "lag",
+      referanse: "UAE Team Emirates",
+      felt: "tourEtapper.noter",
+      feil: "'Aru 3 (2017)' — Aru var med Astana i 2017, ikke UAE",
+      korrekt: "Aru gikk til UAE i 2019. Seire i 2017 (hvis noen) tilhører Astana.",
+      kilde: "Agent-søk 2026-07-04",
+      dato: "2026-07-04"
+    },
+    {
+      id: "visma-van-aert-startaar",
+      kategori: "lag",
+      referanse: "Visma | Lease a Bike",
+      felt: "tourEtapper.noter",
+      feil: "'Van Aert ~10 (2018–2025)' — Van Aert kom til Jumbo i 2019, ikke 2018",
+      korrekt: "Van Aert signerte med LottoNL-Jumbo fra januar 2019. Startår rettet til 2019.",
+      kilde: "Agent-søk 2026-07-04",
+      dato: "2026-07-04"
+    },
+    {
+      id: "bora-sagan-2017",
+      kategori: "lag",
+      referanse: "Red Bull-BORA-hansgrohe",
+      felt: "tourEtapper.noter",
+      feil: "'Sagan 6 (2017×4, 2018×1, 2019×1)' — Sagan ble utvist fra 2017-Tour og vant 0 etapper det året",
+      korrekt: "Sagan ble kastet ut etter Cavendish-episoden, uten noen etappeseier i 2017. Vant etapper 2018 og 2019.",
+      kilde: "Agent-søk 2026-07-04",
+      dato: "2026-07-04"
+    },
+    {
+      id: "trek-cancellara-4-prologer",
+      kategori: "lag",
+      referanse: "Lidl-Trek",
+      felt: "tourEtapper.noter",
+      feil: "'Cancellara 4 prologer (2011–13)' — matematisk umulig, bare 3 Tourer i perioden",
+      korrekt: "Cancellara vant 3 prologer med Trek-tilknyttede lag (2011, 2012, 2013).",
+      kilde: "Agent-søk 2026-07-04",
+      dato: "2026-07-04"
+    },
+    {
+      id: "alpecin-vdp-etappe",
+      kategori: "lag",
+      referanse: "Alpecin-Premier Tech",
+      felt: "tourEtapper.noter",
+      feil: "'van der Poel 1 (etappe 6, 2021)' — Van der Poel vant etappe 2, ikke etappe 6",
+      korrekt: "Van der Poel vant etappe 2 i 2021 (Mûr-de-Bretagne) og tok gultroyen.",
+      kilde: "Agent-søk 2026-07-04",
+      dato: "2026-07-04"
+    },
+    {
+      id: "nsn-girmay-cavendish-feil-lag",
+      kategori: "lag",
+      referanse: "NSN Cycling Team",
+      felt: "tourEtapper.noter",
+      feil: "'Girmay 2 (2024)' og 'Cavendish 1 rekordseter (2024)' — begge feil lag",
+      korrekt: "Girmay var med Intermarché i 2024 og vant 3 etapper (ikke 2). Cavendish var med Astana Qazaqstan. Clarke 1 (etappe 5, 2022) er korrekt NSN-historikk.",
+      kilde: "Agent-søk 2026-07-04",
+      dato: "2026-07-04"
+    },
+    {
+      id: "astana-nibali-2014",
+      kategori: "lag",
+      referanse: "XDS Astana",
+      felt: "tourEtapper.noter",
+      feil: "'Nibali 2 (2014)' — Nibali vant 4 etapper i 2014 (totalvinner)",
+      korrekt: "Nibali vant 4 etapper + sammenlagt i 2014 (etappe 2, 6, 10 + en alpe-etappe).",
+      kilde: "Agent-søk 2026-07-04",
+      dato: "2026-07-04"
+    },
+    {
+      id: "cofidis-calmejane-laporte",
+      kategori: "lag",
+      referanse: "Cofidis",
+      felt: "tourEtapper.noter",
+      feil: "'Calmejane 1 (2017)' og 'Laporte 1 (2022)' — begge vant for andre lag",
+      korrekt: "Calmejane vant etappe 14 i 2017 med Direct Énergie (nå TotalEnergies). Laporte vant i 2022 med Jumbo-Visma.",
+      kilde: "Agent-søk 2026-07-04",
+      dato: "2026-07-04"
+    },
+    {
+      id: "jayco-matthews-clarke",
+      kategori: "lag",
+      referanse: "Team Jayco AlUla",
+      felt: "tourEtapper.noter",
+      feil: "'Matthews 4 (2016–17)' og 'Clarke 1 (2022)' — 2017-seire var med Sunweb, Clarke var med Israel",
+      korrekt: "Matthews vant 2 etapper i 2016 med Orica. 2017-seire tilhører Sunweb/Decathlon. Clarke (etappe 5, 2022) var med Israel-Premier Tech.",
+      kilde: "Agent-søk 2026-07-04",
+      dato: "2026-07-04"
+    },
+    {
+      id: "caja-gaviria-feil-lag-antall",
+      kategori: "lag",
+      referanse: "Caja Rural",
+      felt: "tourEtapper.noter",
+      feil: "'Gaviria 2 i 2018 var med UAE' — Gaviria var med Quick-Step i 2018 og vant 4 etapper",
+      korrekt: "Gaviria vant 4 etapper i 2018-Tour med Quick-Step Floors. Gikk til UAE i 2019.",
+      kilde: "Agent-søk 2026-07-04",
+      dato: "2026-07-04"
+    },
+    {
       id: "abrahamsen-kun-2025-etappe",
       kategori: "rytter",
       referanse: "Jonas Abrahamsen",

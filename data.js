@@ -233,7 +233,7 @@ const TDF_DATA = {
       ds:["Joxean Matxin Fernández", "Andrej Hauptman"],
       ryttere:"Pogačar, Del Toro, McNulty, Wellens, Grossschartner, Politt, Vermeersch, A. Yates",
       notat:"Klart sterkeste lag. Pogačar #1 som forsvarende mester. Del Toro opp som 2. kaptein. Juan Ayuso er IKKE her — han er på Lidl-Trek.",
-      tourEtapper:{ antall:26, noter:"Pogačar 21 etapper (2020–2025) · Aru 3 (2017) · D. Martin 2 (2018–19)" },
+      tourEtapper:{ antall:23, noter:"Pogačar 21 etapper (2020–2025) · D. Martin 2 (2018–19)" },
       drakt:{ base:"#ffffff", skulder:"#cc0520", sleeve:"#cc0520", krave:"#001e62",
               band:null, mønster:"none", sidefelt:"#001e62",
               logo1:"UAE", logo2:"XRG", lf:"#cc0520" }
@@ -243,7 +243,7 @@ const TDF_DATA = {
       ds:["Frans Maassen", "Marc Reef"],
       ryttere:"Vingegaard, Jorgenson, Kuss, Armirail, Campenaerts, Affini, Hagenes (NOR), Piganzoli",
       notat:"NB: To sene frafall: Van Aert ut (infeksjon i elbue) → erstattet av Piganzoli. Laporte ut (lårmuskelsone mai) → erstattet av Per Strand Hagenes (NOR). Jorgenson kan bli nestekaptein.",
-      tourEtapper:{ antall:30, noter:"Som LottoNL-Jumbo/Jumbo-Visma/Visma: Van Aert ~10 (2018–2025, inkl. grønn 2022) · Vingegaard ~9 (2022–2025) · Roglič 3 (2019–21) · Teunissen etappe 1 + gul (2019) · Kuss 1 · Jorgenson 1 (2023)" },
+      tourEtapper:{ antall:30, noter:"Som LottoNL-Jumbo/Jumbo-Visma/Visma: Van Aert ~10 (2019–2025, inkl. grønn 2022) · Vingegaard ~9 (2022–2025) · Roglič 3 (2019–21) · Teunissen etappe 1 + gul (2019) · Kuss 1 · Jorgenson 1 (2023)" },
       drakt:{ base:"#1d1d1b", skulder:"#1d1d1b", sleeve:"#1d1d1b", krave:"#ffe500",
               band:"#ffe500", mønster:"band-top",
               logo1:"VISMA", logo2:"Lease a Bike", lf:"#ffe500" }
@@ -253,7 +253,7 @@ const TDF_DATA = {
       ds:["Zak Dempster", "Klaas Lodewyck"],
       ryttere:"Evenepoel, Lipowitz, Cattaneo, Van Gils, Hindley, Denz, Tratnik, van Dijke",
       notat:"To GC-kort: Evenepoel (tempo) + Lipowitz (jevn). Evenepoel #21. NB: D. Martínez, Meeus og Van Poppel er IKKE med — laget er mer defensivt sammensatt. Luke Tuckwell (som ble 2. i Tour Auvergne) er heller ikke med. Tratnik solid hjelper, Denz allrounder.",
-      tourEtapper:{ antall:8, noter:"Som BORA-hansgrohe/Red Bull-BORA: Sagan 6 (2017×4, 2018×1, 2019×1) · Meeus 1 (Champs-Élysées 2023) · Evenepoel 0 i Tour ennå" },
+      tourEtapper:{ antall:8, noter:"Som BORA-hansgrohe/Red Bull-BORA: Sagan (utvist uten seier 2017, vant etapper 2018–19 inkl. grønn trøye) · Meeus 1 (Champs-Élysées 2023) · Evenepoel 0 i Tour ennå" },
       drakt:{ base:"#0c1640", skulder:"#ffffff", sleeve:"#0c1640", krave:"#cc0000",
               band:null, mønster:"none",
               logo1:"Red Bull", logo2:"BORA", lf:"#ffffff" }
@@ -263,7 +263,7 @@ const TDF_DATA = {
       ds:["Bernhard Eisel", "Maxime Monfort"],
       ryttere:"Ayuso, Skjelmose, Pedersen, Simmons, Vacek, Verona, Skujiņš, Gee-West",
       notat:"Juan Ayuso er her (ikke UAE) — møter eks-lagkamerat Pogačar! Sterk duo Ayuso/Skjelmose + spurter Pedersen. Simmons vant etappe 4 Tour Auvergne 2026. NB: Giulio Ciccone og Søren Kragh Andersen er IKKE med. Toms Skujiņš (LAT) og Derek Gee-West inn.",
-      tourEtapper:{ antall:14, noter:"Som RadioShack/Trek Factory/Trek-Segafredo/Lidl-Trek: Cancellara 4 prologer (2011–13) · Mollema 1 (2019) · Pedersen 1 (2024) · div. etapper" },
+      tourEtapper:{ antall:13, noter:"Som RadioShack/Trek Factory/Trek-Segafredo/Lidl-Trek: Cancellara 3 prologer (2011–13) · Mollema 1 (2019) · Pedersen 1 (2024) · div. etapper" },
       drakt:{ base:"#cc0000", skulder:"#003da5", sleeve:"#ffd700", krave:"#cc0000",
               band:null, mønster:"none",
               logo1:"TREK", logo2:"Lidl", lf:"#ffd700" }
@@ -283,7 +283,7 @@ const TDF_DATA = {
       ds:["Christoph Roodhooft", "Frederik Willems"],
       ryttere:"van der Poel, Philipsen, Verstrynge, Rickaert, Marsman, Debruyne, Planckaert, Dillier",
       notat:"VdP + Philipsen = to av verdens beste spurter/klassikerryttere. VdP jakter Montjuïc og Montmartre. NB: Kaden Groves er IKKE med på TdF-laget — erstattet av Tim Marsman og Ramses Debruyne. Fullstendig tropp bekreftet 1. juli: Edward Planckaert (BEL) og Silvan Dillier (SUI) inn.",
-      tourEtapper:{ antall:7, noter:"Philipsen 4 (2023, grønn trøye) · van der Poel 1 (etappe 6, 2021) · Groves 1 (2024) · Rickaert 1 (2024)" },
+      tourEtapper:{ antall:7, noter:"Philipsen 4 (2023, grønn trøye) · van der Poel 1 (etappe 2, 2021) · Groves 1 (2024) · Rickaert 1 (2024)" },
       drakt:{ base:"#1d73b2", skulder:"#26527b", sleeve:"#1d73b2", krave:"#1d73b2",
               band:null, mønster:"none",
               logo1:"Alpecin", logo2:"Premier Tech", lf:"#ffffff" }
@@ -333,7 +333,7 @@ const TDF_DATA = {
       ds:["Wilfried Peeters", "Tom Steels"],
       ryttere:"van Baarle, Merlier, Stuyven, Van Lerberghe, V. Paret-Peintre, Vervaeke, Van Wilder, Eenkhoorn",
       notat:"STOR NYHET: Mikel Landa er IKKE på laget! «The Wolfpack» mangler sin GC-kaptein. Merlier som spurter og Van Wilder som ny GC-leder (5. plass Tour de Suisse). Louis Vervaeke vant klatretrøya i Tour de Suisse 2026 — i form.",
-      tourEtapper:{ antall:36, noter:"Som Quick-Step/Etixx/Deceuninck/Alpha Vinyl/Soudal Quick-Step: Alaphilippe 4 (2019) · Cavendish 4 (2021) · Lampaert 1 · Martin div. · Boonen div. – ett av Tourens mest vinnende lag" },
+      tourEtapper:{ antall:40, noter:"Som Quick-Step/Etixx/Deceuninck/Alpha Vinyl/Soudal Quick-Step: Gaviria 4 (2018) · Alaphilippe 4 (2019) · Cavendish 4 (2021) · Lampaert 1 · Martin div. · Boonen div. – ett av Tourens mest vinnende lag" },
       drakt:{ base:"#0a2a6b", skulder:"#0a2a6b", sleeve:"#0a2a6b", krave:"#0a2a6b",
               band:null, mønster:"stripes-v",
               logo1:"Quick-Step", logo2:"Soudal", lf:"#ffffff" }
@@ -363,7 +363,7 @@ const TDF_DATA = {
       ds:["Mario Aerts", "Steven De Neef"],
       ryttere:"Van Eetvelt, De Lie, Zimmermann, Berckmoes, Veistroffer, Artz, Craps, Slock",
       notat:"Van Eetvelt som GC-kort — ung belgier. De Lie som spurter/puncheur. Artz, Craps og Slock er nye ryttere bekreftet på TdF-laget.",
-      tourEtapper:{ antall:20, noter:"Som Lotto-Belisol/Lotto-Soudal/Lotto Dstny/Lotto Intermarché: Greipel 13 (2012–2016) · Ewan 3 (2019) · Zimmermann 1 (2023) · De Lie 0 ennå" },
+      tourEtapper:{ antall:23, noter:"Som Lotto-Belisol/Lotto-Soudal/Lotto Dstny/Lotto Intermarché: Greipel 13 (2012–2016) · Ewan 3 (2019) · Zimmermann 1 (2023) · Girmay 3 (2024, Intermarché-siden) · De Lie 0 ennå" },
       drakt:{ base:"#86292e", skulder:"#86292e", sleeve:"#86292e", krave:"#86292e",
               band:null, mønster:"none",
               logo1:"Lotto", logo2:"Intermarché", lf:"#ffffff" }
@@ -373,7 +373,7 @@ const TDF_DATA = {
       ds:["Steve Bauer", "Dror Pekatch"],
       ryttere:"Girmay, G. Bennett, Van Asbroeck, Frigo, Louvel, Lewis Askey, Neilands, Jake Stewart",
       notat:"Girmay er en av verdens beste spurter. NB: George Bennett (NZL) — ikke Sam Bennett (IRE, pensjonert). Lewis Askey (ikke Matthew). Jake Stewart (ikke Chris). Boivin er IKKE med. Van Asbroeck, Frigo, Louvel og Neilands er nye TdF-ryttere for laget. Tidl. Israel-Premier Tech.",
-      tourEtapper:{ antall:5, noter:"Som Israel Start-Up Nation/Israel-Premier Tech/NSN: Girmay 2 (2024) · Cavendish 1 rekordseter (2024 — etappe 35, som slo Merckx) · div." },
+      tourEtapper:{ antall:3, noter:"Som Israel Start-Up Nation/Israel-Premier Tech/NSN: Clarke 1 (etappe 5, 2022) · div." },
       drakt:{ base:"#f0c090", skulder:"#00c0c0", sleeve:"#f0c090", krave:"#f0c090",
               band:null, mønster:"none",
               logo1:"NSN", logo2:"", lf:"#1d1d1b" }
@@ -393,7 +393,7 @@ const TDF_DATA = {
       ds:["Dmitriy Fofonov", "Yvon Ledanois"],
       ryttere:"Teunissen, Higuita, Tejada, Ballerini, Kanter, Vinokurov, Gate, Velasco (Simone)",
       notat:"Etappeseire og klatrertrøya er målet. Teunissen overraskelseskort. NB: Champoussin er IKKE med — erstattet av Aaron Gate (NZL). Og det er SIMONE VELASCO (ITA) — ikke Ibai Velasco (ESP)! Helt forskjellige ryttere.",
-      tourEtapper:{ antall:22, noter:"Som Astana/Astana Qazaqstan/XDS Astana: Nibali 2 (2014) · Fuglsang 1 (2019) · Lutsenko 1 · div. etapper. NB: Contador-seire annullert. Cavendish-rekordseier (2024) var med dette laget da det het Astana Qazaqstan." },
+      tourEtapper:{ antall:24, noter:"Som Astana/Astana Qazaqstan/XDS Astana: Nibali 4 (2014) · Fuglsang 1 (2019) · Lutsenko 1 · div. etapper inkl. Aru (2015–17). NB: Contador-seire annullert. Cavendish-rekordseier (2024) var med dette laget da det het Astana Qazaqstan." },
       drakt:{ base:"#0791aa", skulder:"#33a6ad", sleeve:"#0791aa", krave:"#0791aa",
               band:null, mønster:"none",
               logo1:"Astana", logo2:"XDS", lf:"#ffffff" }
@@ -403,7 +403,7 @@ const TDF_DATA = {
       ds:["Roberto Damiani", "Bingen Fernández", "Sébastien Hinault"],
       ryttere:"Aranburu, Fretin, Izagirre, Kirsch, Page, Allegaert, Biermans, Thomas (B.)",
       notat:"Wildcard-lag. Izagirre og Aranburu som etappejegere. NB: Buchmann er IKKE med. Benjamin Thomas er allrounder og hjelper. Biermans og Allegaert klassikerkort.",
-      tourEtapper:{ antall:10, noter:"Som Cofidis (siden 1997, stabilt lagnavn): Calmejane 1 (2017) · Laporte 1 (2022) · Izagirre 1 (2016) · div. tidlig 2000-tall" },
+      tourEtapper:{ antall:8, noter:"Som Cofidis (siden 1997, stabilt lagnavn): Izagirre 1 (2016) · div. tidlig 2000-tall" },
       drakt:{ base:"#761941", skulder:"#f5c000", sleeve:"#761941", krave:"#761941",
               band:null, mønster:"none",
               logo1:"Cofidis", logo2:"", lf:"#ffffff" }
@@ -434,7 +434,7 @@ const TDF_DATA = {
       ds:["Steve Cummings", "Mathew Hayman"],
       ryttere:"Plapp, Matthews, O'Connor, Ackermann, Schmid, Durbridge, Engelhardt, O'Brien",
       notat:"Wildcard. Matthews som spurter og klassiker-truer. Plapp GC-håp. Durbridge erfaren tempoallrounder, Engelhardt ung tysk klatrer, O'Brien australsk allrounder.",
-      tourEtapper:{ antall:18, noter:"Som GreenEdge/Orica/Mitchelton/BikeExchange/Jayco: Matthews 4 (2016–17) · Ewan 2 (2017–18) · Gerrans 1 (2012) · A. Yates 1 (2022) · Clarke 1 (2022) · div." },
+      tourEtapper:{ antall:15, noter:"Som GreenEdge/Orica/Mitchelton/BikeExchange/Jayco: Matthews 2 (2016) · Ewan 2 (2017–18) · Gerrans 1 (2012) · A. Yates 1 (2022) · div." },
       drakt:{ base:"#6e3fa3", skulder:"#6e3fa3", sleeve:"#6e3fa3", krave:"#6e3fa3",
               band:"#00e676", mønster:"band-mid",
               logo1:"Jayco", logo2:"AlUla", lf:"#ffffff" }
@@ -454,7 +454,7 @@ const TDF_DATA = {
       ds:["José Miguel Fernández", "Rubén Martínez"],
       ryttere:"Gaviria, Balderstone, Berwick, Molenaar, Nicolau, Oldani, Otruba, Parra",
       notat:"Wildcard. Spansk lag. Gaviria som spurter. Hjemmebane-motivasjon i Barcelona-starten.",
-      tourEtapper:{ antall:0, noter:"Tour-DEBUT 2026 — lagets og Gavirias etappeseirer i Tour (2 i 2018) var med UAE Team Emirates. Caja Rural debuterer.", kilde:"PCS" },
+      tourEtapper:{ antall:0, noter:"Tour-DEBUT 2026 — Gaviria vant 4 TdF-etapper i 2018 med Quick-Step (ikke UAE). Caja Rural debuterer.", kilde:"PCS" },
       drakt:{ base:"#3ea95e", skulder:"#3ea95e", sleeve:"#3ea95e", krave:"#3ea95e",
               band:null, mønster:"none",
               logo1:"Caja Rural", logo2:"", lf:"#1d1d1b" }
