@@ -23,25 +23,39 @@ const TDF_DATA = {
     prikketTroye: "Tadej Pogačar",
     hvitTroye: "Juan Ayuso",
     sammenlagtTopp: [
-      {plass:1, navn:"Jonas Vingegaard", lag:"VLB", tid:"21'47\""},
-      {plass:2, navn:"Filippo Ganna", lag:"INE", tid:"+8\""},
-      {plass:3, navn:"Tadej Pogačar", lag:"UAE", tid:"+12\""},
-      {plass:4, navn:"Juan Ayuso", lag:"LTK", tid:"+16\""},
-      {plass:5, navn:"Remco Evenepoel", lag:"RBH", tid:"+19\""},
-      {plass:6, navn:"Isaac del Toro", lag:"UAE", tid:"+26\""},
-      {plass:7, navn:"Davide Piganzoli", lag:"VLB", tid:"+28\""},
-      {plass:8, navn:"Florian Lipowitz", lag:"RBH", tid:"+35\""},
-      {plass:9, navn:"Tobias Foss", lag:"INE", tid:"+38\""},
-      {plass:10, navn:"Paul Seixas", lag:"DEC", tid:"+39\""}
+      {plass:1,  navn:"Jonas Vingegaard",          lag:"VLB", tid:"21'47\""},
+      {plass:2,  navn:"Filippo Ganna",              lag:"IGD", tid:"+8\""},
+      {plass:3,  navn:"Tadej Pogačar",              lag:"UAE", tid:"+12\""},
+      {plass:4,  navn:"Juan Ayuso",                 lag:"LTK", tid:"+16\""},
+      {plass:5,  navn:"Remco Evenepoel",            lag:"RBH", tid:"+19\""},
+      {plass:6,  navn:"Isaac del Toro",             lag:"UAE", tid:"+26\""},
+      {plass:7,  navn:"Davide Piganzoli",           lag:"VLB", tid:"+28\""},
+      {plass:8,  navn:"Florian Lipowitz",           lag:"RBH", tid:"+35\""},
+      {plass:9,  navn:"Tobias Foss",                lag:"IGD", tid:"+38\""},
+      {plass:10, navn:"Paul Seixas",                lag:"DEC", tid:"+39\""},
+      {plass:11, navn:"Mathieu van der Poel",       lag:"APT", tid:"+39\""},
+      {plass:12, navn:"Romain Grégoire",            lag:"GFC", tid:"+41\""},
+      {plass:13, navn:"Antonio Tiberi",             lag:"TBV", tid:"+47\""},
+      {plass:14, navn:"Clément Riccitello",         lag:"DEC", tid:"+50\""},
+      {plass:15, navn:"Lenny Martinez",             lag:"GFC", tid:"+50\""},
+      {plass:16, navn:"Michael Matthews",           lag:"JAY", tid:"+51\""},
+      {plass:17, navn:"Alex Baudin",                lag:"EFE", tid:"+57\""},
+      {plass:18, navn:"Tom Pidcock",                lag:"PQ3", tid:"+57\""},
+      {plass:19, navn:"Ilan Van Wilder",            lag:"SOQ", tid:"+58\""},
+      {plass:20, navn:"Tobias Halland Johannessen", lag:"UNO", tid:"+1:00"}
     ],
     gronnTopp: [
-      {plass:1, navn:"Egan Bernal", lag:"INE", poeng:"—"}
+      {plass:1, navn:"Egan Bernal", lag:"IGD", poeng:"TB"}
     ],
     prikketTopp: [
-      {plass:1, navn:"Tadej Pogačar", lag:"UAE", poeng:"—"}
+      {plass:1, navn:"Tadej Pogačar", lag:"UAE", poeng:"TB"}
     ],
     hvitTopp: [
-      {plass:1, navn:"Juan Ayuso", lag:"LTK", tid:"+16\""}
+      {plass:1, navn:"Juan Ayuso",        lag:"LTK", tid:""},
+      {plass:2, navn:"Isaac del Toro",    lag:"UAE", tid:"+10\""},
+      {plass:3, navn:"Davide Piganzoli",  lag:"VLB", tid:"+12\""},
+      {plass:4, navn:"Paul Seixas",       lag:"DEC", tid:"+23\""},
+      {plass:5, navn:"Romain Grégoire",   lag:"GFC", tid:"+25\""}
     ],
     dagensHistorie: "VISMA VINNER! Vingegaard i gult etter Barcelonas lagtempo. Nesten-ulykke for Uno-X under oppkjøring (gjerde i veien) — Abrahamsen: «Det var millimeter».",
     preTourNytt: [
@@ -1532,18 +1546,33 @@ const TDF_DATA = {
   /* ---- ETAPPERESULTATER (oppdateres etter hver etappe) ---- */
   /* Struktur: { etappe, dato, startby, mål, km, type, resultater:[{plass,navn,lag,tid,delta}] } */
   etappeResultater: [
-    { etappe:1, dato:"4. juli", startby:"Barcelona", mål:"Barcelona/Montjuïc", km:19.7, type:"lagtempo",
+    { etappe:1, dato:"4. juli", startby:"Barcelona", mål:"Barcelona/Montjuïc", km:19.6, type:"tempo-lag",
       resultater:[
-        {plass:1, navn:"Visma–Lease a Bike", lag:"VLB", tid:"21:47", delta:""},
-        {plass:2, navn:"Netcompany INEOS", lag:"INE", tid:"21:55", delta:"+7\""},
-        {plass:3, navn:"UAE Team Emirates–XRG", lag:"UAE", tid:"21:59", delta:"+11\""},
-        {plass:4, navn:"Lidl-Trek", lag:"LTK", tid:"~22:03", delta:"+15\""},
-        {plass:5, navn:"Red Bull–BORA–hansgrohe", lag:"RBH", tid:"22:06", delta:"+18\""},
-        {plass:6, navn:"Decathlon CMA CGM", lag:"DEC", tid:"~22:26", delta:"~+38\""},
-        {plass:7, navn:"Alpecin-Premier Tech", lag:"APT", tid:"22:26", delta:"~+38\""},
-        {plass:8, navn:"Groupama-FDJ United", lag:"FDJ", tid:"22:29", delta:"~+41\""},
-        {plass:"—", navn:"Tobias Foss (NOR)", lag:"INE", tid:"+38\"", delta:"9. sammenlagt"},
-        {plass:"—", navn:"T.H. Johannessen (NOR)", lag:"UNO", tid:"—", delta:"20. sammenlagt"}
+        {plass:1,  navn:"Jonas Vingegaard",          lag:"VLB", tid:"21:47", delta:""},
+        {plass:2,  navn:"Filippo Ganna",              lag:"IGD", tid:"21:55", delta:"+7\""},
+        {plass:3,  navn:"Tadej Pogačar",              lag:"UAE", tid:"21:59", delta:"+12\""},
+        {plass:4,  navn:"Juan Ayuso",                 lag:"LTK", tid:"22:03", delta:"+16\""},
+        {plass:5,  navn:"Remco Evenepoel",            lag:"RBH", tid:"22:06", delta:"+19\""},
+        {plass:6,  navn:"Isaac del Toro",             lag:"UAE", tid:"",      delta:"+26\""},
+        {plass:7,  navn:"Davide Piganzoli",           lag:"VLB", tid:"",      delta:"+28\""},
+        {plass:8,  navn:"Florian Lipowitz",           lag:"RBH", tid:"",      delta:"+35\""},
+        {plass:9,  navn:"Tobias Foss",                lag:"IGD", tid:"",      delta:"+38\""},
+        {plass:10, navn:"Paul Seixas",                lag:"DEC", tid:"",      delta:"+39\""},
+        {plass:11, navn:"Mathieu van der Poel",       lag:"APT", tid:"",      delta:"+39\""},
+        {plass:12, navn:"Romain Grégoire",            lag:"GFC", tid:"",      delta:"+41\""},
+        {plass:13, navn:"Antonio Tiberi",             lag:"TBV", tid:"",      delta:"+47\""},
+        {plass:14, navn:"Clément Riccitello",         lag:"DEC", tid:"",      delta:"+50\""},
+        {plass:15, navn:"Lenny Martinez",             lag:"GFC", tid:"",      delta:"+50\""},
+        {plass:16, navn:"Michael Matthews",           lag:"JAY", tid:"",      delta:"+51\""},
+        {plass:17, navn:"Alex Baudin",                lag:"EFE", tid:"",      delta:"+57\""},
+        {plass:18, navn:"Tom Pidcock",                lag:"PQ3", tid:"",      delta:"+57\""},
+        {plass:19, navn:"Ilan Van Wilder",            lag:"SOQ", tid:"",      delta:"+58\""},
+        {plass:20, navn:"Tobias Halland Johannessen", lag:"UNO", tid:"",      delta:"+1:00"},
+        {plass:21, navn:"Thymen Arensman",            lag:"IGD", tid:"",      delta:"+1:01"},
+        {plass:26, navn:"Kévin Vauquelin",            lag:"IGD", tid:"",      delta:"+1:14"},
+        {plass:35, navn:"Richard Carapaz",            lag:"EFE", tid:"",      delta:"+1:36"},
+        {plass:40, navn:"Cian Uijtdebroeks",          lag:"MOV", tid:"",      delta:"+1:53"},
+        {plass:59, navn:"Matteo Jorgenson",           lag:"VLB", tid:"",      delta:"+2:30"}
       ]
     }
   ],
