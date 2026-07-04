@@ -567,7 +567,7 @@ const TDF_DATA = {
 
     /* ---- KLASSIKER/SPURT ---- */
     { navn:"Mathieu van der Poel", lag:"APT", land:"Nederland", alder:31, rolle:"Klassiker / spurt / brudd", nr:101, foto:"", fødeby:"Kapellen",
-      meritter:"Verdensmester 2023/2024, monumentseire (RVV, Strade Bianche, Paris-Roubaix 2023)",
+      meritter:"Verdensmester 2023, monumentseire (RVV, Strade Bianche, Paris-Roubaix 2023)",
       form:"Vant Omloop Het Nieuwsblad og E3 Saxo Classic (3. år på rad — første siden Boonen 2004–2007). Etappejeger. Jakter Montjuïc (etappe 1+2) og Montmartre (etappe 21). Kan ta gul tidlig.",
       resultater2026:[
         {type:"seier", ritt:"Omloop Het Nieuwsblad"},
@@ -595,7 +595,7 @@ const TDF_DATA = {
       historie:"Alpecins rakettskyting. Trener med van der Poel — genialt duo." },
 
     { navn:"Mads Pedersen", lag:"LTK", land:"Danmark", alder:29, rolle:"Spurt / klassiker", nr:33, foto:"", fødeby:"Tølløse",
-      meritter:"Verdensmester 2019, Ronde van Vlaanderen-vinner 2022",
+      meritter:"Verdensmester 2019, andreplass Ronde van Vlaanderen (2 ganger)",
       form:"0 seiere i 2026 etter skade — men 2. plass Boucles de la Mayenne, 4. Milano-Sanremo bare 6 uker etter operasjon. TdF er klart hovedmål.",
       spurtTopp5:[
         {plass:2, ritt:"Boucles de la Mayenne (siste etappe)"},
@@ -606,7 +606,7 @@ const TDF_DATA = {
       historie:"Dansk allrounder. Jakter etapper på flate og halvkuperte dager." },
 
     { navn:"Biniam Girmay", lag:"NSN", land:"Eritrea", alder:24, rolle:"Spurt / klassiker", nr:131, foto:"", fødeby:"Asmara",
-      meritter:"Gent-Wevelgem 2022, Tour-etappeseier 2024, Vuelta-etapper",
+      meritter:"Gent-Wevelgem 2022 (første afrikaner til å vinne WorldTour-klassiker), 3 Tour-etappeseiere + grønntrøyen 2024, Vuelta-etapper",
       form:"Vant Valencia-etappe, Clásica de Almería og Baloise-etappe i 2026 — Merlier og Philipsens farligste utfordrer.",
       resultater2026:[
         {type:"seier", ritt:"Volta Valenciana et.1"},
@@ -915,7 +915,7 @@ const TDF_DATA = {
       skade:"Krasj i grusparti Tirreno-Adriatico etappe 2 (mars 2026). Omfang av skader ikke kjent, men bekreftet til Tour.",
       historie:"Nederlandsk klatrer. Vant etapper i Vueltaen. Ambisiøs GC-kandidat." },
     { navn:"Filippo Ganna", lag:"IGD", land:"Italia", alder:29, rolle:"Tempo-spesialist", nr:84, foto:"", fødeby:"Verbania",
-      meritter:"4x verdensmester enkeltstart, olympisk mester",
+      meritter:"2x verdensmester enkeltstart (2020 Imola, 2021 Flandern), OL-gull lagsforfølgelse Tokyo 2020",
       form:"Farligste mann i tempoet (etappe 16). Kan ta gul trøye tidlig på lagtempo.",
       skade:"Hjernerystelse med hukommelsestap (krasj TdF 2025 etappe 1) — forlot rittet. Ingen skader i 2026 — klar til Tour.",
       historie:"Verdens beste temposyklist. Holder ikke i fjellet, men etappe 16 er hans store sjanse." },
@@ -1106,7 +1106,7 @@ const TDF_DATA = {
       form:"Bahrains GC-kaptein. 23 år med stort potensial i fjellene.",
       historie:"Stor fremtid. Bahrains fremste GC-håp. Ingen TdF-etappeseier ennå." },
     { navn:"Matej Mohorič", lag:"TBV", land:"Slovenia", alder:31, rolle:"Brudd / klassiker", nr:75, foto:"", fødeby:"Kranj",
-      meritter:"Tour-etappeseirer (incl. 2021), Milano-Sanremo-finalist",
+      meritter:"3 Tour-etappeseirer (etappe 7+19 i 2021, etappe 19 i 2023), Milano-Sanremo-finalist",
       form:"Langdistansebrudd-spesialist. Kan angripe fra 100+ km ut.",
       historie:"Kjent for dristige solobrudd. Vant Tour-etapper i 2021." },
     { navn:"Antonio Tiberi", lag:"TBV", land:"Italia", alder:24, rolle:"Klatrer / GC-talent", nr:77, foto:"", fødeby:"Frosinone",
@@ -1330,7 +1330,7 @@ const TDF_DATA = {
       ],
       historie:"Sterk klatrer fra Australia. Elsker lengre solobrudd i fjellene." },
     { navn:"Matteo Trentin", lag:"TUD", land:"Italia", alder:36, rolle:"Klassiker / etappejeger", nr:197, foto:"", fødeby:"Borgo Valsugana",
-      meritter:"Mange Tour-etappeseire, klassiker-podier, europamester 2017",
+      meritter:"3 Tour-etappeseirer (2013, 2014, 2019), klassiker-podier, europamester 2018",
       form:"Veteran etappetruer. Sterk på kuperte avslutninger.",
       historie:"Italias store klassikerveteran. Europamester 2017. Mange etappeseirer i Tour." },
     { navn:"Nick Pluimers", lag:"TUD", land:"Nederland", alder:25, rolle:"Klatrer / allrounder", nr:195, foto:"", fødeby:"Enter",
@@ -1400,7 +1400,7 @@ const TDF_DATA = {
       form:"Australsk allrounder for Jayco. Solid bidragsyter i brudd og flat.",
       historie:"Australsk allrounder med bred profil. Viktig hjelper for Plapp og O'Connor." },
     { navn:"Michael Matthews", lag:"JAY", land:"Australia", alder:35, rolle:"Klassiker / spurt", nr:115, foto:"", fødeby:"Canberra",
-      meritter:"7 Tour-etappeseire, Milano-Sanremo-finalist, grønn trøye 2017",
+      meritter:"4 Tour-etappeseire (2016, 2017×2, 2022), Milano-Sanremo-finalist, grønn trøye 2017",
       form:"Utrolig comeback-historikk: lungeemboli 2025 → krasjet mars 2026 → tilbake i juni. Vant Gran Premio Castellón i januar.",
       resultater2026:[
         {type:"seier", ritt:"Gran Premio Castellón"}

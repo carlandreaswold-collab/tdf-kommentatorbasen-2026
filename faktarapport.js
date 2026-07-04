@@ -63,6 +63,76 @@ const FAKTARAPPORT = {
       dato: "2026-07-04"
     },
     {
+      id: "pedersen-rvv-2022",
+      kategori: "rytter",
+      referanse: "Mads Pedersen",
+      felt: "meritter",
+      feil: "'Ronde van Vlaanderen-vinner 2022' — RvV 2022 ble vunnet av Van der Poel",
+      korrekt: "Pedersen har aldri vunnet RvV. Hans største seier er VM landevei 2019.",
+      kilde: "Cyclingnews / Wikipedia (agent-søk 2026-07-04)",
+      dato: "2026-07-04"
+    },
+    {
+      id: "girmay-tour-2024-entall",
+      kategori: "rytter",
+      referanse: "Biniam Girmay",
+      felt: "meritter",
+      feil: "'Tour-etappeseier 2024' (entall) — Girmay vant 3 etapper + grønntrøyen i 2024",
+      korrekt: "3 Tour-etappeseiere (etappe 3, 8 og 12) + grønn trøye 2024. Første afrikaner til å vinne grønntrøyen.",
+      kilde: "PCS / Cyclingnews (agent-søk 2026-07-04)",
+      dato: "2026-07-04"
+    },
+    {
+      id: "vdp-vm-2024",
+      kategori: "rytter",
+      referanse: "Mathieu van der Poel",
+      felt: "meritter",
+      feil: "'Verdensmester 2023/2024' — VdP tok bronse i 2024, Pogačar vant",
+      korrekt: "VdP er verdensmester 2023 (Glasgow). I 2024 (Zürich) endte han på 3. plass.",
+      kilde: "Cyclingnews (agent-søk 2026-07-04)",
+      dato: "2026-07-04"
+    },
+    {
+      id: "ganna-vm-antall",
+      kategori: "rytter",
+      referanse: "Filippo Ganna",
+      felt: "meritter",
+      feil: "'4x verdensmester enkeltstart' — Ganna har 2 VM-titler i TT på landevei",
+      korrekt: "2x verdensmester enkeltstart (2020 Imola, 2021 Flandern). OL-gull er i lagsforfølgelse Tokyo 2020.",
+      kilde: "Wikipedia / NBC Sports (agent-søk 2026-07-04)",
+      dato: "2026-07-04"
+    },
+    {
+      id: "mohoric-tour-2023",
+      kategori: "rytter",
+      referanse: "Matej Mohorič",
+      felt: "meritter",
+      feil: "'Tour-etappeseirer (incl. 2021)' — mangler 2023-seieren",
+      korrekt: "3 Tour-etappeseirer: etappe 7 og 19 i 2021, etappe 19 i 2023.",
+      kilde: "Wikipedia / ESPN (agent-søk 2026-07-04)",
+      dato: "2026-07-04"
+    },
+    {
+      id: "trentin-em-2018",
+      kategori: "rytter",
+      referanse: "Matteo Trentin",
+      felt: "meritter",
+      feil: "'europamester 2017' — Trentin vant EM i 2018, ikke 2017",
+      korrekt: "Europamester landevei 2018 (Glasgow). I 2017 ble han nr. 4 i VM.",
+      kilde: "Cyclingnews (agent-søk 2026-07-04)",
+      dato: "2026-07-04"
+    },
+    {
+      id: "matthews-tour-etapper",
+      kategori: "rytter",
+      referanse: "Michael Matthews",
+      felt: "meritter",
+      feil: "'7 Tour-etappeseire' — Matthews har 4 Tour-etappeseirer",
+      korrekt: "4 Tour-etappeseirer: etappe 10 i 2016, etappe 14 og 16 i 2017, etappe 14 i 2022.",
+      kilde: "PCS / Wikipedia (agent-søk 2026-07-04)",
+      dato: "2026-07-04"
+    },
+    {
       id: "bahrain-haller-ingen-seier",
       kategori: "lag",
       referanse: "Bahrain Victorious",
