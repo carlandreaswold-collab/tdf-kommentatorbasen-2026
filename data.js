@@ -14,19 +14,36 @@ const TDF_DATA = {
 
   /* ---- LIVE-STATUS ---- */
   live: {
-    sisteOppdatering: "2026-07-02",
-    nesteEtappe: 1,
+    sisteOppdatering: "2026-07-04",
+    nesteEtappe: 2,
     rittStartISO: "2026-07-04T13:00:00",
-    notat: "Lagpresentasjon i Barcelona 1. juli. TdF starter 4. juli. Startliste KOMPLETT per 1. juli (23 lag, 184 ryttere). Nytt per 1. juli: Tobias Foss (NOR) med INEOS — ikke Rodríguez! Planckaert+Dillier bekreftet for APT. Pinarello fullstendig tropp: Harper+Howson+Meurisse inn. Nytt fra PCS 30. juni: Olav Kooij (verdens beste spurter) overraskende på DEC! Marc Hirschi fra UAE til Tudor! Stefan Küng ikke med Tudor! Kaden Groves ikke med APT! Stefan Bissegger ikke med DEC! Søren Kragh Andersen ikke med LTK! Ny FDJ-tropp: Madouas+Martin-Guyonnet erstattet av 7 nye (inkl. Guillaume Martin!). SIMONE Velasco (ITA) på AST — ikke Ibai! Degenkolb veteran på PIC. John Degenkolb! STORE FRAFALL: Mikel Landa IKKE med SQS; David Gaudu IKKE med FDJ. STORE TILBAKEKOMSTER: Egan Bernal (INEOS) er tilbake i Tour! Tvillingene Johannessen på Uno-X!",
-    gulTroye: null,
-    grontTroye: null,
-    prikketTroye: null,
-    hvitTroye: null,
-    sammenlagtTopp: [],
-    gronnTopp: [],
-    prikketTopp: [],
-    hvitTopp: [],
-    dagensHistorie: "",
+    notat: "E1 FERDIG: Visma vinner lagtempoen i Barcelona! Vingegaard i gult, Pogačar 3. (+12s), Evenepoel 5. (+19s). Tobias Foss (NOR) 9. sammenlagt (+38s). T.H. Johannessen 20. E2 i morgen: Tarragona–Barcelona/Montjuïc, kupert, puncheredag.",
+    gulTroye: "Jonas Vingegaard",
+    grontTroye: "Egan Bernal",
+    prikketTroye: "Tadej Pogačar",
+    hvitTroye: "Juan Ayuso",
+    sammenlagtTopp: [
+      {plass:1, navn:"Jonas Vingegaard", lag:"VLB", tid:"21'47\""},
+      {plass:2, navn:"Filippo Ganna", lag:"INE", tid:"+8\""},
+      {plass:3, navn:"Tadej Pogačar", lag:"UAE", tid:"+12\""},
+      {plass:4, navn:"Juan Ayuso", lag:"LTK", tid:"+16\""},
+      {plass:5, navn:"Remco Evenepoel", lag:"RBH", tid:"+19\""},
+      {plass:6, navn:"Isaac del Toro", lag:"UAE", tid:"+26\""},
+      {plass:7, navn:"Davide Piganzoli", lag:"VLB", tid:"+28\""},
+      {plass:8, navn:"Florian Lipowitz", lag:"RBH", tid:"+35\""},
+      {plass:9, navn:"Tobias Foss", lag:"INE", tid:"+38\""},
+      {plass:10, navn:"Paul Seixas", lag:"DEC", tid:"+39\""}
+    ],
+    gronnTopp: [
+      {plass:1, navn:"Egan Bernal", lag:"INE", poeng:"—"}
+    ],
+    prikketTopp: [
+      {plass:1, navn:"Tadej Pogačar", lag:"UAE", poeng:"—"}
+    ],
+    hvitTopp: [
+      {plass:1, navn:"Juan Ayuso", lag:"LTK", tid:"+16\""}
+    ],
+    dagensHistorie: "VISMA VINNER! Vingegaard i gult etter Barcelonas lagtempo. Nesten-ulykke for Uno-X under oppkjøring (gjerde i veien) — Abrahamsen: «Det var millimeter».",
     preTourNytt: [
       "Tour de Suisse (17–22 jun): 🏆 Pogačar (UAE) — +6:32 til nr.2 · Grønn: Grégoire (FDJ) · 🔴 Klatretrøye: Vervaeke (SQS) · Hvit: Vacek (LTK) · 5. Van Wilder (SQS)",
       "Tour Auvergne-Rhône-Alpes (7–14 jun): 🏆 Del Toro (UAE) · 2. Tuckwell (RBH) · 3. Ayuso (LTK) · Etappeseire: Baudin(EF) · Charmig(UNO) · Simmons(LTK) · Van Gils(RBH)"
@@ -1514,7 +1531,22 @@ const TDF_DATA = {
   /* ---- STATISTIKK & HISTORIER ---- */
   /* ---- ETAPPERESULTATER (oppdateres etter hver etappe) ---- */
   /* Struktur: { etappe, dato, startby, mål, km, type, resultater:[{plass,navn,lag,tid,delta}] } */
-  etappeResultater: [],
+  etappeResultater: [
+    { etappe:1, dato:"4. juli", startby:"Barcelona", mål:"Barcelona/Montjuïc", km:19.7, type:"lagtempo",
+      resultater:[
+        {plass:1, navn:"Visma–Lease a Bike", lag:"VLB", tid:"21:47", delta:""},
+        {plass:2, navn:"Netcompany INEOS", lag:"INE", tid:"21:55", delta:"+7\""},
+        {plass:3, navn:"UAE Team Emirates–XRG", lag:"UAE", tid:"21:59", delta:"+11\""},
+        {plass:4, navn:"Lidl-Trek", lag:"LTK", tid:"~22:03", delta:"+15\""},
+        {plass:5, navn:"Red Bull–BORA–hansgrohe", lag:"RBH", tid:"22:06", delta:"+18\""},
+        {plass:6, navn:"Decathlon CMA CGM", lag:"DEC", tid:"~22:26", delta:"~+38\""},
+        {plass:7, navn:"Alpecin-Premier Tech", lag:"APT", tid:"22:26", delta:"~+38\""},
+        {plass:8, navn:"Groupama-FDJ United", lag:"FDJ", tid:"22:29", delta:"~+41\""},
+        {plass:"—", navn:"Tobias Foss (NOR)", lag:"INE", tid:"+38\"", delta:"9. sammenlagt"},
+        {plass:"—", navn:"T.H. Johannessen (NOR)", lag:"UNO", tid:"—", delta:"20. sammenlagt"}
+      ]
+    }
+  ],
 
   statistikk: [
     { tittel:"Pogačar dominerte Sveits", tekst:"Tour de Suisse 2026 (17–21 juni): Pogačar vant med 6 minutters og 32 sekunders margin etter kun 5 etapper — 3 etappeseire inkl. 72 km solo på etappe 1 og TT-seier. Carapaz nr. 2 (EF), Vacek nr. 3 (LTK). Van Wilder ble 5. (SQS). Vervaeke vant klatretrøya." },
