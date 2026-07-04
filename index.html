@@ -872,6 +872,12 @@ function render(){
 }
 function secTitle(t,n){return `<div class="sec-title">${t} <span class="count">${n}</span></div>`;}
 
+/* ---------- KILDE-BADGE FOR TOUR-ETAPPER ---------- */
+function tourEtapperKildeBadge(te) {
+  if (!te || te.kilde === "PCS") return '';
+  return `<a class="usikker-warn" href="faktasjekk.html" target="_blank" title="Antall og noter er ikke verifisert mot ProCyclingStats — kan inneholde feil">⚠ uverifisert</a> `;
+}
+
 /* ---------- FAKTASJEKK-HJELPER ---------- */
 function usikkerBadge(referanse) {
   if (typeof FAKTARAPPORT === 'undefined') return '';
@@ -927,7 +933,7 @@ function teamCard(t){
       ${t.notat?`<div class="lead" style="color:var(--dim)">${hl(t.notat)}</div>`:""}
       <span class="tropp-trigger"><button class="tropp-btn" type="button">TROPP</button><div class="tropp-popup">${tropNavn}</div></span>${t.ds&&t.ds.length?`<span class="ds-badge"><span class="ds-icon">🎙</span>DS<div class="ds-tooltip"><b>Sportsdirektør${t.ds.length>1?'er':''}</b>${t.ds.map(n=>`<div>${esc(n)}</div>`).join('')}</div></span>`:''}
       ${res2026Html?`<div class="det" style="margin-top:5px"><b>Sesong 2026 (Tour-troppen):</b><span class="chip-legend"><span class="res-chip res-seier">seier</span> <span class="res-chip res-pall">pall</span> <span class="res-chip res-gc">sammenl.</span> <span class="res-chip res-troye-gul">gul trøye</span></span><div>${res2026Html}</div></div>`:""}
-      ${t.tourEtapper?`<div class="det" style="margin-top:5px"><b>TdF-etappeseire (inkl. tidl. lagnavn):</b> <span class="tour-etapper-count">${esc(String(t.tourEtapper.antall))}</span> <span style="color:var(--dim);font-size:12px">· ${hl(t.tourEtapper.noter)}</span></div>`:""}
+      ${t.tourEtapper?`<div class="det" style="margin-top:5px"><b>TdF-etappeseire (inkl. tidl. lagnavn):</b> <span class="tour-etapper-count">${esc(String(t.tourEtapper.antall))}</span> ${tourEtapperKildeBadge(t.tourEtapper)}<span style="color:var(--dim);font-size:12px">· ${hl(t.tourEtapper.noter)}</span></div>`:""}
     </div></div>`;
 }
 

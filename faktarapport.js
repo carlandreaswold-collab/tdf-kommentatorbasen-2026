@@ -53,6 +53,16 @@ const FAKTARAPPORT = {
   // Rettede feil — funnet og fikset i data.js
   rettet: [
     {
+      id: "gregoire-tour-etappe-2025",
+      kategori: "lag",
+      referanse: "Groupama-FDJ United (GFC)",
+      felt: "tourEtapper.noter",
+      feil: "'Grégoire 1 (2025)' — Romain Grégoire har ikke vunnet noen Tour de France-etappe",
+      korrekt: "Grégoire har ingen TdF-etappeseier per juli 2026. Antall rettet fra 12 til 11.",
+      kilde: "Bekreftet av radiokommentator",
+      dato: "2026-07-04"
+    },
+    {
       id: "giro-tour-dobbel-8-ryttere",
       kategori: "statistikk",
       referanse: "Giro-Tour-dobbelen (statistikk)",

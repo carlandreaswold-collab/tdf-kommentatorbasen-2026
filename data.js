@@ -313,7 +313,7 @@ const TDF_DATA = {
       ds:["Frédéric Guesdon", "Benoît Vaugrenard"],
       ryttere:"Grégoire, Martin G., Berthet, Germani, Pacher, Russo, Costiou, Braz Afonso",
       notat:"STOR NYHET: David Gaudu er IKKE med på TdF-laget — og nå heller ikke Madouas eller Martin-Guyonnet! FDJ stiller med 22-årige Grégoire + Guillaume Martin som GC-kort, pluss et ungt og offensivt lag: Berthet, Germani, Pacher, Russo, Costiou og Braz Afonso.",
-      tourEtapper:{ antall:12, noter:"Pinot 3 (2012–18) · Démare 1 (2020) · Bouhanni div. · Gaudu 1 (2023) · Grégoire 1 (2025)" },
+      tourEtapper:{ antall:11, noter:"Pinot 3 (2012–18) · Démare 1 (2020) · Bouhanni div. · Gaudu 1 (2023)" },
       drakt:{ base:"#0a3cae", skulder:"#0a3cae", sleeve:"#0a3cae", krave:"#0a3cae",
               band:null, mønster:"sidefelt", sidefelt:"#d2002e",
               logo1:"FDJ", logo2:"United", lf:"#ffffff" }
@@ -383,7 +383,7 @@ const TDF_DATA = {
       ds:["Christian Andersen", "Stig Kristiansen", "Gabriel Rasch", "Gino Van Oudenhove"],
       ryttere:"Abrahamsen, Charmig, Cort, T.H. Johannessen, A. Johannessen, Skaarseth, Træen, Wærenskjold",
       notat:"NORSK LAG — 8 ryttere! HISTORISK: BEGGE Johannessen-tvillingene er på laget — Tobias Halland OG Anders Johannessen, brødrene som begge er proffyklist! Andreas Kron er IKKE med. Abrahamsen vant Brussels Classic i 2024. Wærenskjold vant Baloise Belgium Tour i 2024. Charmig vant etappe i Tour Auvergne-Rhône-Alpes 2026. Træen er IKKE på Bahrain — han er her.",
-      tourEtapper:{ antall:1, noter:"Abrahamsen 1 (etappe 10, 2023 — som wildcard-lag i første Tour-deltakelse). Årets Tour er lagets første WorldTour-Tour." },
+      tourEtapper:{ antall:1, noter:"Abrahamsen 1 (etappe 10, 2023 — som wildcard-lag i første Tour-deltakelse). Årets Tour er lagets første WorldTour-Tour.", kilde:"PCS" },
       drakt:{ base:"#c92c3a", skulder:"#c92c3a", sleeve:"#c92c3a", krave:"#c92c3a",
               band:"#f5c000", mønster:"band-mid",
               logo1:"Uno-X", logo2:"Mobility", lf:"#ffffff" }
@@ -414,7 +414,7 @@ const TDF_DATA = {
       ds:["Claudio Cozzi", "Matteo Tosatto"],
       ryttere:"Alaphilippe, Trentin, Storer, Pluimers, de Kleijn, Haller, Hirschi, Voisard",
       notat:"Wildcard. Alaphilippe tilbake i Tour etter noen tøffe år — klassiker- og etappetruer. STORE NYHETER: Küng er IKKE med! Men Marc Hirschi (SUI) er inn — fra UAE! Arvid de Kleijn spurterkort. Marco Haller veteran-hjelper. Yannis Voisard ung sveitsisk talent.",
-      tourEtapper:{ antall:0, noter:"Tour-DEBUT 2026 — Alaphilippes 4 Tour-etapper (2019) var med Quick-Step. Tudor er et nytt lag." },
+      tourEtapper:{ antall:0, noter:"Tour-DEBUT 2026 — Alaphilippes 4 Tour-etapper (2019) var med Quick-Step. Tudor er et nytt lag.", kilde:"PCS" },
       drakt:{ base:"#1d1d1b", skulder:"#1d1d1b", sleeve:"#1d1d1b", krave:"#c8102e",
               band:null, mønster:"none",
               logo1:"Tudor", logo2:"", lf:"#c8102e" }
@@ -424,7 +424,7 @@ const TDF_DATA = {
       ds:["Kurt Bogaerts", "Laurent Pichon"],
       ryttere:"Pidcock, Wright, Hermans Q., Van Moer, Azparren, Harper, Howson, Meurisse",
       notat:"Wildcard. Pidcock som GC-mørk hest og etappetruer — vant Tour-etappe 2022 på Alpe d'Huez. Fullstendig tropp bekreftet 1. juli: Quinten Hermans (BEL, puncheur), Fred Wright (WAL), Brent Van Moer (BEL), Azparren (ESP), Chris Harper (AUS), Damien Howson (AUS), Xandro Meurisse (BEL).",
-      tourEtapper:{ antall:0, noter:"Tour-DEBUT 2026 — Pidcocks Alpe d'Huez-seier (2022) var med INEOS. Pinarello-Q36.5 debuterer." },
+      tourEtapper:{ antall:0, noter:"Tour-DEBUT 2026 — Pidcocks Alpe d'Huez-seier (2022) var med INEOS. Pinarello-Q36.5 debuterer.", kilde:"PCS" },
       drakt:{ base:"#d0dae4", skulder:"#d0dae4", sleeve:"#d0dae4", krave:"#d0dae4",
               band:null, mønster:"none",
               logo1:"Pinarello", logo2:"Q36.5", lf:"#1d1d1b" }
@@ -454,7 +454,7 @@ const TDF_DATA = {
       ds:["José Miguel Fernández", "Rubén Martínez"],
       ryttere:"Gaviria, Balderstone, Berwick, Molenaar, Nicolau, Oldani, Otruba, Parra",
       notat:"Wildcard. Spansk lag. Gaviria som spurter. Hjemmebane-motivasjon i Barcelona-starten.",
-      tourEtapper:{ antall:0, noter:"Tour-DEBUT 2026 — lagets og Gavirias etappeseirer i Tour (2 i 2018) var med UAE Team Emirates. Caja Rural debuterer." },
+      tourEtapper:{ antall:0, noter:"Tour-DEBUT 2026 — lagets og Gavirias etappeseirer i Tour (2 i 2018) var med UAE Team Emirates. Caja Rural debuterer.", kilde:"PCS" },
       drakt:{ base:"#3ea95e", skulder:"#3ea95e", sleeve:"#3ea95e", krave:"#3ea95e",
               band:null, mønster:"none",
               logo1:"Caja Rural", logo2:"", lf:"#1d1d1b" }
