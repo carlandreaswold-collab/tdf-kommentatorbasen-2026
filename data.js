@@ -983,13 +983,13 @@ const TDF_DATA = {
       form:"FDJs GC-kort og erfarne rytter. Filosof-syklisten er kjent for sin intellektuelle profil og offensive kjøring. God klatrer som kan overraske på fjellsetapper.",
       historie:"Kjent for å ha skrevet bøker under karrieren — filosof og syklist. Var hos Cofidis i mange år, nå FDJ. Ble 4. i Tour 2020." },
     { navn:"Romain Grégoire", lag:"GFC", land:"Frankrike", alder:22, rolle:"Allrounder / klatrer", nr:181, foto:"", fødeby:"Besançon",
-      meritter:"Etappeseier Tour de Suisse 2026, vant grønn trøye Tour de Suisse 2026, etappeseier Tour de France 2025",
+      meritter:"Etappeseier Tour de Suisse 2026, vant grønn trøye Tour de Suisse 2026",
       form:"Vant etappe 2 i Tour de Suisse 2026 — holdt unna for Pogačar. Vant GRØNN TRØYE (poengklassementet) i Tour de Suisse. FDJ-unge stjerne. Kan overraske på kuperte avslutninger og er i god form.",
       resultater2026:[
         {type:"seier", ritt:"Tour de Suisse etappe 2"},
         {type:"troye", ritt:"Tour de Suisse", troye:"Grønn trøye (poeng)"}
       ],
-      historie:"22 år — Frankrikes neste store. Bred profil og mye driv. Vant etappe i Tour de France 2025 — venter på å eksplodere i 2026." },
+      historie:"22 år — Frankrikes neste store. Bred profil og mye driv. Debuterer i Tour de France 2026 — venter på å eksplodere." },
     { navn:"Clément Berthet", lag:"GFC", land:"Frankrike", alder:27, rolle:"Klatrer / hjelper", nr:182, foto:"", fødeby:"Pierre-Bénite",
       meritter:"Etappeseirer, lovende klatrer",
       form:"Fransk klatrer og hjelper for FDJ. Kan angripe fra brudd på fjellsetapper.",
