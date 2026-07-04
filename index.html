@@ -1104,7 +1104,18 @@ document.addEventListener('mouseover',function(e){
     const btn=t.querySelector('.full-liste-btn');
     if(btn){
       const rect=btn.getBoundingClientRect();
-      popup.style.top=(rect.bottom+6)+'px';
+      const margin=6;
+      const popupH=popup.offsetHeight;
+      const spaceBelow=window.innerHeight-rect.bottom-margin;
+      const spaceAbove=rect.top-margin;
+      if(spaceBelow>=popupH||spaceBelow>=spaceAbove){
+        popup.style.top=(rect.bottom+margin)+'px';
+        popup.style.maxHeight=Math.min(480,spaceBelow)+'px';
+      } else {
+        const h=Math.min(480,spaceAbove);
+        popup.style.top=Math.max(margin,rect.top-h-margin)+'px';
+        popup.style.maxHeight=h+'px';
+      }
       popup.style.left=Math.min(rect.left,window.innerWidth-340)+'px';
     }
   },1000);
