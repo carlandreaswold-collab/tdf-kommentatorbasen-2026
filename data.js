@@ -383,7 +383,7 @@ const TDF_DATA = {
       ds:["Christian Andersen", "Stig Kristiansen", "Gabriel Rasch", "Gino Van Oudenhove"],
       ryttere:"Abrahamsen, Charmig, Cort, T.H. Johannessen, A. Johannessen, Skaarseth, Træen, Wærenskjold",
       notat:"NORSK LAG — 8 ryttere! HISTORISK: BEGGE Johannessen-tvillingene er på laget — Tobias Halland OG Anders Johannessen, brødrene som begge er proffyklist! Andreas Kron er IKKE med. Abrahamsen vant Brussels Classic i 2024. Wærenskjold vant Baloise Belgium Tour i 2024. Charmig vant etappe i Tour Auvergne-Rhône-Alpes 2026. Træen er IKKE på Bahrain — han er her.",
-      tourEtapper:{ antall:1, noter:"Abrahamsen 1 (etappe 10, 2023 — som wildcard-lag i første Tour-deltakelse). Årets Tour er lagets første WorldTour-Tour.", kilde:"PCS" },
+      tourEtapper:{ antall:1, noter:"Abrahamsen 1 (etappe 11 Toulouse, 2025). Årets Tour er lagets første WorldTour-Tour.", kilde:"PCS" },
       drakt:{ base:"#c92c3a", skulder:"#c92c3a", sleeve:"#c92c3a", krave:"#c92c3a",
               band:"#f5c000", mønster:"band-mid",
               logo1:"Uno-X", logo2:"Mobility", lf:"#ffffff" }
@@ -648,13 +648,13 @@ const TDF_DATA = {
       historie:"Tvilling — bror Anders Johannessen er med på Uno-X Tour-laget 2026! Norsk klatrehåp. 6. plass TdF 2025 er Norges beste Grand Tour-resultat noensinne. Kan komme sterk i uka 3 der GC gjøres opp i Alpene." },
 
     { navn:"Jonas Abrahamsen", lag:"UNO", land:"Norge", alder:30, rolle:"Brudd / klatring", nr:122, foto:"", fødeby:"Skien", norsk:true,
-      meritter:"2 Tour de France etappeseire (2023 + etappe 11 Toulouse 2025 — 155 km solo), kåret mest kampvillige rytter TdF 2025, prikktrøye 10 dager + grønn 3 dager TdF 2024, vant Brussels Cycling Classic 2024",
+      meritter:"Tour de France etappeseier (etappe 11 Toulouse 2025 — 155 km solo), kåret mest kampvillige rytter TdF 2025, prikktrøye 10 dager + grønn 3 dager TdF 2024, vant Brussels Cycling Classic 2024",
       form:"Skadefri oppkjøring 2026. 3. plass NM fellesstart 2026 (Stavanger, 39 sek bak NM-vinner Skaarseth). Klar for bruddkjøring. TV2: har trolig blinket seg ut ETAPPE 4 og ETAPPE 9 som mål.",
       resultater2026:[
         {type:"pall", ritt:"NM fellesstart 2026", plass:3}
       ],
       skade:"Kragebeinsbruddet (Baloise Belgium Tour, juni 2025) — fullførte TdF 2025 tross bruddet. Skadefri i 2026.",
-      historie:"Kjent for vekttap-reisen og offensiv kjøring. Norsk etappejeger #1. TdF 2025: 155 km solo-brudd til Toulouse etappe 11 — vant og ble kåret mest kampvillige. TdF 2024: bar prikktrøyen i 10 dager og grønn i 3 dager." },
+      historie:"Kjent for vekttap-reisen og offensiv kjøring. Norsk etappejeger #1. TdF 2025: 155 km solo-brudd til Toulouse etappe 11 — eneste TdF-etappeseier, kåret mest kampvillige. TdF 2024: bar prikktrøyen i 10 dager og grønn i 3 dager." },
 
     { navn:"Søren Wærenskjold", lag:"UNO", land:"Norge", alder:25, rolle:"Spurt / tempo / klassiker", nr:128, foto:"", fødeby:"Mandal", norsk:true,
       meritter:"Vant Baloise Belgium Tour 2024 (sammenlagt), Omloop Het Nieuwsblad",

@@ -63,6 +63,16 @@ const FAKTARAPPORT = {
       dato: "2026-07-04"
     },
     {
+      id: "abrahamsen-kun-2025-etappe",
+      kategori: "rytter",
+      referanse: "Jonas Abrahamsen",
+      felt: "meritter + tourEtapper.noter",
+      feil: "'2 TdF-etappeseire (2023 + 2025)' — Abrahamsen har kun vunnet én TdF-etappe",
+      korrekt: "Eneste TdF-etappeseier: etappe 11 Toulouse 2025 (155 km solo). Ingen seier i 2023.",
+      kilde: "Bekreftet av radiokommentator (Carl Andreas Wold) 2026-07-04",
+      dato: "2026-07-04"
+    },
+    {
       id: "martinez-tour-etappe-2024",
       kategori: "rytter",
       referanse: "Lenny Martínez",
