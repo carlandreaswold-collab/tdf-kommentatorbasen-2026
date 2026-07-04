@@ -63,6 +63,36 @@ const FAKTARAPPORT = {
       dato: "2026-07-04"
     },
     {
+      id: "martinez-tour-etappe-2024",
+      kategori: "rytter",
+      referanse: "Lenny Martínez",
+      felt: "meritter",
+      feil: "'Tour-etappeseier 2024' — Martínez har ikke vunnet noen TdF-etappe",
+      korrekt: "Martínez har ingen TdF-etappeseirer. Hans seire kom i Paris-Nice, Dauphiné-etapper og Romandie.",
+      kilde: "ProCyclingStats (agent-søk 2026-07-04)",
+      dato: "2026-07-04"
+    },
+    {
+      id: "bauhaus-ingen-grand-tour-etapper",
+      kategori: "rytter",
+      referanse: "Phil Bauhaus",
+      felt: "meritter",
+      feil: "'Giro- og Vuelta-etappeseirer' og 'Vant etapper i alle tre Grand Tours' — Bauhaus har ingen Grand Tour-etappeseirer",
+      korrekt: "Bauhaus har aldri vunnet en Grand Tour-etappe. Seirer i Tirreno, Tour de Pologne o.l.",
+      kilde: "ProCyclingStats / Wikipedia (agent-søk 2026-07-04)",
+      dato: "2026-07-04"
+    },
+    {
+      id: "denz-giro-ikke-vuelta",
+      kategori: "rytter",
+      referanse: "Nico Denz",
+      felt: "meritter",
+      feil: "'Vuelta-etappeseier' — Denz har vunnet i Giro, ikke Vuelta",
+      korrekt: "Denz vant Giro-etappe 12 og 14 i 2023, samt etappe 18 i 2025. Ingen Vuelta-seier.",
+      kilde: "ProCyclingStats (agent-søk 2026-07-04)",
+      dato: "2026-07-04"
+    },
+    {
       id: "giro-tour-dobbel-8-ryttere",
       kategori: "statistikk",
       referanse: "Giro-Tour-dobbelen (statistikk)",
