@@ -686,7 +686,7 @@ const TDF_DATA = {
       meritter:"2 Tour de France etappeseire (2018 og 2022), 6 Vuelta-etappeseire",
       form:"Uno-X-kaptein på flate og kuperte etapper. Erfaren etappejeger — 2 Tour-seire (2018, 2022) og 6 Vuelta-seire. Ikke forveks Vuelta- og Tour-tallene på lufta.",
       skade:"Mystisk utmattelse/sykdom mid-2025 — avsluttet sesongen tidlig. Fullt frisk i 2026. SISTE TOUR — annonserte karriereslutt ved sesongslutt 2026.",
-      historie:"Meget populær rytter. Verdensrekordholder i antall Vuelta-etappeseire blant levende ryttere. 2 Tour-etappeseiere (2018 og 2022)." },
+      historie:"Meget populær rytter. 6 Vuelta-etappeseiere er rekord blant aktive ryttere. 2 Tour-etappeseiere (2018 og 2022)." },
 
     { navn:"Matteo Jorgenson", lag:"VLB", land:"USA", alder:26, rolle:"Sammenlagt / hjelper", nr:16, foto:"", fødeby:"Walnut Creek",
       meritter:"Paris-Nice-vinner 2024, sterk GC-rytter",
@@ -731,7 +731,7 @@ const TDF_DATA = {
     { navn:"Adam Yates", lag:"UAE", land:"Storbr.", alder:32, rolle:"Klatrer / hjelper", nr:8, foto:"", fødeby:"Bury",
       meritter:"Critérium du Dauphiné-vinner, topp-5 Tour",
       form:"Erfaren klatrehjelper for Pogačar. Tvillingbror av Simon Yates.",
-      historie:"Bror av Simon Yates. Har vunnet Dauphiné. En av Pogačars viktigste støttespillere i fjellene." },
+      historie:"Bror av Simon Yates. Vant Tour de Suisse 2024. En av Pogačars viktigste støttespillere i fjellene." },
     { navn:"Felix Grossschartner", lag:"UAE", land:"Østerrike", alder:31, rolle:"Allrounder / hjelper", nr:3, foto:"", fødeby:"Wels",
       meritter:"Etappeseire i Grand Tours",
       form:"Hjelper for UAE i fjell og flat.",
@@ -979,9 +979,9 @@ const TDF_DATA = {
 
     /* ---- GROUPAMA–FDJ UNITED ---- */
     { navn:"Guillaume Martin", lag:"GFC", land:"Frankrike", alder:33, rolle:"Sammenlagt / klatrer", nr:186, foto:"", fødeby:"Paris",
-      meritter:"4. plass Tour de France 2020, topp-10 Grand Tours",
+      meritter:"8. plass Tour de France 2021, topp-15 Grand Tours",
       form:"FDJs GC-kort og erfarne rytter. Filosof-syklisten er kjent for sin intellektuelle profil og offensive kjøring. God klatrer som kan overraske på fjellsetapper.",
-      historie:"Kjent for å ha skrevet bøker under karrieren — filosof og syklist. Var hos Cofidis i mange år, nå FDJ. Ble 4. i Tour 2020." },
+      historie:"Kjent for å ha skrevet bøker under karrieren — filosof og syklist. Var hos Cofidis i mange år, nå FDJ. Beste Tour-plassering: 8. plass i 2021." },
     { navn:"Romain Grégoire", lag:"GFC", land:"Frankrike", alder:22, rolle:"Allrounder / klatrer", nr:181, foto:"", fødeby:"Besançon",
       meritter:"Etappeseier Tour de Suisse 2026, vant grønn trøye Tour de Suisse 2026",
       form:"Vant etappe 2 i Tour de Suisse 2026 — holdt unna for Pogačar. Vant GRØNN TRØYE (poengklassementet) i Tour de Suisse. FDJ-unge stjerne. Kan overraske på kuperte avslutninger og er i god form.",
@@ -1108,7 +1108,7 @@ const TDF_DATA = {
     { navn:"Matej Mohorič", lag:"TBV", land:"Slovenia", alder:31, rolle:"Brudd / klassiker", nr:75, foto:"", fødeby:"Kranj",
       meritter:"3 Tour-etappeseirer (etappe 7+19 i 2021, etappe 19 i 2023), Milano-Sanremo-finalist",
       form:"Langdistansebrudd-spesialist. Kan angripe fra 100+ km ut.",
-      historie:"Kjent for dristige solobrudd. Vant Tour-etapper i 2021." },
+      historie:"Kjent for dristige solobrudd. Vant Tour-etapper i 2021 (×2) og 2023." },
     { navn:"Antonio Tiberi", lag:"TBV", land:"Italia", alder:24, rolle:"Klatrer / GC-talent", nr:77, foto:"", fødeby:"Frosinone",
       meritter:"Lovende Grand Tour-klatrer",
       form:"Ung italiensk GC-kaptein for Bahrain.",
