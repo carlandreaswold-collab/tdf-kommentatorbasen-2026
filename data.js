@@ -17,54 +17,42 @@ const TDF_DATA = {
     sisteOppdatering: "2026-07-06",
     nesteEtappe: 3,
     rittStartISO: "2026-07-04T13:00:00",
-    notat: "E2 FERDIG: Isaac del Toro (UAE) vinner Montjuïc — Pogačar ga bort seieren til sin 22-årige hjelper. Topp 4 s.t. (del Toro, Pogačar, Evenepoel, Vingegaard). Vingegaard i gult (+6\" til Pogačar). TRØYESKIFTE: Grønn → del Toro, Prikkete → Molenaar (CRR, tok fjellpoeng i bruddet), Hvit → del Toro. T.H. Johannessen angrep Montjuïc! 12. sammenlagt (+1:03). Foss slapp — 14. (+1:21). E3 i dag: Granollers → Les Angles, toppmål i Pyreneene.",
-    gulTroye: "Jonas Vingegaard",
-    grontTroye: "Isaac del Toro",
-    prikketTroye: "Alex Molenaar",
+    notat: "E3 FERDIG: Pogačar vinner Les Angles og tar gult! Slo Vingegaard med 2 sek på veien, men tidsbonuser (10s vs 6s) gir dem LIKT på tid i GC. T.H. Johannessen imponerte: 5. plass etappe! TRØYESKIFTE: Gul → Pogačar, Grønn → Pogačar, Prikkete → Baudin (EF, tok fjellpoeng i bruddet). Del Toro holder hvit. E4 i morgen: Carcassonne → Foix, 181.9 km, 41°C varsel.",
+    gulTroye: "Tadej Pogačar",
+    grontTroye: "Tadej Pogačar",
+    prikketTroye: "Alex Baudin",
     hvitTroye: "Isaac del Toro",
     sammenlagtTopp: [
-      {plass:1,  navn:"Jonas Vingegaard",          lag:"VLB", tid:"4:01:48"},
-      {plass:2,  navn:"Tadej Pogačar",             lag:"UAE", tid:"+0:06"},
-      {plass:3,  navn:"Remco Evenepoel",           lag:"RBH", tid:"+0:15"},
-      {plass:4,  navn:"Isaac del Toro",            lag:"UAE", tid:"+0:16"},
-      {plass:5,  navn:"Juan Ayuso",                lag:"LTK", tid:"+0:19"},
-      {plass:6,  navn:"Paul Seixas",               lag:"DEC", tid:"+0:42"},
-      {plass:7,  navn:"Romain Grégoire",           lag:"GFC", tid:"+0:44"},
-      {plass:8,  navn:"Lenny Martinez",            lag:"TBV", tid:"+0:45"},
-      {plass:9,  navn:"Florian Lipowitz",          lag:"RBH", tid:"+0:53"},
-      {plass:10, navn:"Tom Pidcock",               lag:"PQ3", tid:"+1:00"},
-      {plass:11, navn:"Ilan Van Wilder",           lag:"SOQ", tid:"+1:01"},
-      {plass:12, navn:"Tobias Halland Johannessen",lag:"UNO", tid:"+1:03"},
-      {plass:13, navn:"Alex Baudin",               lag:"EFE", tid:"+1:07"},
-      {plass:14, navn:"Tobias Foss",               lag:"IGD", tid:"+1:21"},
-      {plass:15, navn:"Mathieu van der Poel",      lag:"APT", tid:"+1:26"},
-      {plass:16, navn:"Mattias Skjelmose",         lag:"LTK", tid:"+1:36"},
-      {plass:17, navn:"Davide Piganzoli",          lag:"VLB", tid:"+1:38"},
-      {plass:18, navn:"Lennert Van Eetvelt",       lag:"LIN", tid:"+1:39"},
-      {plass:19, navn:"Thymen Arensman",           lag:"EFE", tid:"+1:43"},
-      {plass:20, navn:"Richard Carapaz",           lag:"EFE", tid:"+1:48"}
+      {plass:1,  navn:"Tadej Pogačar",              lag:"UAE", tid:"8:46:55"},
+      {plass:2,  navn:"Jonas Vingegaard",           lag:"VLB", tid:"s.t."},
+      {plass:3,  navn:"Remco Evenepoel",            lag:"RBH", tid:"+0:23"},
+      {plass:4,  navn:"Isaac del Toro",             lag:"UAE", tid:"+0:24"},
+      {plass:5,  navn:"Juan Ayuso",                 lag:"LTK", tid:"+0:27"},
+      {plass:6,  navn:"Paul Seixas",                lag:"DEC", tid:"+0:48"},
+      {plass:7,  navn:"Florian Lipowitz",           lag:"RBH", tid:"+0:53"},
+      {plass:8,  navn:"Lenny Martinez",             lag:"TBV", tid:"+1:09"},
+      {plass:9,  navn:"Tobias Halland Johannessen", lag:"UNO", tid:"+1:11"},
+      {plass:10, navn:"Ilan Van Wilder",            lag:"SOQ", tid:"+1:17"}
     ],
     gronnTopp: [
-      {plass:1, navn:"Isaac del Toro",  lag:"UAE", poeng:"30"},
-      {plass:2, navn:"Alex Molenaar",   lag:"CRR", poeng:"25"},
-      {plass:3, navn:"Tadej Pogačar",   lag:"UAE", poeng:"25"},
-      {plass:4, navn:"Remco Evenepoel", lag:"RBH", poeng:"22"},
-      {plass:5, navn:"Jonas Vingegaard",lag:"VLB", poeng:"19"}
+      {plass:1, navn:"Tadej Pogačar",   lag:"UAE", poeng:"45"},
+      {plass:2, navn:"Isaac del Toro",  lag:"UAE", poeng:"37"},
+      {plass:3, navn:"Jonas Vingegaard",lag:"VLB", poeng:"36"},
+      {plass:4, navn:"Remco Evenepoel", lag:"RBH", poeng:"30"},
+      {plass:5, navn:"Alex Molenaar",   lag:"CRR", poeng:"25"}
     ],
     prikketTopp: [
-      {plass:1, navn:"Alex Molenaar",             lag:"CRR", poeng:"5"},
-      {plass:2, navn:"Brandon McNulty",           lag:"UAE", poeng:"4"},
-      {plass:3, navn:"T.H. Johannessen",          lag:"UNO", poeng:"2"},
-      {plass:4, navn:"Tadej Pogačar",             lag:"UAE", poeng:"1"}
+      {plass:1, navn:"Alex Baudin",    lag:"EFE", poeng:"?"},
+      {plass:2, navn:"Alex Molenaar",  lag:"CRR", poeng:"5"},
+      {plass:3, navn:"Brandon McNulty",lag:"UAE", poeng:"4"}
     ],
     hvitTopp: [
-      {plass:1, navn:"Isaac del Toro",  lag:"UAE", tid:"+0:16"},
-      {plass:2, navn:"Juan Ayuso",      lag:"LTK", tid:"+0:19"},
-      {plass:3, navn:"Paul Seixas",     lag:"DEC", tid:"+0:42"},
-      {plass:4, navn:"Romain Grégoire", lag:"GFC", tid:"+0:44"},
-      {plass:5, navn:"Lenny Martinez",  lag:"TBV", tid:"+0:45"}
+      {plass:1, navn:"Isaac del Toro",  lag:"UAE", tid:"+0:24"},
+      {plass:2, navn:"Juan Ayuso",      lag:"LTK", tid:"+0:27"},
+      {plass:3, navn:"Paul Seixas",     lag:"DEC", tid:"+0:48"},
+      {plass:4, navn:"Lenny Martinez",  lag:"TBV", tid:"+1:09"}
     ],
-    dagensHistorie: "DEL TORO VINNER E2! Pogačar ga vekk seieren til sin 22-årige mexicanske hjelper på Montjuïc. «Jeg vil huske dette for resten av livet», sier del Toro. T.H. Johannessen angrep bakken — tok fjellpoeng, holder 12. sammenlagt. Foss slapp i finalen — 14. plass (+1:21).",
+    dagensHistorie: "POGAČAR I GULT! Akselererte fra del Toro 200m fra mål i Les Angles — slo Vingegaard med 2 sekunder på veien. Tidsbonuser (10s/6s) gir dem LIKT på tid. T.H. Johannessen strålende 5. plass! Carapaz 3., Seixas 4. Baudin tok fjellpoeng i bruddet og overtok prikkete. E4: Carcassonne → Foix i ekstrem varme (41°C).",
     preTourNytt: [
       "Tour de Suisse (17–22 jun): 🏆 Pogačar (UAE) — +6:32 til nr.2 · Grønn: Grégoire (FDJ) · 🔴 Klatretrøye: Vervaeke (SQS) · Hvit: Vacek (LTK) · 5. Van Wilder (SQS)",
       "Tour Auvergne-Rhône-Alpes (7–14 jun): 🏆 Del Toro (UAE) · 2. Tuckwell (RBH) · 3. Ayuso (LTK) · Etappeseire: Baudin(EF) · Charmig(UNO) · Simmons(LTK) · Van Gils(RBH)"
@@ -1586,6 +1574,20 @@ const TDF_DATA = {
         {plass:35, navn:"Richard Carapaz",            lag:"EFE", tid:"",      delta:"+1:36"},
         {plass:40, navn:"Cian Uijtdebroeks",          lag:"MOV", tid:"",      delta:"+1:53"},
         {plass:59, navn:"Matteo Jorgenson",           lag:"VLB", tid:"",      delta:"+2:30"}
+      ]
+    },
+    { etappe:3, dato:"6. juli", startby:"Granollers", mål:"Les Angles", km:195.9, type:"toppmål",
+      resultater:[
+        {plass:1,  navn:"Tadej Pogačar",              lag:"UAE", tid:"4:45:11", delta:""},
+        {plass:2,  navn:"Jonas Vingegaard",           lag:"VLB", tid:"",        delta:"+0:02"},
+        {plass:3,  navn:"Richard Carapaz",            lag:"EFE", tid:"",        delta:"s.t."},
+        {plass:4,  navn:"Paul Seixas",                lag:"DEC", tid:"",        delta:"s.t."},
+        {plass:5,  navn:"Tobias Halland Johannessen", lag:"UNO", tid:"",        delta:"+0:04"},
+        {plass:6,  navn:"Lennert Van Eetvelt",        lag:"LIN", tid:"",        delta:"s.t."},
+        {plass:7,  navn:"Florian Lipowitz",           lag:"RBH", tid:"",        delta:"s.t."},
+        {plass:8,  navn:"Remco Evenepoel",            lag:"RBH", tid:"",        delta:"s.t."},
+        {plass:9,  navn:"Isaac del Toro",             lag:"UAE", tid:"",        delta:"s.t."},
+        {plass:10, navn:"Juan Ayuso",                 lag:"LTK", tid:"",        delta:"s.t."}
       ]
     },
     { etappe:2, dato:"5. juli", startby:"Tarragona", mål:"Barcelona/Montjuïc", km:168.5, type:"kupert",
