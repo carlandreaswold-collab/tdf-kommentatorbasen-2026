@@ -1549,6 +1549,7 @@ const TDF_DATA = {
   /* Struktur: { etappe, dato, startby, mål, km, type, resultater:[{plass,navn,lag,tid,delta}] } */
   etappeResultater: [
     { etappe:1, dato:"4. juli", startby:"Barcelona", mål:"Barcelona/Montjuïc", km:19.6, type:"tempo-lag",
+      dnf:[{navn:"Clément Berthet", lag:"GFC", årsak:"Krasj i lagtempo — hjernerystelse, startet ikke E2"}],
       resultater:[
         {plass:1,  navn:"Jonas Vingegaard",          lag:"VLB", tid:"21:47", delta:""},
         {plass:2,  navn:"Filippo Ganna",              lag:"IGD", tid:"21:55", delta:"+7\""},
@@ -1578,6 +1579,7 @@ const TDF_DATA = {
       ]
     },
     { etappe:3, dato:"6. juli", startby:"Granollers", mål:"Les Angles", km:195.9, type:"toppmål",
+      dnf:[{navn:"Arnaud De Lie", lag:"LIN", årsak:"Hadde ikke bena — brøt 10 km fra mål i ekstrem varme"}],
       resultater:[
         {plass:1,  navn:"Tadej Pogačar",              lag:"UAE", tid:"4:45:11", delta:""},
         {plass:2,  navn:"Jonas Vingegaard",           lag:"VLB", tid:"",        delta:"+0:02"},

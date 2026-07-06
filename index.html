@@ -338,6 +338,13 @@
 <script>
 const D = TDF_DATA;
 const $ = s => document.querySelector(s);
+function getDnfRyttere(){
+  const dnf=[];
+  (D.etappeResultater||[]).forEach(et=>{
+    (et.dnf||[]).forEach(d=>dnf.push({...d,etappe:et.etappe}));
+  });
+  return dnf;
+}
 
 /* ---- POENG PR. ETAPPE (grønn trøye, vinner av etappe) ---- */
 const SLUTT_POENG = {
@@ -383,7 +390,7 @@ function oppdaterBruddBadge(){
   b.textContent=total||""; b.style.display=total?"inline-block":"none";
 }
 function oppdaterDnfTelling(){
-  const dnf=(D.live.dnfRyttere||[]).length;
+  const dnf=getDnfRyttere().length;
   const total=D.ryttere.length;
   const igjen=total-dnf;
   const pill=document.getElementById("riderCount");
@@ -784,12 +791,12 @@ function render(){
 
   // Ute av rittet-fane
   if(activeFilter==="ute"&&!q){
-    const dnf=D.live.dnfRyttere||[];
+    const dnf=getDnfRyttere();
     html+=`<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
       <div class="sec-title" style="margin:0">Ute av rittet <span class="count">${dnf.length} rytter${dnf.length===1?"":"e"}</span></div>
     </div>`;
     if(!dnf.length){
-      html+=`<div class="dnf-tom"><b>Ingen ryttere ute av rittet ennå</b><br><span style="font-size:13px">Legg til i <code>TDF_DATA.live.dnfRyttere</code> etter hvert som ryttere bryter</span></div>`;
+      html+=`<div class="dnf-tom"><b>Ingen ryttere ute av rittet ennå</b><br><span style="font-size:13px">Legg til <code>dnf:[{navn,lag,årsak}]</code> på etappen i <code>etappeResultater</code></span></div>`;
     } else {
       html+=`<div style="display:grid;grid-template-columns:68px 1fr 52px 1fr;gap:8px;padding:0 8px 6px;font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:var(--dim)"><span>Etappe</span><span>Rytter</span><span>Lag</span><span>Årsak</span></div>`;
       html+=`<div class="dnf-table">`;
@@ -982,7 +989,7 @@ function riderCard(r){
   const bruddBtn = bruddGrupper.length||inG
     ? `<div class="brudd-pick-wrap"><button class="rider-brudd-btn${inG?' i-brudd':''}" data-brudd-toggle="${esc(r.navn)}">${btnLabel}</button>${picker}</div>`
     : `<div class="brudd-pick-wrap"><button class="rider-brudd-btn" data-brudd-ny="${esc(r.navn)}">+ Brudd</button></div>`;
-  const erDnf=(D.live.dnfRyttere||[]).some(d=>d.navn===r.navn);
+  const erDnf=getDnfRyttere().some(d=>d.navn===r.navn);
   return `<div class="rider${erDnf?" rider-dnf":""}" draggable="true" data-navn="${esc(r.navn)}">${bruddBtn}
     ${avatar}
     <div class="body">
