@@ -14,50 +14,57 @@ const TDF_DATA = {
 
   /* ---- LIVE-STATUS ---- */
   live: {
-    sisteOppdatering: "2026-07-04",
-    nesteEtappe: 2,
+    sisteOppdatering: "2026-07-06",
+    nesteEtappe: 3,
     rittStartISO: "2026-07-04T13:00:00",
-    notat: "E1 FERDIG: Visma vinner lagtempoen i Barcelona! Vingegaard i gult, Pogačar 3. (+12s), Evenepoel 5. (+19s). Tobias Foss (NOR) 9. sammenlagt (+38s). T.H. Johannessen 20. E2 i morgen: Tarragona–Barcelona/Montjuïc, kupert, puncheredag.",
+    notat: "E2 FERDIG: Isaac del Toro (UAE) vinner Montjuïc — Pogačar ga bort seieren til sin 22-årige hjelper. Topp 4 s.t. (del Toro, Pogačar, Evenepoel, Vingegaard). Vingegaard i gult (+6\" til Pogačar). TRØYESKIFTE: Grønn → del Toro, Prikkete → Molenaar (CRR, tok fjellpoeng i bruddet), Hvit → del Toro. T.H. Johannessen angrep Montjuïc! 12. sammenlagt (+1:03). Foss slapp — 14. (+1:21). E3 i dag: Granollers → Les Angles, toppmål i Pyreneene.",
     gulTroye: "Jonas Vingegaard",
-    grontTroye: "Egan Bernal",
-    prikketTroye: "Tadej Pogačar",
-    hvitTroye: "Juan Ayuso",
+    grontTroye: "Isaac del Toro",
+    prikketTroye: "Alex Molenaar",
+    hvitTroye: "Isaac del Toro",
     sammenlagtTopp: [
-      {plass:1,  navn:"Jonas Vingegaard",          lag:"VLB", tid:"21'47\""},
-      {plass:2,  navn:"Filippo Ganna",              lag:"IGD", tid:"+8\""},
-      {plass:3,  navn:"Tadej Pogačar",              lag:"UAE", tid:"+12\""},
-      {plass:4,  navn:"Juan Ayuso",                 lag:"LTK", tid:"+16\""},
-      {plass:5,  navn:"Remco Evenepoel",            lag:"RBH", tid:"+19\""},
-      {plass:6,  navn:"Isaac del Toro",             lag:"UAE", tid:"+26\""},
-      {plass:7,  navn:"Davide Piganzoli",           lag:"VLB", tid:"+28\""},
-      {plass:8,  navn:"Florian Lipowitz",           lag:"RBH", tid:"+35\""},
-      {plass:9,  navn:"Tobias Foss",                lag:"IGD", tid:"+38\""},
-      {plass:10, navn:"Paul Seixas",                lag:"DEC", tid:"+39\""},
-      {plass:11, navn:"Mathieu van der Poel",       lag:"APT", tid:"+39\""},
-      {plass:12, navn:"Romain Grégoire",            lag:"GFC", tid:"+41\""},
-      {plass:13, navn:"Antonio Tiberi",             lag:"TBV", tid:"+47\""},
-      {plass:14, navn:"Clément Riccitello",         lag:"DEC", tid:"+50\""},
-      {plass:15, navn:"Lenny Martinez",             lag:"GFC", tid:"+50\""},
-      {plass:16, navn:"Michael Matthews",           lag:"JAY", tid:"+51\""},
-      {plass:17, navn:"Alex Baudin",                lag:"EFE", tid:"+57\""},
-      {plass:18, navn:"Tom Pidcock",                lag:"PQ3", tid:"+57\""},
-      {plass:19, navn:"Ilan Van Wilder",            lag:"SOQ", tid:"+58\""},
-      {plass:20, navn:"Tobias Halland Johannessen", lag:"UNO", tid:"+1:00"}
+      {plass:1,  navn:"Jonas Vingegaard",          lag:"VLB", tid:"4:01:48"},
+      {plass:2,  navn:"Tadej Pogačar",             lag:"UAE", tid:"+0:06"},
+      {plass:3,  navn:"Remco Evenepoel",           lag:"RBH", tid:"+0:15"},
+      {plass:4,  navn:"Isaac del Toro",            lag:"UAE", tid:"+0:16"},
+      {plass:5,  navn:"Juan Ayuso",                lag:"LTK", tid:"+0:19"},
+      {plass:6,  navn:"Paul Seixas",               lag:"DEC", tid:"+0:42"},
+      {plass:7,  navn:"Romain Grégoire",           lag:"GFC", tid:"+0:44"},
+      {plass:8,  navn:"Lenny Martinez",            lag:"TBV", tid:"+0:45"},
+      {plass:9,  navn:"Florian Lipowitz",          lag:"RBH", tid:"+0:53"},
+      {plass:10, navn:"Tom Pidcock",               lag:"PQ3", tid:"+1:00"},
+      {plass:11, navn:"Ilan Van Wilder",           lag:"SOQ", tid:"+1:01"},
+      {plass:12, navn:"Tobias Halland Johannessen",lag:"UNO", tid:"+1:03"},
+      {plass:13, navn:"Alex Baudin",               lag:"EFE", tid:"+1:07"},
+      {plass:14, navn:"Tobias Foss",               lag:"IGD", tid:"+1:21"},
+      {plass:15, navn:"Mathieu van der Poel",      lag:"APT", tid:"+1:26"},
+      {plass:16, navn:"Mattias Skjelmose",         lag:"LTK", tid:"+1:36"},
+      {plass:17, navn:"Davide Piganzoli",          lag:"VLB", tid:"+1:38"},
+      {plass:18, navn:"Lennert Van Eetvelt",       lag:"LIN", tid:"+1:39"},
+      {plass:19, navn:"Thymen Arensman",           lag:"EFE", tid:"+1:43"},
+      {plass:20, navn:"Richard Carapaz",           lag:"EFE", tid:"+1:48"}
     ],
     gronnTopp: [
-      {plass:1, navn:"Egan Bernal", lag:"IGD", poeng:"TB"}
+      {plass:1, navn:"Isaac del Toro",  lag:"UAE", poeng:"30"},
+      {plass:2, navn:"Alex Molenaar",   lag:"CRR", poeng:"25"},
+      {plass:3, navn:"Tadej Pogačar",   lag:"UAE", poeng:"25"},
+      {plass:4, navn:"Remco Evenepoel", lag:"RBH", poeng:"22"},
+      {plass:5, navn:"Jonas Vingegaard",lag:"VLB", poeng:"19"}
     ],
     prikketTopp: [
-      {plass:1, navn:"Tadej Pogačar", lag:"UAE", poeng:"TB"}
+      {plass:1, navn:"Alex Molenaar",             lag:"CRR", poeng:"5"},
+      {plass:2, navn:"Brandon McNulty",           lag:"UAE", poeng:"4"},
+      {plass:3, navn:"T.H. Johannessen",          lag:"UNO", poeng:"2"},
+      {plass:4, navn:"Tadej Pogačar",             lag:"UAE", poeng:"1"}
     ],
     hvitTopp: [
-      {plass:1, navn:"Juan Ayuso",        lag:"LTK", tid:""},
-      {plass:2, navn:"Isaac del Toro",    lag:"UAE", tid:"+10\""},
-      {plass:3, navn:"Davide Piganzoli",  lag:"VLB", tid:"+12\""},
-      {plass:4, navn:"Paul Seixas",       lag:"DEC", tid:"+23\""},
-      {plass:5, navn:"Romain Grégoire",   lag:"GFC", tid:"+25\""}
+      {plass:1, navn:"Isaac del Toro",  lag:"UAE", tid:"+0:16"},
+      {plass:2, navn:"Juan Ayuso",      lag:"LTK", tid:"+0:19"},
+      {plass:3, navn:"Paul Seixas",     lag:"DEC", tid:"+0:42"},
+      {plass:4, navn:"Romain Grégoire", lag:"GFC", tid:"+0:44"},
+      {plass:5, navn:"Lenny Martinez",  lag:"TBV", tid:"+0:45"}
     ],
-    dagensHistorie: "VISMA VINNER! Vingegaard i gult etter Barcelonas lagtempo. Nesten-ulykke for Uno-X under oppkjøring (gjerde i veien) — Abrahamsen: «Det var millimeter».",
+    dagensHistorie: "DEL TORO VINNER E2! Pogačar ga vekk seieren til sin 22-årige mexicanske hjelper på Montjuïc. «Jeg vil huske dette for resten av livet», sier del Toro. T.H. Johannessen angrep bakken — tok fjellpoeng, holder 12. sammenlagt. Foss slapp i finalen — 14. plass (+1:21).",
     preTourNytt: [
       "Tour de Suisse (17–22 jun): 🏆 Pogačar (UAE) — +6:32 til nr.2 · Grønn: Grégoire (FDJ) · 🔴 Klatretrøye: Vervaeke (SQS) · Hvit: Vacek (LTK) · 5. Van Wilder (SQS)",
       "Tour Auvergne-Rhône-Alpes (7–14 jun): 🏆 Del Toro (UAE) · 2. Tuckwell (RBH) · 3. Ayuso (LTK) · Etappeseire: Baudin(EF) · Charmig(UNO) · Simmons(LTK) · Van Gils(RBH)"
@@ -667,8 +674,9 @@ const TDF_DATA = {
     /* ---- NORSK INTERESSE ---- */
     { navn:"Tobias Halland Johannessen", lag:"UNO", land:"Norge", alder:26, rolle:"Sammenlagt", nr:121, foto:"", fødeby:"Drøbak", norsk:true,
       meritter:"6. plass Tour de France 2025 — Norges beste Grand Tour-resultat noensinne",
-      form:"Beste sesong hittil: 4. Tirreno-Adriatico, 3. Itzulia Basque Country, 2. Milano-Torino, 5. sammenlag Tour Auvergne. 2. plass etappe 6 Tour Auvergne (Crest-Voland) bak Van Gils. Tvillingbror Anders er med på SAMME Tour-lag. Mål 2026: topp 5 (sportsdirektør Gabriel Rasch offentlig). ETAPPE 2 (Barcelona): TV2 peker på dette som hans store sjanse allerede på dag 2 — kan skrive seg inn i Tour de France-historien der.",
+      form:"TOUR E2: Angrep på Montjuïc — tok fjellpoeng, holdt fremste gruppe! 12. sammenlagt (+1:03). E1: 20. sammenlagt. Sesong 2026: 4. Tirreno-Adriatico, 3. Itzulia Basque Country, 2. Milano-Torino, 5. Tour Auvergne. Mål 2026: topp 5. Tvillingbror Anders er med på SAMME Tour-lag.",
       resultater2026:[
+        {type:"GC", ritt:"Tour de France (etter E2)", plass:12},
         {type:"GC", ritt:"Tirreno-Adriatico", plass:4},
         {type:"GC", ritt:"Itzulia Basque Country", plass:3},
         {type:"pall", ritt:"Milano-Torino", plass:2},
@@ -737,9 +745,13 @@ const TDF_DATA = {
 
     /* ---- UAE TEAM EMIRATES ---- */
     { navn:"Isaac Del Toro", lag:"UAE", land:"Mexico", alder:22, rolle:"Sammenlagt / klatrer", nr:2, foto:"", fødeby:"Ensenada",
-      meritter:"Vuelta 2025-revelasjon, vant Tour Auvergne-Rhône-Alpes 2026",
-      form:"Vant Tour Auvergne-Rhône-Alpes 2026 (det nyomdøpte Critérium du Dauphiné) — to strake etappeseire i finalehelgen (Grand Colombier etappe 7 og Plateau de Solaison etappe 8). Tok gul trøye fra Luke Tuckwell (RBH) på siste dag. Kom tilbake etter lårmuskelsone fra Itzulia-krasj i april. UAEs 2. kaptein og hvit-troye-kandidat. INRNG: Rekognoserte nøkkel-Tour-etapper med Pogačar — kjenner bakken. Vis i Giroen 2025 at han klarer 3 uker. Relativ svakhet: tempoetapper.",
+      meritter:"TdF etappeseier 2026 (E2 Barcelona/Montjuïc), Vuelta 2025-revelasjon, vant Tour Auvergne-Rhône-Alpes 2026",
+      form:"🏆 TOUR DE FRANCE ETAPPESEIER E2! Vant Montjuïc-finalen etter at Pogačar ga ham seieren — den første mexicanske TdF-etappeseieren siden Raúl Alcalá i 1990. Nå 4. sammenlagt (+0:16), leder hvit og grønn trøye. Vant Tour Auvergne-Rhône-Alpes 2026 — kjenner nøkkel-Tour-bakker fra rekognoseringstur med Pogačar.",
       resultater2026:[
+        {type:"seier", ritt:"Tour de France etappe 2 (Barcelona/Montjuïc)"},
+        {type:"troye", ritt:"Tour de France", troye:"Grønn trøye (leder)"},
+        {type:"troye", ritt:"Tour de France", troye:"Hvit trøye (leder)"},
+        {type:"GC", ritt:"Tour de France", plass:4},
         {type:"GC", ritt:"Tour Auvergne-Rhône-Alpes", plass:1},
         {type:"seier", ritt:"Tour Auvergne-Rhône-Alpes etappe 7 (Grand Colombier)"},
         {type:"seier", ritt:"Tour Auvergne-Rhône-Alpes etappe 8 (Plateau de Solaison)"},
@@ -952,8 +964,9 @@ const TDF_DATA = {
       historie:"Verdens beste temposyklist. Holder ikke i fjellet, men etappe 16 er hans store sjanse." },
     { navn:"Tobias Foss", lag:"IGD", land:"Norge", alder:27, rolle:"Tempo / allrounder", nr:83, foto:"", fødeby:"Vingrom", norsk:true,
       meritter:"Verdensmester enkeltstart 2022 (Wollongong), verdensmester enkeltstart U23 2019, Vuelta-etappe",
-      form:"NORSK RYTTER PÅ INEOS! Tross tung sesongstart er han i god form: 4. sammenlagt i Sveits rundt, 3. på individuell tempo bak Pogacar og Van der Poel. Norsk tempomester for FJERDE GANG. Kontrakt med INEOS utløper etter 2026 — sitat: «Jeg vet ikke ennå; det gjør ting litt mer stressende.»",
+      form:"TOUR E2: Slapp i finalen på Montjuïc — 14. sammenlagt (+1:21). Mistet 43 sek til Vingegaard. E1: 9. sammenlagt. Sesong 2026: 4. sammenlagt Sveits rundt, 3. på individuell tempo bak Pogačar og Van der Poel. Norsk tempomester for FJERDE GANG. Kontrakt med INEOS utløper etter 2026.",
       resultater2026:[
+        {type:"GC", ritt:"Tour de France (etter E2)", plass:14},
         {type:"GC", ritt:"Sveits rundt", plass:4},
         {type:"pall", ritt:"Sveits rundt tempo", plass:3},
         {type:"seier", ritt:"NM enkeltstart 2026 (4. norske tittel)"}
@@ -1497,7 +1510,7 @@ const TDF_DATA = {
     /* ---- CAJA RURAL–SEGUROS RGA ---- */
     { navn:"Alex Molenaar", lag:"CRR", land:"Nederland", alder:26, rolle:"Puncheur / etappejeger", nr:224, foto:"", fødeby:"Rotterdam",
       meritter:"2. plass Gran Premio Miguel Indurain 2025",
-      form:"Caja Rurals nøkkelrytter til lagets første Tour. Komplett og eksplosiv på korte klatringer og kuperte avslutninger. 2. plass GP Marseillaise og 3. plass Tour du Finistère i 2026.",
+      form:"🔴 LEDER PRIKKTRØYEN etter E2! Angrep i bruddet på Côte de Begues (E2) og stakk av med 5 klatrepoeng. 1. plass grønn trøye-poeng (25 pts) etter etappeseierens poeng. Caja Rurals nøkkelrytter til lagets første Tour. Komplett og eksplosiv på korte klatringer. 2. plass GP Marseillaise og 3. plass Tour du Finistère 2026.",
       resultater2026:[
         {type:"pall", ritt:"GP Cycliste la Marseillaise", plass:2},
         {type:"pall", ritt:"Tour du Finistère", plass:3}
@@ -1573,6 +1586,23 @@ const TDF_DATA = {
         {plass:35, navn:"Richard Carapaz",            lag:"EFE", tid:"",      delta:"+1:36"},
         {plass:40, navn:"Cian Uijtdebroeks",          lag:"MOV", tid:"",      delta:"+1:53"},
         {plass:59, navn:"Matteo Jorgenson",           lag:"VLB", tid:"",      delta:"+2:30"}
+      ]
+    },
+    { etappe:2, dato:"5. juli", startby:"Tarragona", mål:"Barcelona/Montjuïc", km:168.5, type:"kupert",
+      resultater:[
+        {plass:1,  navn:"Isaac del Toro",             lag:"UAE", tid:"3:40:01", delta:""},
+        {plass:2,  navn:"Tadej Pogačar",              lag:"UAE", tid:"3:40:01", delta:"s.t."},
+        {plass:3,  navn:"Remco Evenepoel",            lag:"RBH", tid:"3:40:01", delta:"s.t."},
+        {plass:4,  navn:"Jonas Vingegaard",           lag:"VLB", tid:"3:40:01", delta:"s.t."},
+        {plass:5,  navn:"Mattias Skjelmose",          lag:"LTK", tid:"",        delta:"+0:03"},
+        {plass:6,  navn:"Juan Ayuso",                 lag:"LTK", tid:"",        delta:"+0:03"},
+        {plass:7,  navn:"Paul Seixas",                lag:"DEC", tid:"",        delta:"+0:03"},
+        {plass:8,  navn:"Romain Grégoire",            lag:"GFC", tid:"",        delta:"+0:03"},
+        {plass:9,  navn:"Tom Pidcock",                lag:"PQ3", tid:"",        delta:"+0:03"},
+        {plass:10, navn:"Ilan Van Wilder",            lag:"SOQ", tid:"",        delta:"+0:03"},
+        {plass:11, navn:"Tobias Halland Johannessen", lag:"UNO", tid:"",        delta:"+0:03"},
+        {plass:12, navn:"Lenny Martinez",             lag:"TBV", tid:"",        delta:"+0:03"},
+        {plass:30, navn:"Tobias Foss",                lag:"IGD", tid:"",        delta:"+0:43"}
       ]
     }
   ],
