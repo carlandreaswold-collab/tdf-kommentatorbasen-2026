@@ -92,11 +92,10 @@
   .rider{background:var(--panel2);border:1px solid var(--line);border-radius:var(--radius);padding:12px;display:flex;gap:12px;min-width:0;overflow:hidden;position:relative}
   .rider[draggable="true"]{cursor:grab}
   .rider[draggable="true"]:active{cursor:grabbing}
-  .rider-brudd-btn{position:absolute;top:4px;right:6px;background:rgba(14,17,22,.8);border:1px solid var(--line);border-radius:6px;color:var(--dim);font-size:10.5px;padding:2px 7px;cursor:pointer;font-family:inherit;font-weight:700;z-index:2;white-space:nowrap;line-height:1.5;transition:background .12s,color .12s,border-color .12s}
+  .brudd-pick-wrap{position:absolute;top:4px;right:6px;z-index:10}
+  .rider-brudd-btn{background:rgba(14,17,22,.8);border:1px solid var(--line);border-radius:6px;color:var(--dim);font-size:10.5px;padding:2px 7px;cursor:pointer;font-family:inherit;font-weight:700;white-space:nowrap;line-height:1.5;transition:background .12s,color .12s,border-color .12s}
   .rider-brudd-btn:hover{background:#1e3a1b;color:#7ee0a6;border-color:#2a5a2a}
   .rider-brudd-btn.i-brudd{background:#1a3a1a;border-color:#2a5a2a;color:#7ee0a6}
-  .rider-brudd-btn.fjern-btn{color:#d2002e;border-color:#5a2020;background:rgba(80,20,20,.5)}
-  .rider-brudd-btn.fjern-btn:hover{background:#5a1010;color:#ff7070;border-color:#d2002e}
   .filters button.drop-aktiv{background:#3a1010!important;border-color:#d2002e!important;color:#ff8080!important;box-shadow:0 0 0 2px rgba(210,0,46,.3)}
   .brudd-count-badge{background:#d2002e;color:#fff;border-radius:999px;padding:0 6px;font-size:11px;font-weight:800;margin-left:3px;vertical-align:middle;display:inline-block}
   .brudd-tom{color:var(--dim);text-align:center;padding:52px 24px;border:2px dashed var(--line);border-radius:var(--radius);line-height:1.9}
@@ -104,6 +103,17 @@
   .brudd-topplinje{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
   .brudd-clear-btn{background:#2a1010;border:1px solid #5a2020;color:#d2002e;font-size:12px;padding:4px 12px;border-radius:6px;cursor:pointer;font-family:inherit;font-weight:700}
   .brudd-clear-btn:hover{background:#5a1010;color:#ff8080}
+  .brudd-ny-btn{background:#1a2a1a;border:1px solid #2a5a2a;color:#7ee0a6;font-size:12px;padding:4px 12px;border-radius:6px;cursor:pointer;font-family:inherit;font-weight:700}
+  .brudd-ny-btn:hover{background:#1e3a1b;color:#a0f0c0}
+  .brudd-gruppe-header{display:flex;align-items:center;justify-content:space-between;margin:18px 0 8px}
+  .brudd-gruppe-title{font-size:13px;font-weight:700;color:var(--txt);display:flex;align-items:center;gap:8px}
+  .brudd-picker{display:none;position:absolute;top:calc(100% + 4px);right:0;background:#141d2e;border:1px solid #2a3a55;border-radius:8px;padding:4px;min-width:140px;box-shadow:0 6px 20px rgba(0,0,0,.85);z-index:30}
+  .bp-item{display:block;width:100%;text-align:left;background:none;border:none;color:var(--txt);font-family:inherit;font-size:12px;padding:5px 11px;border-radius:5px;cursor:pointer;white-space:nowrap}
+  .bp-item:hover{background:#1e2d45;color:#9cc8f0}
+  .bp-item.bp-aktiv{color:#7ee0a6;font-weight:700}
+  .bp-item.bp-ny{color:var(--accent);border-top:1px solid var(--line);margin-top:3px;padding-top:8px}
+  .bp-item.bp-fjern{color:#d2002e}
+  .bp-item.bp-fjern:hover{background:#2a1010}
   .rider .avatar{width:62px;height:72px;border-radius:10px;flex:0 0 auto;overflow:hidden;background:#0c0f14;display:flex;flex-direction:column;align-items:center;justify-content:center}
   .rider .photo{width:62px;height:72px;border-radius:10px;flex:0 0 auto;object-fit:cover;background:#0c0f14}
   .rider .body{min-width:0;flex:1}
@@ -350,10 +360,12 @@ const JERSEY_URLS = {
 };
 let activeFilter = "alle";
 let query = "";
-const bruddSet = new Set();
+let bruddGrupper = []; // [{id:N, ryttere:Set<string>}]
+let bruddNeste = 1;
 function oppdaterBruddBadge(){
+  const total=bruddGrupper.reduce((s,g)=>s+g.ryttere.size,0);
   const b=document.getElementById("bruddCount");
-  b.textContent=bruddSet.size||""; b.style.display=bruddSet.size?"inline-block":"none";
+  b.textContent=total||""; b.style.display=total?"inline-block":"none";
 }
 
 /* ---------- hjelpere ---------- */
@@ -720,14 +732,28 @@ function render(){
     r.innerHTML=html; return;
   }
 
-  // Brudd-fane: vis pinboard når ingen søketekst
+  // Brudd-fane: vis grupper når ingen søketekst
   if(activeFilter==="brudd"&&!q){
-    if(!bruddSet.size){
-      html=`<div class="brudd-tom"><b>Bruddet er tomt</b><br><span style="font-size:13px">Dra et rytterkort hit til «Brudd»-knappen<br>— eller klikk «+ Brudd» på et kortets øvre høyre hjørne</span></div>`;
+    const totalR=bruddGrupper.reduce((s,g)=>s+g.ryttere.size,0);
+    html+=`<div class="brudd-topplinje">
+      <div class="sec-title" style="margin:0">Brudd <span class="count">${totalR} ryttere · ${bruddGrupper.length} grupper</span></div>
+      <button class="brudd-ny-btn" data-brudd-ny="">+ Nytt brudd</button>
+    </div>`;
+    if(!bruddGrupper.length){
+      html+=`<div class="brudd-tom"><b>Ingen brudd opprettet ennå</b><br><span style="font-size:13px">Klikk «+ Nytt brudd» for å opprette · Dra rytterkort hit til Brudd-knappen<br>— eller klikk «+ Brudd» på et rytterkort</span></div>`;
     } else {
-      const br=[...bruddSet].map(n=>D.ryttere.find(r=>r.navn===n)).filter(Boolean);
-      html+=`<div class="brudd-topplinje"><div class="sec-title" style="margin:0">Bruddet <span class="count">${br.length}</span></div><button class="brudd-clear-btn" id="bruddClearBtn">Tøm bruddet</button></div>`;
-      html+=`<div class="grid">`+br.map(riderCard).join("")+`</div>`;
+      for(const g of bruddGrupper){
+        const br=[...g.ryttere].map(n=>D.ryttere.find(r=>r.navn===n)).filter(Boolean);
+        html+=`<div class="brudd-gruppe-header">
+          <div class="brudd-gruppe-title">Brudd ${g.id} <span class="count">${br.length}</span></div>
+          <button class="brudd-clear-btn" data-brudd-clear="${g.id}">Tøm</button>
+        </div>`;
+        if(!br.length){
+          html+=`<div style="color:var(--dim);font-size:13px;margin-bottom:14px;padding:10px 14px;border:1px dashed var(--line);border-radius:8px">Tomt — legg til ryttere fra andre faner</div>`;
+        } else {
+          html+=`<div class="grid">`+br.map(riderCard).join("")+`</div>`;
+        }
+      }
     }
     r.innerHTML=html; return;
   }
@@ -899,10 +925,15 @@ function riderCard(r){
       ? `<div class="avatar" style="background:transparent"><img src="${jerseyUrl}" alt="${esc(tm.kort)}" width="52" height="65" loading="lazy" style="object-fit:contain;display:block"></div>`
       : `<div class="avatar">${riderSVG(tm, 62)}</div>`;
   const nr = r.nr ? `<span class="nr-badge">#${r.nr}</span>` : `<span class="nr-badge tbd">nr?</span>`;
-  const iB = bruddSet.has(r.navn);
-  const bruddBtn = activeFilter==="brudd"
-    ? `<button class="rider-brudd-btn fjern-btn" data-brudd-fjern="${esc(r.navn)}">✕ Fjern</button>`
-    : `<button class="rider-brudd-btn${iB?" i-brudd":""}" data-brudd-legg="${esc(r.navn)}">${iB?"✓ I brudd":"+ Brudd"}</button>`;
+  const inG = bruddGrupper.find(g=>g.ryttere.has(r.navn));
+  const pickerItems = bruddGrupper.map(g=>`<button class="bp-item${inG&&g.id===inG.id?' bp-aktiv':''}" data-brudd-assign="${g.id}|${esc(r.navn)}">Brudd ${g.id}${inG&&g.id===inG.id?' ✓':''}</button>`).join('');
+  const fjernItem = inG?`<button class="bp-item bp-fjern" data-brudd-fjern="${esc(r.navn)}">✕ Fjern fra brudd</button>`:'';
+  const nyItem = `<button class="bp-item bp-ny" data-brudd-ny="${esc(r.navn)}">+ Nytt brudd</button>`;
+  const picker = `<div class="brudd-picker" data-bp="${esc(r.navn)}">${pickerItems}${nyItem}${fjernItem}</div>`;
+  const btnLabel = inG?`✓ Brudd ${inG.id} ▾`:(bruddGrupper.length?`+ Brudd ▾`:`+ Brudd`);
+  const bruddBtn = bruddGrupper.length||inG
+    ? `<div class="brudd-pick-wrap"><button class="rider-brudd-btn${inG?' i-brudd':''}" data-brudd-toggle="${esc(r.navn)}">${btnLabel}</button>${picker}</div>`
+    : `<div class="brudd-pick-wrap"><button class="rider-brudd-btn" data-brudd-ny="${esc(r.navn)}">+ Brudd</button></div>`;
   return `<div class="rider" draggable="true" data-navn="${esc(r.navn)}">${bruddBtn}
     ${avatar}
     <div class="body">
@@ -1130,16 +1161,55 @@ document.addEventListener('mouseout',function(e){
 });
 
 /* ---------- BRUDD — KLIKK OG DRAG ---------- */
+// Lukk alle pickers når man klikker utenfor
+document.addEventListener("click", () => {
+  document.querySelectorAll('.brudd-picker').forEach(p=>p.style.display='none');
+});
+
 $("#results").addEventListener("click", e => {
-  const legg = e.target.closest("[data-brudd-legg]");
-  if(legg){
-    const n=legg.dataset.bruddLegg;
-    if(bruddSet.has(n)) bruddSet.delete(n); else bruddSet.add(n);
+  // Toggle picker-dropdown
+  const toggle = e.target.closest("[data-brudd-toggle]");
+  if(toggle){
+    e.stopPropagation();
+    const picker = toggle.parentElement.querySelector('.brudd-picker');
+    if(!picker) return;
+    document.querySelectorAll('.brudd-picker').forEach(p=>{ if(p!==picker) p.style.display='none'; });
+    picker.style.display = picker.style.display==='none'?'block':'none';
+    return;
+  }
+  // Tildel rytter til gruppe
+  const assign = e.target.closest("[data-brudd-assign]");
+  if(assign){
+    const parts = assign.dataset.bruddAssign.split("|");
+    const gid=parseInt(parts[0]); const rNavn=parts.slice(1).join("|");
+    bruddGrupper.forEach(g=>g.ryttere.delete(rNavn));
+    const grp=bruddGrupper.find(g=>g.id===gid);
+    if(grp) grp.ryttere.add(rNavn);
     oppdaterBruddBadge(); render(); return;
   }
+  // Opprett nytt brudd (evt. legg til rytter)
+  const nyEl = e.target.closest("[data-brudd-ny]");
+  if(nyEl){
+    const rNavn = nyEl.dataset.bruddNy||null;
+    const newG = {id:bruddNeste++, ryttere:new Set()};
+    bruddGrupper.push(newG);
+    if(rNavn){ bruddGrupper.forEach(g=>g.ryttere.delete(rNavn)); newG.ryttere.add(rNavn); }
+    oppdaterBruddBadge(); render(); return;
+  }
+  // Fjern rytter fra alle grupper
   const fjern = e.target.closest("[data-brudd-fjern]");
-  if(fjern){ bruddSet.delete(fjern.dataset.bruddFjern); oppdaterBruddBadge(); render(); return; }
-  if(e.target.id==="bruddClearBtn"){ bruddSet.clear(); oppdaterBruddBadge(); render(); }
+  if(fjern){
+    bruddGrupper.forEach(g=>g.ryttere.delete(fjern.dataset.bruddFjern));
+    oppdaterBruddBadge(); render(); return;
+  }
+  // Tøm én gruppe
+  const clearG = e.target.closest("[data-brudd-clear]");
+  if(clearG){
+    const gid=parseInt(clearG.dataset.bruddClear);
+    const grp=bruddGrupper.find(g=>g.id===gid);
+    if(grp) grp.ryttere.clear();
+    oppdaterBruddBadge(); render(); return;
+  }
 });
 
 // Drag fra rytterkort
@@ -1150,7 +1220,7 @@ $("#results").addEventListener("dragstart", e => {
   e.dataTransfer.effectAllowed = "copy";
 });
 
-// Drop-sone: Brudd-filter-knappen
+// Drop-sone: Brudd-filter-knappen (legger til i Brudd 1, oppretter om ingen finnes)
 (function(){
   const btn = document.querySelector("[data-f='brudd']");
   btn.addEventListener("dragover", e => { e.preventDefault(); btn.classList.add("drop-aktiv"); });
@@ -1158,7 +1228,11 @@ $("#results").addEventListener("dragstart", e => {
   btn.addEventListener("drop", e => {
     e.preventDefault(); btn.classList.remove("drop-aktiv");
     const n = e.dataTransfer.getData("text/plain");
-    if(n){ bruddSet.add(n); oppdaterBruddBadge(); render(); }
+    if(!n) return;
+    bruddGrupper.forEach(g=>g.ryttere.delete(n));
+    if(!bruddGrupper.length){ bruddGrupper.push({id:bruddNeste++,ryttere:new Set()}); }
+    bruddGrupper[0].ryttere.add(n);
+    oppdaterBruddBadge(); render();
   });
 })();
 
