@@ -18,6 +18,7 @@ const TDF_DATA = {
     nesteEtappe: 3,
     rittStartISO: "2026-07-04T13:00:00",
     notat: "E3 FERDIG: Pogačar vinner Les Angles og tar gult! Slo Vingegaard med 2 sek på veien, men tidsbonuser (10s vs 6s) gir dem LIKT på tid i GC. T.H. Johannessen imponerte: 5. plass etappe! TRØYESKIFTE: Gul → Pogačar, Grønn → Pogačar, Prikkete → Baudin (EF, tok fjellpoeng i bruddet). Del Toro holder hvit. E4 i morgen: Carcassonne → Foix, 181.9 km, 41°C varsel.",
+    dnfRyttere: [],
     gulTroye: "Tadej Pogačar",
     grontTroye: "Tadej Pogačar",
     prikketTroye: "Alex Baudin",
