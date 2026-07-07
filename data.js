@@ -17,43 +17,51 @@ const TDF_DATA = {
     sisteOppdatering: "2026-07-06",
     nesteEtappe: 3,
     rittStartISO: "2026-07-04T13:00:00",
-    notat: "E3 FERDIG: Pogačar vinner Les Angles og tar gult! Slo Vingegaard med 2 sek på veien, men tidsbonuser (10s vs 6s) gir dem LIKT på tid i GC. T.H. Johannessen imponerte: 5. plass etappe! TRØYESKIFTE: Gul → Pogačar, Grønn → Pogačar, Prikkete → Baudin (EF, tok fjellpoeng i bruddet). Del Toro holder hvit. E4 i morgen: Carcassonne → Foix, 181.9 km, 41°C varsel.",
-    dnfRyttere: [],
-    gulTroye: "Tadej Pogačar",
-    grontTroye: "Tadej Pogačar",
+    notat: "E4 FERDIG: NORSK SENSASJON! Torstein Træen i gult! 34-mannsbruddet fikk 12:59 på feltet. Mads Pedersen vinner sprint i Foix (LTK 1-2 med Simmons). Træen 8. i etappen — nok til å ta gult fra Pogačar! TRØYESKIFTE: Gul → Træen, Grønn → Pedersen (103p), Prikket → Baudin (holder), Hvit → Vacek (tok fra del Toro). Kelland O'Brien (JAY) ute av tidsgrensen. E5 i morgen: Lannemezan → Pau, 158.3 km.",
+    dnfRyttere: [
+      {navn:"Clément Berthet",  lag:"GFC", etappe:1, årsak:"Krasj i lagtempo — hjernerystelse"},
+      {navn:"Arnaud De Lie",    lag:"LIN", etappe:3, årsak:"Brøt 10 km fra mål i ekstrem varme"},
+      {navn:"Kelland O'Brien",  lag:"JAY", etappe:4, årsak:"Ute av tidsgrensen — mer enn 46 min etter Pedersen"}
+    ],
+    gulTroye: "Torstein Træen",
+    grontTroye: "Mads Pedersen",
     prikketTroye: "Alex Baudin",
-    hvitTroye: "Isaac del Toro",
+    hvitTroye: "Mathias Vacek",
     sammenlagtTopp: [
-      {plass:1,  navn:"Tadej Pogačar",              lag:"UAE", tid:"8:46:55"},
-      {plass:2,  navn:"Jonas Vingegaard",           lag:"VLB", tid:"s.t."},
-      {plass:3,  navn:"Remco Evenepoel",            lag:"RBH", tid:"+0:23"},
-      {plass:4,  navn:"Isaac del Toro",             lag:"UAE", tid:"+0:24"},
-      {plass:5,  navn:"Juan Ayuso",                 lag:"LTK", tid:"+0:27"},
-      {plass:6,  navn:"Paul Seixas",                lag:"DEC", tid:"+0:48"},
-      {plass:7,  navn:"Florian Lipowitz",           lag:"RBH", tid:"+0:53"},
-      {plass:8,  navn:"Lenny Martinez",             lag:"TBV", tid:"+1:09"},
-      {plass:9,  navn:"Tobias Halland Johannessen", lag:"UNO", tid:"+1:11"},
-      {plass:10, navn:"Ilan Van Wilder",            lag:"SOQ", tid:"+1:17"}
+      {plass:1,  navn:"Torstein Træen",             lag:"UNO", tid:"13:02:46"},
+      {plass:2,  navn:"Sean Quinn",                 lag:"EFE", tid:"+0:28"},
+      {plass:3,  navn:"Mathias Vacek",              lag:"LTK", tid:"+3:50"},
+      {plass:4,  navn:"Tadej Pogačar",              lag:"UAE", tid:"+7:53"},
+      {plass:5,  navn:"Jonas Vingegaard",           lag:"VLB", tid:"+7:53"},
+      {plass:6,  navn:"Ramses Debruyne",            lag:"APT", tid:"+8:06"},
+      {plass:7,  navn:"Remco Evenepoel",            lag:"RBH", tid:"+8:16"},
+      {plass:8,  navn:"Isaac del Toro",             lag:"UAE", tid:"+8:17"},
+      {plass:9,  navn:"Juan Ayuso",                 lag:"LTK", tid:"+8:20"},
+      {plass:10, navn:"Paul Seixas",                lag:"DEC", tid:"+8:41"},
+      {plass:13, navn:"Tobias Halland Johannessen", lag:"UNO", tid:"+9:04"}
     ],
     gronnTopp: [
-      {plass:1, navn:"Tadej Pogačar",   lag:"UAE", poeng:"45"},
-      {plass:2, navn:"Isaac del Toro",  lag:"UAE", poeng:"37"},
-      {plass:3, navn:"Jonas Vingegaard",lag:"VLB", poeng:"36"},
-      {plass:4, navn:"Remco Evenepoel", lag:"RBH", poeng:"30"},
-      {plass:5, navn:"Alex Molenaar",   lag:"CRR", poeng:"25"}
+      {plass:1, navn:"Mads Pedersen",    lag:"LTK", poeng:"103"},
+      {plass:2, navn:"Tadej Pogačar",    lag:"UAE", poeng:"55"},
+      {plass:3, navn:"Jonas Vingegaard", lag:"VLB", poeng:"44"},
+      {plass:4, navn:"Quinn Simmons",    lag:"LTK", poeng:"42"},
+      {plass:5, navn:"Isaac del Toro",   lag:"UAE", poeng:"39"}
     ],
     prikketTopp: [
-      {plass:1, navn:"Alex Baudin",    lag:"EFE", poeng:"?"},
-      {plass:2, navn:"Alex Molenaar",  lag:"CRR", poeng:"5"},
-      {plass:3, navn:"Brandon McNulty",lag:"UAE", poeng:"4"}
+      {plass:1, navn:"Alex Baudin",         lag:"EFE", poeng:"12"},
+      {plass:2, navn:"Alex Molenaar",       lag:"CRR", poeng:"10"},
+      {plass:3, navn:"Nicolas Prodhomme",   lag:"GFC", poeng:"9"},
+      {plass:4, navn:"Raúl García Pierna",  lag:"MOV", poeng:"7"},
+      {plass:5, navn:"Marco Frigo",         lag:"NSN", poeng:"5"}
     ],
     hvitTopp: [
-      {plass:1, navn:"Isaac del Toro",  lag:"UAE", tid:"+0:24"},
-      {plass:2, navn:"Juan Ayuso",      lag:"LTK", tid:"+0:27"},
-      {plass:3, navn:"Paul Seixas",     lag:"DEC", tid:"+0:48"},
-      {plass:4, navn:"Lenny Martinez",  lag:"TBV", tid:"+1:09"}
+      {plass:1, navn:"Mathias Vacek",   lag:"LTK", tid:"+3:50"},
+      {plass:2, navn:"Ramses Debruyne", lag:"APT", tid:"+8:06"},
+      {plass:3, navn:"Isaac del Toro",  lag:"UAE", tid:"+8:17"},
+      {plass:4, navn:"Juan Ayuso",      lag:"LTK", tid:"+8:20"},
+      {plass:5, navn:"Paul Seixas",     lag:"DEC", tid:"+8:41"}
     ],
-    dagensHistorie: "POGAČAR I GULT! Akselererte fra del Toro 200m fra mål i Les Angles — slo Vingegaard med 2 sekunder på veien. Tidsbonuser (10s/6s) gir dem LIKT på tid. T.H. Johannessen strålende 5. plass! Carapaz 3., Seixas 4. Baudin tok fjellpoeng i bruddet og overtok prikkete. E4: Carcassonne → Foix i ekstrem varme (41°C).",
+    dagensHistorie: "NORSK SENSASJON: TRÆEN I GULT! 34-mannsbruddet rullerte i 41°C-hete fra Carcassonne til Foix og fikk 12:59 på feltet. Mads Pedersen (LTK) vant spurten foran Quinn Simmons — Lidl-Trek 1-2! Torstein Træen (UNO) kom 8. i etappen og tar gult fra Pogačar. Thor Hushovd er lagsjef. T.H. Johannessen 13. totalt (+9:04). E5: Lannemezan → Pau.",
     preTourNytt: [
       "Tour de Suisse (17–22 jun): 🏆 Pogačar (UAE) — +6:32 til nr.2 · Grønn: Grégoire (FDJ) · 🔴 Klatretrøye: Vervaeke (SQS) · Hvit: Vacek (LTK) · 5. Van Wilder (SQS)",
       "Tour Auvergne-Rhône-Alpes (7–14 jun): 🏆 Del Toro (UAE) · 2. Tuckwell (RBH) · 3. Ayuso (LTK) · Etappeseire: Baudin(EF) · Charmig(UNO) · Simmons(LTK) · Van Gils(RBH)"
@@ -1576,6 +1584,22 @@ const TDF_DATA = {
         {plass:35, navn:"Richard Carapaz",            lag:"EFE", tid:"",      delta:"+1:36"},
         {plass:40, navn:"Cian Uijtdebroeks",          lag:"MOV", tid:"",      delta:"+1:53"},
         {plass:59, navn:"Matteo Jorgenson",           lag:"VLB", tid:"",      delta:"+2:30"}
+      ]
+    },
+    { etappe:4, dato:"7. juli", startby:"Carcassonne", mål:"Foix", km:181.9, type:"kupert",
+      dnf:[{navn:"Kelland O'Brien", lag:"JAY", årsak:"Ute av tidsgrensen (+46 min) — krasjet tidligere i rittet"}],
+      resultater:[
+        {plass:1,  navn:"Mads Pedersen",              lag:"LTK", tid:"4:10:45", delta:""},
+        {plass:2,  navn:"Quinn Simmons",              lag:"LTK", tid:"",        delta:"s.t."},
+        {plass:3,  navn:"Raúl García Pierna",         lag:"MOV", tid:"",        delta:"s.t."},
+        {plass:4,  navn:"Marco Frigo",                lag:"NSN", tid:"",        delta:"s.t."},
+        {plass:5,  navn:"Ramses Debruyne",            lag:"APT", tid:"",        delta:"s.t."},
+        {plass:6,  navn:"Kévin Vauquelin",            lag:"IGD", tid:"",        delta:"s.t."},
+        {plass:7,  navn:"Sean Quinn",                 lag:"EFE", tid:"",        delta:"s.t."},
+        {plass:8,  navn:"Torstein Træen",             lag:"UNO", tid:"",        delta:"s.t."},
+        {plass:9,  navn:"Pablo Castrillo",            lag:"MOV", tid:"",        delta:"s.t."},
+        {plass:10, navn:"Mathias Vacek",              lag:"LTK", tid:"",        delta:"s.t."},
+        {plass:11, navn:"— peloton (Pogačar/Vingegaard/T.H. Johannessen m.fl.)", lag:"—", tid:"", delta:"+12:59"}
       ]
     },
     { etappe:3, dato:"6. juli", startby:"Granollers", mål:"Les Angles", km:195.9, type:"toppmål",
