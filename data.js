@@ -500,7 +500,7 @@ const TDF_DATA = {
   ryttere: [
     /* ---- GC-FAVORITTER ---- */
     { navn:"Tadej Pogačar", lag:"UAE", land:"Slovenia", alder:27, rolle:"Sammenlagt", nr:1, foto:"", fødeby:"Komenda",
-      meritter:"4 Tour-seire (2020,2021,2024,2025), regjerende verdensmester",
+      meritter:"4 Tour-seire (2020,2021,2024,2025) + 22 Tour-etappeseiere (2020:3, 2021:5, 2024:6 inkl. E3 2026), regjerende verdensmester (2024+2025)",
       form:"Monstrøst form. Vant Tour de Suisse med 6 minutters og 32 sekunders margin etter kun 5 etapper — 3 etappeseire inkl. solo-raid 72 km ut og TT-seier. Har vunnet 3 Monumenter i vår (MSR, RVV, LBL). Tapte Paris-Roubaix til van Aert i to-mann sprint. Jakter historisk 5. Tour-seir. NB (INRNG): Avslørte etter TdF 2025 at han hadde en KNESKADE under rittet — med det in mente var han muligens sårbar. Svakhet: dristige angrep som ikke alltid lønner seg (eks. Amstel Gold Race 2025).",
       resultater2026:[
         {type:"seier", ritt:"Strade Bianche"},
@@ -516,7 +516,7 @@ const TDF_DATA = {
       historie:"Mest komplette rytter for denne ruta. Angriper hvor som helst. #1 som forsvarende mester. Tour de Suisse 2026: vant på sin første deltakelse med nesten 7 minutter — nesten utropt i sveitsisk fjellterreng." },
 
     { navn:"Jonas Vingegaard", lag:"VLB", land:"Danmark", alder:29, rolle:"Sammenlagt", nr:11, foto:"", fødeby:"Glyngøre",
-      meritter:"2 Tour-seire (2022, 2023), vant Vuelta a España 2025, vant Giro d'Italia 2026 (fullfører karriere-Grand Slam — alle tre Grand Tours vunnet, første siden Froome 2018)",
+      meritter:"2 Tour-seire (2022, 2023), 4 Tour-etappeseiere: 2022 (et.11 Col du Granon + et.18 + prikket trøye), 2023 (et.16 ITT — slo Pogačar med 1:38), 2024 (1 etappe) — vant Vuelta a España 2025, vant Giro d'Italia 2026 (karriere-Grand Slam)",
       form:"Dominerte Giroen 2026 (5 etappeseire, utropt i Roma). Vant Paris-Nice og Volta a Catalunya i vår. Vant Vuelta 2025. Stort spørsmål: klarer han Giro-Tour-dobbelen? Siste som slo Pogačar i Tour. INRNG: 'He even says he's better than ever' — men sa det samme i 2025 og tapte.",
       resultater2026:[
         {type:"seier", ritt:"Paris-Nice"},
@@ -527,7 +527,7 @@ const TDF_DATA = {
       historie:"Klatrer i verdensklasse. Eneste toppfavoritt fra Giroen i år. #11. Langtidstrener Tim Heemskerk forlot laget foran 2026 — Vingegaard la om opplegg og sier han er gladere enn på lenge. Første Tour uten alvorlig ferskskade siden 2023." },
 
     { navn:"Remco Evenepoel", lag:"RBH", land:"Belgia", alder:26, rolle:"Sammenlagt / tempo", nr:21, foto:"", fødeby:"Schepdaal",
-      meritter:"Dobbel OL-mester (Paris 2024), 3. i Tour-debut 2023, abandonerte Tour de France 2025",
+      meritter:"Dobbel OL-mester (Paris 2024), 2 Tour-etappeseiere (2024: et.7 TT, 2025: et.5 TT), 3. plass Tour-debut 2024, abandonerte Tour de France 2025",
       form:"Vant Amstel Gold Race i april. Hoppet over all racing siden april for å fokusere 100% på Tour. Ser ekstremt slank ut — klar. Våpenet er tempoetappe 16; problemet er dobbel Alpe d'Huez etterpå. Tourmalet er hans nemesis (tapte der i Vuelta 2023 og TdF 2025). INRNG: kan overraske med overraskelsesangrep der han tar et gap og holder inn — passer noen dalstrekninger bedre enn toppmålene.",
       resultater2026:[
         {type:"seier", ritt:"Amstel Gold Race"},
@@ -574,7 +574,7 @@ const TDF_DATA = {
       historie:"Vant etappen på Alpe d'Huez i 2022 — kommer tilbake dit på etappe 19 og 20." },
 
     { navn:"Richard Carapaz", lag:"EFE", land:"Ecuador", alder:33, rolle:"Sammenlagt", nr:41, foto:"", fødeby:"El Carmelo",
-      meritter:"OL-mester (Tokyo 2021), Giro-vinner 2019",
+      meritter:"OL-mester (Tokyo 2021), Giro-vinner 2019, Tour de France etappeseier 2024 (solobrudd fra stor gruppe)",
       form:"2. plass Tour de Suisse 2026 — 6 minutters og 32 sekunders gap til Pogačar (veldig sterk, men Pogačar var ekstraordinær). Bevist at han er i Tour-form. EF-kaptein for GC.",
       resultater2026:[
         {type:"GC", ritt:"Tour de Suisse", plass:2}
@@ -602,7 +602,7 @@ const TDF_DATA = {
 
     /* ---- KLASSIKER/SPURT ---- */
     { navn:"Mathieu van der Poel", lag:"APT", land:"Nederland", alder:31, rolle:"Klassiker / spurt / brudd", nr:101, foto:"", fødeby:"Kapellen",
-      meritter:"Verdensmester 2023, monumentseire (RVV, Strade Bianche, Paris-Roubaix 2023)",
+      meritter:"Verdensmester 2023, 2 Tour-etappeseiere (2021: et.2 Mûr-de-Bretagne + gult 6 dager, 2025: et.2 Boulogne + gult), 8 monumentseiere (RVV 4×, Paris-Roubaix 2×, Strade Bianche, MSR)",
       form:"Vant Omloop Het Nieuwsblad og E3 Saxo Classic (3. år på rad — første siden Boonen 2004–2007). Etappejeger. Jakter Montjuïc (etappe 1+2) og Montmartre (etappe 21). Kan ta gul tidlig.",
       resultater2026:[
         {type:"seier", ritt:"Omloop Het Nieuwsblad"},
@@ -612,7 +612,7 @@ const TDF_DATA = {
       historie:"Barnebarn av Raymond Poulidor. Eksplosiv på kuperte dager." },
 
     { navn:"Jasper Philipsen", lag:"APT", land:"Belgia", alder:27, rolle:"Spurt", nr:105, foto:"", fødeby:"Mol",
-      meritter:"Vant 4 Tour-etapper i 2023, grønn troye 2023",
+      meritter:"9 Tour-etappeseiere: 2022 (et.15), 2023 (et.3,4,7,11), 2024 (et.10,13,16), 2025 (et.1 — brøt E3) + grønn trøye 2023",
       form:"Vant Gent-Wevelgem, Baloise Belgium Tour (sammenlagt) og Copenhagen Sprint i 2026. Verdens beste spurter ved siden av Girmay. Jakter grønn troye.",
       resultater2026:[
         {type:"seier", ritt:"Gent-Wevelgem"},
@@ -630,7 +630,7 @@ const TDF_DATA = {
       historie:"Alpecins rakettskyting. Trener med van der Poel — genialt duo." },
 
     { navn:"Mads Pedersen", lag:"LTK", land:"Danmark", alder:29, rolle:"Spurt / klassiker", nr:33, foto:"", fødeby:"Tølløse",
-      meritter:"Verdensmester 2019, andreplass Ronde van Vlaanderen (2 ganger)",
+      meritter:"Verdensmester 2019, 3 Tour-etappeseiere (2022: et.13 St-Étienne, 2023: et.8, 2026: E4 Foix), andreplass Ronde van Vlaanderen 2×",
       form:"0 seiere i 2026 etter skade — men 2. plass Boucles de la Mayenne, 4. Milano-Sanremo bare 6 uker etter operasjon. TdF er klart hovedmål.",
       spurtTopp5:[
         {plass:2, ritt:"Boucles de la Mayenne (siste etappe)"},
@@ -641,7 +641,7 @@ const TDF_DATA = {
       historie:"Dansk allrounder. Jakter etapper på flate og halvkuperte dager." },
 
     { navn:"Biniam Girmay", lag:"NSN", land:"Eritrea", alder:24, rolle:"Spurt / klassiker", nr:131, foto:"", fødeby:"Asmara",
-      meritter:"Gent-Wevelgem 2022 (første afrikaner til å vinne WorldTour-klassiker), 3 Tour-etappeseiere + grønntrøyen 2024, Vuelta-etapper",
+      meritter:"3 Tour-etappeseiere (2024: et.3, 8, 12) + grønn trøye 2024 (første afrikan til å vinne Tour-jersey), Gent-Wevelgem 2022 (første afrikaner å vinne WorldTour-klassiker), Giro-etappe 2022, Vuelta-etapper",
       form:"Vant Valencia-etappe, Clásica de Almería og Baloise-etappe i 2026 — Merlier og Philipsens farligste utfordrer.",
       resultater2026:[
         {type:"seier", ritt:"Volta Valenciana et.1"},
@@ -657,7 +657,7 @@ const TDF_DATA = {
       historie:"Africas nye sykkelhelt. Tidenes beste eritreanske syklist. Utrolig explosivitet." },
 
     { navn:"Julian Alaphilippe", lag:"TUD", land:"Frankrike", alder:33, rolle:"Klassiker / brudd", nr:191, foto:"", fødeby:"Saint-Amand-Montrond",
-      meritter:"2x verdensmester (2020, 2021), vant Tour-etapper, Monument-podier",
+      meritter:"2x verdensmester (2020, 2021), 6 Tour-etappeseiere: 2018×2, 2019×2 (inkl. ITT Pau), 2020×1, 2021×1 — bar gult i 14 dager i 2019, MSR 2019, Flèche Wallonne 3×",
       form:"Tudor wildcard. Tilbake i Tour etter å ha forlatt Quick-Step. Sulten på etapper.",
       skade:"Viral sykdom vår 2026 — abandonerte/DNS Amstel, Flèche Wallonne og Liège. Tilbake i Tour de Suisse (DNS siste etappe).",
       historie:"Fransk publikumsfavoritt — ingen skaper mer spenning i brudd og i teten." },
@@ -892,7 +892,7 @@ const TDF_DATA = {
       form:"Ungt fransk talent på Decathlon. Kan vokse gjennom rittet.",
       historie:"23 år og allerede i Tour. Stor fremtid." },
     { navn:"Olav Kooij", lag:"DEC", land:"Nederland", alder:25, rolle:"Spurt", nr:55, foto:"", fødeby:"Numansdorp",
-      meritter:"En av verdens beste spurter, etappeseirer i Grand Tours og énsdagsritt",
+      meritter:"Tour de France etappeseier 2026 (E5 Pau — Decathlons første noensinne!), etappeseiere i Giro d'Italia og Vuelta a España",
       form:"Mistet halv vår til virus, men kom tilbake og vant 3 av 3 spurter i Boucles de la Mayenne + Baloise-etappe. I knallform.",
       resultater2026:[
         {type:"seier", ritt:"Boucles de la Mayenne et.1"},
@@ -971,7 +971,7 @@ const TDF_DATA = {
       skade:"Veltet i Valencia februar 2026 — brukket skulderblad, ribbein, kragebein og ryggvirvel. 6 uker ute, tilbake i april. Fullt frisk til Tour.",
       historie:"Norsk tempoallrounder. VERDENSMESTER i enkeltstart 2022 i Wollongong — ett av Norges største sykkelgull noensinne. Også U23-verdensmester 2019. Syklet for Jumbo-Visma/Visma i mange år — nå på INEOS. Kontrakt utløper etter 2026." },
     { navn:"Kévin Vauquelin", lag:"IGD", land:"Frankrike", alder:25, rolle:"Klatrer / etappejeger / GC", nr:88, foto:"", fødeby:"Bayeux",
-      meritter:"Kritérium du Dauphiné-etappe, sterk klatrer",
+      meritter:"Tour de France etappeseier 2024 (et.2, Borgoña — uphill finish), Critérium du Dauphiné-etappe, sterk klatrer",
       form:"Etter Oscar Onleys frafall (skulderbrudd Tour Auvergne) er Vauquelin nå INEOS sin GC-kandidat. Syk i siste oppkjøring men bekreftet på start. Rollen er vesentlig utvidet — var ikke planlagt som GC-mann.",
       skade:"Sykdom i oppkjøringen til Tour. Forventes å starte.",
       historie:"Ung fransk klatrer. Tar uventet GC-ansvar etter Onley-skaden. Stor mulighet — og stort ansvar." },
@@ -1092,7 +1092,7 @@ const TDF_DATA = {
       form:"Sterk klassikerrytter for SQS. Kan angripe fra brudd.",
       historie:"Vant Paris-Roubaix 2022. Bred profil." },
     { navn:"Tim Merlier", lag:"SOQ", land:"Belgia", alder:33, rolle:"Spurt", nr:91, foto:"", fødeby:"Kortrijk",
-      meritter:"Giro-etappeseirer, sterk spurter",
+      meritter:"3 Tour-etappeseiere (2021: et.3, 2025: et.3+9), Giro-etappeseiere, Scheldeprijs 2021+2026",
       form:"Sesongens varmeste spurter — 6 seiere inkl. Scheldeprijs (3. år på rad!), Ronde van Limburg og 3 Tour de Hongrie-etapper. Farligst på rene flate spurt.",
       resultater2026:[
         {type:"seier", ritt:"Scheldeprijs"},
