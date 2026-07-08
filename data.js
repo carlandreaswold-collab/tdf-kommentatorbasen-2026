@@ -500,7 +500,7 @@ const TDF_DATA = {
   ryttere: [
     /* ---- GC-FAVORITTER ---- */
     { navn:"Tadej Pogačar", lag:"UAE", land:"Slovenia", alder:27, rolle:"Sammenlagt", nr:1, foto:"", fødeby:"Komenda",
-      meritter:"4 Tour-seire (2020,2021,2024,2025) + 22 Tour-etappeseiere (2020:3, 2021:5, 2024:6 inkl. E3 2026), regjerende verdensmester (2024+2025)",
+      meritter:"4 Tour-seire (2020,2021,2024,2025) + 22 Tour-etappeseiere (2020:3, 2021:3, 2022:3, 2023:2, 2024:6, 2025:4, 2026:1), regjerende verdensmester (2024+2025)",
       form:"Monstrøst form. Vant Tour de Suisse med 6 minutters og 32 sekunders margin etter kun 5 etapper — 3 etappeseire inkl. solo-raid 72 km ut og TT-seier. Har vunnet 3 Monumenter i vår (MSR, RVV, LBL). Tapte Paris-Roubaix til van Aert i to-mann sprint. Jakter historisk 5. Tour-seir. NB (INRNG): Avslørte etter TdF 2025 at han hadde en KNESKADE under rittet — med det in mente var han muligens sårbar. Svakhet: dristige angrep som ikke alltid lønner seg (eks. Amstel Gold Race 2025).",
       resultater2026:[
         {type:"seier", ritt:"Strade Bianche"},
@@ -612,7 +612,7 @@ const TDF_DATA = {
       historie:"Barnebarn av Raymond Poulidor. Eksplosiv på kuperte dager." },
 
     { navn:"Jasper Philipsen", lag:"APT", land:"Belgia", alder:27, rolle:"Spurt", nr:105, foto:"", fødeby:"Mol",
-      meritter:"9 Tour-etappeseiere: 2022 (et.15), 2023 (et.3,4,7,11), 2024 (et.10,13,16), 2025 (et.1 — brøt E3) + grønn trøye 2023",
+      meritter:"10 Tour-etappeseiere: 2022 (et.15+21 ChampsÉlysées), 2023 (et.3,4,7,11), 2024 (et.10,13,16), 2025 (et.1 — brøt E3) + grønn trøye 2023",
       form:"Vant Gent-Wevelgem, Baloise Belgium Tour (sammenlagt) og Copenhagen Sprint i 2026. Verdens beste spurter ved siden av Girmay. Jakter grønn troye.",
       resultater2026:[
         {type:"seier", ritt:"Gent-Wevelgem"},
@@ -971,7 +971,7 @@ const TDF_DATA = {
       skade:"Veltet i Valencia februar 2026 — brukket skulderblad, ribbein, kragebein og ryggvirvel. 6 uker ute, tilbake i april. Fullt frisk til Tour.",
       historie:"Norsk tempoallrounder. VERDENSMESTER i enkeltstart 2022 i Wollongong — ett av Norges største sykkelgull noensinne. Også U23-verdensmester 2019. Syklet for Jumbo-Visma/Visma i mange år — nå på INEOS. Kontrakt utløper etter 2026." },
     { navn:"Kévin Vauquelin", lag:"IGD", land:"Frankrike", alder:25, rolle:"Klatrer / etappejeger / GC", nr:88, foto:"", fødeby:"Bayeux",
-      meritter:"Tour de France etappeseier 2024 (et.2, Borgoña — uphill finish), Critérium du Dauphiné-etappe, sterk klatrer",
+      meritter:"Tour de France etappeseier 2024 (et.2, Bologna — solo fra brudd), Critérium du Dauphiné-etappe, sterk klatrer",
       form:"Etter Oscar Onleys frafall (skulderbrudd Tour Auvergne) er Vauquelin nå INEOS sin GC-kandidat. Syk i siste oppkjøring men bekreftet på start. Rollen er vesentlig utvidet — var ikke planlagt som GC-mann.",
       skade:"Sykdom i oppkjøringen til Tour. Forventes å starte.",
       historie:"Ung fransk klatrer. Tar uventet GC-ansvar etter Onley-skaden. Stor mulighet — og stort ansvar." },
