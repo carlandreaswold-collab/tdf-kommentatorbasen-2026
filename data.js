@@ -15,9 +15,9 @@ const TDF_DATA = {
   /* ---- LIVE-STATUS ---- */
   live: {
     sisteOppdatering: "2026-07-06",
-    nesteEtappe: 3,
+    nesteEtappe: 4,
     rittStartISO: "2026-07-04T13:00:00",
-    notat: "E4 FERDIG: NORSK SENSASJON! Torstein Træen i gult! 34-mannsbruddet fikk 12:59 på feltet. Mads Pedersen vinner sprint i Foix (LTK 1-2 med Simmons). Træen 8. i etappen — nok til å ta gult fra Pogačar! TRØYESKIFTE: Gul → Træen, Grønn → Pedersen (103p), Prikket → Baudin (holder), Hvit → Vacek (tok fra del Toro). Kelland O'Brien (JAY) ute av tidsgrensen. E5 i morgen: Lannemezan → Pau, 158.3 km.",
+    notat: "E5 FERDIG: Olav Kooij (DEC) vinner sprint i Pau — Decathlons første Tour-etappeseier! Krasj 5 km fra mål splittet feltet, men ingen tidsforskjell erklært for GC. Søren Wærenskjold 9. (UNO) — beste norske. Træen holder gult (+28\" til Quinn). E6 i morgen: Pau → Gavarnie-Gèdre, 186.2 km — STORE PYRENEEER (Aspin + Tourmalet + toppmål)!",
     dnfRyttere: [
       {navn:"Clément Berthet",  lag:"GFC", etappe:1, årsak:"Krasj i lagtempo — hjernerystelse"},
       {navn:"Arnaud De Lie",    lag:"LIN", etappe:3, årsak:"Brøt 10 km fra mål i ekstrem varme"},
@@ -28,7 +28,7 @@ const TDF_DATA = {
     prikketTroye: "Alex Baudin",
     hvitTroye: "Mathias Vacek",
     sammenlagtTopp: [
-      {plass:1,  navn:"Torstein Træen",             lag:"UNO", tid:"13:02:46"},
+      {plass:1,  navn:"Torstein Træen",             lag:"UNO", tid:"16:32:07"},
       {plass:2,  navn:"Sean Quinn",                 lag:"EFE", tid:"+0:28"},
       {plass:3,  navn:"Mathias Vacek",              lag:"LTK", tid:"+3:50"},
       {plass:4,  navn:"Tadej Pogačar",              lag:"UAE", tid:"+7:53"},
@@ -61,7 +61,7 @@ const TDF_DATA = {
       {plass:4, navn:"Juan Ayuso",      lag:"LTK", tid:"+8:20"},
       {plass:5, navn:"Paul Seixas",     lag:"DEC", tid:"+8:41"}
     ],
-    dagensHistorie: "NORSK SENSASJON: TRÆEN I GULT! 34-mannsbruddet rullerte i 41°C-hete fra Carcassonne til Foix og fikk 12:59 på feltet. Mads Pedersen (LTK) vant spurten foran Quinn Simmons — Lidl-Trek 1-2! Torstein Træen (UNO) kom 8. i etappen og tar gult fra Pogačar. Thor Hushovd er lagsjef. T.H. Johannessen 13. totalt (+9:04). E5: Lannemezan → Pau.",
+    dagensHistorie: "KOOIJ VINNER FØRSTE SPURT I PAU! Olav Kooij (DEC) tar Decathlons aller første Tour-etappeseier i en kaotisk avslutning — krasj 5 km fra mål splittet bunten og tok ut mange leadouts (bl.a. Van der Poel). GC-gruppen kom inn +14 sek, men ingen tidsforskjell ble erklært. Søren Wærenskjold (UNO) beste nordmann: 9. plass. Træen holder gult (+28 sek). Baudin holder prikket, Pedersen grønt, Vacek hvitt. E6: Pau → Gavarnie-Gèdre (186.2 km) — Aspin + Tourmalet + toppmål.",
     preTourNytt: [
       "Tour de Suisse (17–22 jun): 🏆 Pogačar (UAE) — +6:32 til nr.2 · Grønn: Grégoire (FDJ) · 🔴 Klatretrøye: Vervaeke (SQS) · Hvit: Vacek (LTK) · 5. Van Wilder (SQS)",
       "Tour Auvergne-Rhône-Alpes (7–14 jun): 🏆 Del Toro (UAE) · 2. Tuckwell (RBH) · 3. Ayuso (LTK) · Etappeseire: Baudin(EF) · Charmig(UNO) · Simmons(LTK) · Van Gils(RBH)"
@@ -1632,6 +1632,21 @@ const TDF_DATA = {
         {plass:11, navn:"Tobias Halland Johannessen", lag:"UNO", tid:"",        delta:"+0:03"},
         {plass:12, navn:"Lenny Martinez",             lag:"TBV", tid:"",        delta:"+0:03"},
         {plass:30, navn:"Tobias Foss",                lag:"IGD", tid:"",        delta:"+0:43"}
+      ]
+    },
+    { etappe:5, dato:"8. juli", startby:"Lannemezan", mål:"Pau", km:158.3, type:"flat",
+      resultater:[
+        {plass:1,  navn:"Olav Kooij",          lag:"DEC", tid:"3:29:07", delta:""},
+        {plass:2,  navn:"Max Kanter",           lag:"AST", tid:"",        delta:"s.t."},
+        {plass:3,  navn:"Tim Merlier",          lag:"SQS", tid:"",        delta:"s.t."},
+        {plass:4,  navn:"Huub Artz",            lag:"LIN", tid:"",        delta:"s.t."},
+        {plass:5,  navn:"Jasper Philipsen",     lag:"APT", tid:"",        delta:"s.t."},
+        {plass:6,  navn:"Biniam Girmay",        lag:"NSN", tid:"",        delta:"s.t."},
+        {plass:7,  navn:"Mads Pedersen",        lag:"LTK", tid:"",        delta:"s.t."},
+        {plass:8,  navn:"Milan Fretin",         lag:"COF", tid:"",        delta:"s.t."},
+        {plass:9,  navn:"Søren Wærenskjold",    lag:"UNO", tid:"",        delta:"s.t."},
+        {plass:10, navn:"Anthony Turgis",       lag:"TOT", tid:"",        delta:"s.t."},
+        {plass:21, navn:"— GC-gruppe (Træen, Quinn, Pogačar, Vingegaard m.fl.)", lag:"—", tid:"", delta:"+0:14"}
       ]
     }
   ],
