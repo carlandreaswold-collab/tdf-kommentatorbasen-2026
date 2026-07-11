@@ -14,54 +14,55 @@ const TDF_DATA = {
 
   /* ---- LIVE-STATUS ---- */
   live: {
-    sisteOppdatering: "2026-07-06",
-    nesteEtappe: 4,
+    sisteOppdatering: "2026-07-10",
+    nesteEtappe: 8,
     rittStartISO: "2026-07-04T13:00:00",
-    notat: "E5 FERDIG: Olav Kooij (DEC) vinner sprint i Pau — Decathlons første Tour-etappeseier! Krasj 5 km fra mål splittet feltet, men ingen tidsforskjell erklært for GC. Søren Wærenskjold 9. (UNO) — beste norske. Træen holder gult (+28\" til Quinn). E6 i morgen: Pau → Gavarnie-Gèdre, 186.2 km — STORE PYRENEEER (Aspin + Tourmalet + toppmål)!",
+    notat: "E7 FERDIG: Tim Merlier (SQS) vinner massespurt til Bordeaux — slår Wærenskjold og Girmay. Søren Wærenskjold (UNO) 2.plass! Træen brøt til E7 etter krasj i E6-nedkjøringen fra Tourmalet (hjernerystelse + ribbeinsbrudd). Pogačar leder trygt (+2:42 til Vingegaard). E8 i dag: Périgueux → Bergerac (180.4 km) — ny spurtdag.",
     dnfRyttere: [
       {navn:"Clément Berthet",  lag:"GFC", etappe:1, årsak:"Krasj i lagtempo — hjernerystelse"},
       {navn:"Arnaud De Lie",    lag:"LIN", etappe:3, årsak:"Brøt 10 km fra mål i ekstrem varme"},
-      {navn:"Kelland O'Brien",  lag:"JAY", etappe:4, årsak:"Ute av tidsgrensen — mer enn 46 min etter Pedersen"}
+      {navn:"Kelland O'Brien",  lag:"JAY", etappe:4, årsak:"Ute av tidsgrensen — mer enn 46 min etter Pedersen"},
+      {navn:"Torstein Træen",   lag:"UNO", etappe:7, årsak:"Krasjet i nedkjøringen fra Tourmalet (E6) — hjernerystelse og ribbeinsbrudd, brøt til E7"}
     ],
-    gulTroye: "Torstein Træen",
+    gulTroye: "Tadej Pogačar",
     grontTroye: "Mads Pedersen",
-    prikketTroye: "Alex Baudin",
-    hvitTroye: "Mathias Vacek",
+    prikketTroye: "Tadej Pogačar",
+    hvitTroye: "Isaac del Toro",
     sammenlagtTopp: [
-      {plass:1,  navn:"Torstein Træen",             lag:"UNO", tid:"16:32:07"},
-      {plass:2,  navn:"Sean Quinn",                 lag:"EFE", tid:"+0:28"},
-      {plass:3,  navn:"Mathias Vacek",              lag:"LTK", tid:"+3:50"},
-      {plass:4,  navn:"Tadej Pogačar",              lag:"UAE", tid:"+7:53"},
-      {plass:5,  navn:"Jonas Vingegaard",           lag:"VLB", tid:"+7:53"},
-      {plass:6,  navn:"Ramses Debruyne",            lag:"APT", tid:"+8:06"},
-      {plass:7,  navn:"Remco Evenepoel",            lag:"RBH", tid:"+8:16"},
-      {plass:8,  navn:"Isaac del Toro",             lag:"UAE", tid:"+8:17"},
-      {plass:9,  navn:"Juan Ayuso",                 lag:"LTK", tid:"+8:20"},
-      {plass:10, navn:"Paul Seixas",                lag:"DEC", tid:"+8:41"},
-      {plass:13, navn:"Tobias Halland Johannessen", lag:"UNO", tid:"+9:04"}
+      {plass:1,  navn:"Tadej Pogačar",              lag:"UAE", tid:"24:56:17"},
+      {plass:2,  navn:"Jonas Vingegaard",           lag:"VLB", tid:"+2:42"},
+      {plass:3,  navn:"Isaac del Toro",             lag:"UAE", tid:"+3:27"},
+      {plass:4,  navn:"Remco Evenepoel",            lag:"RBH", tid:"+3:30"},
+      {plass:5,  navn:"Juan Ayuso",                 lag:"LTK", tid:"+3:34"},
+      {plass:6,  navn:"Paul Seixas",                lag:"DEC", tid:"+3:55"},
+      {plass:7,  navn:"Florian Lipowitz",           lag:"RBH", tid:"+4:00"},
+      {plass:8,  navn:"Lenny Martínez",             lag:"TBV", tid:"+4:21"},
+      {plass:9,  navn:"Mattias Skjelmose",          lag:"LTK", tid:"+4:57"},
+      {plass:10, navn:"Mathias Vacek",              lag:"LTK", tid:"+7:10"},
+      {plass:13, navn:"Tobias Halland Johannessen", lag:"UNO", tid:"+9:42"}
     ],
     gronnTopp: [
-      {plass:1, navn:"Mads Pedersen",    lag:"LTK", poeng:"103"},
-      {plass:2, navn:"Tadej Pogačar",    lag:"UAE", poeng:"55"},
-      {plass:3, navn:"Jonas Vingegaard", lag:"VLB", poeng:"44"},
-      {plass:4, navn:"Quinn Simmons",    lag:"LTK", poeng:"42"},
-      {plass:5, navn:"Isaac del Toro",   lag:"UAE", poeng:"39"}
+      {plass:1, navn:"Mads Pedersen",  lag:"LTK", poeng:"204"},
+      {plass:2, navn:"Biniam Girmay",  lag:"NSN", poeng:"145"},
+      {plass:3, navn:"Max Kanter",     lag:"AST", poeng:"140"},
+      {plass:4, navn:"Tim Merlier",    lag:"SQS", poeng:"134"},
+      {plass:5, navn:"Jasper Philipsen", lag:"APT", poeng:"126"}
     ],
     prikketTopp: [
-      {plass:1, navn:"Alex Baudin",         lag:"EFE", poeng:"12"},
-      {plass:2, navn:"Alex Molenaar",       lag:"CRR", poeng:"10"},
-      {plass:3, navn:"Nicolas Prodhomme",   lag:"GFC", poeng:"9"},
-      {plass:4, navn:"Raúl García Pierna",  lag:"MOV", poeng:"7"},
-      {plass:5, navn:"Marco Frigo",         lag:"NSN", poeng:"5"}
+      {plass:1, navn:"Tadej Pogačar",    lag:"UAE", poeng:"28"},
+      {plass:2, navn:"Jonas Vingegaard", lag:"VLB", poeng:"19"},
+      {plass:3, navn:"Lenny Martínez",   lag:"TBV", poeng:"16"},
+      {plass:4, navn:"Alex Baudin",      lag:"EFE", poeng:"13"},
+      {plass:5, navn:"Paul Seixas",      lag:"DEC", poeng:"12"}
     ],
     hvitTopp: [
-      {plass:1, navn:"Mathias Vacek",   lag:"LTK", tid:"+3:50"},
-      {plass:2, navn:"Ramses Debruyne", lag:"APT", tid:"+8:06"},
-      {plass:3, navn:"Isaac del Toro",  lag:"UAE", tid:"+8:17"},
-      {plass:4, navn:"Juan Ayuso",      lag:"LTK", tid:"+8:20"},
-      {plass:5, navn:"Paul Seixas",     lag:"DEC", tid:"+8:41"}
+      {plass:1, navn:"Isaac del Toro",   lag:"UAE", tid:"+3:27"},
+      {plass:2, navn:"Juan Ayuso",       lag:"LTK", tid:"+3:34"},
+      {plass:3, navn:"Paul Seixas",      lag:"DEC", tid:"+3:55"},
+      {plass:4, navn:"Lenny Martínez",   lag:"TBV", tid:"+4:21"},
+      {plass:5, navn:"Mathias Vacek",    lag:"LTK", tid:"+7:10"}
     ],
-    dagensHistorie: "KOOIJ VINNER FØRSTE SPURT I PAU! Olav Kooij (DEC) tar Decathlons aller første Tour-etappeseier i en kaotisk avslutning — krasj 5 km fra mål splittet bunten og tok ut mange leadouts (bl.a. Van der Poel). GC-gruppen kom inn +14 sek, men ingen tidsforskjell ble erklært. Søren Wærenskjold (UNO) beste nordmann: 9. plass. Træen holder gult (+28 sek). Baudin holder prikket, Pedersen grønt, Vacek hvitt. E6: Pau → Gavarnie-Gèdre (186.2 km) — Aspin + Tourmalet + toppmål.",
+    dagensHistorie: "MERLIER OG WÆRENSKJOLD I BORDEAUX! Tim Merlier (SQS) vinner massesprinten til Bordeaux — Søren Wærenskjold (UNO) 2.plass, Girmay 3. Stor norsk dag! Træen brøt til E7 etter krasj i E6-nedkjøringen fra Tourmalet — hjernerystelse + ribbeinsbrudd. E6: Pogačar knuste alle med 42 km solo over Tourmalet og inn til Gavarnie-Gèdre — tok gult (+2:42 til Vingegaard). E8 i dag: Périgueux → Bergerac (180.4 km) — flat spurtdag, 2 x cat4.",
     preTourNytt: [
       "Tour de Suisse (17–22 jun): 🏆 Pogačar (UAE) — +6:32 til nr.2 · Grønn: Grégoire (FDJ) · 🔴 Klatretrøye: Vervaeke (SQS) · Hvit: Vacek (LTK) · 5. Van Wilder (SQS)",
       "Tour Auvergne-Rhône-Alpes (7–14 jun): 🏆 Del Toro (UAE) · 2. Tuckwell (RBH) · 3. Ayuso (LTK) · Etappeseire: Baudin(EF) · Charmig(UNO) · Simmons(LTK) · Van Gils(RBH)"
@@ -1647,6 +1648,32 @@ const TDF_DATA = {
         {plass:9,  navn:"Søren Wærenskjold",    lag:"UNO", tid:"",        delta:"s.t."},
         {plass:10, navn:"Anthony Turgis",       lag:"TOT", tid:"",        delta:"s.t."},
         {plass:21, navn:"— GC-gruppe (Træen, Quinn, Pogačar, Vingegaard m.fl.)", lag:"—", tid:"", delta:"+0:14"}
+      ]
+    },
+    { etappe:6, dato:"9. juli", startby:"Pau", mål:"Gavarnie-Gèdre", km:186.2, type:"toppmål",
+      dnf:[{navn:"Torstein Træen", lag:"UNO", årsak:"Krasjet i nedkjøringen fra Col du Tourmalet — hjernerystelse og ribbeinsbrudd, brøt til E7"}],
+      resultater:[
+        {plass:1,  navn:"Tadej Pogačar",              lag:"UAE", tid:"",   delta:""},
+        {plass:2,  navn:"Jonas Vingegaard",           lag:"VLB", tid:"",   delta:"+2:42"},
+        {plass:3,  navn:"Isaac del Toro",             lag:"UAE", tid:"",   delta:"+3:27"},
+        {plass:4,  navn:"Remco Evenepoel",            lag:"RBH", tid:"",   delta:"+3:30"},
+        {plass:5,  navn:"Juan Ayuso",                 lag:"LTK", tid:"",   delta:"+3:34"},
+        {plass:6,  navn:"Paul Seixas",                lag:"DEC", tid:"",   delta:"+3:55"},
+        {plass:7,  navn:"Florian Lipowitz",           lag:"RBH", tid:"",   delta:"+4:00"},
+        {plass:8,  navn:"Lenny Martínez",             lag:"TBV", tid:"",   delta:"+4:21"},
+        {plass:9,  navn:"Mattias Skjelmose",          lag:"LTK", tid:"",   delta:"+4:57"},
+        {plass:10, navn:"Egan Bernal",                lag:"IGD", tid:"",   delta:"+9:12"},
+        {plass:999,navn:"— T.H. Johannessen, Vacek m.fl. i grupetto", lag:"—", tid:"", delta:"ca. +14:00"}
+      ]
+    },
+    { etappe:7, dato:"10. juli", startby:"Hagetmau", mål:"Bordeaux", km:175.1, type:"flat",
+      dnf:[{navn:"Torstein Træen", lag:"UNO", årsak:"Startet ikke etter krasj i E6-nedkjøringen"}],
+      resultater:[
+        {plass:1,  navn:"Tim Merlier",          lag:"SQS", tid:"3:44:20", delta:""},
+        {plass:2,  navn:"Søren Wærenskjold",    lag:"UNO", tid:"",        delta:"s.t."},
+        {plass:3,  navn:"Biniam Girmay",        lag:"NSN", tid:"",        delta:"s.t."},
+        {plass:4,  navn:"Max Kanter",           lag:"AST", tid:"",        delta:"s.t."},
+        {plass:5,  navn:"Jasper Philipsen",     lag:"APT", tid:"",        delta:"s.t."}
       ]
     }
   ],
