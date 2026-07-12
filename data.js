@@ -14,10 +14,10 @@ const TDF_DATA = {
 
   /* ---- LIVE-STATUS ---- */
   live: {
-    sisteOppdatering: "2026-07-10",
-    nesteEtappe: 8,
+    sisteOppdatering: "2026-07-12",
+    nesteEtappe: 10,
     rittStartISO: "2026-07-04T13:00:00",
-    notat: "E7 FERDIG: Tim Merlier (SQS) vinner massespurt til Bordeaux — slår Wærenskjold og Girmay. Søren Wærenskjold (UNO) 2.plass! Træen brøt til E7 etter krasj i E6-nedkjøringen fra Tourmalet (hjernerystelse + ribbeinsbrudd). Pogačar leder trygt (+2:42 til Vingegaard). E8 i dag: Périgueux → Bergerac (180.4 km) — ny spurtdag.",
+    notat: "HVILEDAG 13. JULI. E9 FERDIG: Tim Merlier (SQS) vinner tredje etappe på rad! Ussel (154,6 km — forkortet pga. ekstremvarme, historisk første gang i TdF). Van der Poel + Rickaert 173 km i brudd, hentet < 1 km fra mål. E8: Merlier vant i Bergerac — Wærenskjold 11. etter kontroversiell spurt (mente Girmay dyttet ham). GC uendret: Pogačar leder +2:42 til Vingegaard.",
     dnfRyttere: [
       {navn:"Clément Berthet",  lag:"GFC", etappe:1, årsak:"Krasj i lagtempo — hjernerystelse"},
       {navn:"Arnaud De Lie",    lag:"LIN", etappe:3, årsak:"Brøt 10 km fra mål i ekstrem varme"},
@@ -26,7 +26,7 @@ const TDF_DATA = {
     ],
     gulTroye: "Tadej Pogačar",
     grontTroye: "Mads Pedersen",
-    prikketTroye: "Tadej Pogačar",
+    prikketTroye: "Jonas Vingegaard",
     hvitTroye: "Isaac del Toro",
     sammenlagtTopp: [
       {plass:1,  navn:"Tadej Pogačar",              lag:"UAE", tid:"24:56:17"},
@@ -42,11 +42,12 @@ const TDF_DATA = {
       {plass:13, navn:"Tobias Halland Johannessen", lag:"UNO", tid:"+9:42"}
     ],
     gronnTopp: [
-      {plass:1, navn:"Mads Pedersen",  lag:"LTK", poeng:"204"},
-      {plass:2, navn:"Biniam Girmay",  lag:"NSN", poeng:"145"},
-      {plass:3, navn:"Max Kanter",     lag:"AST", poeng:"140"},
-      {plass:4, navn:"Tim Merlier",    lag:"SQS", poeng:"134"},
-      {plass:5, navn:"Jasper Philipsen", lag:"APT", poeng:"126"}
+      {plass:1, navn:"Mads Pedersen",    lag:"LTK", poeng:"228"},
+      {plass:2, navn:"Tim Merlier",      lag:"SQS", poeng:"213"},
+      {plass:3, navn:"Biniam Girmay",    lag:"NSN", poeng:"203"},
+      {plass:4, navn:"Jasper Philipsen", lag:"APT", poeng:"175"},
+      {plass:5, navn:"Max Kanter",       lag:"AST", poeng:"172"},
+      {plass:7, navn:"Søren Wærenskjold",lag:"UNO", poeng:"89"}
     ],
     prikketTopp: [
       {plass:1, navn:"Tadej Pogačar",    lag:"UAE", poeng:"28"},
@@ -62,7 +63,7 @@ const TDF_DATA = {
       {plass:4, navn:"Lenny Martínez",   lag:"TBV", tid:"+4:21"},
       {plass:5, navn:"Mathias Vacek",    lag:"LTK", tid:"+7:10"}
     ],
-    dagensHistorie: "MERLIER OG WÆRENSKJOLD I BORDEAUX! Tim Merlier (SQS) vinner massesprinten til Bordeaux — Søren Wærenskjold (UNO) 2.plass, Girmay 3. Stor norsk dag! Træen brøt til E7 etter krasj i E6-nedkjøringen fra Tourmalet — hjernerystelse + ribbeinsbrudd. E6: Pogačar knuste alle med 42 km solo over Tourmalet og inn til Gavarnie-Gèdre — tok gult (+2:42 til Vingegaard). E8 i dag: Périgueux → Bergerac (180.4 km) — flat spurtdag, 2 x cat4.",
+    dagensHistorie: "HVILEDAG — MERLIER HAT TRICK! Tim Merlier (SQS) tok sin 3. etappeseier på rad — E7 Bordeaux, E8 Bergerac, E9 Ussel. E9 ble forkortet fra ~185 til 154,6 km pga. ekstremvarme (rødt farevarsel Corrèze) — første gang i TdF-historien! Van der Poel + Rickaert laget 173 km langt brudd, hentet < 1 km fra mål. E8: Wærenskjold 11. etter spurtkontrovers med Girmay (ingen regelbrudd funnet). GC uendret: Pogačar (gult), Vingegaard +2:42, del Toro +3:27, Evenepoel +3:30. E10 tirsdag: Montluçon → Vichy.",
     preTourNytt: [
       "Tour de Suisse (17–22 jun): 🏆 Pogačar (UAE) — +6:32 til nr.2 · Grønn: Grégoire (FDJ) · 🔴 Klatretrøye: Vervaeke (SQS) · Hvit: Vacek (LTK) · 5. Van Wilder (SQS)",
       "Tour Auvergne-Rhône-Alpes (7–14 jun): 🏆 Del Toro (UAE) · 2. Tuckwell (RBH) · 3. Ayuso (LTK) · Etappeseire: Baudin(EF) · Charmig(UNO) · Simmons(LTK) · Van Gils(RBH)"
@@ -1674,6 +1675,29 @@ const TDF_DATA = {
         {plass:3,  navn:"Biniam Girmay",        lag:"NSN", tid:"",        delta:"s.t."},
         {plass:4,  navn:"Max Kanter",           lag:"AST", tid:"",        delta:"s.t."},
         {plass:5,  navn:"Jasper Philipsen",     lag:"APT", tid:"",        delta:"s.t."}
+      ]
+    },
+    { etappe:8, dato:"11. juli", startby:"Périgueux", mål:"Bergerac", km:180.4, type:"flat",
+      notat:"Merlier vinner for 2. dag på rad — slår Girmay og Kooij. Soudal SQS forlenger rekken til 14 TdF-utgaver på rad med etappeseier (siden 2013). Wærenskjold 11. etter kontroversiell avslutning — mente Girmay dyttet (\"kjører som en jævla idiot\"), UCI fant ingen regelbrudd. Slock (LIN) i brudd, hadde 15 sek med 3 km igjen, hentet 1,3 km fra mål.",
+      resultater:[
+        {plass:1,  navn:"Tim Merlier",          lag:"SQS", tid:"",        delta:""},
+        {plass:2,  navn:"Biniam Girmay",        lag:"NSN", tid:"",        delta:"s.t."},
+        {plass:3,  navn:"Olav Kooij",           lag:"DEC", tid:"",        delta:"s.t."},
+        {plass:4,  navn:"Jasper Philipsen",     lag:"APT", tid:"",        delta:"s.t."},
+        {plass:5,  navn:"Pavel Bittner",        lag:"PIC", tid:"",        delta:"s.t."},
+        {plass:6,  navn:"Rick Pluimers",        lag:"TUD", tid:"",        delta:"s.t."},
+        {plass:7,  navn:"Pascal Ackermann",     lag:"JAY", tid:"",        delta:"s.t."},
+        {plass:8,  navn:"Clément Russo",        lag:"FDJ", tid:"",        delta:"s.t."},
+        {plass:9,  navn:"Max Kanter",           lag:"AST", tid:"",        delta:"s.t."},
+        {plass:10, navn:"Milan Fretin",         lag:"COF", tid:"",        delta:"s.t."},
+        {plass:11, navn:"Søren Wærenskjold",    lag:"UNO", tid:"",        delta:"s.t."}
+      ]
+    },
+    { etappe:9, dato:"12. juli", startby:"Malemort", mål:"Ussel", km:154.6, type:"kupert",
+      notat:"HISTORISK: Første gang i TdF-historien at en etappe forkortes pga. ekstremvarme — Météo-France rødt farevarsel i Corrèze (40–41°C), fra ~185 til 154,6 km. Merlier tar hattrick (3 strake etappeseirer)! Van der Poel + Jonas Rickaert (APT) i 173 km langt brudd, hentet < 1 km fra mål. Mads Pedersen vant mellomspurten i Beynat. HVILEDAG 13. juli.",
+      resultater:[
+        {plass:1,  navn:"Tim Merlier",          lag:"SQS", tid:"",        delta:""},
+        {plass:999,navn:"— massespurt fra pelotongen (brudd hentet < 1 km fra mål)", lag:"—", tid:"", delta:"s.t."}
       ]
     }
   ],
