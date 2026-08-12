@@ -14,56 +14,63 @@ const TDF_DATA = {
 
   /* ---- LIVE-STATUS ---- */
   live: {
-    sisteOppdatering: "2026-07-12",
-    nesteEtappe: 10,
+    sisteOppdatering: "2026-07-26",
+    nesteEtappe: null,
     rittStartISO: "2026-07-04T13:00:00",
-    notat: "HVILEDAG 13. JULI. E9 FERDIG: Tim Merlier (SQS) vinner tredje etappe på rad! Ussel (154,6 km — forkortet pga. ekstremvarme, historisk første gang i TdF). Van der Poel + Rickaert 173 km i brudd, hentet < 1 km fra mål. E8: Merlier vant i Bergerac — Wærenskjold 11. etter kontroversiell spurt (mente Girmay dyttet ham). GC uendret: Pogačar leder +2:42 til Vingegaard.",
+    notat: "RITTET FERDIG! Pogačar vinner sin 5. Tour de France — tangerer rekorden til Merckx, Anquetil, Hinault og Indurain! Evenepoel 2. (+6:26), del Toro 3. (+9:42). Wærenskjold vant E11 i rekordtempo (50,91 km/t). Vingegaard brøt i E15 (krasj, nøkkelben). Van der Poel vant på Champs-Élysées.",
     dnfRyttere: [
-      {navn:"Clément Berthet",  lag:"GFC", etappe:1, årsak:"Krasj i lagtempo — hjernerystelse"},
-      {navn:"Arnaud De Lie",    lag:"LIN", etappe:3, årsak:"Brøt 10 km fra mål i ekstrem varme"},
-      {navn:"Kelland O'Brien",  lag:"JAY", etappe:4, årsak:"Ute av tidsgrensen — mer enn 46 min etter Pedersen"},
-      {navn:"Torstein Træen",   lag:"UNO", etappe:7, årsak:"Krasjet i nedkjøringen fra Tourmalet (E6) — hjernerystelse og ribbeinsbrudd, brøt til E7"}
+      {navn:"Clément Berthet",    lag:"GFC", etappe:1,  årsak:"Krasj i lagtempo — hjernerystelse"},
+      {navn:"Arnaud De Lie",      lag:"LIN", etappe:3,  årsak:"Brøt 10 km fra mål i ekstrem varme"},
+      {navn:"Kelland O'Brien",    lag:"JAY", etappe:4,  årsak:"Ute av tidsgrensen — mer enn 46 min etter Pedersen"},
+      {navn:"Torstein Træen",     lag:"UNO", etappe:7,  årsak:"Krasjet i nedkjøringen fra Tourmalet (E6) — hjernerystelse og ribbeinsbrudd, brøt til E7"},
+      {navn:"Fernando Gaviria",   lag:"CRR", etappe:13, årsak:"Krasj i E12-spurten — kne og arm, startet ikke E13"},
+      {navn:"Jenno Berckmoes",    lag:"LIN", etappe:13, årsak:"Krasj i E12-spurten — nøkkelben, startet ikke E13"},
+      {navn:"Jonas Vingegaard",   lag:"VLB", etappe:15, årsak:"Krasj i nedkjøring mot Bonneville — brudd i nøkkelben, operasjon"},
+      {navn:"Florian Lipowitz",   lag:"RBH", etappe:16, årsak:"Krasj under TT-løpet — brudd i nøkkelben, båret vekk på båre"},
+      {navn:"Brandon McNulty",    lag:"UAE", etappe:18, årsak:"Mage-tarm-sykdom (pelotongens virusbølge) — kritisk UAE-støtte falt fra"},
+      {navn:"Ilan Van Wilder",    lag:"SOQ", etappe:20, årsak:"Krasj på dronningetappen"},
+      {navn:"Pascal Ackermann",   lag:"JAY", etappe:20, årsak:"DNF på dronningetappen"}
     ],
     gulTroye: "Tadej Pogačar",
     grontTroye: "Mads Pedersen",
-    prikketTroye: "Jonas Vingegaard",
+    prikketTroye: "Richard Carapaz",
     hvitTroye: "Isaac del Toro",
     sammenlagtTopp: [
-      {plass:1,  navn:"Tadej Pogačar",              lag:"UAE", tid:"24:56:17"},
-      {plass:2,  navn:"Jonas Vingegaard",           lag:"VLB", tid:"+2:42"},
-      {plass:3,  navn:"Isaac del Toro",             lag:"UAE", tid:"+3:27"},
-      {plass:4,  navn:"Remco Evenepoel",            lag:"RBH", tid:"+3:30"},
-      {plass:5,  navn:"Juan Ayuso",                 lag:"LTK", tid:"+3:34"},
-      {plass:6,  navn:"Paul Seixas",                lag:"DEC", tid:"+3:55"},
-      {plass:7,  navn:"Florian Lipowitz",           lag:"RBH", tid:"+4:00"},
-      {plass:8,  navn:"Lenny Martínez",             lag:"TBV", tid:"+4:21"},
-      {plass:9,  navn:"Mattias Skjelmose",          lag:"LTK", tid:"+4:57"},
-      {plass:10, navn:"Mathias Vacek",              lag:"LTK", tid:"+7:10"},
-      {plass:13, navn:"Tobias Halland Johannessen", lag:"UNO", tid:"+9:42"}
+      {plass:1,  navn:"Tadej Pogačar",              lag:"UAE", tid:"73:56:26"},
+      {plass:2,  navn:"Remco Evenepoel",            lag:"RBH", tid:"+6:26"},
+      {plass:3,  navn:"Isaac del Toro",             lag:"UAE", tid:"+9:42"},
+      {plass:4,  navn:"Paul Seixas",                lag:"DEC", tid:"+11:56"},
+      {plass:5,  navn:"Lenny Martínez",             lag:"TBV", tid:"+13:02"},
+      {plass:6,  navn:"Mattias Skjelmose",          lag:"LTK", tid:"+14:59"},
+      {plass:7,  navn:"Juan Ayuso",                 lag:"LTK", tid:"+17:48"},
+      {plass:8,  navn:"Richard Carapaz",            lag:"EFE", tid:"+20:00"},
+      {plass:9,  navn:"Tom Pidcock",                lag:"PQ3", tid:"+29:28"},
+      {plass:10, navn:"Jordan Jégat",               lag:"TOT", tid:"+33:21"},
+      {plass:13, navn:"Tobias Halland Johannessen", lag:"UNO", tid:"—"}
     ],
     gronnTopp: [
-      {plass:1, navn:"Mads Pedersen",    lag:"LTK", poeng:"228"},
-      {plass:2, navn:"Tim Merlier",      lag:"SQS", poeng:"213"},
-      {plass:3, navn:"Biniam Girmay",    lag:"NSN", poeng:"203"},
-      {plass:4, navn:"Jasper Philipsen", lag:"APT", poeng:"175"},
-      {plass:5, navn:"Max Kanter",       lag:"AST", poeng:"172"},
-      {plass:7, navn:"Søren Wærenskjold",lag:"UNO", poeng:"89"}
+      {plass:1, navn:"Mads Pedersen",    lag:"LTK", poeng:"559"},
+      {plass:2, navn:"Jasper Philipsen", lag:"APT", poeng:"503"},
+      {plass:3, navn:"Biniam Girmay",    lag:"NSN", poeng:"481"},
+      {plass:4, navn:"Tim Merlier",      lag:"SQS", poeng:"421"},
+      {plass:5, navn:"Olav Kooij",       lag:"DEC", poeng:"318"},
+      {plass:6, navn:"Søren Wærenskjold",lag:"UNO", poeng:"182"}
     ],
     prikketTopp: [
-      {plass:1, navn:"Tadej Pogačar",    lag:"UAE", poeng:"28"},
-      {plass:2, navn:"Jonas Vingegaard", lag:"VLB", poeng:"19"},
-      {plass:3, navn:"Lenny Martínez",   lag:"TBV", poeng:"16"},
-      {plass:4, navn:"Alex Baudin",      lag:"EFE", poeng:"13"},
-      {plass:5, navn:"Paul Seixas",      lag:"DEC", poeng:"12"}
+      {plass:1, navn:"Richard Carapaz",  lag:"EFE", poeng:"146"},
+      {plass:2, navn:"Tadej Pogačar",    lag:"UAE", poeng:"90"},
+      {plass:3, navn:"Valentin Paret-Peintre", lag:"SOQ", poeng:"84"},
+      {plass:4, navn:"Lenny Martínez",   lag:"TBV", poeng:"38"},
+      {plass:5, navn:"Tobias Halland Johannessen", lag:"UNO", poeng:"22"}
     ],
     hvitTopp: [
-      {plass:1, navn:"Isaac del Toro",   lag:"UAE", tid:"+3:27"},
-      {plass:2, navn:"Juan Ayuso",       lag:"LTK", tid:"+3:34"},
-      {plass:3, navn:"Paul Seixas",      lag:"DEC", tid:"+3:55"},
-      {plass:4, navn:"Lenny Martínez",   lag:"TBV", tid:"+4:21"},
-      {plass:5, navn:"Mathias Vacek",    lag:"LTK", tid:"+7:10"}
+      {plass:1, navn:"Isaac del Toro",   lag:"UAE", tid:"+9:42"},
+      {plass:2, navn:"Paul Seixas",      lag:"DEC", tid:"+11:56"},
+      {plass:3, navn:"Lenny Martínez",   lag:"TBV", tid:"+13:02"},
+      {plass:4, navn:"Mattias Skjelmose",lag:"LTK", tid:"+14:59"},
+      {plass:5, navn:"Juan Ayuso",       lag:"LTK", tid:"+17:48"}
     ],
-    dagensHistorie: "HVILEDAG — MERLIER HAT TRICK! Tim Merlier (SQS) tok sin 3. etappeseier på rad — E7 Bordeaux, E8 Bergerac, E9 Ussel. E9 ble forkortet fra ~185 til 154,6 km pga. ekstremvarme (rødt farevarsel Corrèze) — første gang i TdF-historien! Van der Poel + Rickaert laget 173 km langt brudd, hentet < 1 km fra mål. E8: Wærenskjold 11. etter spurtkontrovers med Girmay (ingen regelbrudd funnet). GC uendret: Pogačar (gult), Vingegaard +2:42, del Toro +3:27, Evenepoel +3:30. E10 tirsdag: Montluçon → Vichy.",
+    dagensHistorie: "RITTET FERDIG! Tadej Pogačar vinner Tour de France 2026 — sin 5. tittel, som tangerer rekorden til Merckx, Anquetil, Hinault og Indurain. E21 Paris: Van der Poel vant på Champs-Élysées (APT 1-2 med Philipsen). Høydepunkter: Wærenskjold vant E11 i rekordtempo (50,91 km/t — TdF-rekord). Pogačar tok Pantanis 1995-rekord opp Alpe d'Huez i E19 (35'27\"). Vingegaard brøt i E15 (krasj, brudd nøkkelben). Lipowitz brøt under E16-TT (krasj). Carapaz vant 2 etapper + prikktrøye. Evenepoel vant E15 og TT i E16 (belgisk nasjonaldag) — endt på 2. totalt.",
     preTourNytt: [
       "Tour de Suisse (17–22 jun): 🏆 Pogačar (UAE) — +6:32 til nr.2 · Grønn: Grégoire (FDJ) · 🔴 Klatretrøye: Vervaeke (SQS) · Hvit: Vacek (LTK) · 5. Van Wilder (SQS)",
       "Tour Auvergne-Rhône-Alpes (7–14 jun): 🏆 Del Toro (UAE) · 2. Tuckwell (RBH) · 3. Ayuso (LTK) · Etappeseire: Baudin(EF) · Charmig(UNO) · Simmons(LTK) · Van Gils(RBH)"
@@ -1699,6 +1706,192 @@ const TDF_DATA = {
         {plass:1,  navn:"Tim Merlier",          lag:"SQS", tid:"",        delta:""},
         {plass:999,navn:"— massespurt fra pelotongen (brudd hentet < 1 km fra mål)", lag:"—", tid:"", delta:"s.t."}
       ]
+    },
+    { etappe:10, dato:"14. juli", startby:"Aurillac", mål:"Le Lioran", km:166.6, type:"toppmål",
+      notat:"BASTILLEDAGEN! Pogačar angrep på Col de Pertus, kjørte solo forbi Carapaz og andre bruddryttere. Tredje Bastilledag-seier i TdF (etter 2021 og 2024) — en unik rekord. Del Toro sprakk og falt fra 3. til 7. sammenlagt. 25. karriere-etappeseier i Tour for Pogačar.",
+      resultater:[
+        {plass:1,  navn:"Tadej Pogačar",              lag:"UAE", tid:"",        delta:""},
+        {plass:2,  navn:"Remco Evenepoel",            lag:"RBH", tid:"",        delta:"+0:32"},
+        {plass:3,  navn:"Paul Seixas",                lag:"DEC", tid:"",        delta:"+0:34"},
+        {plass:4,  navn:"Florian Lipowitz",           lag:"RBH", tid:"",        delta:"s.t."},
+        {plass:5,  navn:"Juan Ayuso",                 lag:"LTK", tid:"",        delta:"+0:38"},
+        {plass:6,  navn:"Mattias Skjelmose",          lag:"LTK", tid:"",        delta:"s.t."},
+        {plass:7,  navn:"Jonas Vingegaard",           lag:"VLB", tid:"",        delta:"+0:44"},
+        {plass:8,  navn:"Isaac del Toro",             lag:"UAE", tid:"",        delta:"+1:31"},
+        {plass:9,  navn:"Tom Pidcock",                lag:"PQ3", tid:"",        delta:"+1:59"},
+        {plass:10, navn:"Lenny Martínez",             lag:"TBV", tid:"",        delta:"+2:03"}
+      ]
+    },
+    { etappe:11, dato:"15. juli", startby:"Vichy", mål:"Nevers", km:161.3, type:"flat",
+      notat:"TdF-REKORD: Gjennomsnittsfart 50,91 km/t — raskeste veietappe i Tour de Frances 123-årige historie (slo Cipollinis rekord fra 1999). Wærenskjold tar karrierens første TdF-etappeseier! Philipsen diskvalifisert fra 3. plass for avvik og satt bak i feltet.",
+      resultater:[
+        {plass:1,  navn:"Søren Wærenskjold",    lag:"UNO", tid:"3:09:41", delta:""},
+        {plass:2,  navn:"Olav Kooij",           lag:"DEC", tid:"",        delta:"s.t."},
+        {plass:3,  navn:"Milan Fretin",         lag:"COF", tid:"",        delta:"s.t."},
+        {plass:4,  navn:"Huub Artz",            lag:"LIN", tid:"",        delta:"s.t."},
+        {plass:5,  navn:"Biniam Girmay",        lag:"NSN", tid:"",        delta:"s.t."},
+        {plass:6,  navn:"Anthony Turgis",       lag:"TOT", tid:"",        delta:"s.t."},
+        {plass:7,  navn:"Clément Russo",        lag:"GFC", tid:"",        delta:"s.t."},
+        {plass:8,  navn:"Fernando Gaviria",     lag:"CRR", tid:"",        delta:"s.t."},
+        {plass:9,  navn:"Pascal Ackermann",     lag:"JAY", tid:"",        delta:"s.t."},
+        {plass:10, navn:"Max Kanter",           lag:"AST", tid:"",        delta:"s.t."},
+        {plass:119,navn:"Jasper Philipsen (diskval. fra 3.)",lag:"APT",   tid:"",        delta:"s.t."}
+      ]
+    },
+    { etappe:12, dato:"16. juli", startby:"Magny-Cours", mål:"Chalon-sur-Saône", km:179.1, type:"flat",
+      notat:"Merlier vinner sin 4. etappe i 2026-Tour! SQS forlenger til 14 TdF-utgaver på rad med minst én etappeseier (siden 2013). Stor krasj < 400 m fra mål tar ned Gaviria (CRR), Wærenskjold, Berckmoes — Gaviria og Berckmoes stiller ikke til start i E13.",
+      dnf:[
+        {navn:"Fernando Gaviria",   lag:"CRR", årsak:"DNS E13 — krasjet 400 m fra mål i E12, kne og arm"},
+        {navn:"Jenno Berckmoes",    lag:"LIN", årsak:"DNS E13 — krasjet 400 m fra mål i E12, nøkkelben"}
+      ],
+      resultater:[
+        {plass:1,  navn:"Tim Merlier",          lag:"SQS", tid:"",        delta:""},
+        {plass:2,  navn:"Olav Kooij",           lag:"DEC", tid:"",        delta:"s.t."},
+        {plass:3,  navn:"Jasper Philipsen",     lag:"APT", tid:"",        delta:"s.t."},
+        {plass:4,  navn:"Biniam Girmay",        lag:"NSN", tid:"",        delta:"s.t."},
+        {plass:5,  navn:"Milan Fretin",         lag:"COF", tid:"",        delta:"s.t."},
+        {plass:6,  navn:"Anthony Turgis",       lag:"TOT", tid:"",        delta:"s.t."},
+        {plass:7,  navn:"Max Kanter",           lag:"AST", tid:"",        delta:"s.t."},
+        {plass:8,  navn:"Clément Russo",        lag:"GFC", tid:"",        delta:"s.t."},
+        {plass:9,  navn:"Mads Pedersen",        lag:"LTK", tid:"",        delta:"s.t."},
+        {plass:10, navn:"Huub Artz",            lag:"LIN", tid:"",        delta:"s.t."}
+      ]
+    },
+    { etappe:13, dato:"17. juli", startby:"Dole", mål:"Belfort", km:205.8, type:"kupert",
+      notat:"Lengste etappe i 2026-Tour (205,8 km). Schmid og Tejada brøt løs 16 km fra mål — Schmid vant spurten i duo-finish. Pidcocks 3. plass (+4 sek tidsbonus) katapulterte ham fra 10. til 4. sammenlagt, bare 9 sek bak Evenepoel.",
+      resultater:[
+        {plass:1,  navn:"Mauro Schmid",         lag:"JAY", tid:"",        delta:""},
+        {plass:2,  navn:"Harold Tejada",        lag:"AST", tid:"",        delta:"s.t."},
+        {plass:3,  navn:"Tom Pidcock",          lag:"PQ3", tid:"",        delta:"s.t."},
+        {plass:4,  navn:"Maxim Van Gils",       lag:"RBH", tid:"",        delta:"s.t."},
+        {plass:5,  navn:"Brandon McNulty",      lag:"UAE", tid:"",        delta:"s.t."},
+        {plass:6,  navn:"Kévin Vauquelin",      lag:"NSN", tid:"",        delta:"s.t."},
+        {plass:7,  navn:"Luke Plapp",           lag:"JAY", tid:"",        delta:"s.t."},
+        {plass:8,  navn:"Jordan Jégat",         lag:"TOT", tid:"",        delta:"s.t."},
+        {plass:999,navn:"— peloton (Pogačar, Vingegaard m.fl.)", lag:"—", tid:"", delta:"+7:32"}
+      ]
+    },
+    { etappe:14, dato:"18. juli", startby:"Mulhouse", mål:"Le Markstein", km:155.3, type:"toppmål",
+      notat:"Pogačar angrep 7 km fra mål, kjørte forbi alle bruddryttere og vant solo. 4. etappeseier og 25. karriereseier i Tour for sloveneren. Del Toro sterk tilbake — klatret fra 7. til 3. GC etter E14.",
+      resultater:[
+        {plass:1,  navn:"Tadej Pogačar",              lag:"UAE", tid:"",        delta:""},
+        {plass:2,  navn:"Isaac del Toro",             lag:"UAE", tid:"",        delta:"+0:38"},
+        {plass:3,  navn:"Paul Seixas",                lag:"DEC", tid:"",        delta:"+0:40"},
+        {plass:4,  navn:"Jonas Vingegaard",           lag:"VLB", tid:"",        delta:"+0:44"},
+        {plass:5,  navn:"Remco Evenepoel",            lag:"RBH", tid:"",        delta:"+0:48"},
+        {plass:6,  navn:"Juan Ayuso",                 lag:"LTK", tid:"",        delta:"+0:50"},
+        {plass:7,  navn:"Florian Lipowitz",           lag:"RBH", tid:"",        delta:"s.t."}
+      ]
+    },
+    { etappe:15, dato:"19. juli", startby:"Champagnole", mål:"Plateau de Solaison", km:183.9, type:"toppmål",
+      notat:"VINGEGAARD BRYTER! Krasj i nedkjøring mot Bonneville ~20 km fra mål — nøkkelben, ambulanse. Evenepoel spurter forbi Pogačar 250 m fra mål på Solaisons HC-topp (11,3 km / 9%). Solaison TdF-debut. Natten før: overraskende dopingkontroll kl. 02 (Vingegaard) og 05 (Pogačar) av ITA/Paris-statsadvokat.",
+      dnf:[{navn:"Jonas Vingegaard", lag:"VLB", årsak:"Krasj i nedkjøring ~20 km fra mål — brudd i nøkkelben, fraktet til sykehus"}],
+      resultater:[
+        {plass:1,  navn:"Remco Evenepoel",            lag:"RBH", tid:"4:23:09", delta:""},
+        {plass:2,  navn:"Tadej Pogačar",              lag:"UAE", tid:"",        delta:"s.t."},
+        {plass:3,  navn:"Isaac del Toro",             lag:"UAE", tid:"",        delta:"+0:06"},
+        {plass:4,  navn:"Paul Seixas",                lag:"DEC", tid:"",        delta:"+0:58"},
+        {plass:5,  navn:"Florian Lipowitz",           lag:"RBH", tid:"",        delta:"s.t."},
+        {plass:6,  navn:"Lenny Martínez",             lag:"TBV", tid:"",        delta:"+1:57"},
+        {plass:7,  navn:"Mattias Skjelmose",          lag:"LTK", tid:"",        delta:"s.t."},
+        {plass:8,  navn:"Juan Ayuso",                 lag:"LTK", tid:"",        delta:"+2:00"},
+        {plass:9,  navn:"Adam Yates",                 lag:"UAE", tid:"",        delta:"s.t."},
+        {plass:10, navn:"Quinn Simmons",              lag:"LTK", tid:"",        delta:"+2:16"}
+      ]
+    },
+    { etappe:16, dato:"21. juli", startby:"Évian-les-Bains", mål:"Thonon-les-Bains", km:26.1, type:"tempo",
+      notat:"BELGISK NASJONALDAG — Evenepoel dominerer TT med 48,45 km/t! 3. TT-seier på 3 TdF-utgaver på rad (2024/25/26). Belgias 500. TdF-etappeseier. Første belgiske seier på nasjonaldagen siden 1985. Lipowitz krasjet hardt under sin TT-løp og brøt med nøkkelben — begge RBH-stjernene Vingegaard og Lipowitz ute med same skade.",
+      dnf:[{navn:"Florian Lipowitz", lag:"RBH", årsak:"Krasj under TT-løpet — brudd i nøkkelben, båret vekk på båre"}],
+      resultater:[
+        {plass:1,  navn:"Remco Evenepoel",            lag:"RBH", tid:"32:19",   delta:""},
+        {plass:2,  navn:"Tadej Pogačar",              lag:"UAE", tid:"",        delta:"+0:28"},
+        {plass:3,  navn:"Mattias Skjelmose",          lag:"LTK", tid:"",        delta:"+1:04"},
+        {plass:4,  navn:"Paul Seixas",                lag:"DEC", tid:"",        delta:"+1:16"},
+        {plass:5,  navn:"Isaac del Toro",             lag:"UAE", tid:"",        delta:"+1:21"},
+        {plass:11, navn:"Filippo Ganna",              lag:"IGD", tid:"",        delta:"—"}
+      ]
+    },
+    { etappe:17, dato:"22. juli", startby:"Chambéry", mål:"Voiron", km:160, type:"kupert",
+      notat:"Tilsynelatende flat etappe endte med 40-manns split over 4 klatringer. Philipsen vinner fra det reduserte feltet etter perfekt Alpecin-oppkjøring. Pedersen tok mellomspurten (25 poeng) men tapte til Philipsen i mål — nå bare 7 poeng bak i grønntrøyekampen.",
+      resultater:[
+        {plass:1,  navn:"Jasper Philipsen",     lag:"APT", tid:"",        delta:""},
+        {plass:2,  navn:"Mauro Schmid",         lag:"JAY", tid:"",        delta:"s.t."},
+        {plass:3,  navn:"Olav Kooij",           lag:"DEC", tid:"",        delta:"s.t."},
+        {plass:4,  navn:"Lewis Askey",          lag:"NSN", tid:"",        delta:"s.t."},
+        {plass:5,  navn:"Rick Pluimers",        lag:"PIC", tid:"",        delta:"s.t."},
+        {plass:6,  navn:"Clément Russo",        lag:"GFC", tid:"",        delta:"s.t."},
+        {plass:7,  navn:"Huub Artz",            lag:"LIN", tid:"",        delta:"s.t."},
+        {plass:8,  navn:"Mads Pedersen",        lag:"LTK", tid:"",        delta:"s.t."},
+        {plass:9,  navn:"Michael Matthews",     lag:"JAY", tid:"",        delta:"s.t."},
+        {plass:10, navn:"Aaron Gate",           lag:"AST", tid:"",        delta:"s.t."},
+        {plass:999,navn:"— GC-gruppe (Pogačar, Evenepoel m.fl.)", lag:"—", tid:"", delta:"+8:46"}
+      ]
+    },
+    { etappe:18, dato:"23. juli", startby:"Voiron", mål:"Orcières-Merlette", km:185.2, type:"toppmål",
+      notat:"Carapaz angrep 3 km fra mål fra 6-manns brudd og vant solo — hans 2. karriere-TdF-etappeseier (1. gang 2019). Schmid og Jorgenson kom 45 sek etter. T.H. Johannessen sterk 5. plass for Uno-X. McNulty brøt pga. mage-tarm-virus — UAE mister viktig støtteløper før de avgjørende alpeetappene.",
+      dnf:[{navn:"Brandon McNulty", lag:"UAE", årsak:"Mage-tarm-sykdom (pelotongens virusbølge) — brøt etter E18"}],
+      resultater:[
+        {plass:1,  navn:"Richard Carapaz",            lag:"EFE", tid:"4:26:21", delta:""},
+        {plass:2,  navn:"Mauro Schmid",               lag:"JAY", tid:"",        delta:"+0:45"},
+        {plass:3,  navn:"Matteo Jorgenson",           lag:"VLB", tid:"",        delta:"s.t."},
+        {plass:4,  navn:"Valentin Paret-Peintre",     lag:"SOQ", tid:"",        delta:"+1:14"},
+        {plass:5,  navn:"Tobias Halland Johannessen", lag:"UNO", tid:"",        delta:"+1:57"},
+        {plass:6,  navn:"Raúl García Pierna",         lag:"MOV", tid:"",        delta:"+2:12"},
+        {plass:7,  navn:"Pablo Castrillo",            lag:"MOV", tid:"",        delta:"+4:30"},
+        {plass:8,  navn:"Lenny Martínez",             lag:"TBV", tid:"",        delta:"+4:35"},
+        {plass:9,  navn:"Remco Evenepoel",            lag:"RBH", tid:"",        delta:"s.t."},
+        {plass:10, navn:"Tom Pidcock",                lag:"PQ3", tid:"",        delta:"s.t."},
+        {plass:999,navn:"— Pogačar og GC-gruppe", lag:"—", tid:"", delta:"+4:35"}
+      ]
+    },
+    { etappe:19, dato:"24. juli", startby:"Gap", mål:"Alpe d'Huez", km:127.9, type:"toppmål",
+      notat:"PANTANI-REKORDEN FALT! Pogačar startet sluttoppsstigningen 3:30 bak bruddet, kjørte forbi ALLE 21 svinger — opp på 35'27\". Marco Pantanis 1995-rekord (36'50\") slått. Estimert 455W / 6,9 W/kg. Carapaz tok prikktrøyen fra Pogačar. 2. rytter noensinne å vinne TdF-etappe på Alpe d'Huez i gul trøye (Geraint Thomas, 2018).",
+      resultater:[
+        {plass:1,  navn:"Tadej Pogačar",              lag:"UAE", tid:"3:17:57", delta:""},
+        {plass:2,  navn:"Lenny Martínez",             lag:"TBV", tid:"",        delta:"+0:06"},
+        {plass:3,  navn:"Richard Carapaz",            lag:"EFE", tid:"",        delta:"+0:09"},
+        {plass:4,  navn:"Sepp Kuss",                  lag:"VLB", tid:"",        delta:"+1:14"},
+        {plass:5,  navn:"Tobias Halland Johannessen", lag:"UNO", tid:"",        delta:"+2:07"},
+        {plass:6,  navn:"Remco Evenepoel",            lag:"RBH", tid:"",        delta:"+2:29"},
+        {plass:7,  navn:"Isaac del Toro",             lag:"UAE", tid:"",        delta:"+2:41"},
+        {plass:8,  navn:"Paul Seixas",                lag:"DEC", tid:"",        delta:"+2:45"},
+        {plass:9,  navn:"Mattias Skjelmose",          lag:"LTK", tid:"",        delta:"—"},
+        {plass:10, navn:"Juan Ayuso",                 lag:"LTK", tid:"",        delta:"—"}
+      ]
+    },
+    { etappe:20, dato:"25. juli", startby:"Le Bourg-d'Oisans", mål:"Alpe d'Huez", km:170.9, type:"toppmål",
+      notat:"DRONNINGETAPPE: 5 450 hm (Croix de Fer + Galibier + Sarenne + Alpe d'Huez). Carapaz sluttangrep solo og vant. Kuss solo i front < 7 km fra mål — krasjet to ganger, sist reddet av sikkerhetsnett. Evenepoel passerte stakkars Kuss på streken og stjal 2. plassen. Pogačar syklet som domestique for del Toro for å sikre hvit trøye. Pedersen angrep nær toppen og sementerte grønn trøye.",
+      dnf:[
+        {navn:"Ilan Van Wilder",  lag:"SOQ", årsak:"Krasj på dronningetappen"},
+        {navn:"Pascal Ackermann", lag:"JAY", årsak:"DNF dronningetappen"}
+      ],
+      resultater:[
+        {plass:1,  navn:"Richard Carapaz",            lag:"EFE", tid:"4:59:39", delta:""},
+        {plass:2,  navn:"Remco Evenepoel",            lag:"RBH", tid:"",        delta:"+0:26"},
+        {plass:3,  navn:"Sepp Kuss",                  lag:"VLB", tid:"",        delta:"+0:31"},
+        {plass:4,  navn:"Tadej Pogačar",              lag:"UAE", tid:"",        delta:"+1:05"},
+        {plass:5,  navn:"Isaac del Toro",             lag:"UAE", tid:"",        delta:"s.t."},
+        {plass:6,  navn:"Lenny Martínez",             lag:"TBV", tid:"",        delta:"+1:07"},
+        {plass:7,  navn:"Jai Hindley",                lag:"—",   tid:"",        delta:"+2:15"},
+        {plass:8,  navn:"Mattias Skjelmose",          lag:"LTK", tid:"",        delta:"+2:55"},
+        {plass:9,  navn:"Juan Ayuso",                 lag:"LTK", tid:"",        delta:"s.t."},
+        {plass:10, navn:"Paul Seixas",                lag:"DEC", tid:"",        delta:"s.t."}
+      ]
+    },
+    { etappe:21, dato:"26. juli", startby:"Thoiry", mål:"Paris/Champs-Élysées", km:110, type:"flat",
+      notat:"Van der Poel + Pogačar brøt løs på Montmartre-brosteinen (Rue Lepic) med 12 sek forsprang. Pelotongen hentet dem til sluttspurten, men van der Poel holdt unna i fotofinsj — APT 1-2. Rittet offisielt avsluttet. Pogačar: 5 Tour-titler, tangerer Merckx/Anquetil/Hinault/Indurain.",
+      resultater:[
+        {plass:1,  navn:"Mathieu van der Poel",       lag:"APT", tid:"1:58:49", delta:""},
+        {plass:2,  navn:"Jasper Philipsen",           lag:"APT", tid:"",        delta:"s.t."},
+        {plass:3,  navn:"Mads Pedersen",              lag:"LTK", tid:"",        delta:"s.t."},
+        {plass:4,  navn:"Max Kanter",                 lag:"AST", tid:"",        delta:"s.t."},
+        {plass:5,  navn:"Olav Kooij",                 lag:"DEC", tid:"",        delta:"s.t."},
+        {plass:6,  navn:"Matej Mohorič",              lag:"TBV", tid:"",        delta:"s.t."},
+        {plass:7,  navn:"Rick Pluimers",              lag:"PIC", tid:"",        delta:"s.t."},
+        {plass:8,  navn:"Anthony Turgis",             lag:"TOT", tid:"",        delta:"s.t."},
+        {plass:9,  navn:"Milan Fretin",               lag:"COF", tid:"",        delta:"s.t."},
+        {plass:10, navn:"Clément Russo",              lag:"GFC", tid:"",        delta:"s.t."}
+      ]
     }
   ],
 
@@ -1727,7 +1920,14 @@ const TDF_DATA = {
     { tittel:"Hvit trøye — beste unge rytter 2021–2025", tekst:"2025: Florian Lipowitz · 2024: Remco Evenepoel · 2023: Tadej Pogačar · 2022: Tadej Pogačar · 2021: Tadej Pogačar. Pogačar vant hvit trøye tre år på rad." },
     { tittel:"Wout van Aert slår Pogačar", tekst:"Eneste gang Pogačar har tapt et ritt i 2026: Wout Van Aert spurtslo sloveneren i velodrom-finalen på Paris-Roubaix. Ellers ubeseiret siden... 2023 Tour de France." },
     { tittel:"Tidsbonuser på etappemål", tekst:"10-6-4 sekunders tidsbonus til henholdsvis 1., 2. og 3. plass på samtlige etappenål. Kan spille inn i tett sammenlagtkamp." },
-    { tittel:"Vingegaard slår Pogačar på TT 2023", tekst:"Klassisk moment: Etter 15 etapper i 2023 skilte det KUN 10 sekunder mellom Pogačar og Vingegaard. Da kom tempo til Saint-Gervais Mont-Blanc — Vingegaard slo Pogačar og åpnet et gap på nesten 2 minutter. TT kan avgjøre Tour." }
+    { tittel:"Vingegaard slår Pogačar på TT 2023", tekst:"Klassisk moment: Etter 15 etapper i 2023 skilte det KUN 10 sekunder mellom Pogačar og Vingegaard. Da kom tempo til Saint-Gervais Mont-Blanc — Vingegaard slo Pogačar og åpnet et gap på nesten 2 minutter. TT kan avgjøre Tour." },
+    { tittel:"Wærenskjold — ny TdF-rekord", tekst:"Søren Wærenskjold (Uno-X) vant etappe 11 (Vichy → Nevers) med gjennomsnittsfart 50,91 km/t — raskeste veietappe i Tour de Frances 123-årige historie! Knuste Cipollinis rekord fra 1999. Første TdF-etappeseier for Wærenskjold og for Uno-X Mobility i sin første WorldTour-sesong." },
+    { tittel:"Pogačar slår Pantani opp Alpe d'Huez", tekst:"På etappe 19 startet Pogačar siste Alpe d'Huez-klatring 3:30 bak bruddet. Han passerte samtlige bruddryttere og klatret opp på 35'27\" — knuste Marco Pantanis 1995-rekord på 36'50\". Estimert effekt: ~455 W / 6,9 W/kg. Kun Geraint Thomas (2018) har tidligere vunnet en TdF-etappe der oppe i gul trøye." },
+    { tittel:"Pogačar: 5 Tour-titler — rekordtangest", tekst:"Tadej Pogačar vinner Tour de France 2026 — sin 5. tittel på 6 forsøk (2020/21/24/25/26). Tangerer rekorden til Merckx, Anquetil, Hinault og Indurain. Pogačar er også første til å vinne 5 titler siden Induráin i 1995. Han vant totalt 5 etapper i 2026-Tour." },
+    { tittel:"Vingegaard og Lipowitz — nøkkelben-dobbel", tekst:"Tour 2026 mistet to topp-GC-ryttere med identisk skade: Jonas Vingegaard (VLB) krasjet i nedkjøringen mot Bonneville i E15 og brøt med brudd i nøkkelben. Florian Lipowitz (RBH) krasjet under TT i E16 og ble båret bort — nøkkelben. Begge lå i GC-topp fem da de gikk ut." },
+    { tittel:"Evenepoel: E15 + E16 — back-to-back", tekst:"Remco Evenepoel (RBH) vant to etapper på rad: E15 (Plateau de Solaison — slo Pogačar i spurten 250 m fra mål) og E16-TT i Thonon-les-Bains (48,45 km/t — dominant). Det var belgisk nasjonaldag og Belgias 500. TdF-etappeseier. Evenepoel endte 2. sammenlagt, +6:26 etter Pogačar." },
+    { tittel:"Carapaz: 2 etapper + prikktrøye", tekst:"Richard Carapaz (EF) var rittets most combative-rytter: vant E18 (Orcières-Merlette) og E20 (dronningetappen Alpe d'Huez), og tok prikktrøyen fra Pogačar etter E19. Endte 8. sammenlagt. Første ecuadorianer til å vinne Tour-etapper i to ulike år." },
+    { tittel:"Sepp Kuss — tragedie på Alpe d'Huez", tekst:"Sepp Kuss (VLB) var alene i front < 7 km fra mål på dronningetappen og var på vei mot en storseier. Krasjet inn i en vegg ved tunellutgang, remonterte, krasjet igjen — bare reddet fra stupet av sikkerhetsnett. Evenepoel passerte den stakkars amerikaneren på streken og tok 2. plassen." }
   ],
 
   /* ---- TRØYENE ---- */
