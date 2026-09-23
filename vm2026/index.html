@@ -297,6 +297,13 @@ const state = {
 // Brudd-tilstand (deles mellom herrer/kvinner)
 let bruddGrupper = [];   // [{id, label, ryttere: Set()}]
 let bruddNeste   = 1;
+const bruddÅpne  = new Set(); // navn på åpne rytterkort i brudd-fanen
+
+function toggleBruddKort(navn) {
+  if (bruddÅpne.has(navn)) bruddÅpne.delete(navn);
+  else bruddÅpne.add(navn);
+  renderBrudd(document.getElementById('innholdPane'));
+}
 
 function bruddTotalt() {
   return bruddGrupper.reduce((s, g) => s + g.ryttere.size, 0);
@@ -704,19 +711,36 @@ function renderBrudd(pane) {
   const grupper = bruddGrupper.map(g => {
     const ryttere = [...g.ryttere].map(navn => {
       const r = alleRyttere.find(x => x.navn === navn);
+      const navnSafe = navn.replace(/'/g, "\\'");
       if (!r) return `<div class="brudd-rytter-rad">
         <span class="brudd-rytter-info"><span class="brudd-rytter-navn">${navn}</span></span>
-        <button class="brudd-fjern-btn" onclick="fjernFraBrudd('${navn}');renderBrudd(document.getElementById('innholdPane'))">✕</button>
+        <button class="brudd-fjern-btn" onclick="fjernFraBrudd('${navnSafe}');renderBrudd(document.getElementById('innholdPane'))">✕</button>
       </div>`;
 
       const badgeKlasse = r.spesialitet || '';
-      return `<div class="brudd-rytter-rad">
-        <span class="brudd-rytter-flagg">${r.flagg}</span>
-        <div class="brudd-rytter-info">
-          <div class="brudd-rytter-navn">${r.navn}</div>
-          <div class="brudd-rytter-meta">${r.land} · <span class="badge ${badgeKlasse}" style="font-size:11px;padding:1px 6px">${kapitaliser(r.spesialitet)}</span></div>
+      const erNorsk = r.land === 'Norge';
+      const åpen = bruddÅpne.has(r.navn);
+
+      const detaljer = åpen ? `<div class="rkort-detaljer" style="margin:0 14px 12px">
+        <h4>Form 2026</h4>
+        <p class="form-tekst">${r.form}</p>
+        <h4>Palmarès</h4>
+        <ul>${r.palmarès.map(p => `<li>${p}</li>`).join('')}</ul>
+        <h4>Kommentarnote</h4>
+        <div class="notat-tekst">${r.notat}</div>
+      </div>` : '';
+
+      return `<div style="border-bottom:1px dashed #1e2530">
+        <div class="brudd-rytter-rad" style="cursor:pointer" onclick="toggleBruddKort('${navnSafe}')">
+          <span class="brudd-rytter-flagg">${r.flagg}</span>
+          <div class="brudd-rytter-info">
+            <div class="brudd-rytter-navn">${r.navn}${erNorsk ? ' <span style="color:var(--accent);font-size:11px">🇳🇴</span>' : ''} <span style="font-size:12px;font-weight:400;color:var(--dim)">${r.alder} år</span></div>
+            <div class="brudd-rytter-meta">${r.land} · <span class="badge ${badgeKlasse}" style="font-size:11px;padding:1px 6px">${kapitaliser(r.spesialitet)}</span></div>
+          </div>
+          <span style="color:var(--dim);font-size:12px;margin-right:8px">${åpen ? '▲' : '▼'}</span>
+          <button class="brudd-fjern-btn" onclick="event.stopPropagation();fjernFraBrudd('${navnSafe}');renderBrudd(document.getElementById('innholdPane'))">✕</button>
         </div>
-        <button class="brudd-fjern-btn" onclick="fjernFraBrudd('${navn.replace(/'/g,"\\'")}');renderBrudd(document.getElementById('innholdPane'))">✕</button>
+        ${detaljer}
       </div>`;
     }).join('') || `<div style="color:var(--dim);padding:14px;font-size:13px;font-style:italic">Ingen ryttere ennå — gå til Rytterinfo og klikk + Brudd</div>`;
 
