@@ -133,6 +133,16 @@
     line-height:1.5;color:var(--txt);margin-top:6px;
   }
   .rkort-detaljer .form-tekst{color:var(--txt);margin-bottom:6px}
+  .mine-notater-label{margin-top:10px;border-top:1px solid var(--line);padding-top:8px}
+  .mine-notater-textarea{
+    width:100%;box-sizing:border-box;margin-top:4px;
+    background:var(--panel);border:1px solid var(--line);border-radius:6px;
+    color:var(--txt);font-size:12.5px;line-height:1.5;padding:7px 9px;
+    resize:vertical;min-height:58px;font-family:inherit;
+    transition:border-color .15s;
+  }
+  .mine-notater-textarea:focus{outline:none;border-color:var(--accent)}
+  .mine-notater-textarea::placeholder{color:var(--dim);opacity:.7}
 
   /* ---- VM PROGRAM ---- */
   .program-wrapper{flex:1;overflow-y:auto;padding:14px}
@@ -384,6 +394,10 @@ function byttHistorikkTab(tab) {
   renderInnhold();
 }
 
+function lagreNotat(navn, verdi) {
+  try { localStorage.setItem('minenotater_' + navn, verdi); } catch(e) {}
+}
+
 // ====================================================
 // HOVED-RENDER
 // ====================================================
@@ -518,6 +532,9 @@ function renderRytterliste() {
 
     let detaljer = '';
     if (åpen) {
+      const nøkkel = 'minenotater_' + r.navn;
+      const lagretNotat = (() => { try { return localStorage.getItem(nøkkel) || ''; } catch(e) { return ''; } })();
+      const taId = 'mnt_' + r.navn.replace(/[^a-z0-9]/gi,'_');
       detaljer = `<div class="rkort-detaljer">
         <h4>Form 2026</h4>
         <p class="form-tekst">${r.form}</p>
@@ -525,6 +542,14 @@ function renderRytterliste() {
         <ul>${r.palmarès.map(p => `<li>${p}</li>`).join('')}</ul>
         <h4>Kommentarnote</h4>
         <div class="notat-tekst">${r.notat}</div>
+        <div class="mine-notater-label">
+          <h4>Mine notater</h4>
+          <textarea id="${taId}" class="mine-notater-textarea"
+            placeholder="Skriv egne notater her…"
+            onclick="event.stopPropagation()"
+            oninput="lagreNotat('${r.navn.replace(/'/g,"\\'")}',this.value)"
+          >${lagretNotat}</textarea>
+        </div>
       </div>`;
     }
 
@@ -721,6 +746,9 @@ function renderBrudd(pane) {
       const erNorsk = r.land === 'Norge';
       const åpen = bruddÅpne.has(r.navn);
 
+      const nøkkelBrudd = 'minenotater_' + r.navn;
+      const lagretNotatBrudd = (() => { try { return localStorage.getItem(nøkkelBrudd) || ''; } catch(e) { return ''; } })();
+      const taIdBrudd = 'mnt_brudd_' + r.navn.replace(/[^a-z0-9]/gi,'_');
       const detaljer = åpen ? `<div class="rkort-detaljer" style="margin:0 14px 12px">
         <h4>Form 2026</h4>
         <p class="form-tekst">${r.form}</p>
@@ -728,6 +756,14 @@ function renderBrudd(pane) {
         <ul>${r.palmarès.map(p => `<li>${p}</li>`).join('')}</ul>
         <h4>Kommentarnote</h4>
         <div class="notat-tekst">${r.notat}</div>
+        <div class="mine-notater-label">
+          <h4>Mine notater</h4>
+          <textarea id="${taIdBrudd}" class="mine-notater-textarea"
+            placeholder="Skriv egne notater her…"
+            onclick="event.stopPropagation()"
+            oninput="lagreNotat('${r.navn.replace(/'/g,"\\'")}',this.value)"
+          >${lagretNotatBrudd}</textarea>
+        </div>
       </div>` : '';
 
       return `<div style="border-bottom:1px dashed #1e2530">
