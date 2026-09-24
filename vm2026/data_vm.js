@@ -2,7 +2,7 @@
    VM-KOMMENTATORBASEN 2026 — DATAFIL
    -------------------------------------------------------------
    UCI Road World Championships — Montréal, Canada
-   Sist oppdatert: 2026-09-23
+   Sist oppdatert: 2026-09-24
    Kilder: UCI, ProCyclingStats, CyclingNews, VeloNews
    ============================================================= */
 
@@ -217,6 +217,295 @@ const VM_DATA = {
         form:"Erfaren lagspiller, sterk arbeidshest for Norge.",
         notat:"Skaarseth er der for å jobbe. Han vil bruke seg opp i de første 150 km for å beskytte THJ og Foss. Klassisk lagreisende rolle — viktig selv om han ikke sykler til mål."
       },
+
+      /* ---- Algerie ---- */
+      { navn:"Oussama Mimouni", land:"Algerie", flagg:"🇩🇿", lag:"Algerie", alder:26, fødtÅr:2000, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Australia ---- */
+      { navn:"Jack Haig", land:"Australia", flagg:"🇦🇺", lag:"Bahrain Victorious", alder:33, fødtÅr:1993, spesialitet:"klatrer", palmarès:["Vuelta a España topp-10","Tour de Suisse topp-5"], form:"", notat:"" },
+      { navn:"Jai Hindley", land:"Australia", flagg:"🇦🇺", lag:"Red Bull Bora-Hansgrohe", alder:30, fødtÅr:1996, spesialitet:"klatrer", palmarès:["Giro d'Italia 2022 vinner","Vuelta a España 2. plass 2020"], form:"", notat:"" },
+      { navn:"Michael Matthews", land:"Australia", flagg:"🇦🇺", lag:"Jayco-AlUla", alder:36, fødtÅr:1990, spesialitet:"puncheur", palmarès:["VM sølv 2020","TdF etappeseier 9x","Gent-Wevelgem"], form:"", notat:"" },
+      { navn:"Ben O'Connor", land:"Australia", flagg:"🇦🇺", lag:"Decathlon AG2R", alder:31, fødtÅr:1995, spesialitet:"klatrer", palmarès:["4. TdF 2021","Critérium du Dauphiné etapper"], form:"", notat:"" },
+      { navn:"Michael Storer", land:"Australia", flagg:"🇦🇺", lag:"Groupama-FDJ", alder:29, fødtÅr:1997, spesialitet:"klatrer", palmarès:["Vuelta a España 2 etapper"], form:"", notat:"" },
+      { navn:"Luke Tuckwell", land:"Australia", flagg:"🇦🇺", lag:"Australia", alder:26, fødtÅr:2000, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Østerrike ---- */
+      { navn:"Felix Gall", land:"Østerrike", flagg:"🇦🇹", lag:"Decathlon AG2R", alder:28, fødtÅr:1998, spesialitet:"klatrer", palmarès:["TdF etappeseier 2023","Critérium du Dauphiné 2023"], form:"", notat:"" },
+      { navn:"Felix Grossschartner", land:"Østerrike", flagg:"🇦🇹", lag:"UAE Team Emirates", alder:33, fødtÅr:1993, spesialitet:"klatrer", palmarès:["UAE Tour etapper","Volta a Catalunya etapp"], form:"", notat:"" },
+      { navn:"Patrick Konrad", land:"Østerrike", flagg:"🇦🇹", lag:"Lidl-Trek", alder:35, fødtÅr:1991, spesialitet:"puncheur", palmarès:["TdF etappeseier 2021"], form:"", notat:"" },
+
+      /* ---- Belgia (utover Evenepoel, van Aert og Nys) ---- */
+      { navn:"Tiesj Benoot", land:"Belgia", flagg:"🇧🇪", lag:"Visma-Lease a Bike", alder:32, fødtÅr:1994, spesialitet:"allrounder", palmarès:["Strade Bianche","Dwars door Vlaanderen"], form:"", notat:"Sterk hjelpemann for van Aert og Evenepoel." },
+      { navn:"Quinten Hermans", land:"Belgia", flagg:"🇧🇪", lag:"Alpecin-Deceuninck", alder:31, fødtÅr:1995, spesialitet:"puncheur", palmarès:["GP Wallonie","Binche-Chimay-Binche"], form:"", notat:"" },
+      { navn:"Alec Segaert", land:"Belgia", flagg:"🇧🇪", lag:"Lotto Dstny", alder:24, fødtÅr:2002, spesialitet:"tempo", palmarès:["U23 VM TT 2022","Belgisk TT-mester"], form:"", notat:"" },
+      { navn:"Maxim Van Gils", land:"Belgia", flagg:"🇧🇪", lag:"Red Bull Bora-Hansgrohe", alder:26, fødtÅr:2000, spesialitet:"puncheur", palmarès:["Volta a Catalunya etapper","Critérium du Dauphiné etapp"], form:"", notat:"" },
+      { navn:"Gianni Vermeersch", land:"Belgia", flagg:"🇧🇪", lag:"Alpecin-Deceuninck", alder:34, fødtÅr:1992, spesialitet:"allrounder", palmarès:["Paris-Roubaix topp-5"], form:"", notat:"" },
+
+      /* ---- Bermuda ---- */
+      { navn:"Kaden Hopkins", land:"Bermuda", flagg:"🇧🇲", lag:"Bermuda", alder:25, fødtÅr:2001, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Nicholas Narraway", land:"Bermuda", flagg:"🇧🇲", lag:"Bermuda", alder:28, fødtÅr:1998, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Belize ---- */
+      { navn:"Derrick Chavarria", land:"Belize", flagg:"🇧🇿", lag:"Belize", alder:28, fødtÅr:1998, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Brasil ---- */
+      { navn:"Henrique Avancini", land:"Brasil", flagg:"🇧🇷", lag:"Brasil", alder:36, fødtÅr:1990, spesialitet:"allrounder", palmarès:["World Cup XCO-etapper"], form:"Primært MTB-rytter", notat:"" },
+
+      /* ---- Canada ---- */
+      { navn:"Derek Gee-West", land:"Canada", flagg:"🇨🇦", lag:"Israel-Premier Tech", alder:27, fødtÅr:1999, spesialitet:"klatrer", palmarès:["TdF etappeseier 2023","Giro etappe"], form:"", notat:"" },
+      { navn:"Hugo Houle", land:"Canada", flagg:"🇨🇦", lag:"Israel-Premier Tech", alder:36, fødtÅr:1990, spesialitet:"allrounder", palmarès:["TdF etappeseier 2022"], form:"", notat:"" },
+      { navn:"Michael Leonard", land:"Canada", flagg:"🇨🇦", lag:"Israel-Premier Tech", alder:28, fødtÅr:1998, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Michael Woods", land:"Canada", flagg:"🇨🇦", lag:"Israel-Premier Tech", alder:40, fødtÅr:1986, spesialitet:"klatrer", palmarès:["Il Lombardia topp-3","Flèche Wallonne","Vuelta etapper"], form:"", notat:"" },
+      { navn:"Nickolas Zukowsky", land:"Canada", flagg:"🇨🇦", lag:"Q36.5 Pro Cycling", alder:26, fødtÅr:2000, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+      { navn:"Pier-Andre Cote", land:"Canada", flagg:"🇨🇦", lag:"EF Education-EasyPost", alder:30, fødtÅr:1996, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Chile ---- */
+      { navn:"Vicente Rojas", land:"Chile", flagg:"🇨🇱", lag:"Chile", alder:28, fødtÅr:1998, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Kina ---- */
+      { navn:"You Li", land:"Kina", flagg:"🇨🇳", lag:"Kina", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Colombia ---- */
+      { navn:"Nairo Quintana", land:"Colombia", flagg:"🇨🇴", lag:"Movistar Team", alder:36, fødtÅr:1990, spesialitet:"klatrer", palmarès:["Giro d'Italia 2014","Vuelta a España 2016","TdF 2. plass 2x"], form:"", notat:"" },
+      { navn:"Santiago Buitrago", land:"Colombia", flagg:"🇨🇴", lag:"Bahrain Victorious", alder:27, fødtÅr:1999, spesialitet:"klatrer", palmarès:["Vuelta etapper","Giro etapper"], form:"", notat:"" },
+      { navn:"Sergio Higuita", land:"Colombia", flagg:"🇨🇴", lag:"Red Bull Bora-Hansgrohe", alder:29, fødtÅr:1997, spesialitet:"klatrer", palmarès:["Vuelta al País Vasco vinner","TdF etappe"], form:"", notat:"" },
+      { navn:"Harold Tejada", land:"Colombia", flagg:"🇨🇴", lag:"Astana Qazaqstan", alder:27, fødtÅr:1999, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+      { navn:"Brandon Smith Rivera", land:"Colombia", flagg:"🇨🇴", lag:"Colombia", alder:26, fødtÅr:2000, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+      { navn:"Wilmar Paredes", land:"Colombia", flagg:"🇨🇴", lag:"Intermarché-Wanty", alder:31, fødtÅr:1995, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+
+      /* ---- Costa Rica ---- */
+      { navn:"Luis Daniel Oses", land:"Costa Rica", flagg:"🇨🇷", lag:"Costa Rica", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Kypros ---- */
+      { navn:"Andreas Miltiadis", land:"Kypros", flagg:"🇨🇾", lag:"Kypros", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Tsjekkia ---- */
+      { navn:"Mathias Vacek", land:"Tsjekkia", flagg:"🇨🇿", lag:"Lidl-Trek", alder:24, fødtÅr:2002, spesialitet:"allrounder", palmarès:["E3 Saxo Bank Classic topp-10"], form:"", notat:"" },
+      { navn:"Jakub Otruba", land:"Tsjekkia", flagg:"🇨🇿", lag:"Tsjekkia", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Pavel Novak", land:"Tsjekkia", flagg:"🇨🇿", lag:"Tsjekkia", alder:28, fødtÅr:1998, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Danmark (utover Pedersen og Nys) ---- */
+      { navn:"Mikkel Frølich Honoré", land:"Danmark", flagg:"🇩🇰", lag:"EF Education-EasyPost", alder:29, fødtÅr:1997, spesialitet:"allrounder", palmarès:["Volta a Catalunya etapp"], form:"", notat:"" },
+      { navn:"Kasper Asgreen", land:"Danmark", flagg:"🇩🇰", lag:"Soudal Quick-Step", alder:31, fødtÅr:1995, spesialitet:"allrounder", palmarès:["Ronde van Vlaanderen 2021","E3 Saxo Bank Classic 2021"], form:"", notat:"" },
+      { navn:"Mikkel Bjerg", land:"Danmark", flagg:"🇩🇰", lag:"UAE Team Emirates", alder:28, fødtÅr:1998, spesialitet:"tempo", palmarès:["VM TT U23 3x"], form:"", notat:"" },
+      { navn:"Andreas Kron", land:"Danmark", flagg:"🇩🇰", lag:"Lotto Dstny", alder:28, fødtÅr:1998, spesialitet:"puncheur", palmarès:["Giro etappe 2021"], form:"", notat:"" },
+      { navn:"Michael Valgren", land:"Danmark", flagg:"🇩🇰", lag:"EF Education-EasyPost", alder:34, fødtÅr:1992, spesialitet:"puncheur", palmarès:["Amstel Gold Race 2018"], form:"", notat:"" },
+      { navn:"Søren Kragh Andersen", land:"Danmark", flagg:"🇩🇰", lag:"Decathlon AG2R", alder:32, fødtÅr:1994, spesialitet:"allrounder", palmarès:["TdF etappeseier 2x"], form:"", notat:"" },
+      { navn:"Anthon Charmig", land:"Danmark", flagg:"🇩🇰", lag:"Uno-X Mobility", alder:26, fødtÅr:2000, spesialitet:"puncheur", palmarès:[], form:"", notat:"" },
+
+      /* ---- Dominica ---- */
+      { navn:"Kohath Baron", land:"Dominica", flagg:"🇩🇲", lag:"Dominica", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Ecuador (utover Narváez) ---- */
+      { navn:"Richard Carapaz", land:"Ecuador", flagg:"🇪🇨", lag:"EF Education-EasyPost", alder:33, fødtÅr:1993, spesialitet:"klatrer", palmarès:["Giro d'Italia 2019","OL gull 2020","Vuelta a España topp-3"], form:"", notat:"" },
+      { navn:"Jefferson Cepeda", land:"Ecuador", flagg:"🇪🇨", lag:"Intermarché-Wanty", alder:28, fødtÅr:1998, spesialitet:"klatrer", palmarès:["Giro etappe"], form:"", notat:"" },
+
+      /* ---- Eritrea ---- */
+      { navn:"Biniam Girmay", land:"Eritrea", flagg:"🇪🇷", lag:"Intermarché-Wanty", alder:25, fødtÅr:2001, spesialitet:"puncheur", palmarès:["Gent-Wevelgem 2022","VM sølv 2022","TdF etappeseier 3x","Vuelta etapper"], form:"", notat:"" },
+      { navn:"Amanuel Ghebreigzabhier", land:"Eritrea", flagg:"🇪🇷", lag:"Lidl-Trek", alder:30, fødtÅr:1996, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+      { navn:"Merhawi Kudus", land:"Eritrea", flagg:"🇪🇷", lag:"EF Education-EasyPost", alder:31, fødtÅr:1995, spesialitet:"klatrer", palmarès:["Vuelta etapper","Tour of Britain etapper"], form:"", notat:"" },
+      { navn:"Henok Mulubrhan", land:"Eritrea", flagg:"🇪🇷", lag:"Intermarché-Wanty", alder:23, fødtÅr:2003, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+      { navn:"Natnael Tesfatsion", land:"Eritrea", flagg:"🇪🇷", lag:"Lidl-Trek", alder:26, fødtÅr:2000, spesialitet:"klatrer", palmarès:["Giro etappe 2022"], form:"", notat:"" },
+
+      /* ---- Estland ---- */
+      { navn:"Madis Mihkels", land:"Estland", flagg:"🇪🇪", lag:"Intermarché-Wanty", alder:24, fødtÅr:2002, spesialitet:"puncheur", palmarès:[], form:"", notat:"" },
+
+      /* ---- Frankrike (utover Seixas) ---- */
+      { navn:"Pavel Sivakov", land:"Frankrike", flagg:"🇫🇷", lag:"UAE Team Emirates", alder:29, fødtÅr:1997, spesialitet:"klatrer", palmarès:["Critérium du Dauphiné topp-5"], form:"", notat:"" },
+      { navn:"Bruno Armirail", land:"Frankrike", flagg:"🇫🇷", lag:"Groupama-FDJ", alder:32, fødtÅr:1994, spesialitet:"tempo", palmarès:["Giro TT-etappe"], form:"", notat:"" },
+      { navn:"Valentin Paret-Peintre", land:"Frankrike", flagg:"🇫🇷", lag:"Decathlon AG2R", alder:28, fødtÅr:1998, spesialitet:"klatrer", palmarès:["Giro etapper"], form:"", notat:"" },
+      { navn:"Jordan Labrosse", land:"Frankrike", flagg:"🇫🇷", lag:"Decathlon AG2R", alder:24, fødtÅr:2002, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+      { navn:"Nicolas Prodhomme", land:"Frankrike", flagg:"🇫🇷", lag:"Decathlon AG2R", alder:29, fødtÅr:1997, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+      { navn:"Alex Baudin", land:"Frankrike", flagg:"🇫🇷", lag:"Decathlon AG2R", alder:25, fødtÅr:2001, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+      { navn:"Jordan Jegat", land:"Frankrike", flagg:"🇫🇷", lag:"Arkéa-B&B Hotels", alder:24, fødtÅr:2002, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Tyskland ---- */
+      { navn:"Florian Lipowitz", land:"Tyskland", flagg:"🇩🇪", lag:"Red Bull Bora-Hansgrohe", alder:25, fødtÅr:2001, spesialitet:"klatrer", palmarès:["2. Vuelta a España 2024","Tour de Suisse etapper"], form:"", notat:"" },
+      { navn:"Maximilian Schachmann", land:"Tyskland", flagg:"🇩🇪", lag:"Soudal Quick-Step", alder:32, fødtÅr:1994, spesialitet:"puncheur", palmarès:["Paris-Nice 2x","Strade Bianche topp-5"], form:"", notat:"" },
+      { navn:"Marco Brenner", land:"Tyskland", flagg:"🇩🇪", lag:"Lidl-Trek", alder:23, fødtÅr:2003, spesialitet:"klatrer", palmarès:["Vuelta etappe 2023"], form:"", notat:"" },
+      { navn:"Georg Zimmermann", land:"Tyskland", flagg:"🇩🇪", lag:"Intermarché-Wanty", alder:27, fødtÅr:1999, spesialitet:"puncheur", palmarès:["TdF etappe 2022"], form:"", notat:"" },
+      { navn:"Felix Engelhardt", land:"Tyskland", flagg:"🇩🇪", lag:"Jayco-AlUla", alder:24, fødtÅr:2002, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+      { navn:"Nico Denz", land:"Tyskland", flagg:"🇩🇪", lag:"Red Bull Bora-Hansgrohe", alder:32, fødtÅr:1994, spesialitet:"allrounder", palmarès:["Giro etappe 2023"], form:"", notat:"" },
+
+      /* ---- Storbritannia (utover Pidcock) ---- */
+      { navn:"Adam Yates", land:"Storbritannia", flagg:"🇬🇧", lag:"UAE Team Emirates", alder:34, fødtÅr:1992, spesialitet:"klatrer", palmarès:["UAE Tour vinner","Tour de Suisse vinner","TdF topp-5"], form:"", notat:"" },
+      { navn:"Mark Donovan", land:"Storbritannia", flagg:"🇬🇧", lag:"Red Bull Bora-Hansgrohe", alder:26, fødtÅr:2000, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+      { navn:"Oscar Onley", land:"Storbritannia", flagg:"🇬🇧", lag:"Picnic-PostNL", alder:23, fødtÅr:2003, spesialitet:"klatrer", palmarès:["Paris-Nice topp-5 2024"], form:"", notat:"" },
+      { navn:"Finlay Pickering", land:"Storbritannia", flagg:"🇬🇧", lag:"Storbritannia", alder:25, fødtÅr:2001, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"James Shaw", land:"Storbritannia", flagg:"🇬🇧", lag:"Storbritannia", alder:28, fødtÅr:1998, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Callum Thornley", land:"Storbritannia", flagg:"🇬🇧", lag:"Storbritannia", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Fred Wright", land:"Storbritannia", flagg:"🇬🇧", lag:"Bahrain Victorious", alder:26, fødtÅr:2000, spesialitet:"puncheur", palmarès:["Clasica San Sebastián topp-5"], form:"", notat:"" },
+
+      /* ---- Guinea-Bissau ---- */
+      { navn:"Gil Landim Gomes", land:"Guinea-Bissau", flagg:"🇬🇼", lag:"Guinea-Bissau", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Hellas ---- */
+      { navn:"Nikiforos Arvanitou", land:"Hellas", flagg:"🇬🇷", lag:"Hellas", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Guatemala ---- */
+      { navn:"Manuel Rodas", land:"Guatemala", flagg:"🇬🇹", lag:"Guatemala", alder:38, fødtÅr:1988, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Juan Vasquez", land:"Guatemala", flagg:"🇬🇹", lag:"Guatemala", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Honduras ---- */
+      { navn:"Fredd Matute", land:"Honduras", flagg:"🇭🇳", lag:"Honduras", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Ungarn ---- */
+      { navn:"Attila Valter", land:"Ungarn", flagg:"🇭🇺", lag:"Visma-Lease a Bike", alder:28, fødtÅr:1998, spesialitet:"klatrer", palmarès:["Giro d'Italia hvit trøye","Giro etappe"], form:"", notat:"" },
+
+      /* ---- Irland (utover Healy) ---- */
+      { navn:"Darren Rafferty", land:"Irland", flagg:"🇮🇪", lag:"EF Education-EasyPost", alder:29, fødtÅr:1997, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Jamie Meehan", land:"Irland", flagg:"🇮🇪", lag:"Irland", alder:25, fødtÅr:2001, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Ryan Mullen", land:"Irland", flagg:"🇮🇪", lag:"Lidl-Trek", alder:31, fødtÅr:1995, spesialitet:"tempo", palmarès:[], form:"", notat:"" },
+
+      /* ---- Israel ---- */
+      { navn:"Nadav Raisberg", land:"Israel", flagg:"🇮🇱", lag:"Israel-Premier Tech", alder:25, fødtÅr:2001, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Italia (utover Ciccone, Ganna, Pellizzari) ---- */
+      { navn:"Alberto Bettiol", land:"Italia", flagg:"🇮🇹", lag:"Groupama-FDJ", alder:33, fødtÅr:1993, spesialitet:"puncheur", palmarès:["Ronde van Vlaanderen 2019","Strade Bianche topp-5"], form:"", notat:"" },
+      { navn:"Mattia Cattaneo", land:"Italia", flagg:"🇮🇹", lag:"Soudal Quick-Step", alder:36, fødtÅr:1990, spesialitet:"allrounder", palmarès:["TdF topp-10"], form:"", notat:"" },
+      { navn:"Lorenzo Finn", land:"Italia", flagg:"🇮🇹", lag:"Italia", alder:23, fødtÅr:2003, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+      { navn:"Davide Piganzoli", land:"Italia", flagg:"🇮🇹", lag:"Astana Qazaqstan", alder:24, fødtÅr:2002, spesialitet:"klatrer", palmarès:["Giro etapper 2024"], form:"", notat:"" },
+      { navn:"Christian Scaroni", land:"Italia", flagg:"🇮🇹", lag:"Astana Qazaqstan", alder:30, fødtÅr:1996, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+      { navn:"Matteo Trentin", land:"Italia", flagg:"🇮🇹", lag:"Tudor Pro Cycling", alder:37, fødtÅr:1989, spesialitet:"puncheur", palmarès:["VM sølv 2019","TdF etappeseier 3x","Gent-Wevelgem"], form:"", notat:"" },
+
+      /* ---- Japan ---- */
+      { navn:"Jo Hashikawa", land:"Japan", flagg:"🇯🇵", lag:"Japan", alder:25, fødtÅr:2001, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Kasakhstan ---- */
+      { navn:"Anton Kuzmin", land:"Kasakhstan", flagg:"🇰🇿", lag:"Kasakhstan", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Daniil Marukhin", land:"Kasakhstan", flagg:"🇰🇿", lag:"Astana Qazaqstan", alder:26, fødtÅr:2000, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+
+      /* ---- Latvia ---- */
+      { navn:"Toms Skujins", land:"Latvia", flagg:"🇱🇻", lag:"Lidl-Trek", alder:35, fødtÅr:1991, spesialitet:"puncheur", palmarès:["Volta a Catalunya etapp","Tour of California"], form:"", notat:"" },
+      { navn:"Emils Liepins", land:"Latvia", flagg:"🇱🇻", lag:"Lidl-Trek", alder:31, fødtÅr:1995, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Kristians Belohvosciks", land:"Latvia", flagg:"🇱🇻", lag:"Soudal Quick-Step", alder:25, fødtÅr:2001, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Martins Pluto", land:"Latvia", flagg:"🇱🇻", lag:"Latvia", alder:24, fødtÅr:2002, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Luxembourg ---- */
+      { navn:"Arno Wallenborn", land:"Luxembourg", flagg:"🇱🇺", lag:"Decathlon AG2R", alder:24, fødtÅr:2002, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+      { navn:"Arthur Kluckers", land:"Luxembourg", flagg:"🇱🇺", lag:"Jayco-AlUla", alder:23, fødtÅr:2003, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Mauritius ---- */
+      { navn:"Alexandre Mayer", land:"Mauritius", flagg:"🇲🇺", lag:"Groupama-FDJ", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Mexico (utover del Toro) ---- */
+      { navn:"Eder Frayre", land:"Mexico", flagg:"🇲🇽", lag:"Mexico", alder:28, fødtÅr:1998, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Ulises Castillo", land:"Mexico", flagg:"🇲🇽", lag:"Arkéa-B&B Hotels", alder:28, fødtÅr:1998, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Edgar Cadena", land:"Mexico", flagg:"🇲🇽", lag:"Mexico", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Jose Escarcega", land:"Mexico", flagg:"🇲🇽", lag:"Mexico", alder:26, fødtÅr:2000, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Carlos Garcia", land:"Mexico", flagg:"🇲🇽", lag:"Mexico", alder:25, fødtÅr:2001, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Monaco ---- */
+      { navn:"Victor Langellotti", land:"Monaco", flagg:"🇲🇨", lag:"Cofidis", alder:27, fødtÅr:1999, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+
+      /* ---- Mongolia ---- */
+      { navn:"Maral-Erdene Batmunkh", land:"Mongolia", flagg:"🇲🇳", lag:"Mongolia", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Nederland (utover van der Poel) ---- */
+      { navn:"Bauke Mollema", land:"Nederland", flagg:"🇳🇱", lag:"Lidl-Trek", alder:40, fødtÅr:1986, spesialitet:"klatrer", palmarès:["Il Lombardia 2016","Clasica San Sebastián","TdF etappe"], form:"", notat:"" },
+      { navn:"Daan Hoole", land:"Nederland", flagg:"🇳🇱", lag:"Lidl-Trek", alder:26, fødtÅr:2000, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Bart Lemmen", land:"Nederland", flagg:"🇳🇱", lag:"Visma-Lease a Bike", alder:26, fødtÅr:2000, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+      { navn:"Tim van Dijke", land:"Nederland", flagg:"🇳🇱", lag:"Visma-Lease a Bike", alder:24, fødtÅr:2002, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+      { navn:"Pascal Eenkhoorn", land:"Nederland", flagg:"🇳🇱", lag:"Visma-Lease a Bike", alder:28, fødtÅr:1998, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Menno Huising", land:"Nederland", flagg:"🇳🇱", lag:"Lidl-Trek", alder:24, fødtÅr:2002, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Mathijs Paasschens", land:"Nederland", flagg:"🇳🇱", lag:"Lidl-Trek", alder:28, fødtÅr:1998, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- New Zealand ---- */
+      { navn:"Finn Fisher-Black", land:"New Zealand", flagg:"🇳🇿", lag:"Red Bull Bora-Hansgrohe", alder:25, fødtÅr:2001, spesialitet:"allrounder", palmarès:["Vuelta a España topp-10"], form:"", notat:"" },
+      { navn:"Laurence Pithie", land:"New Zealand", flagg:"🇳🇿", lag:"Groupama-FDJ", alder:25, fødtÅr:2001, spesialitet:"puncheur", palmarès:["Giro etappe","Dwars door Vlaanderen topp-5"], form:"", notat:"" },
+      { navn:"George Bennett", land:"New Zealand", flagg:"🇳🇿", lag:"UAE Team Emirates", alder:36, fødtÅr:1990, spesialitet:"klatrer", palmarès:["Vuelta etapper"], form:"", notat:"" },
+      { navn:"Corbin Strong", land:"New Zealand", flagg:"🇳🇿", lag:"Israel-Premier Tech", alder:25, fødtÅr:2001, spesialitet:"puncheur", palmarès:[], form:"", notat:"" },
+      { navn:"Ben Oliver", land:"New Zealand", flagg:"🇳🇿", lag:"New Zealand", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Panama ---- */
+      { navn:"Christofer Jurado", land:"Panama", flagg:"🇵🇦", lag:"Panama", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Polen ---- */
+      { navn:"Michal Kwiatkowski", land:"Polen", flagg:"🇵🇱", lag:"Ineos Grenadiers", alder:36, fødtÅr:1990, spesialitet:"allrounder", palmarès:["VM fellesstart 2014","Strade Bianche","Milano-Sanremo","E3 Saxo Bank Classic"], form:"", notat:"" },
+      { navn:"Mateusz Gajdulewicz", land:"Polen", flagg:"🇵🇱", lag:"Polen", alder:26, fødtÅr:2000, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+      { navn:"Jakub Kaczmarek", land:"Polen", flagg:"🇵🇱", lag:"Polen", alder:25, fødtÅr:2001, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Piotr Pekala", land:"Polen", flagg:"🇵🇱", lag:"Polen", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Portugal ---- */
+      { navn:"Joao Almeida", land:"Portugal", flagg:"🇵🇹", lag:"UAE Team Emirates", alder:28, fødtÅr:1998, spesialitet:"klatrer", palmarès:["Giro d'Italia hvit trøye 2020","UAE Tour vinner","Volta ao Algarve"], form:"", notat:"" },
+      { navn:"Ivo Oliveira", land:"Portugal", flagg:"🇵🇹", lag:"UAE Team Emirates", alder:27, fødtÅr:1999, spesialitet:"tempo", palmarès:[], form:"", notat:"" },
+      { navn:"Nelson Oliveira", land:"Portugal", flagg:"🇵🇹", lag:"Movistar Team", alder:35, fødtÅr:1991, spesialitet:"allrounder", palmarès:["Giro etapper"], form:"", notat:"" },
+      { navn:"Antonio Morgado", land:"Portugal", flagg:"🇵🇹", lag:"UAE Team Emirates", alder:22, fødtÅr:2004, spesialitet:"klatrer", palmarès:["VM U23 TT 2023"], form:"", notat:"" },
+      { navn:"Afonso Eulalio", land:"Portugal", flagg:"🇵🇹", lag:"Portugal", alder:24, fødtÅr:2002, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Tiago Antunes", land:"Portugal", flagg:"🇵🇹", lag:"Portugal", alder:26, fødtÅr:2000, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Romania ---- */
+      { navn:"Iustin-Ioan Vaidian", land:"Romania", flagg:"🇷🇴", lag:"Romania", alder:25, fødtÅr:2001, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Saudi-Arabia ---- */
+      { navn:"Ali Al Shaikhahmed", land:"Saudi-Arabia", flagg:"🇸🇦", lag:"Saudi-Arabia", alder:25, fødtÅr:2001, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Serbia ---- */
+      { navn:"Mihajlo Stolic", land:"Serbia", flagg:"🇷🇸", lag:"Bahrain Victorious", alder:22, fødtÅr:2004, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+
+      /* ---- Slovakia ---- */
+      { navn:"Martin Svrcek", land:"Slovakia", flagg:"🇸🇰", lag:"Israel-Premier Tech", alder:24, fødtÅr:2002, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Slovenia (utover Roglič og Mohorič) ---- */
+      { navn:"Jan Tratnik", land:"Slovenia", flagg:"🇸🇮", lag:"Visma-Lease a Bike", alder:35, fødtÅr:1991, spesialitet:"allrounder", palmarès:["Vuelta etapper","TdF etappe"], form:"", notat:"" },
+      { navn:"Matevz Govekar", land:"Slovenia", flagg:"🇸🇮", lag:"Bahrain Victorious", alder:26, fødtÅr:2000, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+      { navn:"Luka Mezgec", land:"Slovenia", flagg:"🇸🇮", lag:"Jayco-AlUla", alder:37, fødtÅr:1989, spesialitet:"puncheur", palmarès:["TdF etapper"], form:"", notat:"" },
+      { navn:"Tilen Finkst", land:"Slovenia", flagg:"🇸🇮", lag:"UAE Team Emirates", alder:26, fødtÅr:2000, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+      { navn:"Gal Glivar", land:"Slovenia", flagg:"🇸🇮", lag:"Bahrain Victorious", alder:26, fødtÅr:2000, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Jakob Omrzel", land:"Slovenia", flagg:"🇸🇮", lag:"UAE Team Emirates", alder:22, fødtÅr:2004, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+
+      /* ---- Sør-Afrika ---- */
+      { navn:"Byron Munton", land:"Sør-Afrika", flagg:"🇿🇦", lag:"Sør-Afrika", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Spania ---- */
+      { navn:"Juan Ayuso", land:"Spania", flagg:"🇪🇸", lag:"UAE Team Emirates", alder:24, fødtÅr:2002, spesialitet:"klatrer", palmarès:["Vuelta a España topp-5","UAE Tour vinner","Volta a Catalunya vinner"], form:"", notat:"" },
+      { navn:"Enric Mas", land:"Spania", flagg:"🇪🇸", lag:"Movistar Team", alder:31, fødtÅr:1995, spesialitet:"klatrer", palmarès:["Vuelta a España 2. plass 2x","TdF topp-5"], form:"", notat:"" },
+      { navn:"Ivan Romeo", land:"Spania", flagg:"🇪🇸", lag:"Movistar Team", alder:24, fødtÅr:2002, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+      { navn:"Igor Arrieta", land:"Spania", flagg:"🇪🇸", lag:"UAE Team Emirates", alder:22, fødtÅr:2004, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+      { navn:"Carlos Verona", land:"Spania", flagg:"🇪🇸", lag:"Lidl-Trek", alder:34, fødtÅr:1992, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Markel Beloki", land:"Spania", flagg:"🇪🇸", lag:"Spania", alder:24, fødtÅr:2002, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+      { navn:"Raul Garcia Pierna", land:"Spania", flagg:"🇪🇸", lag:"Astana Qazaqstan", alder:26, fødtÅr:2000, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+      { navn:"Marcel Camprubi", land:"Spania", flagg:"🇪🇸", lag:"Kern Pharma", alder:25, fødtÅr:2001, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+
+      /* ---- Sverige ---- */
+      { navn:"Jakob Soderqvist", land:"Sverige", flagg:"🇸🇪", lag:"Sverige", alder:24, fødtÅr:2002, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Sveits ---- */
+      { navn:"Marc Hirschi", land:"Sveits", flagg:"🇨🇭", lag:"UAE Team Emirates", alder:28, fødtÅr:1998, spesialitet:"puncheur", palmarès:["Flèche Wallonne vinner","Vuelta etapper","TdF etappe"], form:"", notat:"" },
+      { navn:"Mauro Schmid", land:"Sveits", flagg:"🇨🇭", lag:"Jayco-AlUla", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:["Giro etapper"], form:"", notat:"" },
+      { navn:"Stefan Kung", land:"Sveits", flagg:"🇨🇭", lag:"Groupama-FDJ", alder:33, fødtÅr:1993, spesialitet:"tempo", palmarès:["VM TT sølv 3x","Flandern Rundt 2.","Tirreno-Adriatico etapper"], form:"", notat:"" },
+      { navn:"Stefan Bissegger", land:"Sveits", flagg:"🇨🇭", lag:"EF Education-EasyPost", alder:27, fødtÅr:1999, spesialitet:"tempo", palmarès:["Etoile de Bessèges"], form:"", notat:"" },
+      { navn:"Fabio Christen", land:"Sveits", flagg:"🇨🇭", lag:"Sveits", alder:24, fødtÅr:2002, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Jan Christen", land:"Sveits", flagg:"🇨🇭", lag:"UAE Team Emirates", alder:21, fødtÅr:2005, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+
+      /* ---- Thailand ---- */
+      { navn:"Athit Poulard", land:"Thailand", flagg:"🇹🇭", lag:"Thailand", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Ukraina ---- */
+      { navn:"Heorhii Antonenko", land:"Ukraina", flagg:"🇺🇦", lag:"Intermarché-Wanty", alder:24, fødtÅr:2002, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+
+      /* ---- USA (utover Simmons) ---- */
+      { navn:"Matteo Jorgenson", land:"USA", flagg:"🇺🇸", lag:"Visma-Lease a Bike", alder:27, fødtÅr:1999, spesialitet:"klatrer", palmarès:["Paris-Nice vinner 2024","Vuelta etapper"], form:"", notat:"" },
+      { navn:"Brandon McNulty", land:"USA", flagg:"🇺🇸", lag:"UAE Team Emirates", alder:28, fødtÅr:1998, spesialitet:"allrounder", palmarès:["Vuelta etapper","UAE Tour etapper"], form:"", notat:"" },
+      { navn:"Neilson Powless", land:"USA", flagg:"🇺🇸", lag:"EF Education-EasyPost", alder:30, fødtÅr:1996, spesialitet:"allrounder", palmarès:["Clasica San Sebastián topp-5"], form:"", notat:"" },
+      { navn:"Kevin Vermaerke", land:"USA", flagg:"🇺🇸", lag:"Red Bull Bora-Hansgrohe", alder:26, fødtÅr:2000, spesialitet:"puncheur", palmarès:["Vuelta etappe"], form:"", notat:"" },
+      { navn:"Sean Quinn", land:"USA", flagg:"🇺🇸", lag:"EF Education-EasyPost", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Larry Warbasse", land:"USA", flagg:"🇺🇸", lag:"Lotto Dstny", alder:35, fødtÅr:1991, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Artem Shmidt", land:"USA", flagg:"🇺🇸", lag:"USA", alder:24, fødtÅr:2002, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Uruguay ---- */
+      { navn:"Eric Fagundez", land:"Uruguay", flagg:"🇺🇾", lag:"Uruguay", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Guillermo Silva", land:"Uruguay", flagg:"🇺🇾", lag:"Uruguay", alder:28, fødtÅr:1998, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Usbekistan ---- */
+      { navn:"Samandar Janikulov", land:"Usbekistan", flagg:"🇺🇿", lag:"Usbekistan", alder:25, fødtÅr:2001, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+
+      /* ---- Venezuela ---- */
+      { navn:"Orluis Aular", land:"Venezuela", flagg:"🇻🇪", lag:"Caja Rural-Seguros RGA", alder:29, fødtÅr:1997, spesialitet:"puncheur", palmarès:["Vuelta a Burgos etapper"], form:"", notat:"" },
+      { navn:"Francisco Penuela", land:"Venezuela", flagg:"🇻🇪", lag:"Venezuela", alder:26, fødtÅr:2000, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Nøytral utøver ---- */
+      { navn:"Aleksandr Vlasov", land:"Nøytral (ANA)", flagg:"🏳", lag:"Red Bull Bora-Hansgrohe", alder:28, fødtÅr:1998, spesialitet:"klatrer", palmarès:["Vuelta a España topp-10","Critérium du Dauphiné etapp"], form:"", notat:"" },
     ]
   },
 
@@ -337,6 +626,254 @@ const VM_DATA = {
         form:"Fin sesong — klar for sin rolle i VM-laget.",
         notat:"Berg Edseth er en klatrer som passer banen i Montréal. Om hun henger med i de avgjørende rundene er spørsmålet — men hun vil gi alt for laget."
       },
+
+      /* ---- Norge (utover Aalerud, Ytterhus Haugset, Jorgensen, Berg Edseth) ---- */
+      { navn:"Mie Bjorndal Ottestad", land:"Norge", flagg:"🇳🇴", lag:"Uno-X Mobility", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:["NM Vei"], form:"", notat:"" },
+
+      /* ---- Algerie ---- */
+      { navn:"Nesrine Houili", land:"Algerie", flagg:"🇩🇿", lag:"Algerie", alder:25, fødtÅr:2001, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Australia ---- */
+      { navn:"Amanda Spratt", land:"Australia", flagg:"🇦🇺", lag:"Lidl-Trek", alder:38, fødtÅr:1988, spesialitet:"klatrer", palmarès:["VM sølv 2019","Giro Donne topp-5"], form:"", notat:"" },
+      { navn:"Georgia Baker", land:"Australia", flagg:"🇦🇺", lag:"Lidl-Trek", alder:30, fødtÅr:1996, spesialitet:"puncheur", palmarès:["TdF Femmes etapper"], form:"", notat:"" },
+      { navn:"Sarah Gigante", land:"Australia", flagg:"🇦🇺", lag:"Movistar Team", alder:25, fødtÅr:2001, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+      { navn:"Lauretta Hanson", land:"Australia", flagg:"🇦🇺", lag:"Jayco-AlUla", alder:30, fødtÅr:1996, spesialitet:"puncheur", palmarès:["Gent-Wevelgem Femmes"], form:"", notat:"" },
+
+      /* ---- Østerrike ---- */
+      { navn:"Katharina Sadnik", land:"Østerrike", flagg:"🇦🇹", lag:"Østerrike", alder:26, fødtÅr:2000, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Carina Schrempf", land:"Østerrike", flagg:"🇦🇹", lag:"Østerrike", alder:28, fødtÅr:1998, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Christina Schweinberger", land:"Østerrike", flagg:"🇦🇹", lag:"Østerrike", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:["VM TT-bronse 2022"], form:"", notat:"" },
+
+      /* ---- Belgia (utover Kopecky) ---- */
+      { navn:"Shari Bossuyt", land:"Belgia", flagg:"🇧🇪", lag:"SD Worx-Protime", alder:24, fødtÅr:2002, spesialitet:"puncheur", palmarès:["Gent-Wevelgem Femmes topp-5"], form:"", notat:"" },
+      { navn:"Lotte Claes", land:"Belgia", flagg:"🇧🇪", lag:"Proximus-Alphamotorhomes", alder:28, fødtÅr:1998, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Julie Van de Velde", land:"Belgia", flagg:"🇧🇪", lag:"Proximus-Alphamotorhomes", alder:29, fødtÅr:1997, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Margot Vanpachtenbeke", land:"Belgia", flagg:"🇧🇪", lag:"Belgia", alder:25, fødtÅr:2001, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Sandrine Tas", land:"Belgia", flagg:"🇧🇪", lag:"Proximus-Alphamotorhomes", alder:32, fødtÅr:1994, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Brasil ---- */
+      { navn:"Ana Vitoria Magalhaes", land:"Brasil", flagg:"🇧🇷", lag:"Brasil", alder:26, fødtÅr:2000, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Bulgaria ---- */
+      { navn:"Gergana Stoyanova", land:"Bulgaria", flagg:"🇧🇬", lag:"Bulgaria", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Canada (utover Vallières) ---- */
+      { navn:"Alison Jackson", land:"Canada", flagg:"🇨🇦", lag:"EF Education-Cannondale", alder:31, fødtÅr:1995, spesialitet:"puncheur", palmarès:["Paris-Roubaix Femmes vinner 2023","Gent-Wevelgem Femmes"], form:"", notat:"" },
+      { navn:"Maggie Coles-Lyster", land:"Canada", flagg:"🇨🇦", lag:"EF Education-Cannondale", alder:26, fødtÅr:2000, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Olivia Baril", land:"Canada", flagg:"🇨🇦", lag:"EF Education-Cannondale", alder:28, fødtÅr:1998, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+      { navn:"Sarah Van Dam", land:"Canada", flagg:"🇨🇦", lag:"EF Education-Cannondale", alder:28, fødtÅr:1998, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Adele Normand", land:"Canada", flagg:"🇨🇦", lag:"Canada", alder:26, fødtÅr:2000, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Nadia Gontova", land:"Canada", flagg:"🇨🇦", lag:"Canada", alder:25, fødtÅr:2001, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Chile ---- */
+      { navn:"Catalina Soto", land:"Chile", flagg:"🇨🇱", lag:"Chile", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Kina ---- */
+      { navn:"Zhaoqi Feng", land:"Kina", flagg:"🇨🇳", lag:"Kina", alder:25, fødtÅr:2001, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Xin Tang", land:"Kina", flagg:"🇨🇳", lag:"Kina", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Shimeng Zhu", land:"Kina", flagg:"🇨🇳", lag:"Kina", alder:26, fødtÅr:2000, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Colombia ---- */
+      { navn:"Paula Patino", land:"Colombia", flagg:"🇨🇴", lag:"Movistar Team", alder:29, fødtÅr:1997, spesialitet:"klatrer", palmarès:["Giro Donne etapper"], form:"", notat:"" },
+      { navn:"Diana Penuela", land:"Colombia", flagg:"🇨🇴", lag:"Colombia", alder:28, fødtÅr:1998, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+      { navn:"Laura Daniela Rojas", land:"Colombia", flagg:"🇨🇴", lag:"Colombia", alder:26, fødtÅr:2000, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+
+      /* ---- Komorene ---- */
+      { navn:"Ramadhan Najma", land:"Komorene", flagg:"🇰🇲", lag:"Komorene", alder:25, fødtÅr:2001, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Kypros ---- */
+      { navn:"Antri Christoforou", land:"Kypros", flagg:"🇨🇾", lag:"Kypros", alder:26, fødtÅr:2000, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Danmark ---- */
+      { navn:"Cecilie Uttrup Ludwig", land:"Danmark", flagg:"🇩🇰", lag:"FDJ-SUEZ", alder:30, fødtÅr:1996, spesialitet:"klatrer", palmarès:["VM sølv Bergen 2017","Flèche Wallonne topp-5","La Vuelta Femmes etapper"], form:"", notat:"" },
+      { navn:"Solbjork Minke Anderson", land:"Danmark", flagg:"🇩🇰", lag:"Danmark", alder:24, fødtÅr:2002, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Eritrea ---- */
+      { navn:"Monalisa Araya", land:"Eritrea", flagg:"🇪🇷", lag:"Eritrea", alder:26, fødtÅr:2000, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+
+      /* ---- Estland ---- */
+      { navn:"Ann-Christine Allik", land:"Estland", flagg:"🇪🇪", lag:"Estland", alder:28, fødtÅr:1998, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Janika Loiv", land:"Estland", flagg:"🇪🇪", lag:"Estland", alder:26, fødtÅr:2000, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Aidi Gerde Tuisk", land:"Estland", flagg:"🇪🇪", lag:"Estland", alder:25, fødtÅr:2001, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Finland ---- */
+      { navn:"Ursula Linden", land:"Finland", flagg:"🇫🇮", lag:"Finland", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Frankrike ---- */
+      { navn:"Evita Muzic", land:"Frankrike", flagg:"🇫🇷", lag:"FDJ-SUEZ", alder:25, fødtÅr:2001, spesialitet:"klatrer", palmarès:["TdF Femmes etapper","Giro Donne topp-10"], form:"", notat:"" },
+      { navn:"Cedrine Kerbaol", land:"Frankrike", flagg:"🇫🇷", lag:"Ceratizit-WNT", alder:24, fødtÅr:2002, spesialitet:"klatrer", palmarès:["TdF Femmes etapper"], form:"", notat:"" },
+      { navn:"Marie Le Net", land:"Frankrike", flagg:"🇫🇷", lag:"FDJ-SUEZ", alder:26, fødtÅr:2000, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+      { navn:"Juliette Berthet", land:"Frankrike", flagg:"🇫🇷", lag:"Decathlon AG2R La Mondiale", alder:25, fødtÅr:2001, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+      { navn:"Maeva Squiban", land:"Frankrike", flagg:"🇫🇷", lag:"Cofidis", alder:24, fødtÅr:2002, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Lea Curinier", land:"Frankrike", flagg:"🇫🇷", lag:"Frankrike", alder:24, fødtÅr:2002, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Celia Gery", land:"Frankrike", flagg:"🇫🇷", lag:"Frankrike", alder:25, fødtÅr:2001, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Tyskland (utover Koch) ---- */
+      { navn:"Ricarda Bauernfeind", land:"Tyskland", flagg:"🇩🇪", lag:"Canyon//SRAM Racing", alder:25, fødtÅr:2001, spesialitet:"klatrer", palmarès:["TdF Femmes etappe"], form:"", notat:"" },
+      { navn:"Liane Lippert", land:"Tyskland", flagg:"🇩🇪", lag:"Movistar Team", alder:27, fødtÅr:1999, spesialitet:"puncheur", palmarès:["Strade Bianche Donne","Giro Donne etapper"], form:"", notat:"" },
+      { navn:"Antonia Niedermaier", land:"Tyskland", flagg:"🇩🇪", lag:"Canyon//SRAM Racing", alder:23, fødtÅr:2003, spesialitet:"klatrer", palmarès:["TdF Femmes hvit trøye"], form:"", notat:"" },
+      { navn:"Linda Riedmann", land:"Tyskland", flagg:"🇩🇪", lag:"Tyskland", alder:24, fødtÅr:2002, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Storbritannia (utover Bäckstedt) ---- */
+      { navn:"Anna Henderson", land:"Storbritannia", flagg:"🇬🇧", lag:"Visma-Lease a Bike", alder:28, fødtÅr:1998, spesialitet:"tempo", palmarès:["VM TT-bronse 2023","TdF Femmes etapper"], form:"", notat:"" },
+      { navn:"Pfeiffer Georgi", land:"Storbritannia", flagg:"🇬🇧", lag:"SD Worx-Protime", alder:26, fødtÅr:2000, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Lauren Dickson", land:"Storbritannia", flagg:"🇬🇧", lag:"Storbritannia", alder:28, fødtÅr:1998, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Flora Perkins", land:"Storbritannia", flagg:"🇬🇧", lag:"Storbritannia", alder:24, fødtÅr:2002, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+      { navn:"Josie Nelson", land:"Storbritannia", flagg:"🇬🇧", lag:"Storbritannia", alder:25, fødtÅr:2001, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Hellas ---- */
+      { navn:"Varvara Fasoi", land:"Hellas", flagg:"🇬🇷", lag:"Hellas", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Argiro Milaki", land:"Hellas", flagg:"🇬🇷", lag:"Hellas", alder:28, fødtÅr:1998, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Guatemala ---- */
+      { navn:"Jasmin Gabriela Soto", land:"Guatemala", flagg:"🇬🇹", lag:"Guatemala", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Ungarn ---- */
+      { navn:"Petra Zsanko", land:"Ungarn", flagg:"🇭🇺", lag:"Ungarn", alder:26, fødtÅr:2000, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Indonesia ---- */
+      { navn:"Firotika Magh Marenda", land:"Indonesia", flagg:"🇮🇩", lag:"Indonesia", alder:24, fødtÅr:2002, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Israel ---- */
+      { navn:"Rotem Gafinovitz", land:"Israel", flagg:"🇮🇱", lag:"Human Powered Health", alder:29, fødtÅr:1997, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+
+      /* ---- Italia (utover Longo Borghini) ---- */
+      { navn:"Silvia Persico", land:"Italia", flagg:"🇮🇹", lag:"UAE Team ADQ", alder:28, fødtÅr:1998, spesialitet:"klatrer", palmarès:["Giro Donne etapper","Strade Bianche topp-5"], form:"", notat:"" },
+      { navn:"Erica Magnaldi", land:"Italia", flagg:"🇮🇹", lag:"UAE Team ADQ", alder:31, fødtÅr:1995, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Sara Casasola", land:"Italia", flagg:"🇮🇹", lag:"Ceratizit-WNT", alder:28, fødtÅr:1998, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Francesca Barale", land:"Italia", flagg:"🇮🇹", lag:"Italia", alder:25, fødtÅr:2001, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+      { navn:"Eleonora Gasparrini", land:"Italia", flagg:"🇮🇹", lag:"Italia", alder:25, fødtÅr:2001, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Monica Trinca Colonel", land:"Italia", flagg:"🇮🇹", lag:"Ceratizit-WNT", alder:31, fødtÅr:1995, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+
+      /* ---- Japan ---- */
+      { navn:"Karin Abe", land:"Japan", flagg:"🇯🇵", lag:"Japan", alder:25, fødtÅr:2001, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Kasakhstan ---- */
+      { navn:"Faina Potapova", land:"Kasakhstan", flagg:"🇰🇿", lag:"Kasakhstan", alder:25, fødtÅr:2001, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Kenya ---- */
+      { navn:"Nancy Debe", land:"Kenya", flagg:"🇰🇪", lag:"Kenya", alder:25, fødtÅr:2001, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Monica Jelimo Kiplagat", land:"Kenya", flagg:"🇰🇪", lag:"Kenya", alder:26, fødtÅr:2000, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Kendra Masiga", land:"Kenya", flagg:"🇰🇪", lag:"Kenya", alder:24, fødtÅr:2002, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Luxembourg ---- */
+      { navn:"Nina Berton", land:"Luxembourg", flagg:"🇱🇺", lag:"Cofidis", alder:22, fødtÅr:2004, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+
+      /* ---- Mauritius ---- */
+      { navn:"Kim Le Court-Pienaar", land:"Mauritius", flagg:"🇲🇺", lag:"UAE Team ADQ", alder:24, fødtÅr:2002, spesialitet:"klatrer", palmarès:["TdF Femmes etapper"], form:"", notat:"" },
+      { navn:"Lucie de Marigny-Lagesse", land:"Mauritius", flagg:"🇲🇺", lag:"Mauritius", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Mexico ---- */
+      { navn:"Romina Hinojosa", land:"Mexico", flagg:"🇲🇽", lag:"Mexico", alder:28, fødtÅr:1998, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Sara Roel", land:"Mexico", flagg:"🇲🇽", lag:"Mexico", alder:26, fødtÅr:2000, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Andrea Ramirez", land:"Mexico", flagg:"🇲🇽", lag:"Mexico", alder:25, fødtÅr:2001, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Lizbeth Salazar", land:"Mexico", flagg:"🇲🇽", lag:"Mexico", alder:26, fødtÅr:2000, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Namibia ---- */
+      { navn:"Vera Looser", land:"Namibia", flagg:"🇳🇦", lag:"Namibia", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Nederland (utover Vollering og Pieterse) ---- */
+      { navn:"Riejanne Markus", land:"Nederland", flagg:"🇳🇱", lag:"Visma-Lease a Bike", alder:30, fødtÅr:1996, spesialitet:"allrounder", palmarès:["VM-bronse 2023","TdF Femmes etapper"], form:"", notat:"" },
+      { navn:"Lieke Nooijen", land:"Nederland", flagg:"🇳🇱", lag:"Fenix-Deceuninck", alder:24, fødtÅr:2002, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Karlijn Swinkels", land:"Nederland", flagg:"🇳🇱", lag:"Jayco-AlUla", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Femke de Vries", land:"Nederland", flagg:"🇳🇱", lag:"Visma-Lease a Bike", alder:26, fødtÅr:2000, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+      { navn:"Amber Kraak", land:"Nederland", flagg:"🇳🇱", lag:"Nederland", alder:24, fødtÅr:2002, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- New Zealand ---- */
+      { navn:"Niamh Fisher-Black", land:"New Zealand", flagg:"🇳🇿", lag:"Red Bull Bora-Hansgrohe", alder:25, fødtÅr:2001, spesialitet:"klatrer", palmarès:["VM-sølv 2023","VM-sølv 2025","Giro Donne topp-5"], form:"", notat:"" },
+      { navn:"Henrietta Christie", land:"New Zealand", flagg:"🇳🇿", lag:"Human Powered Health", alder:26, fødtÅr:2000, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+      { navn:"Ella Wyllie", land:"New Zealand", flagg:"🇳🇿", lag:"New Zealand", alder:23, fødtÅr:2003, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+      { navn:"Bronwyn MacGregor", land:"New Zealand", flagg:"🇳🇿", lag:"New Zealand", alder:28, fødtÅr:1998, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Panama ---- */
+      { navn:"Wendy Ducreux", land:"Panama", flagg:"🇵🇦", lag:"Panama", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Paraguay ---- */
+      { navn:"Agua Marina Espinola", land:"Paraguay", flagg:"🇵🇾", lag:"Paraguay", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Filippinene ---- */
+      { navn:"Mary Joyce Monton", land:"Filippinene", flagg:"🇵🇭", lag:"Filippinene", alder:26, fødtÅr:2000, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Polen (utover Niewiadoma) ---- */
+      { navn:"Marta Lach", land:"Polen", flagg:"🇵🇱", lag:"Ceratizit-WNT", alder:29, fødtÅr:1997, spesialitet:"allrounder", palmarès:["Tour of Flanders topp-10"], form:"", notat:"" },
+      { navn:"Marta Jaskulska", land:"Polen", flagg:"🇵🇱", lag:"Lidl-Trek", alder:26, fødtÅr:2000, spesialitet:"puncheur", palmarès:[], form:"", notat:"" },
+      { navn:"Dominika Wlodarczyk", land:"Polen", flagg:"🇵🇱", lag:"Polen", alder:28, fødtÅr:1998, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Kaja Rysz", land:"Polen", flagg:"🇵🇱", lag:"Polen", alder:26, fødtÅr:2000, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Portugal ---- */
+      { navn:"Daniela Campos", land:"Portugal", flagg:"🇵🇹", lag:"Portugal", alder:26, fødtÅr:2000, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Raquel Queiros", land:"Portugal", flagg:"🇵🇹", lag:"Portugal", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Beatriz Roxo", land:"Portugal", flagg:"🇵🇹", lag:"Portugal", alder:24, fødtÅr:2002, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+
+      /* ---- Rwanda ---- */
+      { navn:"Diane Ingabire", land:"Rwanda", flagg:"🇷🇼", lag:"Rwanda", alder:26, fødtÅr:2000, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Xaveline Nirere", land:"Rwanda", flagg:"🇷🇼", lag:"Rwanda", alder:25, fødtÅr:2001, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Claudette Nyirarukundo", land:"Rwanda", flagg:"🇷🇼", lag:"Rwanda", alder:24, fødtÅr:2002, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Saudi-Arabia ---- */
+      { navn:"Mashael Alhazmi", land:"Saudi-Arabia", flagg:"🇸🇦", lag:"Saudi-Arabia", alder:24, fødtÅr:2002, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Slovakia ---- */
+      { navn:"Tereza Kurnicka", land:"Slovakia", flagg:"🇸🇰", lag:"Slovakia", alder:26, fødtÅr:2000, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Slovenia ---- */
+      { navn:"Nika Bobnar", land:"Slovenia", flagg:"🇸🇮", lag:"Alé BTC Ljubljana", alder:25, fødtÅr:2001, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Sør-Afrika ---- */
+      { navn:"Ashleigh Moolman-Pasio", land:"Sør-Afrika", flagg:"🇿🇦", lag:"AG Insurance-Soudal", alder:39, fødtÅr:1987, spesialitet:"klatrer", palmarès:["Giro Donne topp-5 3x"], form:"", notat:"" },
+      { navn:"Lisa Bone", land:"Sør-Afrika", flagg:"🇿🇦", lag:"Sør-Afrika", alder:28, fødtÅr:1998, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Tiffany Keep", land:"Sør-Afrika", flagg:"🇿🇦", lag:"Sør-Afrika", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Hayley Preen", land:"Sør-Afrika", flagg:"🇿🇦", lag:"Sør-Afrika", alder:26, fødtÅr:2000, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Spania ---- */
+      { navn:"Mavi Garcia", land:"Spania", flagg:"🇪🇸", lag:"UAE Team ADQ", alder:36, fødtÅr:1990, spesialitet:"klatrer", palmarès:["Vuelta Femenina vinner","VM-bronse 2025","Giro Donne topp-5"], form:"", notat:"" },
+      { navn:"Sara Martin", land:"Spania", flagg:"🇪🇸", lag:"Movistar Team", alder:28, fødtÅr:1998, spesialitet:"klatrer", palmarès:["Vuelta Femenina etapper"], form:"", notat:"" },
+      { navn:"Usoa Ostolaza", land:"Spania", flagg:"🇪🇸", lag:"Bizkaia-Durango", alder:24, fødtÅr:2002, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+      { navn:"Paula Blasi", land:"Spania", flagg:"🇪🇸", lag:"Spania", alder:25, fødtÅr:2001, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Mireia Benito", land:"Spania", flagg:"🇪🇸", lag:"Spania", alder:26, fødtÅr:2000, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Sandra Alonso", land:"Spania", flagg:"🇪🇸", lag:"Spania", alder:28, fødtÅr:1998, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Sverige ---- */
+      { navn:"Caroline Andersson", land:"Sverige", flagg:"🇸🇪", lag:"Ceratizit-WNT", alder:25, fødtÅr:2001, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Julia Borgstrom", land:"Sverige", flagg:"🇸🇪", lag:"Jayco-AlUla", alder:28, fødtÅr:1998, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Sveits (utover Reusser) ---- */
+      { navn:"Noemi Ruegg", land:"Sveits", flagg:"🇨🇭", lag:"Lidl-Trek", alder:26, fødtÅr:2000, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Jasmin Liechti", land:"Sveits", flagg:"🇨🇭", lag:"Sveits", alder:24, fødtÅr:2002, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+      { navn:"Ginia Caluori", land:"Sveits", flagg:"🇨🇭", lag:"Sveits", alder:23, fødtÅr:2003, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+      { navn:"Steffi Haberlin", land:"Sveits", flagg:"🇨🇭", lag:"Sveits", alder:28, fødtÅr:1998, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Linda Zanetti", land:"Sveits", flagg:"🇨🇭", lag:"Sveits", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Thailand ---- */
+      { navn:"Pittayapron Seatun", land:"Thailand", flagg:"🇹🇭", lag:"Thailand", alder:26, fødtÅr:2000, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Trinidad og Tobago ---- */
+      { navn:"Teniel Campbell", land:"Trinidad og Tobago", flagg:"🇹🇹", lag:"Trinidad og Tobago", alder:26, fødtÅr:2000, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Ukraina ---- */
+      { navn:"Valeriya Kononenko", land:"Ukraina", flagg:"🇺🇦", lag:"Ukraina", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Olha Kulynych", land:"Ukraina", flagg:"🇺🇦", lag:"Ukraina", alder:25, fødtÅr:2001, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- USA ---- */
+      { navn:"Kristen Faulkner", land:"USA", flagg:"🇺🇸", lag:"EF Education-Cannondale", alder:32, fødtÅr:1994, spesialitet:"allrounder", palmarès:["OL-gull 2024 lagtempo","TdF Femmes topp-10"], form:"", notat:"" },
+      { navn:"Kate Courtney", land:"USA", flagg:"🇺🇸", lag:"USA", alder:30, fødtÅr:1996, spesialitet:"allrounder", palmarès:["VM MTB XCO 2018"], form:"Primært MTB-rytter", notat:"" },
+      { navn:"Grace Arlandson", land:"USA", flagg:"🇺🇸", lag:"USA", alder:24, fødtÅr:2002, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
+      { navn:"Alexis Magner", land:"USA", flagg:"🇺🇸", lag:"USA", alder:28, fødtÅr:1998, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Natalie Quinn", land:"USA", flagg:"🇺🇸", lag:"USA", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Lauren Stephens", land:"USA", flagg:"🇺🇸", lag:"USA", alder:36, fødtÅr:1990, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Usbekistan ---- */
+      { navn:"Madina Kakhkhorova", land:"Usbekistan", flagg:"🇺🇿", lag:"Usbekistan", alder:25, fødtÅr:2001, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Venezuela ---- */
+      { navn:"Lilibeth Chacon", land:"Venezuela", flagg:"🇻🇪", lag:"Venezuela", alder:29, fødtÅr:1997, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Zimbabwe ---- */
+      { navn:"Skye Davidson", land:"Zimbabwe", flagg:"🇿🇼", lag:"Zimbabwe", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+      { navn:"Rongina Ngandu", land:"Zimbabwe", flagg:"🇿🇼", lag:"Zimbabwe", alder:25, fødtÅr:2001, spesialitet:"allrounder", palmarès:[], form:"", notat:"" },
+
+      /* ---- Nøytral utøver ---- */
+      { navn:"Kristina Novikova", land:"Nøytral (ANA)", flagg:"🏳", lag:"Nøytral", alder:27, fødtÅr:1999, spesialitet:"klatrer", palmarès:[], form:"", notat:"" },
     ]
   },
 
