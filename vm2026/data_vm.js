@@ -23,16 +23,16 @@ const VM_DATA = {
   /* ---- VM-PROGRAM ---- */
   program: [
     { dato:"Søn 20.09", kategori:"Tempo Kvinner Elite",     distanse:"39,2 km", status:"ferdig",       vinner:"Marlen Reusser (SUI)" },
-    { dato:"Søn 20.09", kategori:"Tempo Herrer Elite",      distanse:"39,2 km", status:"ferdig",       vinner:"Remco Evenepoel (BEL) — 5. strake tittel!" },
+    { dato:"Søn 20.09", kategori:"Tempo Herrer Elite",      distanse:"39,2 km", status:"ferdig",       vinner:"Remco Evenepoel (BEL) — 4. strake TT-tittel!" },
     { dato:"Man 21.09", kategori:"Tempo Kvinner U23",       distanse:"20,3 km", status:"ferdig",       vinner:"Felicity Wilson-Haffenden (AUS)" },
     { dato:"Man 21.09", kategori:"Tempo Herrer U23",        distanse:"31,3 km", status:"ferdig",       vinner:"Ryan Gal (NED)" },
     { dato:"Tir 22.09", kategori:"Blandet stafett-tempo",   distanse:"40,6 km", status:"ferdig",       vinner:"Italia" },
     { dato:"Tir 22.09", kategori:"Tempo Herrer Junior",     distanse:"20,3 km", status:"ferdig",       vinner:"Benjamín Noval (ESP)" },
     { dato:"Tir 22.09", kategori:"Tempo Kvinner Junior",    distanse:"10,7 km", status:"ferdig",       vinner:"Maria Okrucińska (POL)" },
     { dato:"Ons 23.09", kategori:"Hviledag",                distanse:"—",       status:"hviledag",     vinner:"—" },
-    { dato:"Tor 24.09", kategori:"Fellesstart Kvinner U23", distanse:"134 km",  status:"idag",         vinner:"—" },
-    { dato:"Fre 25.09", kategori:"Fellesstart Kvinner Jr",  distanse:"80,4 km", status:"imorgen",      vinner:"—" },
-    { dato:"Fre 25.09", kategori:"Fellesstart Herrer Jr",   distanse:"~130 km", status:"imorgen",      vinner:"—" },
+    { dato:"Tor 24.09", kategori:"Fellesstart Kvinner U23", distanse:"134 km",  status:"ferdig",       vinner:"Viktória Chladoňová (SVK)" },
+    { dato:"Fre 25.09", kategori:"Fellesstart Kvinner Jr",  distanse:"80,4 km", status:"idag",         vinner:"—" },
+    { dato:"Fre 25.09", kategori:"Fellesstart Herrer Jr",   distanse:"~130 km", status:"ferdig",       vinner:"Benjamín Noval (ESP)" },
     { dato:"Lør 26.09", kategori:"Fellesstart Kvinner Elite",distanse:"180,1 km",status:"kommende",    vinner:"—" },
     { dato:"Søn 27.09", kategori:"Fellesstart Herrer Elite", distanse:"273,7 km",status:"kommende",    vinner:"—" },
   ],
@@ -66,8 +66,8 @@ const VM_DATA = {
       {
         navn:"Remco Evenepoel", land:"Belgia", flagg:"🇧🇪", lag:"Soudal Quick-Step",
         alder:26, fødtÅr:2000, spesialitet:"allrounder",
-        palmarès:["VM Fellesstart 2022 (Wollongong)","VM TT 2022–2026 (5 strake!)","2. TdF 2026","Amstel Gold Race 2026","San Sebastián 4x","OL 2024 gull TT og sølv fellesstart"],
-        form:"Vinner av VM TT for 5. gang på rad (20. sep). I livets beste form.",
+        palmarès:["VM Fellesstart 2022 (Wollongong)","VM TT 2023–2026 (4 strake!)","2. TdF 2026","Amstel Gold Race 2026","San Sebastián 4x","OL 2024 gull TT og sølv fellesstart"],
+        form:"Vinner av VM TT for 4. gang på rad (20. sep). I livets beste form.",
         notat:"Den komplette syklist. Sterk nok i bakker til å kjempe om gull — men vil de la ham komme til mål? Belgia har et drømmelag (van Aert, Nys, Benoot) som vil sette fart. 26 år og vil bli den første til å ta VM-dobbelen siden Merckx. Kjent svakhet: kan bli isolert hvis laget ikke funker 100 %."
       },
       {
@@ -898,7 +898,7 @@ const VM_DATA = {
       { år:2022, sted:"Wollongong, AUS",           gull:"Remco Evenepoel (BEL)",    sølv:"Biniam Girmay (ERI)",       bronse:"Christophe Laporte (FRA)",  norsk:"—" },
       { år:2023, sted:"Glasgow, SCO",              gull:"Mathieu van der Poel (NED)",sølv:"Tadej Pogačar (SLO)",      bronse:"Mads Pedersen (DEN)",       norsk:"—" },
       { år:2024, sted:"Zürich, SUI",               gull:"Tadej Pogačar (SLO)",      sølv:"Remco Evenepoel (BEL)",     bronse:"Mathieu van der Poel (NED)",norsk:"—" },
-      { år:2025, sted:"Kigali, RWA",               gull:"Tadej Pogačar (SLO)",      sølv:"(ukjent)",                  bronse:"(ukjent)",                  norsk:"—" },
+      { år:2025, sted:"Kigali, RWA",               gull:"Tadej Pogačar (SLO)",      sølv:"Remco Evenepoel (BEL)",     bronse:"Ben Healy (IRL)",           norsk:"—" },
     ],
 
     herrer_tempo: [
@@ -917,7 +917,7 @@ const VM_DATA = {
       { år:2022, sted:"Wollongong, AUS",            gull:"Tobias Foss 🇳🇴",         sølv:"Stefan Küng (SUI)",         bronse:"Edoardo Affini (ITA)",      norsk:"🥇 GULL — Tobias Foss! Ingen ventet det!", norskFlagg:true },
       { år:2023, sted:"Glasgow, SCO",               gull:"Remco Evenepoel (BEL)",    sølv:"Wout van Aert (BEL)",       bronse:"(ukjent)",                  norsk:"—" },
       { år:2024, sted:"Zürich, SUI",                gull:"Remco Evenepoel (BEL)",    sølv:"Stefan Küng (SUI)",         bronse:"Joshua Tarling (GBR)",      norsk:"—" },
-      { år:2025, sted:"Kigali, RWA",                gull:"Remco Evenepoel (BEL)",    sølv:"(ukjent)",                  bronse:"(ukjent)",                  norsk:"—" },
+      { år:2025, sted:"Kigali, RWA",                gull:"Remco Evenepoel (BEL)",    sølv:"Jay Vine (AUS)",            bronse:"Ilan Van Wilder (BEL)",     norsk:"—" },
       { år:2026, sted:"Montréal, CAN",              gull:"Remco Evenepoel (BEL)",    sølv:"Filippo Ganna (ITA)",       bronse:"Paul Seixas (FRA)",         norsk:"—", kjørt:true },
     ],
 
@@ -956,7 +956,7 @@ const VM_DATA = {
       { år:2022, sted:"Wollongong, AUS",            gull:"Ellen van Dijk (NED)",     sølv:"Marlen Reusser (SUI)",      bronse:"Christina Schweinberger (AUT)", norsk:"—" },
       { år:2023, sted:"Glasgow, SCO",               gull:"Chloe Dygert (USA)",       sølv:"Marlen Reusser (SUI)",      bronse:"Anna Henderson (GBR)",      norsk:"—" },
       { år:2024, sted:"Zürich, SUI",                gull:"Grace Brown (AUS)",         sølv:"Demi Vollering (NED)",      bronse:"Marlen Reusser (SUI)",      norsk:"—" },
-      { år:2025, sted:"Kigali, RWA",                gull:"Marlen Reusser (SUI)",      sølv:"(ukjent)",                  bronse:"(ukjent)",                  norsk:"—" },
+      { år:2025, sted:"Kigali, RWA",                gull:"Marlen Reusser (SUI)",      sølv:"Anna van der Breggen (NED)",bronse:"Demi Vollering (NED)",      norsk:"—" },
       { år:2026, sted:"Montréal, CAN",              gull:"Marlen Reusser (SUI)",      sølv:"Zoe Bäckstedt (GBR)",       bronse:"Franziska Koch (GER)",      norsk:"—", kjørt:true },
     ]
   }
