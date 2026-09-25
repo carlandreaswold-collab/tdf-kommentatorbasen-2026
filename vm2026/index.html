@@ -502,14 +502,18 @@ function renderRytterliste() {
   const q = state.søk.toLowerCase();
   const fil = state.filter;
 
+  // Hvis søket starter med et landnavn (≥3 tegn), søk kun i land+navn
+  const erLandSøk = q.length >= 3 && ryttere.some(r => r.land.toLowerCase().startsWith(q));
+
   const filtrert = ryttere.filter(r => {
     const erNorsk = r.land === 'Norge';
     if (fil === 'norsk' && !erNorsk) return false;
     if (fil && fil !== 'norsk' && r.spesialitet !== fil) return false;
     if (!q) return true;
+    if (r.navn.toLowerCase().includes(q)) return true;
+    if (r.land.toLowerCase().includes(q)) return true;
+    if (erLandSøk) return false;
     return (
-      r.navn.toLowerCase().includes(q) ||
-      r.land.toLowerCase().includes(q) ||
       r.lag.toLowerCase().includes(q) ||
       r.spesialitet.toLowerCase().includes(q) ||
       (r.palmarès && r.palmarès.some(p => p.toLowerCase().includes(q))) ||
