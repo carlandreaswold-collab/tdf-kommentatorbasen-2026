@@ -59,7 +59,7 @@ const VM_DATA = {
       { navn:"Wout van Aert",      land:"BEL", flagg:"🇧🇪", lag:"Visma-Lease a Bike", notat:"Vant Paris-Roubaix 2026 — eksplosiv avslutter, sterk i oppoverbakker" },
       { navn:"Isaac del Toro",     land:"MEX", flagg:"🇲🇽", lag:"UAE Team Emirates",  notat:"3. TdF 2026 (22 år!) — vant GP Montréal og er kjent med banen" },
       { navn:"Paul Seixas",        land:"FRA", flagg:"🇫🇷", lag:"Decathlon AG2R",     notat:"4. TdF i en alder av 19 år — det nye franske geniet, 3. VM TT" },
-      { navn:"Tom Pidcock",        land:"GBR", flagg:"🇬🇧", lag:"Ineos Grenadiers",   notat:"VM 2023 sølv, frigjort fra Ineos = toppformert. Toppresultater hele 2026" },
+      { navn:"Tom Pidcock",        land:"GBR", flagg:"🇬🇧", lag:"Pinarello-Q36.5",   notat:"VM 2023 sølv, frigjort fra Ineos = toppformert. Toppresultater hele 2026" },
       { navn:"Mathieu van der Poel",land:"NED",flagg:"🇳🇱", lag:"Alpecin-Deceuninck", notat:"VM 2023 vinner — sier banen er for hard, men undervurdér ham aldri" },
     ],
 
@@ -67,7 +67,7 @@ const VM_DATA = {
       {
         navn:"Remco Evenepoel", land:"Belgia", flagg:"🇧🇪", lag:"Soudal Quick-Step",
         alder:26, fødtÅr:2000, spesialitet:"allrounder",
-        palmarès:["VM Fellesstart 2022 (Wollongong)","VM TT 2023–2026 (4 strake!)","2. TdF 2026","Amstel Gold Race 2026","San Sebastián 4x","OL 2024 gull TT og sølv fellesstart"],
+        palmarès:["VM Fellesstart 2022 (Wollongong)","VM TT 2023–2026 (4 strake!)","2. TdF 2026","Amstel Gold Race 2026","San Sebastián 4x","OL 2024 dobbel-gull (TT + fellesstart)"],
         form:"Vinner av VM TT for 4. gang på rad (20. sep). I livets beste form.",
         notat:"Den komplette syklist. Sterk nok i bakker til å kjempe om gull — men vil de la ham komme til mål? Belgia har et drømmelag (van Aert, Nys, Benoot) som vil sette fart. 26 år og vil bli den første til å ta VM-dobbelen siden Merckx. Kjent svakhet: kan bli isolert hvis laget ikke funker 100 %."
       },
@@ -95,12 +95,12 @@ const VM_DATA = {
       {
         navn:"Mathieu van der Poel", land:"Nederland", flagg:"🇳🇱", lag:"Alpecin-Deceuninck",
         alder:31, fødtÅr:1995, spesialitet:"puncheur",
-        palmarès:["VM Fellesstart 2023 (Glasgow)","Paris-Roubaix 2x","Ronde van Vlaanderen 3x","Strade Bianche 2x","Tour of Flanders"],
+        palmarès:["VM Fellesstart 2023 (Glasgow)","Paris-Roubaix 2x","Ronde van Vlaanderen 3x","Strade Bianche 2x"],
         form:"Mer selektiv sesong i 2026 — fokus mot VM. Sier banen er for hard for ham, men det sa han også i 2023...",
         notat:"VM-vinneren i 2023 sier han er usikker på egne sjanser i Montréal — men det kan godt være taktisk underdrivelse. MvdP er eksplosiv nok til å prøve seg i siste runde. Nederland har ikke det sterkeste laget, så han kan bli isolert tidlig. Stopp-og-gå-rytme passer ham bedre enn langvarig klatring."
       },
       {
-        navn:"Tom Pidcock", land:"Storbritannia", flagg:"🇬🇧", lag:"Ineos Grenadiers",
+        navn:"Tom Pidcock", land:"Storbritannia", flagg:"🇬🇧", lag:"Pinarello-Q36.5",
         alder:27, fødtÅr:1999, spesialitet:"puncheur",
         palmarès:["OL MTB-gull 2021","VM MTB 2026","GP Industria e Artigianato 2026","Strade Bianche vinner","Amstel Gold 2."],
         form:"Etter å ha frigjort seg fra Ineos-begrensninger er Pidcock tilbake i toppsjaktet. VM MTB 2026 bekrefter toppform.",
@@ -167,7 +167,7 @@ const VM_DATA = {
         alder:27, fødtÅr:1999, spesialitet:"allrounder",
         palmarès:["Giro d'Italia etappseier (Milano-mål)","GP Montréal topp-10"],
         form:"Solid sesong — ikke vinnersresultat, men pålitelig hjelper og selvstendig trussel.",
-        notat:"Narváez er en av de mest undervurderte ryttere i feltet. Sterk i bakker, god avslutter, og kjenner Montréal-banen fra GP. Ecuador er ikke et VM-land — men Narváez kan overraske. Vil sannsynligvis jobbe for Pidcock i Ineos."
+        notat:"Narváez er en av de mest undervurderte ryttere i feltet. Sterk i bakker, god avslutter, og kjenner Montréal-banen fra GP. Ecuador er ikke et VM-land — men Narváez kan overraske. Vil sannsynligvis jobbe for Carapaz i Ecuador-laget."
       },
       {
         navn:"Quinn Simmons", land:"USA", flagg:"🇺🇸", lag:"Lidl-Trek",
@@ -302,7 +302,7 @@ const VM_DATA = {
       { navn:"Jefferson Cepeda", land:"Ecuador", flagg:"🇪🇨", lag:"Intermarché-Wanty", alder:28, fødtÅr:1998, spesialitet:"klatrer", palmarès:["Giro etappe"], form:"Klatrer med Intermarché-Wanty.", notat:"Cepeda er Ecuadors nestemann. Vil hjelpe Carapaz og Narváez i de vanskelige fasene." },
 
       /* ---- Eritrea ---- */
-      { navn:"Biniam Girmay", land:"Eritrea", flagg:"🇪🇷", lag:"Intermarché-Wanty", alder:25, fødtÅr:2001, spesialitet:"puncheur", palmarès:["Gent-Wevelgem 2022","VM sølv 2022","TdF etappeseier 3x","Vuelta etapper"], form:"3x TdF-etapper og Vuelta-seier. En av verdens beste avsluttere.", notat:"Girmay er en fenomenal rytter — VM sølv 2022 som 22-åring! Han er eksplosiv nok til å henge med i en liten gruppe. Eritrea stiller sterkt. Kan han klatre Camillien-Houde i de siste rundene? Ja — han klatrer bedre enn folk tror. Mørk hest!" },
+      { navn:"Biniam Girmay", land:"Eritrea", flagg:"🇪🇷", lag:"NSN Cycling Team", alder:25, fødtÅr:2001, spesialitet:"puncheur", palmarès:["Gent-Wevelgem 2022","VM sølv 2022","TdF etappeseier 3x","Vuelta etapper"], form:"3x TdF-etapper og Vuelta-seier. En av verdens beste avsluttere.", notat:"Girmay er en fenomenal rytter — VM sølv 2022 som 22-åring! Han er eksplosiv nok til å henge med i en liten gruppe. Eritrea stiller sterkt. Kan han klatre Camillien-Houde i de siste rundene? Ja — han klatrer bedre enn folk tror. Mørk hest!" },
       { navn:"Amanuel Ghebreigzabhier", land:"Eritrea", flagg:"🇪🇷", lag:"Lidl-Trek", alder:30, fødtÅr:1996, spesialitet:"klatrer", palmarès:[], form:"Erfaren klatrer og lagspiller.", notat:"Nasjonal representant som hjelper Girmay for Eritrea. En av Afrikas sterkeste sykkelnæringer." },
       { navn:"Merhawi Kudus", land:"Eritrea", flagg:"🇪🇷", lag:"EF Education-EasyPost", alder:31, fødtÅr:1995, spesialitet:"klatrer", palmarès:["Vuelta etapper","Tour of Britain etapper"], form:"Klatrer med EF Education. Solid erfaring.", notat:"Kudus er en god klatrer. Eritrea har et overraskende sterkt lag — vil prøve seg i brudd og hjelpe Girmay." },
       { navn:"Henok Mulubrhan", land:"Eritrea", flagg:"🇪🇷", lag:"Intermarché-Wanty", alder:23, fødtÅr:2003, spesialitet:"klatrer", palmarès:[], form:"Ung klatrer, 23 år.", notat:"Mulubrhan er Eritreas fremtid. Bare 23 år og allerede i WorldTour — imponerende for et afrikansk land." },
@@ -527,28 +527,28 @@ const VM_DATA = {
     },
 
     favoritter: [
-      { navn:"Demi Vollering",     land:"NED", flagg:"🇳🇱", lag:"SD Worx-Protime",     notat:"Nr. 1 UCI-ranking — beste klatrer i feltet, vant TdF Femmes og Giro Donne 2026" },
+      { navn:"Demi Vollering",     land:"NED", flagg:"🇳🇱", lag:"FDJ United-Suez",     notat:"Nr. 1 UCI-ranking — beste klatrer i feltet, vant TdF Femmes og Giro Donne 2026" },
       { navn:"Lotte Kopecky",      land:"BEL", flagg:"🇧🇪", lag:"SD Worx-Protime",     notat:"Forsvarende to-ganger (2023+2024) — verdens mest komplette syklist i fellesstart" },
       { navn:"Magdeleine Vallières",land:"CAN",flagg:"🇨🇦", lag:"EF Education-Cannondale", notat:"Forsvarende mester + hjemmebane i Montréal — trykket er enormt, men motivasjonen likedan" },
       { navn:"Kasia Niewiadoma",   land:"POL", flagg:"🇵🇱", lag:"Canyon//SRAM Racing",  notat:"Vant Vuelta Femenina 2026 — toppform, elsker harde baner" },
-      { navn:"Elisa Longo Borghini",land:"ITA",flagg:"🇮🇹", lag:"Lidl-Trek",           notat:"3x VM-bronse — vil hun endelig ta gullet? Nettopp vunnet blandet TTT. 35 år" },
+      { navn:"Elisa Longo Borghini",land:"ITA",flagg:"🇮🇹", lag:"UAE Team L'IMAD",     notat:"3x VM-bronse — vil hun endelig ta gullet? Nettopp vunnet blandet TTT. 35 år" },
       { navn:"Marlen Reusser",     land:"SUI", flagg:"🇨🇭", lag:"Lidl-Trek",           notat:"Vant VM TT på 35-årsdagen sin (20. sep) — i karrierens beste form. Kan hun ta dobbelen?" },
     ],
 
     ryttere: [
       {
-        navn:"Demi Vollering", land:"Nederland", flagg:"🇳🇱", lag:"SD Worx-Protime",
+        navn:"Demi Vollering", land:"Nederland", flagg:"🇳🇱", lag:"FDJ United-Suez",
         alder:27, fødtÅr:1999, spesialitet:"klatrer",
         palmarès:["TdF Femmes 2026","Giro Donne 2026","La Flèche Wallonne 2026","LBL 2025","Flanderne 2026"],
         form:"Nr. 1 UCI-ranking. Beste klatrer i feltet. Skuffende 8. i VM TT (ikke hennes distanse).",
-        notat:"Vollering er favoritt nr. 1 på en bane som Montréal. Camillien-Houde-klatringen er som skapt for henne — hun er sterkere enn alle over 5+ min. Svakhet: etter en enorm sesong (TdF + Giro) kan hun møte slitasje. SD Worx-laget med Kopecky er en potensiell intern konflikt: hvem kjører for hvem?"
+        notat:"Vollering er favoritt nr. 1 på en bane som Montréal. Camillien-Houde-klatringen er som skapt for henne — hun er sterkere enn alle over 5+ min. Svakhet: etter en enorm sesong (TdF + Giro) kan hun møte slitasje. Nederland vs. Belgia er den store VM-rivaliseringen — Vollering vs. Kopecky."
       },
       {
         navn:"Lotte Kopecky", land:"Belgia", flagg:"🇧🇪", lag:"SD Worx-Protime",
         alder:28, fødtÅr:1998, spesialitet:"allrounder",
         palmarès:["VM Fellesstart 2023 (Glasgow)","VM Fellesstart 2024 (Zürich)","Paris-Roubaix Femmes 2026","Flanderne 2x"],
         form:"Forsvarende to-ganger. Imponerte i Paris-Roubaix 2026. Toppform.",
-        notat:"Kopecky er kanskje den mest komplette syklisten i feltet — kan spurte, klatre, jobbe i vind. Tre på rad? Det gjøres bare av de aller største (Vos, van Vleuten). Montréal er mer selektiv enn Glasgow og Zürich — dette favoriserer kanskje Vollering foran Kopecky. SD Worx-internt drama er uunngåelig."
+        notat:"Kopecky er kanskje den mest komplette syklisten i feltet — kan spurte, klatre, jobbe i vind. Tre på rad? Det gjøres bare av de aller største (Vos, van Vleuten). Montréal er mer selektiv enn Glasgow og Zürich — dette favoriserer kanskje Vollering foran Kopecky. Nederland vs. Belgia-rivaliseringen er den store VM-dramaen — Vollering er nå på FDJ, Kopecky på SD Worx."
       },
       {
         navn:"Magdeleine Vallières", land:"Canada", flagg:"🇨🇦", lag:"EF Education-Cannondale",
@@ -565,7 +565,7 @@ const VM_DATA = {
         notat:"Niewiadoma er alltid farligst på en dag som kanskje overrasker — der favorittene kjemper innbyrdes og hun slipper unna. Kampen mellom Vollering og Kopecky kan gi henne en åpning. Erfaren VM-rytter (Polen har sjelden medal men hun er alltid der fremme)."
       },
       {
-        navn:"Elisa Longo Borghini", land:"Italia", flagg:"🇮🇹", lag:"Lidl-Trek",
+        navn:"Elisa Longo Borghini", land:"Italia", flagg:"🇮🇹", lag:"UAE Team L'IMAD",
         alder:35, fødtÅr:1991, spesialitet:"klatrer",
         palmarès:["3x VM-bronse","Giro Donne 2x","Paris-Roubaix Femmes","Strade Bianche 3x"],
         form:"Vant blandet TTT med Italia (22. sep). Frisk og motivert — siste sjanse for VM-gull?",
@@ -774,7 +774,7 @@ const VM_DATA = {
       { navn:"Vera Looser", land:"Namibia", flagg:"🇳🇦", lag:"Namibia", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"Nasjonal representant", notat:"Nasjonal representant for Namibia — representerer Sørlige Afrika." },
 
       /* ---- Nederland (utover Vollering og Pieterse) ---- */
-      { navn:"Riejanne Markus", land:"Nederland", flagg:"🇳🇱", lag:"Visma-Lease a Bike", alder:30, fødtÅr:1996, spesialitet:"allrounder", palmarès:["VM-bronse 2023","TdF Femmes etapper"], form:"VM-bronse 2023. Sterk hjelper for Vollering.", notat:"Markus er en av pelotongens sterkeste hjelpere. VM-bronse 2023 viser at hun også kan kjøre for seg selv. Visma bruker henne primært til å beskytte Vollering." },
+      { navn:"Riejanne Markus", land:"Nederland", flagg:"🇳🇱", lag:"Visma-Lease a Bike", alder:30, fødtÅr:1996, spesialitet:"allrounder", palmarès:["TdF Femmes etapper"], form:"Sterk hjelper og erfaren VM-rytter.", notat:"Markus er en av pelotongens sterkeste hjelpere. Erfaren VM-rytter som Visma primært bruker til å beskytte Vollering — men kan prøve seg selv om sjansen byr seg." },
       { navn:"Lieke Nooijen", land:"Nederland", flagg:"🇳🇱", lag:"Fenix-Deceuninck", alder:24, fødtÅr:2002, spesialitet:"allrounder", palmarès:[], form:"Ung allrounder, 24 år.", notat:"Nooijen er i utvikling. Hjelper Vollering og laget." },
       { navn:"Karlijn Swinkels", land:"Nederland", flagg:"🇳🇱", lag:"Jayco-AlUla", alder:27, fødtÅr:1999, spesialitet:"allrounder", palmarès:[], form:"Allrounder og solid hjelper.", notat:"Swinkels er en solid arbeider — bidrar for Nederland." },
       { navn:"Femke de Vries", land:"Nederland", flagg:"🇳🇱", lag:"Visma-Lease a Bike", alder:26, fødtÅr:2000, spesialitet:"klatrer", palmarès:[], form:"Ung klatrer med Visma.", notat:"de Vries er Nederlandsk fremtid i klatringen. Hjelper Vollering." },
