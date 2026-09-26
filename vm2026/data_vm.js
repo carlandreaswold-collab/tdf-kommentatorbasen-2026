@@ -781,7 +781,7 @@ const VM_DATA = {
       { navn:"Amber Kraak", land:"Nederland", flagg:"🇳🇱", lag:"Nederland", alder:24, fødtÅr:2002, spesialitet:"allrounder", palmarès:[], form:"Nasjonal representant", notat:"Nasjonal representant for Nederland." },
 
       /* ---- New Zealand ---- */
-      { navn:"Niamh Fisher-Black", land:"New Zealand", flagg:"🇳🇿", lag:"Red Bull Bora-Hansgrohe", alder:25, fødtÅr:2001, spesialitet:"klatrer", palmarès:["VM-sølv 2023","VM-sølv 2025","Giro Donne topp-5"], form:"VM sølv 2023 OG 2025 — alltid på pallen, aldri gullet!", notat:"Fisher-Black har vært topp-3 i VM to ganger og er aldri langt unna. 25 år og i toppnivå — bror av Finn Fisher-Black (herrer). VM 2026 er hennes store sjanse — vil hun endelig ta gullet?" },
+      { navn:"Niamh Fisher-Black", land:"New Zealand", flagg:"🇳🇿", lag:"Red Bull Bora-Hansgrohe", alder:25, fødtÅr:2001, spesialitet:"klatrer", palmarès:["VM-sølv 2025","Giro Donne topp-5"], form:"VM sølv 2025 — alltid nær pallen!", notat:"Fisher-Black tok sølv i VM 2025 (Kigali) og er en av verdens beste klatrere. 25 år og i toppnivå — søster av Finn Fisher-Black (herrer). VM 2026 er hennes store sjanse — vil hun endelig ta gullet?" },
       { navn:"Henrietta Christie", land:"New Zealand", flagg:"🇳🇿", lag:"Human Powered Health", alder:26, fødtÅr:2000, spesialitet:"klatrer", palmarès:[], form:"Klatrer med HPH.", notat:"Christie er New Zealands neste generasjon. Klatrer i utvikling." },
       { navn:"Ella Wyllie", land:"New Zealand", flagg:"🇳🇿", lag:"New Zealand", alder:23, fødtÅr:2003, spesialitet:"klatrer", palmarès:[], form:"Nasjonal representant", notat:"Nasjonal representant for New Zealand." },
       { navn:"Bronwyn MacGregor", land:"New Zealand", flagg:"🇳🇿", lag:"New Zealand", alder:28, fødtÅr:1998, spesialitet:"allrounder", palmarès:[], form:"Nasjonal representant", notat:"Nasjonal representant for New Zealand." },
@@ -936,7 +936,7 @@ const VM_DATA = {
       { år:2020, sted:"Imola, ITA",                 gull:"Anna van der Breggen (NED)",sølv:"Annemiek van Vleuten (NED)",bronse:"Elizabeth Deignan (GBR)",  norsk:"—" },
       { år:2021, sted:"Leuven, BEL",                gull:"Elisa Balsamo (ITA)",      sølv:"Marianne Vos (NED)",        bronse:"Lorena Wiebes (NED)",       norsk:"—" },
       { år:2022, sted:"Wollongong, AUS",            gull:"Annemiek van Vleuten (NED)",sølv:"Lotte Kopecky (BEL)",      bronse:"Neve Bradbury (AUS)",       norsk:"—" },
-      { år:2023, sted:"Glasgow, SCO",               gull:"Lotte Kopecky (BEL)",      sølv:"Niamh Fisher-Black (NZL)", bronse:"Riejanne Markus (NED)",     norsk:"—" },
+      { år:2023, sted:"Glasgow, SCO",               gull:"Lotte Kopecky (BEL)",      sølv:"Demi Vollering (NED)",      bronse:"Cecilie Uttrup Ludwig (DEN)",norsk:"—" },
       { år:2024, sted:"Zürich, SUI",                gull:"Lotte Kopecky (BEL)",      sølv:"Chloe Dygert (USA)",        bronse:"Elisa Longo Borghini (ITA)",norsk:"—" },
       { år:2025, sted:"Kigali, RWA",                gull:"Magdeleine Vallières (CAN)",sølv:"Niamh Fisher-Black (NZL)",  bronse:"Mavi Garcia (ESP)",         norsk:"—" },
     ],
