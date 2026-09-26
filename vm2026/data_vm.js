@@ -31,9 +31,10 @@ const VM_DATA = {
     { dato:"Tir 22.09", kategori:"Tempo Kvinner Junior",    distanse:"10,7 km", status:"ferdig",       vinner:"Maria Okrucińska (POL)" },
     { dato:"Ons 23.09", kategori:"Hviledag",                distanse:"—",       status:"hviledag",     vinner:"—" },
     { dato:"Tor 24.09", kategori:"Fellesstart Kvinner U23", distanse:"134 km",  status:"ferdig",       vinner:"Viktória Chladoňová (SVK)" },
-    { dato:"Fre 25.09", kategori:"Fellesstart Kvinner Jr",  distanse:"80,4 km", status:"idag",         vinner:"—" },
+    { dato:"Fre 25.09", kategori:"Fellesstart Herrer U23",  distanse:"174,2 km",status:"ferdig",       vinner:"Ashlin Barry (USA) — 🥉 Jesper Stiansen (NOR) bronse!" },
+    { dato:"Fre 25.09", kategori:"Fellesstart Kvinner Jr",  distanse:"80,4 km", status:"ferdig",       vinner:"Alejandra Neira (ESP)" },
     { dato:"Fre 25.09", kategori:"Fellesstart Herrer Jr",   distanse:"~130 km", status:"ferdig",       vinner:"Benjamín Noval (ESP)" },
-    { dato:"Lør 26.09", kategori:"Fellesstart Kvinner Elite",distanse:"180,1 km",status:"kommende",    vinner:"—" },
+    { dato:"Lør 26.09", kategori:"Fellesstart Kvinner Elite",distanse:"180,1 km",status:"idag",        vinner:"—" },
     { dato:"Søn 27.09", kategori:"Fellesstart Herrer Elite", distanse:"273,7 km",status:"kommende",    vinner:"—" },
   ],
 
@@ -602,8 +603,8 @@ const VM_DATA = {
         navn:"Katrine Aalerud", land:"Norge", flagg:"🇳🇴", lag:"Uno-X Mobility",
         alder:29, fødtÅr:1997, spesialitet:"allrounder",
         palmarès:["Energa Tour Feminin etapper","Tour of Scandinavia","NM Vei"],
-        form:"USIKKER START — krasjet under rekognosering av VM-banen. Gikk ikke VM TT. Avklares.",
-        notat:"Norges viktigste rytter er i tvil etter fall under rekognosering. Aalerud er Norges erfarne leder og tapte TT pga. skade. Om hun starter fellesstart er et åpent spørsmål. Norsk sjef Thomas Campana må ta avgjørelsen tett opp mot start."
+        form:"STARTER IKKE — bekreftet DNS etter krasj under rekognosering av VM-banen. Gikk ikke VM TT og starter heller ikke fellesstart.",
+        notat:"Aalerud starter ikke fellesstart — bekreftet. Krasjet under rekognosering og klarte ikke å komme seg til start. Norges erfarne leder er ute av VM 2026. Et stort tap for det norske laget — Ytterhus Haugset, Jorgensen og Berg Edseth må bære lasset uten Aalerud."
       },
       {
         navn:"Sigrid Ytterhus Haugset", land:"Norge", flagg:"🇳🇴", lag:"Uno-X Mobility",
@@ -617,7 +618,7 @@ const VM_DATA = {
         alder:23, fødtÅr:2003, spesialitet:"allrounder",
         palmarès:["NM Fellesstart 2025","Tour of Scandinavia"],
         form:"Solid sesong med Uno-X. Norsk lagspiller.",
-        notat:"Jorgensen er allsidig og hardtarbeidende. Vil jobbe for Aalerud (om hun starter) og bidra i de vanskelige første timene av løpet."
+        notat:"Jorgensen er allsidig og hardtarbeidende. Med Aalerud ute er Jorgensen en av de viktigste i det norske laget — vil drive laget og bidra i de vanskelige første timene."
       },
       {
         navn:"Marte Berg Edseth", land:"Norge", flagg:"🇳🇴", lag:"Human Powered Health",
